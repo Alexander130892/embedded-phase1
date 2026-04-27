@@ -170,11 +170,11 @@ Week 10 — Interrupts + NVIC
  - [x] R3 Ch.7.3 — Interrupt lifecycle: pending, active, preemption — understand what happens on entry/exit
  - [x] R3 Ch.7.4 — Priority levels for your Cortex-M variant (M3/M4/M7 section if applicable)
  - [x] R3 Ch.7.6 — Masking interrupts: PRIMASK, BASEPRI — useful for critical sections
- - [ ] Exercise: enable TIM2 update interrupt → toggle LED in ISR
- - [ ] Exercise: enable EXTI interrupt on a button GPIO → debounce in ISR or main loop
- - [ ] Exercise: refactor UART RX to use RXNE interrupt instead of polling
- - [ ] Study ISR best practices: keep ISRs short, use volatile flags, avoid blocking calls
- - [ ] Commit to week10/interrupts/
+ - [x] Exercise: enable TIM2 update interrupt → toggle LED in ISR
+ - [x] Exercise: enable EXTI interrupt on a button GPIO → debounce in ISR or main loop
+ - [x] Exercise: refactor UART RX to use RXNE interrupt instead of polling
+ - [x] Study ISR best practices: keep ISRs short, use volatile flags, avoid blocking calls
+ - [x] Commit to week10/interrupts/
 
 
 🏁 M5 checkpoint: Timer interrupt firing reliably; UART RX interrupt-driven.
@@ -196,7 +196,6 @@ Week 11 — PWM + Integration
 - [ ]  Refactor into clean modules: gpio.c, uart.c, timer.c, main.c
 - [ ] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
 - [ ]  Commit to week11/pwm_integration/
-
 
 Week 12 — Deliverable + Documentation
 
