@@ -1,10 +1,4 @@
-week08/uart_tx_rx/Inc/led.h
-week08/uart_tx_rx/Inc/parser.h
-week08/uart_tx_rx/Inc/stm32f46re.h
-week08/uart_tx_rx/Inc/uart.h
-week08/uart_tx_rx/Src/led.c
-week08/uart_tx_rx/Src/main.c
-week08/uart_tx_rx/Src/parser.c
-week08/uart_tx_rx/Src/syscalls.c
-week08/uart_tx_rx/Src/sysmem.c
-week08/uart_tx_rx/Src/uart.c
+week10/interrupt/Inc/stm32f446re.h
+week10/interrupt/Src/main.c
+week10/interrupt/Src/syscalls.c
+week10/interrupt/Src/sysmem.c
