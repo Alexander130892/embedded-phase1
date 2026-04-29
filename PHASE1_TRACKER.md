@@ -185,12 +185,12 @@ Week 11 — PWM + Integration
 ~10 hrs | R3 Ch.11.3 (PWM sections) + original code
 
 
-- [ ]  R3 Ch.11.3.5 — Input Capture mode: read for context, understand the capture/compare unit
-- [ ]  R3 Ch.11.3.6 — Output Compare mode: the foundation PWM builds on
-- [ ]  R3 Ch.11.3.7 — PWM generation: CCR, PWM1 vs PWM2 mode, duty cycle formula
-- [ ]  Reference Manual: TIMx_CCMRx and TIMx_CCRx registers for your timer
-- [ ]  Exercise: configure a timer in PWM mode — set duty cycle via CCR
-- [ ]  Exercise: drive an LED with variable brightness (fade in/out)
+- [x]  R3 Ch.11.3.5 — Input Capture mode: read for context, understand the capture/compare unit
+- [x]  R3 Ch.11.3.6 — Output Compare mode: the foundation PWM builds on
+- [x]  R3 Ch.11.3.7 — PWM generation: CCR, PWM1 vs PWM2 mode, duty cycle formula
+- [x]  Reference Manual: TIMx_CCMRx and TIMx_CCRx registers for your timer
+- [x]  Exercise: configure a timer in PWM mode — set duty cycle via CCR
+- [x]  Exercise: drive an LED with variable brightness (fade in/out)
 - [ ]  Exercise: integrate UART command parser — accept pwm <0-100> to set duty cycle live
 - [ ]  Exercise: wire together blink, UART, timer, interrupt code into a single project
 - [ ]  Refactor into clean modules: gpio.c, uart.c, timer.c, main.c
