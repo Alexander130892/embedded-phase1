@@ -1,15 +1,15 @@
 /*
  * File:    Ex_13_roulette.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a console-based roulette game where the
- *   player starts with a $5 budget and can bet on specific numbers
- *   (0-35), even, or odd outcomes, with corresponding payouts of 35x,
- *   2x, or 2x respectively. The game continues until the player runs
- *   out of money, with each spin costing $1 and using random number
- *   generation to simulate the roulette wheel.
+ *   This file implements a simple roulette game where the player
+ *   starts with a $5 budget and can bet on specific numbers (0-35),
+ *   even numbers, or odd numbers, with payouts of 35x for number bets
+ *   and 2x for even/odd bets. The game continues until the player runs
+ *   out of money, with each spin costing $1 and the roulette wheel
+ *   generating random numbers from 0-35.
  */
 //Libraries
 #include <stdio.h>

@@ -1,13 +1,12 @@
 /*
  * File:    Ex_20_pallindrome.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program reads strings from standard input and counts how
- *   many of them are palindromes, ignoring whitespace and case
- *   differences. It outputs the total count of palindromes found with
- *   the message "palindromes in directory".
+ *   This program reads strings from standard input and counts how many
+ *   of them are palindromes, ignoring spaces and case differences. It
+ *   outputs the total count of palindromes found in the input.
  */
 //Libraries
 #include <stdio.h>

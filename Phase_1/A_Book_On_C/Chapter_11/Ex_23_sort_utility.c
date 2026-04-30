@@ -1,14 +1,15 @@
 /*
- * File:    Ex_31_BST_to_orderedArray copy.c
+ * File:    Ex_23_sort_utility.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates converting a Binary Search Tree (BST) to a
- *   sorted array using in-order traversal, creating a BST from an
- *   input array and then extracting its elements in sorted order. The
- *   program also includes various tree utility functions for counting
- *   nodes, leaves, depth, and specific values within the BST.
+ *   This C program is a utility wrapper that takes a filename as a
+ *   command-line argument and executes the Unix `sort -r` command on
+ *   that file to display its contents in reverse sorted order. It
+ *   includes basic input validation to ensure exactly one argument is
+ *   provided and that the filename is not too long to prevent buffer
+ *   overflow.
  */
  //Libraries
 #include <stdio.h>

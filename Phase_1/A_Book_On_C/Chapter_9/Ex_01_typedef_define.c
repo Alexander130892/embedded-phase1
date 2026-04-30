@@ -1,14 +1,15 @@
 /*
  * File:    Ex_01_typedef_define.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the use of `#define` to create a type alias
- *   for `float` as `DOLLARS`, calculating and displaying a simple
- *   interest calculation on a monetary amount. It shows an alternative
- *   to using `typedef` (which is commented out) for creating custom
- *   type names in C.
+ *   This file demonstrates the use of `#define` preprocessor directive
+ *   to create an alias for the `float` data type, calculating and
+ *   displaying the sum of a monetary amount plus its interest. The
+ *   file shows an alternative approach using `#define DOLLARS float`
+ *   instead of the commented-out `typedef float DOLLARS;` declaration
+ *   to achieve the same aliasing functionality.
  */
  //Libraries
 #include <stdio.h>

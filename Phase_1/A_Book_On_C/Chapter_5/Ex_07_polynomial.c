@@ -1,13 +1,14 @@
 /*
  * File:    Ex_07_polynomial.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program evaluates and prints the values of a quadratic
- *   polynomial f(x) = ax² + bx + c with coefficients a=1, b=-3, c=2
- *   for x values from 0 to 3 in increments of 0.1. The polynomial is
- *   computed using Horner's method for efficient evaluation.
+ *   This C program evaluates and prints coordinate pairs of a
+ *   quadratic polynomial function f(x) = ax² + bx + c with
+ *   coefficients a=1, b=-3, c=2 over the interval x=[0,3] in
+ *   increments of 0.1. The polynomial is computed using Horner's
+ *   method for efficient evaluation.
  */
  //Libraries
 #include <stdio.h>

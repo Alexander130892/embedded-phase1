@@ -1,15 +1,16 @@
 /*
  * File:    Ex_34_BT_levelOrder.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C file implements a binary search tree (BST) with various
- *   tree operations including insertion, deletion, traversal methods
- *   (inorder and level-order), and utility functions for counting
- *   nodes, leaves, and tree depth. The main function demonstrates
- *   these operations by creating a BST from an array and performing
- *   different tree analysis tasks.
+ *   This C file implements a binary search tree (BST) with level-order
+ *   traversal functionality, including operations for insertion,
+ *   deletion, and various tree statistics like node counting and depth
+ *   calculation. The program creates a BST from an array of integers
+ *   and demonstrates tree traversal methods, with a focus on
+ *   breadth-first (level-order) traversal using a queue data
+ *   structure.
  */
  //Libraries
 #include <stdio.h>

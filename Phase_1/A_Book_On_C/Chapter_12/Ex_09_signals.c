@@ -1,14 +1,14 @@
 /*
  * File:    Ex_09_signals.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates signal handling for floating-point
- *   exceptions (SIGFPE) by first ignoring division by zero errors and
- *   printing the result, then restoring default signal handling which
- *   would typically cause the program to terminate on the second
- *   division by zero.
+ *   This file demonstrates signal handling in C by performing division
+ *   by zero operations, first ignoring the SIGFPE (floating-point
+ *   exception) signal and then restoring the default signal behavior.
+ *   The program shows how different signal handling approaches affect
+ *   the execution when encountering floating-point arithmetic errors.
  */
 //Libraries
 #include <stdio.h>

@@ -1,14 +1,15 @@
 /*
  * File:    Ex_07_iterative_print.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C file implements a linked list data structure with character
- *   data and demonstrates cycle detection functionality. It converts
- *   strings to linked lists, concatenates them (which can create
- *   cycles), and uses an iterative approach to detect if a cycle
- *   exists in the linked list structure.
+ *   This file implements a linked list data structure that stores
+ *   characters and provides various operations including creation from
+ *   strings, concatenation, sorting, and cycle detection. The main
+ *   function demonstrates creating linked lists from strings,
+ *   concatenating one list to itself to create a cycle, and testing
+ *   the cycle detection functionality.
  */
  //Libraries
 #include <stdio.h>

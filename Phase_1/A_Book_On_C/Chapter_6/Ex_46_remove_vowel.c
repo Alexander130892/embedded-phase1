@@ -1,13 +1,14 @@
 /*
  * File:    Ex_46_remove_vowel.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file reads characters from standard input and outputs only
- *   the non-vowel characters, effectively filtering out all vowels (a,
- *   e, i, o, u, y) in a case-insensitive manner. It treats 'y' as a
- *   vowel and adds a newline at the end of the filtered output.
+ *   the non-vowel characters, effectively removing all vowels
+ *   (including 'y') from the input text. The program treats vowels as
+ *   case-insensitive and adds a newline at the end of the filtered
+ *   output.
  */
 //Libraries
 #include <stdio.h>

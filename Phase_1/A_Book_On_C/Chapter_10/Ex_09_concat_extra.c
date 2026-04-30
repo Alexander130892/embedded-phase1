@@ -1,14 +1,14 @@
 /*
  * File:    Ex_09_concat_extra.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a linked list library for character data,
- *   providing functions to create lists from strings, concatenate two
- *   lists, clone lists, and detect cycles. The main function
- *   demonstrates converting two strings to linked lists, concatenating
- *   them, and testing for cycles before freeing the memory.
+ *   This C program implements a linked list data structure that stores
+ *   characters and demonstrates string-to-list conversion and list
+ *   concatenation functionality. The main function converts two
+ *   strings into linked lists, concatenates them together, and prints
+ *   the results while also testing for cycles in the lists.
  */
  //Libraries
 #include <stdio.h>

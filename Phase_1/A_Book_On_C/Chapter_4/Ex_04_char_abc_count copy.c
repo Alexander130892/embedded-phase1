@@ -1,14 +1,14 @@
 /*
  * File:    Ex_04_char_abc_count copy.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program reads characters from standard input and counts how
+ *   This C program reads characters from standard input and counts how
  *   many are letters 'a', 'b', or 'c' (case-insensitive) versus all
  *   other characters, then displays the totals. The program contains
- *   unused constants and comments that don't match its actual
- *   functionality.
+ *   unused constants that suggest it may be a copy or template from
+ *   another exercise.
  */
  //Libraries
 #include <stdio.h>

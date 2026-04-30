@@ -1,15 +1,14 @@
 /*
  * File:    stm32f446re.h
  * Author:  Alexander130892
- * Date:    29-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This header file defines memory-mapped register addresses and
- *   offsets for STM32F446RE microcontroller peripherals including
- *   GPIO, timers, RCC clock control, NVIC interrupts, EXTI external
- *   interrupts, and USART communication. It serves as a hardware
- *   abstraction layer providing symbolic names for direct register
- *   access instead of using hard-coded memory addresses.
+ *   This file defines register base addresses and offset constants for
+ *   STM32F446RE microcontroller peripherals including GPIO, timers,
+ *   USART, interrupts, and clock control. It serves as a hardware
+ *   abstraction layer header file that provides memory-mapped register
+ *   definitions for low-level peripheral programming.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

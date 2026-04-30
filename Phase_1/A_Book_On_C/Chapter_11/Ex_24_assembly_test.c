@@ -1,14 +1,13 @@
 /*
- * File:    Ex_31_BST_to_orderedArray copy.c
+ * File:    Ex_24_assembly_test.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates converting a Binary Search Tree (BST) to a
- *   sorted array using in-order traversal, creating a BST from an
- *   input array and then extracting its elements in sorted order. The
- *   program also includes various tree utility functions for counting
- *   nodes, leaves, depth, and specific values within the BST.
+ *   This file implements a simple countdown loop that prints
+ *   decreasing integer values from 9 down to 1, likely created as a
+ *   test case for examining assembly code generation or debugging
+ *   assembly output.
  */
  //Libraries
 #include <stdio.h>

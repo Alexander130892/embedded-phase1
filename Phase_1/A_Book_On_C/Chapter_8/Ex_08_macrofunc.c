@@ -1,14 +1,14 @@
 /*
  * File:    Ex_08_macrofunc.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates C macro functionality by defining a macro
- *   PRN3 that uses string concatenation to print three variables with
- *   their names and values, though the main function only calls
- *   character case conversion functions and doesn't actually use the
- *   defined macro.
+ *   PRN3 that prints three variables with their names and values using
+ *   stringification, though the main function only calls character
+ *   case conversion functions and doesn't actually use the defined
+ *   macro.
  */
 //write pack into one line
 #include <ctype.h>

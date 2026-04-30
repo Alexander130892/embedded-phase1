@@ -1,13 +1,16 @@
 /*
  * File:    Ex_08_printed.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates boolean expression evaluation and
- *   operator precedence by printing the results of various logical
- *   comparisons involving character equality, logical OR operations,
- *   negation operators, and floating-point arithmetic comparisons.
+ *   This C program demonstrates various boolean expressions and
+ *   logical operations by printing the results of character
+ *   comparisons, logical OR operations, negation operations, and
+ *   floating-point arithmetic comparisons. It serves as an educational
+ *   example showing how different logical and comparison operators
+ *   behave in C, particularly with edge cases involving very large
+ *   floating-point numbers.
  */
  //Libraries
 #include <stdio.h>

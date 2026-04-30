@@ -1,15 +1,15 @@
 /*
  * File:    Ex_14_insert_general.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates various insertion operations on a linked
- *   list data structure, implementing functions to insert elements at
- *   the head, tail, after a specific value, and at a specific
- *   position. It creates a linked list from a test string and
- *   showcases each insertion method by adding characters at different
- *   positions in the list.
+ *   This C program demonstrates various insertion operations on a
+ *   singly linked list of characters, including functions to insert at
+ *   the head, tail, after a specific element, and at a specific
+ *   position. It creates a linked list from the string "TestString"
+ *   and tests each insertion method before printing the results and
+ *   cleaning up memory.
  */
  //Libraries
 #include <stdio.h>

@@ -6,9 +6,8 @@
  * Description:
  *   This header file defines a command parser system that maps text
  *   commands to handler functions, designed to process UART-like
- *   communication with commands for LED control, PWM, and status
- *   operations. It uses a function pointer-based architecture to
- *   dispatch commands to their respective handlers.
+ *   communication inputs with a 64-byte buffer and includes temporary
+ *   implementations for LED, PWM, and status commands.
  */
 #ifndef PARSER_H
 #define PARSER_H

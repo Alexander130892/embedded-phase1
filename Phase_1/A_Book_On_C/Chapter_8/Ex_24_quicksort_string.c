@@ -1,15 +1,16 @@
 /*
  * File:    Ex_24_quicksort_string.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program implements a quicksort algorithm specifically for
- *   sorting arrays of strings using lexicographic comparison via
- *   strcmp(). The program demonstrates sorting a hardcoded array of 5
- *   strings and includes a sophisticated pivot selection strategy that
- *   uses the median-of-three method with additional logic to handle
- *   duplicate values.
+ *   This C program implements the quicksort algorithm to sort an array
+ *   of strings in lexicographical (alphabetical) order using pointer
+ *   arithmetic and custom macros for swapping and ordering operations.
+ *   The program demonstrates sorting a predefined array of 5 strings
+ *   and includes a pivot selection strategy that uses the
+ *   median-of-three method with fallback logic for handling duplicate
+ *   elements.
  */
 //write pack into one line
 

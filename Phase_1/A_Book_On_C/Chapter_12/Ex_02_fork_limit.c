@@ -1,18 +1,14 @@
 /*
  * File:    Ex_02_fork_limit.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program creates a binary tree of processes by forking 13
- *   times in a loop, with each parent and child process printing
- *   identification messages before potentially forking again. The
- *   program demonstrates exponential process creation where each
- *   successful fork doubles the number of running processes,
- *   potentially creating thousands of processes that all execute the
- *   remaining loop iterations.
+ *   This file creates a binary tree of processes by forking N times in
+ *   a loop, with each parent and child process continuing to fork,
+ *   resulting in exponential process creation where both parent and
+ *   child processes print identifying messages at each iteration.
  */
-
 // Compute Fibonacci numbers and print time asynchronously
 
 #include <stdio.h>

@@ -1,15 +1,15 @@
 /*
  * File:    Ex_22_BooleanTruthtable.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This C program generates and displays truth tables for three
- *   different boolean functions operating on 4-bit values (nibbles),
- *   including OR, AND, and a complex boolean expression. It uses a
- *   union structure to access individual bits and systematically
- *   evaluates each function across all 16 possible 4-bit input
- *   combinations.
+ *   different Boolean functions (OR, AND, and a complex logical
+ *   expression) operating on 4-bit values represented as a union
+ *   structure. It systematically evaluates each function across all 16
+ *   possible 4-bit input combinations (0000 to 1111) and prints the
+ *   results in a tabular format.
  */
  //Libraries
 #include <stdio.h>

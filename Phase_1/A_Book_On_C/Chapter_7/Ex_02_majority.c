@@ -1,14 +1,15 @@
 /*
  * File:    Ex_02_majority.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program implements a bitwise majority function that returns
- *   a value where each bit position is set to 1 if at least two of the
- *   three input values have 1 in that position, and includes a utility
- *   function to print binary representations of the values for
- *   visualization.
+ *   This C program implements a bitwise majority function that
+ *   performs majority voting on corresponding bits of three short
+ *   integers, returning a value where each bit position is set to 1 if
+ *   at least two of the three input bits at that position are 1. It
+ *   includes a utility function to print the binary representation of
+ *   the inputs and output for visualization.
  */
 //Libraries
 #include <stdio.h>

@@ -1,14 +1,14 @@
 /*
  * File:    Ex_20_SC_Evaluation.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C file demonstrates short-circuit evaluation behavior of
- *   logical operators (&& and ||) by showing how the right-hand side
- *   expressions are either evaluated or skipped based on the left-hand
- *   side values. It prints the values of variables to illustrate when
- *   assignments occur or are bypassed due to short-circuiting.
+ *   This file demonstrates short-circuit evaluation in C by showing
+ *   how logical operators (&& and ||) can prevent the execution of
+ *   subsequent expressions when the result is already determined, as
+ *   evidenced by variables remaining unchanged when their assignment
+ *   expressions are short-circuited.
  */
  //Libraries
 #include <stdio.h>

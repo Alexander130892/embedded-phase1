@@ -1,15 +1,14 @@
 /*
  * File:    Ex_35_string_matrix.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates complex pointer arithmetic and
- *   dereferencing operations on a 2D array of string pointers,
- *   printing individual characters accessed through various
- *   multi-level pointer expressions. The program serves as an exercise
- *   in understanding how to navigate and extract data from nested
- *   pointer structures containing strings.
+ *   This file demonstrates various pointer dereferencing techniques
+ *   with a 2D array of strings, printing individual characters using
+ *   different combinations of pointer arithmetic and array indexing
+ *   syntax. It serves as an educational example showing multiple ways
+ *   to access characters within a matrix of string pointers.
  */
 //Libraries
 #include <stdio.h>

@@ -1,14 +1,14 @@
 /*
  * File:    Ex_34_my_echo.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a custom echo program that prints
- *   command-line arguments on separate lines, with an optional "-c"
+ *   command-line arguments on separate lines, with an optional `-c`
  *   flag that converts all output to uppercase. It also displays the
- *   argument count and skips printing the "-c" flag itself when
- *   present.
+ *   argument count and skips printing the `-c` flag itself while
+ *   processing other arguments.
  */
 //Libraries
 #include <stdio.h>

@@ -1,16 +1,14 @@
 /*
  * File:    Ex_30_OrderedBinaryTree.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a binary search tree (BST) data structure
- *   that maintains elements in sorted order, providing functions to
- *   create the tree by inserting elements, traverse it in-order, and
- *   count various properties like total nodes, leaf nodes, and tree
- *   depth. The program demonstrates BST operations by building a tree
- *   from an integer array and testing the counting functions with
- *   expected results.
+ *   with operations to create, traverse, and analyze the tree,
+ *   including functions to count nodes, leaves, and tree depth. The
+ *   program creates a BST from an integer array and demonstrates
+ *   various tree operations through recursive algorithms.
  */
  //Libraries
 #include <stdio.h>

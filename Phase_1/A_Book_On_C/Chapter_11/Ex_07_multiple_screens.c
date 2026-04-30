@@ -1,15 +1,15 @@
 /*
  * File:    Ex_07_multiple_screens.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a command-line pager program that displays
- *   text files one page at a time, pausing after a specified number of
- *   lines (default 20) to wait for user input before showing the next
- *   page. It supports an optional -n flag to set custom lines per page
- *   and can process multiple files sequentially, clearing the screen
- *   between files.
+ *   This C program implements a text file pager that displays multiple
+ *   files page by page, with an optional command-line argument to
+ *   specify the number of lines per page (default 20). It clears the
+ *   screen between files, shows a header for each file, and pauses
+ *   after each page with a prompt allowing the user to continue or
+ *   quit.
  */
 #include <stdio.h>
 #include <stdlib.h>

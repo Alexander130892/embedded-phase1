@@ -1,14 +1,14 @@
 /*
  * File:    Ex_18_gcd.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file calculates the greatest common divisor (GCD) of two
+ *   This file computes the greatest common divisor (GCD) of two
  *   integers using the Euclidean algorithm, with both functions
- *   (gcd_rec and gcd_it) actually implemented iteratively despite the
- *   misleading function names. The program demonstrates the GCD
- *   calculation by finding the GCD of 48 and 24, which outputs 24.
+ *   (`gcd_rec` and `gcd_it`) implementing identical iterative
+ *   approaches despite their misleading names suggesting one should be
+ *   recursive.
  */
  //Libraries
 #include <stdio.h>

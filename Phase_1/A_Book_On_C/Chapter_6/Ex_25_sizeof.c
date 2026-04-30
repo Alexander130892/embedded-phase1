@@ -1,15 +1,15 @@
 /*
  * File:    Ex_25_sizeof.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the sizeof operator in C by printing the
- *   sizes of different data types including string arrays, pointers,
- *   integer arrays, and double arrays, while also showing how array
- *   parameters are treated as pointers in function calls. The file
- *   includes additional unused functions for arithmetic operations on
- *   arrays representing large numbers stored as digit arrays.
+ *   This file demonstrates how the sizeof operator works differently
+ *   with arrays versus pointers, showing that array names retain size
+ *   information locally but decay to pointers when passed to
+ *   functions. It also includes unused helper functions for performing
+ *   arithmetic operations on large numbers represented as digit
+ *   arrays.
  */
 //Libraries
 #include <stdio.h>

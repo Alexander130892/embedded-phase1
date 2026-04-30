@@ -1,13 +1,13 @@
 /*
  * File:    Ex_27_struct_equality.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates struct assignment and the fact that direct
- *   equality comparison between struct instances is not allowed in C,
- *   showing that while structs can be assigned to each other (copying
- *   all members), they cannot be compared using the == operator.
+ *   This file demonstrates that while you can assign one struct to
+ *   another in C (copying all member values), you cannot directly
+ *   compare structs for equality using the == operator, which would
+ *   result in a compilation error.
  */
  //Libraries
 #include <stdio.h>

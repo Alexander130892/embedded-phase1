@@ -1,15 +1,15 @@
 /*
  * File:    strlen_.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a custom version of the standard C library
- *   strlen() function that calculates and returns the length of a
- *   null-terminated string by iterating through each character until
- *   it reaches the null terminator. The implementation demonstrates
- *   the basic string length calculation algorithm with a test case
- *   using the alphabet string.
+ *   strlen() function that counts and returns the number of characters
+ *   in a null-terminated string. The implementation uses a simple loop
+ *   to iterate through the string until it reaches the null
+ *   terminator, demonstrating the basic algorithm behind string length
+ *   calculation.
  */
  //Libraries
 #include <stdio.h>

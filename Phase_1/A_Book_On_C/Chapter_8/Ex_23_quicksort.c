@@ -1,15 +1,15 @@
 /*
  * File:    Ex_23_quicksort.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a quicksort algorithm to sort an array of one
- *   million random integers (0-9), using a median-of-three pivot
- *   selection strategy and custom macros for swapping and ordering
- *   elements. The program prints a sample of the array before and
- *   after sorting, showing the first 10, middle 10, and last 10
- *   elements rather than the entire array.
+ *   This C program implements the quicksort algorithm to sort an array
+ *   of 1,000,000 random integers (0-9), using a median-of-three pivot
+ *   selection strategy for improved performance. The program includes
+ *   a custom print function that displays only the first 10, middle
+ *   10, and last 10 elements of the array before and after sorting to
+ *   avoid overwhelming output.
  */
 //write pack into one line
 

@@ -1,14 +1,14 @@
 /*
  * File:    Ex_04_shift_signed.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the behavior of right bit-shifting
- *   operations on signed versus unsigned integers, specifically
- *   showing whether zeros or ones are shifted in during the operation.
- *   It includes utility functions for cyclic bit shifting and printing
- *   binary representations of values.
+ *   This C program demonstrates the difference between arithmetic and
+ *   logical right shift operations on signed versus unsigned integers
+ *   by comparing how -1 is shifted in each case and printing the
+ *   binary representations. It also includes a cyclic shift function
+ *   that rotates bits within a short integer.
  */
 //Libraries
 #include <stdio.h>

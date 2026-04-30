@@ -1,15 +1,17 @@
 /*
  * File:    Ex_22.quicksort_test.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements and tests a quicksort algorithm on an array
- *   of 1 million random integers, using a median-of-three pivot
- *   selection strategy with fallback logic for arrays with duplicate
- *   elements. The program displays a sample of values from the
- *   beginning, middle, and end of the array both before and after
- *   sorting to demonstrate the algorithm's effectiveness.
+ *   This file tests a quicksort algorithm implementation by generating
+ *   an array of 1,000,000 random integers, sorting them using
+ *   quicksort, and displaying a sample of elements from the beginning,
+ *   middle, and end of the array before and after sorting. The
+ *   implementation uses a sophisticated pivot selection strategy that
+ *   chooses the median of three values or finds a suitable pivot by
+ *   scanning the array to handle cases where all elements might be
+ *   equal.
  */
 //write pack into one line
 

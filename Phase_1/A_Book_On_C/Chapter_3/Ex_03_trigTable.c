@@ -1,16 +1,15 @@
 /*
  * File:    Ex_03_trigTable.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file generates and displays a table of trigonometric function
- *   values (sine, cosine, and tangent) for angles from 0 to 360
- *   degrees in increments of 18 degrees. The program incorrectly
- *   treats the angle values as radians when calling the math
- *   functions, which will produce mathematically incorrect results
- *   since the math library expects radian input but the loop uses
- *   degree values.
+ *   values (sine, cosine, tangent) for angles from 0 to 360 degrees in
+ *   increments of 18 degrees. The program incorrectly treats the angle
+ *   values as radians when passed to the math functions, which will
+ *   produce unexpected results since the angles should be converted
+ *   from degrees to radians first.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_42_f_ptr.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program demonstrates function pointers by passing the
- *   addresses of the `strcmp` function and the `main` function to a
- *   helper function that prints their memory addresses, with special
- *   handling to identify when the `strcmp` function is passed.
+ *   This file demonstrates function pointers in C by passing function
+ *   addresses (strcmp and main) to a function that prints their memory
+ *   addresses, with special handling to identify the strcmp function
+ *   specifically.
  */
 //Libraries
 #include <stdio.h>

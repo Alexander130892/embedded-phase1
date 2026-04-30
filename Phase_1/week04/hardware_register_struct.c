@@ -1,15 +1,15 @@
 /*
  * File:    hardware_register_struct.c
  * Author:  Alexander130892
- * Date:    3-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates how to use a C union with bit fields to
- *   model a hardware register, allowing access to the same 16-bit data
- *   either as a raw value or as individual bit fields (ACK, INT flags
- *   and an 8-bit MEM field). It tests various operations including
- *   setting individual bits, boundary conditions, and overflow
- *   behavior to verify the bit field implementation works correctly.
+ *   This file demonstrates how to use a C union with bitfields to
+ *   represent a hardware register, allowing access to the same 16-bit
+ *   data both as a raw value and as individual named bit fields (ACK,
+ *   INT, and MEM). It tests various operations including
+ *   reading/writing through both interfaces, flag manipulation,
+ *   boundary conditions, and overflow behavior of the bitfields.
  */
  //Libraries
 #include <stdio.h>

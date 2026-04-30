@@ -1,13 +1,13 @@
 /*
  * File:    Ex_15_char_sizeof.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates the sizeof operator behavior with char
  *   variables and expressions in C, showing how character literals are
  *   treated as integers and how integer promotion affects the size of
- *   char arithmetic operations.
+ *   arithmetic operations involving chars.
  */
  //Libraries
 #include <stdio.h>

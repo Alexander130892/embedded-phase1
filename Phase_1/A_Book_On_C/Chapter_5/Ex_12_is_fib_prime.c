@@ -1,14 +1,13 @@
 /*
  * File:    Ex_12_is_fib_prime.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program calculates Fibonacci numbers for positions 3
- *   through 19 and checks whether both the Fibonacci number and its
- *   position index are prime numbers. It prints formatted output
- *   showing each Fibonacci number, its primality status, and whether
- *   the corresponding position number is also prime.
+ *   This C program generates the first 17 Fibonacci numbers (3rd
+ *   through 19th) and checks whether each Fibonacci number and its
+ *   corresponding position number are prime, displaying the results in
+ *   a formatted output.
  */
  //Libraries
 #include <stdio.h>

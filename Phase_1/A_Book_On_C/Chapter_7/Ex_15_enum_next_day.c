@@ -1,14 +1,14 @@
 /*
  * File:    Ex_15_enum_next_day.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program takes a date input (day and month as integers) and
- *   calculates the next day, handling month transitions when reaching
- *   the end of a month. It uses an enumerated type for months and
- *   lookup tables for month names and days per month, though it
- *   doesn't account for leap years in February.
+ *   This C program takes a date input (day and month as integers) and
+ *   calculates the next day using enums for months and arrays for
+ *   month names and days per month. It handles month transitions when
+ *   the current day is the last day of the month, incrementing to day
+ *   1 of the next month.
  */
 //Libraries
 #include <stdio.h>

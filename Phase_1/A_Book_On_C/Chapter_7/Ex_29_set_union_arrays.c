@@ -1,13 +1,14 @@
 /*
- * File:    Ex_24_condensed_pack.c
+ * File:    Ex_29_set_union_arrays.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program demonstrates bit manipulation by packing four
- *   individual char values into a single unsigned integer using left
- *   shifts and bitwise OR operations, then prints the resulting bit
- *   pattern with spaces between each byte.
+ *   This file implements a bit vector-based set data structure using
+ *   arrays of unsigned integers, providing operations like union,
+ *   intersection, and complement on sets of integers. It demonstrates
+ *   the set union operation by creating two sets, adding elements to
+ *   them, computing their union, and displaying the result.
  */
 //write pack into one line
 #include <stdio.h>

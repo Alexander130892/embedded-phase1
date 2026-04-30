@@ -1,14 +1,14 @@
 /*
  * File:    Ex_17_p_incr.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates the difference between pointer increment
  *   (`*p++`) and value increment (`(*p)++`) by first printing
- *   characters from a string while advancing the pointer, then
- *   printing and incrementing each character's ASCII value while
- *   keeping the pointer position fixed.
+ *   characters from a string "abc" while advancing the pointer, then
+ *   printing the same characters while incrementing their ASCII values
+ *   in place, resulting in the string being modified to "bcd".
  */
 //Libraries
 #include <stdio.h>

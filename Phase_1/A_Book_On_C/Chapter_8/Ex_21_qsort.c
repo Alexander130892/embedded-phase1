@@ -1,14 +1,14 @@
 /*
  * File:    Ex_21_qsort.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates the qsort() function by generating
- *   random arrays of characters and floats, then sorting them using
- *   custom comparison functions - characters are sorted
- *   lexicographically, while floats are sorted first by their
- *   fractional parts and then by their decimal (integer) parts.
+ *   This file demonstrates the use of C's qsort() function by sorting
+ *   arrays of random characters lexicographically and arrays of random
+ *   floats by their fractional parts and decimal parts using custom
+ *   comparison functions. It uses macros to generate random data and
+ *   display the arrays before and after sorting operations.
  */
 //write pack into one line
 

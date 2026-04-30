@@ -1,15 +1,13 @@
 /*
  * File:    Ex_07_intstring.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates Binary Coded Decimal (BCD) packing and
- *   unpacking, converting decimal digit strings into compact 32-bit
- *   representations where each digit occupies 4 bits, then recovering
- *   the original string. It includes utility functions for multi-chunk
- *   BCD processing and bit visualization, with the main function
- *   showcasing the pack/unpack cycle on the string "12345678".
+ *   This C program demonstrates Binary Coded Decimal (BCD) encoding
+ *   and decoding by packing a numeric string "12345678" into a 32-bit
+ *   integer where each decimal digit occupies 4 bits, then unpacking
+ *   it back to verify the process works correctly.
  */
 //Libraries
 #include <stdio.h>

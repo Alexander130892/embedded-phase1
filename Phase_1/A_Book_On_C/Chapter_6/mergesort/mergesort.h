@@ -1,15 +1,13 @@
 /*
  * File:    mergesort.h
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This header file declares functions for implementing the merge
- *   sort algorithm, including the main sorting function, a merge
- *   helper function for combining sorted arrays, and a utility
- *   function for printing arrays.
+ *   This header file declares the interface for a merge sort
+ *   implementation, including functions to sort an integer array,
+ *   merge two sorted arrays, and print an array.
  */
-
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>

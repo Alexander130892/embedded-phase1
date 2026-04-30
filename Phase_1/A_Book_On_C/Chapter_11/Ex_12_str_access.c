@@ -1,14 +1,15 @@
 /*
  * File:    Ex_12_str_access.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates different behaviors when accessing
- *   string characters with sscanf, writing "aaa" to tmp1 file (since
- *   sscanf always reads from the start of the string) and "abc" to
- *   tmp2 file (since the pointer is incremented to read each
- *   successive character).
+ *   This C program demonstrates different string access methods by
+ *   reading characters from a string using sscanf with a fixed pointer
+ *   versus an incrementing pointer, writing the results to two
+ *   separate files to show that the fixed pointer repeatedly reads the
+ *   same character while the incrementing pointer reads each character
+ *   sequentially.
  */
 #include <stdio.h>
 #include <time.h>

@@ -1,15 +1,16 @@
 /*
  * File:    NeuralNet_MultipleOutputs.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C file implements a neural network with one hidden layer that
- *   simultaneously learns to compute five different Boolean logic
- *   operations (OR, XOR, NOR, AND, NAND) from the same two binary
- *   inputs. The network uses backpropagation with sigmoid activation
- *   to train on all four possible input combinations until achieving a
- *   90% success rate across all operations.
+ *   This file implements a multi-layer perceptron neural network that
+ *   learns to simultaneously compute five different logical operations
+ *   (OR, XOR, NOR, AND, NAND) from two binary inputs using
+ *   backpropagation training. The network uses a single hidden layer
+ *   with 6 neurons and sigmoid activation to map all four possible
+ *   input combinations to their corresponding truth table outputs for
+ *   each logical operation.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_06_print_test.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file tests the behavior of the logical NOT operator (!) in C
- *   by printing the results of various expressions involving negation
- *   of characters and integers with different combinations of logical
- *   and arithmetic operators.
+ *   by printing the results of various logical expressions involving
+ *   characters and integers, demonstrating how the operator converts
+ *   non-zero values to 0 and zero values to 1.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_44_F_ptr.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates different ways to call functions using
- *   function pointer syntax and excessive parentheses, creating a
- *   chain of function calls from f() to g() to h() that each print a
- *   greeting message.
+ *   This C program demonstrates different syntactic ways to call
+ *   functions using function pointers and excessive
+ *   parentheses/dereference operators, with functions f, g, and h each
+ *   printing a message and calling the next function in sequence.
  */
 //Libraries
 #include <stdio.h>

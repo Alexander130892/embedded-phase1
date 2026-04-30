@@ -1,15 +1,15 @@
 /*
  * File:    parser.c
  * Author:  Alexander130892
- * Date:    22-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a command parser that processes text commands
- *   received via UART to control LED and PWM functions on an embedded
- *   system. It parses commands like "led on/off", "pwm [0-100]", and
- *   "status", validates their arguments, and executes the
- *   corresponding handler functions while sending feedback messages
- *   over UART.
+ *   This file implements a command parser that processes text-based
+ *   commands received via UART, supporting "led", "pwm", and "status"
+ *   commands with appropriate argument validation. It uses a command
+ *   table structure to map command strings to their respective handler
+ *   functions, which control LED operations and provide system status
+ *   feedback through UART communication.
  */
 #include "parser.h"
 #include "uart.h"

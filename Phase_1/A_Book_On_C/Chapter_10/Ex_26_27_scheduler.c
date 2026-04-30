@@ -1,15 +1,14 @@
 /*
  * File:    Ex_26_27_scheduler.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a simple job scheduler that reads job
- *   requests from input, categorizes them into four separate queues
- *   (A, B, C, D) based on input characters, and then processes each
- *   queue in FIFO order to display the scheduled jobs. It uses a
- *   linked-list-based queue data structure to manage process IDs for
- *   each scheduler category.
+ *   This file implements a job scheduler that reads job requests from
+ *   input and assigns them to four different queues (A, B, C, D) based
+ *   on input characters, then processes and displays each queue's jobs
+ *   in FIFO order. It uses a linked-list-based queue data structure to
+ *   manage job scheduling for four separate schedulers.
  */
  //Libraries
 #include <stdio.h>

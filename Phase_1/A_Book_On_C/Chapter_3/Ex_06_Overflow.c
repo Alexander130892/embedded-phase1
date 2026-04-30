@@ -1,13 +1,14 @@
 /*
  * File:    Ex_06_Overflow.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates integer overflow by adding two large
- *   numbers (2,000,000,000 each) that exceed the maximum value for a
- *   32-bit unsigned integer, then prints the result as both signed and
- *   unsigned integers to show the overflow behavior.
+ *   numbers (2 billion each) that exceed the range of a 32-bit
+ *   unsigned integer, then prints the result using both signed and
+ *   unsigned format specifiers to show how overflow affects the
+ *   displayed values.
  */
  //Libraries
 #include <stdio.h>

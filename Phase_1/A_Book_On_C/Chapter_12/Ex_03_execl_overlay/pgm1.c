@@ -1,16 +1,14 @@
 /*
  * File:    pgm1.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a simple program that prints its own name
- *   followed by all command-line arguments passed to it, separated by
- *   spaces and ending with a newline.
+ *   This program prints its own name followed by all command-line
+ *   arguments passed to it, then exits successfully. Despite defining
+ *   N as 13 and declaring fork(), the program only uses basic I/O to
+ *   echo the command line.
  */
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

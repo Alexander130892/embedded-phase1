@@ -1,15 +1,14 @@
 /*
  * File:    Ex_28_count_file.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program reads characters from standard input and counts
- *   different character types (blanks, digits, lowercase letters,
- *   uppercase letters, newlines, and others), then displays the counts
- *   in a formatted table with totals. It processes input until EOF is
- *   reached and categorizes each character into one of six distinct
- *   categories.
+ *   This program reads characters from standard input until EOF and
+ *   counts the occurrences of different character types (blanks,
+ *   digits, lowercase letters, uppercase letters, newlines, and
+ *   others), then displays the results in a formatted table with
+ *   totals.
  */
  //Libraries
 #include <stdio.h>

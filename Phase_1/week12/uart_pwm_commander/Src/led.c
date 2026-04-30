@@ -7,7 +7,8 @@
  *   This file implements LED control functions for an STM32F446RE
  *   microcontroller, configuring GPIO pin PA0 for PWM output using
  *   Timer 2 and providing functions to turn the LED on/off, check its
- *   state, and make it blink by toggling the timer connection.
+ *   state, and make it blink by manipulating the PWM duty cycle and
+ *   timer settings.
  */
 #include "led.h"
 #include "timer.h"

@@ -1,14 +1,14 @@
 /*
  * File:    Ex_36_birthdaygame copy.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program simulates the famous birthday paradox problem by
- *   running Monte Carlo simulations to calculate the probability that
- *   at least two people share the same birthday in groups of varying
- *   sizes (2 to 49 people). It performs one million trials for each
- *   group size and outputs the success rate as a percentage.
+ *   This file simulates the birthday paradox by running Monte Carlo
+ *   simulations to calculate the probability that at least two people
+ *   share the same birthday in groups of varying sizes (2-49 people).
+ *   It performs one million trials for each group size and outputs the
+ *   success rate as a percentage for each scenario.
  */
  //Libraries
 #include <stdio.h>

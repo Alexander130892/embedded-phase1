@@ -1,14 +1,15 @@
 /*
  * File:    Ex_08_eps.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program tests floating-point precision by checking if the
- *   expression `1.0 < 1.0 + eps` evaluates to true when eps is set to
- *   1e-15, printing "True" or "False" based on whether the small
- *   epsilon value is significant enough to be detected in
- *   floating-point arithmetic.
+ *   This file tests floating-point precision by checking whether
+ *   adding a very small epsilon value (1e-15) to 1.0 produces a number
+ *   that is distinguishable from 1.0 in floating-point arithmetic. It
+ *   prints "True" if the comparison detects a difference or "False" if
+ *   the epsilon is too small to be represented in the floating-point
+ *   format.
  */
  //Libraries
 #include <stdio.h>

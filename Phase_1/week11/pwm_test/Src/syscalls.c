@@ -1,17 +1,18 @@
 /*
  * File:    syscalls.c
  * Author:  Alexander130892
- * Date:    29-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file provides minimal system call implementations for STM32
- *   microcontrollers to support the Newlib C library, enabling basic
- *   I/O operations and stub implementations for POSIX functions. Most
- *   functions return error codes since advanced operating system
- *   features like file systems and process management are not
- *   available on bare-metal microcontrollers.
+ *   microcontrollers to enable C standard library functions to work
+ *   with the Newlib C library. Most functions are stubbed out to
+ *   return error codes since typical POSIX operations like file
+ *   systems and process management don't apply to bare-metal embedded
+ *   systems, with only basic I/O operations (_read/_write) providing
+ *   actual functionality through weak-linked character input/output
+ *   functions.
  */
-
 /**
  ******************************************************************************
  * @file      syscalls.c

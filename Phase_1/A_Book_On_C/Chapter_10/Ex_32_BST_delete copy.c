@@ -1,15 +1,15 @@
 /*
  * File:    Ex_32_BST_delete copy.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C file implements a binary search tree (BST) data structure
- *   with node deletion functionality, creating a BST from an array and
- *   demonstrating deletion of a specific node while maintaining BST
- *   properties. The program tests various tree operations including
- *   counting nodes, leaves, depth, and converting the BST back to a
- *   sorted array before and after deletion.
+ *   This file implements a Binary Search Tree (BST) with node deletion
+ *   functionality, creating a BST from an array and testing various
+ *   tree operations including counting nodes, leaves, and depth. The
+ *   main focus is demonstrating BST node deletion using standard cases
+ *   (leaf, one child, two children) and verifying the tree structure
+ *   before and after deletion operations.
  */
  //Libraries
 #include <stdio.h>

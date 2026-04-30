@@ -1,12 +1,12 @@
 /*
  * File:    stm32f46re.h
  * Author:  Alexander130892
- * Date:    22-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This header file defines base memory addresses for key peripherals
- *   (GPIO Port A, USART2, and RCC) on an STM32F46RE microcontroller,
- *   providing the foundation for low-level hardware register access.
+ *   (GPIO, USART, and RCC) on an STM32F46RE microcontroller, providing
+ *   symbolic constants for low-level hardware register access.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

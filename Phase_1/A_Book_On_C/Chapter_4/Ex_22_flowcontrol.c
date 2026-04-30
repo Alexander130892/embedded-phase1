@@ -1,12 +1,15 @@
 /*
  * File:    Ex_22_flowcontrol.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates basic flow control in C by using a for loop
  *   to iterate through values 1-3 and a switch statement to execute
- *   different printf statements based on each iteration value.
+ *   different print statements based on each iteration value. It
+ *   serves as a simple educational example showing how switch-case
+ *   statements work with proper break statements to prevent
+ *   fall-through behavior.
  */
  //Libraries
 #include <stdio.h>

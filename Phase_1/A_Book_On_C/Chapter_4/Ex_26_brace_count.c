@@ -1,15 +1,15 @@
 /*
  * File:    Ex_26_brace_count.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program reads input character by character, counts matching
- *   pairs of curly braces `{}` and parentheses `()`, and outputs the
- *   original text while marking syntax errors with `?` when closing
- *   braces appear before their corresponding opening braces. After
- *   processing all input, it reports whether the braces are properly
- *   balanced and suggests missing closing braces if needed.
+ *   This file reads input character by character and counts matching
+ *   pairs of braces `{}` and parentheses `()`, echoing the input while
+ *   marking imbalanced braces with a `?` character and providing error
+ *   messages indicating missing opening or closing braces. It serves
+ *   as a basic syntax checker for brace and parenthesis matching in
+ *   text input.
  */
  //Libraries
 #include <stdio.h>
