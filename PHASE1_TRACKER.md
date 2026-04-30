@@ -199,18 +199,18 @@ Week 12 — Deliverable + Documentation
  - [x]  Exercise: integrate UART command parser — accept pwm <0-100> to set duty 
  - [x]  Exercise: wire together blink, UART, timer, interrupt code into a single project
  - [x]  Refactor into clean modules: gpio.c, uart.c, timer.c, main.c
- - [ ] R3 Ch.5 — Debugging: use the SFRs View to verify your register values, set watchpoints on key variables
+ - [x] R3 Ch.5 — Debugging: use the SFRs View to verify your register values, set watchpoints on key variables
  - [x] Final integration test: all features working together on hardware
- - [ ] Write README.md covering:
-    - [ ] Project overview and feature list
-    - [ ] Hardware setup (board, wiring diagram or description)
-    - [ ] Build instructions (make, flash with OpenOCD/STM32CubeProgrammer)
-    - [ ] Design decisions: polling vs interrupts, buffer strategy, register choices
-    - [ ] Lessons learned / what you'd do differently
-    - [ ] Add schematic or ASCII wiring diagram
- - [ ] Tag the repo: git tag v1.0-phase1
- - [ ] Clean up dead code, add comments where missing
- - [ ] Write a short Phase 1 retrospective (NOTES.md)
+ - [x] Write README.md covering:
+    - [x] Project overview and feature list
+    - [x] Hardware setup (board, wiring diagram or description)
+    - [x] Build instructions (make, flash with OpenOCD/STM32CubeProgrammer)
+    - [x] Design decisions: polling vs interrupts, buffer strategy, register choices
+    - [x] Lessons learned / what you'd do differently
+    - [x] Add schematic or ASCII wiring diagram
+ - [x] Tag the repo: git tag v1.0-phase1
+ - [x] Clean up dead code, add comments where missing
+ - [x] Write a short Phase 1 retrospective (NOTES.md)
  - [ ] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
 
 🏁 M6 checkpoint: GitHub repo published. Phase 1 complete. ✅
@@ -232,7 +232,7 @@ Week 12 — Deliverable + Documentation
 | 9 | Timers | ✅ Done |
 | 10 | Interrupts + NVIC | ✅ Done |
 | 11 | PWM + Integration | ✅ Done |
-| 12 | Deliverable + Docs | ⬜ Not started |
+| 12 | Deliverable + Docs | ✅ Done |
 
 > Update statuses to: `🟡 In progress` → `✅ Done`
 
