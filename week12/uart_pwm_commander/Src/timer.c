@@ -1,11 +1,15 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    30-4-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements timer-based functionality for an STM32F446RE
+ *   microcontroller, providing PWM signal generation at 1kHz frequency
+ *   and LED blinking every 500ms using Timer 2 interrupts. It also
+ *   includes a millisecond counter function that tracks timer
+ *   overflows to provide basic timing capabilities.
  */
-
-
 #include "timer.h"
 #include "led.h"
 #include "stm32f446re.h"

@@ -1,18 +1,17 @@
 /*
  * File:    parser.c
  * Author:  Alexander130892
- * Date:    29-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a command parser that processes text commands
- *   ("led", "pwm", "status") and dispatches them to appropriate
- *   handler functions for controlling hardware peripherals. The
- *   handlers currently output test messages to simulate UART
- *   communication, with the LED handler accepting on/off arguments,
- *   PWM handler validating numeric values 0-100, and status handler
- *   taking no arguments.
+ *   This file implements a command parser for an STM32 microcontroller
+ *   that processes text commands received via UART to control LED
+ *   operations including on/off switching, PWM duty cycle adjustment,
+ *   and status reporting. The parser uses a command table structure to
+ *   map command strings ("led", "pwm", "status") to their respective
+ *   handler functions and validates arguments before executing the
+ *   requested operations.
  */
-
 #include "stm32f446re.h"
 #include "timer.h"
 #include "parser.h"

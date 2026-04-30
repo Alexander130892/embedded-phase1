@@ -1,10 +1,14 @@
 /*
- * led.c
+ * File:    led.c
+ * Author:  Alexander130892
+ * Date:    30-4-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements LED control functions for an STM32F446RE
+ *   microcontroller, configuring GPIO pin PA0 for PWM output using
+ *   Timer 2 and providing functions to turn the LED on/off, check its
+ *   state, and make it blink by toggling the timer connection.
  */
-
 #include "led.h"
 #include "timer.h"
 #include "stm32f446re.h"

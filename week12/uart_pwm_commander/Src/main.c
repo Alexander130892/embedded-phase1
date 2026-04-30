@@ -1,3 +1,17 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    30-4-2026
+ *
+ * Description:
+ *   This is an STM32F446RE microcontroller program that implements a
+ *   command-line interface over UART, receiving text commands from a
+ *   user, echoing them back, and parsing them to control various
+ *   peripherals including PWM output, LED blinking, and timers. The
+ *   program runs in an infinite loop waiting for user input after
+ *   initializing the system clocks and peripheral modules.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c
