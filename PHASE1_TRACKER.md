@@ -184,40 +184,34 @@ Week 11 — PWM + Integration
 
 ~10 hrs | R3 Ch.11.3 (PWM sections) + original code
 
-
 - [x]  R3 Ch.11.3.5 — Input Capture mode: read for context, understand the capture/compare unit
 - [x]  R3 Ch.11.3.6 — Output Compare mode: the foundation PWM builds on
 - [x]  R3 Ch.11.3.7 — PWM generation: CCR, PWM1 vs PWM2 mode, duty cycle formula
 - [x]  Reference Manual: TIMx_CCMRx and TIMx_CCRx registers for your timer
 - [x]  Exercise: configure a timer in PWM mode — set duty cycle via CCR
 - [x]  Exercise: drive an LED with variable brightness (fade in/out)
-- [ ]  Exercise: integrate UART command parser — accept pwm <0-100> to set duty cycle live
-- [ ]  Exercise: wire together blink, UART, timer, interrupt code into a single project
-- [ ]  Refactor into clean modules: gpio.c, uart.c, timer.c, main.c
-- [ ] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
-- [ ]  Commit to week11/pwm_integration/
+cycle live
+- [x]  Commit to week11/pwm_integration/
 
 Week 12 — Deliverable + Documentation
 
 ~10 hrs | Polish, README, reflection
-
-
+ - [x]  Exercise: integrate UART command parser — accept pwm <0-100> to set duty 
+ - [x]  Exercise: wire together blink, UART, timer, interrupt code into a single project
+ - [x]  Refactor into clean modules: gpio.c, uart.c, timer.c, main.c
  - [ ] R3 Ch.5 — Debugging: use the SFRs View to verify your register values, set watchpoints on key variables
- - [ ] Final integration test: all features working together on hardware
+ - [x] Final integration test: all features working together on hardware
  - [ ] Write README.md covering:
-
- - [ ] Project overview and feature list
- - [ ] Hardware setup (board, wiring diagram or description)
- - [ ] Build instructions (make, flash with OpenOCD/STM32CubeProgrammer)
- - [ ] Design decisions: polling vs interrupts, buffer strategy, register choices
- - [ ] Lessons learned / what you'd do differently
-
-
- - [ ] Add schematic or ASCII wiring diagram
+    - [ ] Project overview and feature list
+    - [ ] Hardware setup (board, wiring diagram or description)
+    - [ ] Build instructions (make, flash with OpenOCD/STM32CubeProgrammer)
+    - [ ] Design decisions: polling vs interrupts, buffer strategy, register choices
+    - [ ] Lessons learned / what you'd do differently
+    - [ ] Add schematic or ASCII wiring diagram
  - [ ] Tag the repo: git tag v1.0-phase1
  - [ ] Clean up dead code, add comments where missing
  - [ ] Write a short Phase 1 retrospective (NOTES.md)
-
+ - [ ] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
 
 🏁 M6 checkpoint: GitHub repo published. Phase 1 complete. ✅
 
@@ -236,8 +230,8 @@ Week 12 — Deliverable + Documentation
 | 7 | UART TX | ✅ Done |
 | 8 | UART RX + Command Parser | ✅ Done |
 | 9 | Timers | ✅ Done |
-| 10 | Interrupts + NVIC | ⬜ Not started |
-| 11 | PWM + Integration | ⬜ Not started |
+| 10 | Interrupts + NVIC | ✅ Done |
+| 11 | PWM + Integration | ✅ Done |
 | 12 | Deliverable + Docs | ⬜ Not started |
 
 > Update statuses to: `🟡 In progress` → `✅ Done`
