@@ -1,3 +1,16 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    1-5-2026
+ *
+ * Description:
+ *   This AVR microcontroller program configures pin PC2 as an input
+ *   with internal pull-up resistor to detect active-low button
+ *   presses, with incomplete code that should toggle an LED when the
+ *   button is pressed but currently only contains an empty comment
+ *   placeholder.
+ */
+
 #include <avr/io.h>
 #include <util/delay.h>
 

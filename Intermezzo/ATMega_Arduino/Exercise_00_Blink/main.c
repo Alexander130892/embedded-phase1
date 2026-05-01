@@ -1,3 +1,14 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    1-5-2026
+ *
+ * Description:
+ *   This AVR microcontroller program continuously blinks an LED
+ *   connected to pin PB5 by turning it on and off every 500
+ *   milliseconds in an infinite loop.
+ */
+
 #include <avr/io.h>
 #include <util/delay.h>
 

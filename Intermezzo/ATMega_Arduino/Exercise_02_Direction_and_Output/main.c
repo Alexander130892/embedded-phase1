@@ -1,3 +1,15 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    1-5-2026
+ *
+ * Description:
+ *   This AVR microcontroller program configures pins PB5 and PB4 as
+ *   outputs, sets PB5 high and PB4 low, then enters an infinite loop.
+ *   It demonstrates basic GPIO pin configuration and control using
+ *   bitmask operations.
+ */
+
 #include <avr/io.h>
 #include <util/delay.h>
 
