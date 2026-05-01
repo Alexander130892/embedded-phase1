@@ -1,7 +1,7 @@
 /*
  * File:    Ex_39_my_echo.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a simple echo program that prints all

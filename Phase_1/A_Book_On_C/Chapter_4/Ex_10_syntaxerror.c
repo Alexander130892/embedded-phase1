@@ -1,14 +1,13 @@
 /*
  * File:    Ex_10_syntaxerror.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates a simple do-while loop that calculates and
- *   prints values using the formula j=2*i+3 for i from 0 to 9,
- *   producing output from 3 to 21. Despite its filename suggesting a
- *   syntax error, the code compiles and runs correctly, though it
- *   contains unused constants and headers.
+ *   This C file demonstrates a simple do-while loop that calculates
+ *   and prints the results of the formula j = 2*i + 3 for values of i
+ *   from 0 to 9. The file contains a syntax error as it's missing a
+ *   return statement in the main function.
  */
  //Libraries
 #include <stdio.h>

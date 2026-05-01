@@ -1,14 +1,13 @@
 /*
  * File:    Ex_04_fortune.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file creates a child process that executes the fortune
- *   program to display a random fortune/quote, while the parent
- *   process immediately exits.
+ *   This file creates a child process that executes the 'fortune'
+ *   program to display a random quote or saying, while the parent
+ *   process exits immediately.
  */
-
 // Compute Fibonacci numbers and print time asynchronously
 
 #include <stdio.h>

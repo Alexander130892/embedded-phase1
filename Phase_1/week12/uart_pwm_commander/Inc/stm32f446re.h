@@ -4,12 +4,11 @@
  * Date:    30-4-2026
  *
  * Description:
- *   This header file defines memory addresses and register offsets for
- *   various peripherals on the STM32F446RE microcontroller, including
- *   GPIO ports, timers, USART, NVIC interrupt controller, and system
- *   configuration registers. It serves as a hardware abstraction layer
- *   providing direct register access constants for low-level
- *   peripheral programming without using vendor libraries.
+ *   This header file defines memory addresses, register offsets, and
+ *   bit positions for various peripherals (timers, GPIO, NVIC, USART,
+ *   etc.) on the STM32F446RE microcontroller. It serves as a hardware
+ *   abstraction layer providing symbolic constants for low-level
+ *   register access instead of using raw memory addresses.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

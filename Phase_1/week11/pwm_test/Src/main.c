@@ -1,17 +1,16 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    29-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This STM32F446RE microcontroller program generates a PWM signal on
- *   pin PA0 using Timer 2 at 1kHz frequency, with a fade function that
- *   appears to modify the duty cycle over time based on millisecond
- *   timing. The code uses direct register manipulation to configure
- *   clocks, GPIO alternate function mode, and PWM generation without
- *   using HAL libraries.
+ *   GPIO pin PA0 using Timer 2 and implements a fading effect by
+ *   continuously calling a fade function that likely modulates the PWM
+ *   duty cycle over time. The PWM operates at 1kHz frequency with
+ *   configurable duty cycle control, and includes a millisecond timing
+ *   function based on timer overflow counting.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

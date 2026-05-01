@@ -1,14 +1,14 @@
 /*
  * File:    strcat_.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a custom string concatenation function
- *   `strcat_` that appends the second string to the end of the first
- *   string, modifying the first string in place. The program
- *   demonstrates this functionality by concatenating two strings and
- *   printing the results before and after the operation.
+ *   `strcat_` that appends the contents of a second string to the end
+ *   of a first string, modifying the first string in place. The
+ *   program demonstrates this functionality by concatenating two
+ *   strings and printing the results before and after the operation.
  */
  //Libraries
 #include <stdio.h>

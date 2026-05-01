@@ -1,13 +1,13 @@
 /*
  * File:    Ex_05_ptradrr.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates memory addresses of local variables by
- *   declaring three char variables and three char pointers, then
- *   printing their memory addresses as unsigned long integers to show
- *   how variables are arranged in memory.
+ *   This file demonstrates memory addresses by declaring several
+ *   character variables and character pointers, then printing their
+ *   memory addresses as unsigned long integers to show how variables
+ *   are allocated in memory.
  */
  //Libraries
 #include <stdio.h>

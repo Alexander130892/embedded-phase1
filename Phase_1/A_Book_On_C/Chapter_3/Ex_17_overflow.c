@@ -1,14 +1,14 @@
 /*
  * File:    Ex_17_overflow.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates integer overflow behavior in C by
- *   performing addition and multiplication operations on the maximum
- *   unsigned integer value (UINT_MAX) and printing the results to show
- *   how the values wrap around when they exceed the maximum
- *   representable value.
+ *   This file demonstrates integer overflow behavior by performing
+ *   addition and multiplication operations on the maximum unsigned
+ *   integer value (UINT_MAX) and printing the results to show how
+ *   values wrap around when they exceed the maximum representable
+ *   value.
  */
  //Libraries
 #include <stdio.h>

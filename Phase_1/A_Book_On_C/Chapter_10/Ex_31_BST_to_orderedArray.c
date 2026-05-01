@@ -1,13 +1,13 @@
 /*
  * File:    Ex_31_BST_to_orderedArray.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This C program creates a Binary Search Tree (BST) from an array of
  *   integers and converts it back to a sorted array using in-order
  *   traversal. It also includes utility functions to count nodes,
- *   leaves, tree depth, and search for specific values in the BST.
+ *   leaves, depth, and specific values within the BST structure.
  */
  //Libraries
 #include <stdio.h>

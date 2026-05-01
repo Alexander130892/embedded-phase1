@@ -1,13 +1,14 @@
 /*
  * File:    Ex_08_search.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a simple text search utility that reads a
- *   file and prints all lines containing a specified search string. It
- *   takes two command-line arguments (search term and filename) and
- *   uses the strstr() function to find matching lines.
+ *   This C program searches for a specified string within a text file
+ *   and prints all lines containing that string to standard output. It
+ *   takes two command-line arguments (search string and filename) and
+ *   uses the strstr() function to perform case-sensitive substring
+ *   matching on each line of the file.
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,15 +1,13 @@
 /*
  * File:    Ex_29_mistery_program.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program uses a union and endian-specific hexadecimal
- *   constants to encode and decode the string "Hello, world!" by
- *   storing it as 32-bit integers and then interpreting the memory as
- *   characters. The program demonstrates how byte order affects the
- *   representation of multi-byte data in memory by printing the
- *   decoded message.
+ *   This program uses a union and endianness-specific hexadecimal
+ *   values to store and print the message "Hello, world!" by treating
+ *   the same memory location as both an array of integers and a
+ *   character string.
  */
  //Libraries
 #include <stdio.h>

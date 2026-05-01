@@ -1,13 +1,13 @@
 /*
  * File:    Ex_07_wrong.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates a common programming error by using
- *   assignment (=) instead of comparison (==) in an if statement,
- *   which will always execute the printf statement and output "2, 4,
- *   6" regardless of the intended logic.
+ *   This file contains a simple C program that demonstrates a common
+ *   programming error where an assignment operator (=) is mistakenly
+ *   used instead of a comparison operator (==) in an if statement,
+ *   causing the condition to always execute and print "2, 4, 6".
  */
  //Libraries
 #include <stdio.h>

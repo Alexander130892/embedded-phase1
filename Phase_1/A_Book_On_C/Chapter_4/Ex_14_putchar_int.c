@@ -1,14 +1,13 @@
 /*
  * File:    Ex_14_putchar_int.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the behavior of putchar() function calls
- *   within a printf statement, showing that putchar() returns an
- *   integer value (the character code) while also printing the
- *   characters to stdout, resulting in the characters being printed
- *   before their corresponding integer values.
+ *   This file demonstrates the behavior of the putchar() function by
+ *   showing that it prints characters to stdout immediately but
+ *   returns their ASCII values, which are then printed by printf in
+ *   reverse order due to function call evaluation order.
  */
  //Libraries
 #include <stdio.h>

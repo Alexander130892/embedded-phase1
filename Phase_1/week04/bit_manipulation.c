@@ -1,14 +1,14 @@
 /*
  * File:    bit_manipulation.c
  * Author:  Alexander130892
- * Date:    3-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements and demonstrates basic bit manipulation
- *   operations through macros that can set, clear, toggle, and read
- *   individual bits in data values. It includes two different bit
- *   printing functions to visualize the binary representation of data
- *   and test the bit manipulation macros on an unsigned char value.
+ *   This file demonstrates bit manipulation operations using custom
+ *   macros to set, clear, toggle, and read individual bits in an
+ *   unsigned char value. It provides two different implementations for
+ *   printing binary representations and tests the bit manipulation
+ *   functionality on a sample value (0xA8).
  */
  //Libraries
 #include <stdio.h>

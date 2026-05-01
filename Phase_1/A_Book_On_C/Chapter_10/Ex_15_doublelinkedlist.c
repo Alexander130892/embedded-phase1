@@ -1,16 +1,16 @@
 /*
  * File:    Ex_15_doublelinkedlist.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a doubly-linked list data structure that
- *   stores characters, providing functions to create lists from
+ *   stores character data, providing functions to create lists from
  *   strings, insert/delete nodes at various positions, and print the
  *   list in both forward and reverse directions. The main function
  *   demonstrates the functionality by converting "TestString" to a
- *   linked list, printing it both ways, deleting a character, and
- *   cleaning up memory.
+ *   doubly-linked list, printing it both ways, deleting a character,
+ *   and cleaning up memory.
  */
  //Libraries
 #include <stdio.h>

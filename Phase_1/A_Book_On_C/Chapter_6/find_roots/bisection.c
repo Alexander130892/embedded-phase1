@@ -1,15 +1,14 @@
 /*
  * File:    bisection.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements the bisection method for finding roots of a
- *   function by recursively narrowing down an interval [a,b] where the
- *   function changes sign, stopping when the function equals zero or
- *   the interval becomes smaller than a specified epsilon tolerance.
+ *   function by recursively narrowing down an interval where the
+ *   function changes sign until the root is found within a specified
+ *   tolerance.
  */
-
 #include "find_roots.h"
 
 dbl bisection(pfdd f, dbl a, dbl b){

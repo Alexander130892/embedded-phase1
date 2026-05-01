@@ -1,12 +1,12 @@
 /*
  * File:    Ex_07_printf_literals.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates basic printf functionality by calculating
- *   and displaying the sum of two integer literals (21 + 31) within a
- *   formatted output string.
+ *   This file demonstrates basic printf formatting by calculating and
+ *   displaying the sum of two integers (21 + 31 = 52) using the %d
+ *   format specifier for integer output.
  */
  //Libraries
 #include <stdio.h>

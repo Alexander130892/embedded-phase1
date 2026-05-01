@@ -1,13 +1,16 @@
 /*
  * File:    Ex_09_printed.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates C's if-else statement association rules by
- *   testing nested conditionals where the variables i and j are both
- *   set to 7, resulting in the else clause executing and printing the
- *   result of i=i-j followed by the final value of i.
+ *   This file demonstrates C's if-else statement precedence and
+ *   associativity by testing nested conditional logic where an outer
+ *   if condition (i==1) is false, causing the entire nested if-else
+ *   block to be skipped and leaving the variable i unchanged. The
+ *   program prints the final value of i (which remains 7) to show that
+ *   no arithmetic operations were performed due to the failed initial
+ *   condition.
  */
  //Libraries
 #include <stdio.h>

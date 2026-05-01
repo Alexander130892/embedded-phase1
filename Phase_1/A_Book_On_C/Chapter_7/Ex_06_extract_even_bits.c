@@ -1,14 +1,14 @@
 /*
  * File:    Ex_06_extract_even_bits.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements two functions that extract bits at even
- *   positions (0, 2, 4, ..., 30) from a 32-bit input and pack them
- *   consecutively into a 16-bit output. The first function uses an
- *   efficient bit manipulation approach with masks and shifts, while
- *   the second uses a straightforward loop-based method.
+ *   This file extracts even-positioned bits (0, 2, 4, ..., 30) from a
+ *   32-bit integer and packs them into consecutive positions in a
+ *   16-bit result. It provides two implementations: an optimized bit
+ *   manipulation version using masks and shifts, and a straightforward
+ *   loop-based approach.
  */
 #include <stdint.h>
 

@@ -1,14 +1,15 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    22-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This STM32 microcontroller program initializes GPIO and UART
- *   communication, then enters an infinite loop that receives commands
- *   via UART, echoes them back, and parses them for execution. The
- *   program also initializes an LED and provides a command-line
- *   interface over serial communication.
+ *   This is an STM32 microcontroller main program that initializes
+ *   GPIO pins and USART2 for serial communication, then runs a
+ *   command-line interface that continuously receives commands via
+ *   UART, echoes them back, and parses them for execution. The program
+ *   configures the hardware registers directly and enters an infinite
+ *   loop to process user commands through the serial interface.
  */
 /**
  ******************************************************************************

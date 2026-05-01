@@ -1,14 +1,13 @@
 /*
  * File:    Ex_03_cyclic_shift.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a cyclic left shift operation on unsigned
- *   short integers, where bits that are shifted out from the left are
- *   rotated back in from the right, and includes a utility function to
- *   print the binary representation of the values for demonstration
- *   purposes.
+ *   This file implements a cyclic left bit shift operation on unsigned
+ *   short integers, where bits shifted out of the left end wrap around
+ *   to the right end, and includes a utility function to print the
+ *   binary representation of the values.
  */
 //Libraries
 #include <stdio.h>

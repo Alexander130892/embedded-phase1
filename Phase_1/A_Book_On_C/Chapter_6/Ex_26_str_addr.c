@@ -1,12 +1,13 @@
 /*
  * File:    Ex_26_str_addr.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates whether two string literals with identical
- *   content ("abc") are stored at the same memory address by comparing
- *   their pointer values and printing the result.
+ *   This file demonstrates string literal storage behavior in C by
+ *   comparing the addresses of two pointers assigned to identical
+ *   string literals to show whether the compiler stores them at the
+ *   same memory location or creates separate copies.
  */
 //Libraries
 #include <stdio.h>

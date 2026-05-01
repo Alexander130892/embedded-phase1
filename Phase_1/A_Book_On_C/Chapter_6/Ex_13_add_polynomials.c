@@ -1,14 +1,14 @@
 /*
  * File:    Ex_13_add_polynomials.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program adds two polynomials by adding their corresponding
- *   coefficients and stores the result in a third polynomial array. It
- *   includes a Horner's method function for polynomial evaluation but
- *   only uses the polynomial addition functionality in the main
- *   function.
+ *   This C program adds two polynomials represented as coefficient
+ *   arrays and stores the result in a third array, then prints the
+ *   coefficients of the resulting polynomial. The program also
+ *   includes a Horner's method function for polynomial evaluation,
+ *   though it's not used in the main execution.
  */
  //Libraries
 #include <stdio.h>

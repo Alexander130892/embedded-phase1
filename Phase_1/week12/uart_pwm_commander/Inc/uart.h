@@ -5,12 +5,10 @@
  *
  * Description:
  *   This header file defines the interface for UART serial
- *   communication functionality, including functions to send/receive
- *   characters and strings, along with a circular buffer
- *   implementation using head and tail pointers for buffered data
- *   handling.
+ *   communication functionality, providing functions to initialize
+ *   UART, send/receive characters and strings, and manage a circular
+ *   buffer with head/tail pointers for buffered data handling.
  */
-
 #ifndef UART_H
 #define UART_H
 

@@ -1,17 +1,14 @@
 /*
  * File:    Ex_2.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program demonstrates how printf handles null terminators by
- *   printing a string containing embedded null characters and
- *   displaying the count of characters actually printed. The printf
- *   function stops at the first null terminator, so it prints only
- *   "abc" and returns 3, even though the string literal contains more
- *   characters after the null.
+ *   This program prints a string containing null terminators and
+ *   demonstrates that printf() only outputs characters up to the first
+ *   null terminator, then displays the count of characters actually
+ *   printed (which will be 3 for "abc").
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 

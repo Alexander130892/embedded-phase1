@@ -1,15 +1,16 @@
 /*
  * File:    Ex_27_quicksort_5_element_pivot.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a quicksort algorithm that uses a 5-element
- *   median-of-five pivot selection strategy, sampling five
- *   evenly-spaced elements from the array and selecting their median
- *   as the pivot to improve performance. The implementation appears to
- *   sort in descending order based on the modified comparison
- *   operators in the swap and partition logic.
+ *   This C program implements a quicksort algorithm that uses a
+ *   5-element pivot selection strategy, where it samples 5 elements
+ *   from the array (dividing it into 4 equal parts), sorts them using
+ *   nested macros, and selects the median as the pivot. The pivot
+ *   selection logic appears to have some errors in the conditional
+ *   checks, and the sorting macros are designed to sort in descending
+ *   order rather than ascending order.
  */
 //write pack into one line
 

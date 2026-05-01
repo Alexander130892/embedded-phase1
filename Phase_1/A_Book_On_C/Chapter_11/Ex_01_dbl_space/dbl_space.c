@@ -1,14 +1,14 @@
 /*
  * File:    dbl_space.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file reads a text file specified as a command-line argument
- *   and outputs its contents to stdout with double spacing by
- *   inserting an additional newline character after each existing
- *   newline. If the wrong number of arguments is provided, it prints
- *   usage information to stderr and exits.
+ *   This C program reads a text file specified as a command-line
+ *   argument and outputs its contents to stdout with double spacing by
+ *   adding an extra newline character after each original newline. If
+ *   the wrong number of arguments is provided, it displays usage
+ *   information and exits.
  */
  //Libraries
 #include <stdio.h>

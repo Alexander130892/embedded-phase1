@@ -1,15 +1,16 @@
 /*
  * File:    Ex_23_largenumbers.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements arbitrary precision arithmetic for large
- *   numbers by storing each digit in separate array elements and
- *   performing addition and multiplication operations with manual
- *   carry handling. It demonstrates these operations by adding and
- *   multiplying predefined large integers and displaying the results
- *   in a human-readable format.
+ *   This C program performs arithmetic operations (addition and
+ *   multiplication) on large integers that are stored as arrays of
+ *   individual digits, allowing calculations beyond the range of
+ *   standard integer data types. It demonstrates big integer
+ *   arithmetic by adding two large numbers and multiplying two others,
+ *   then displaying the results with proper formatting that suppresses
+ *   leading zeros.
  */
 //Libraries
 #include <stdio.h>

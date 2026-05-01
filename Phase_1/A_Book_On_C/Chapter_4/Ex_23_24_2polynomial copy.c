@@ -1,14 +1,13 @@
 /*
  * File:    Ex_23_24_2polynomial copy.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file solves quadratic equations of the form ax²+bx+c=0 by
- *   calculating and displaying the real or complex roots using the
- *   quadratic formula. It handles special cases including linear
- *   equations (when a=0) and displays complex roots when the
- *   discriminant is negative.
+ *   This C program solves quadratic equations of the form ax²+bx+c=0
+ *   by calculating and displaying the roots, handling cases for linear
+ *   equations, real roots, and complex roots with imaginary
+ *   components.
  */
  //Libraries
 #include <stdio.h>

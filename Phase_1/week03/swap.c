@@ -1,14 +1,13 @@
 /*
  * File:    swap.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates swapping two integer values using an
- *   XOR-based bitwise operation that avoids using temporary variables.
- *   The swap function includes a guard against self-assignment and
- *   uses three XOR operations to exchange the values of two integers
- *   passed by reference.
+ *   This file demonstrates swapping two integer values using a bitwise
+ *   XOR algorithm that exchanges values without requiring a temporary
+ *   variable. The swap function includes a safety check to prevent
+ *   issues when both pointers reference the same memory location.
  */
  //Libraries
 #include <stdio.h>

@@ -1,17 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    27-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a main program for an STM32F446RE
- *   microcontroller that configures GPIO pins for LED output and
- *   button input, sets up a timer interrupt (TIM2) running at 2Hz,
- *   enables external interrupt handling for button presses, and
- *   initializes USART2 for serial communication with interrupt-driven
- *   string buffering.
+ *   This file is the main program for an STM32F446RE microcontroller
+ *   that initializes GPIO pins for LED control and button input,
+ *   configures Timer2 for periodic interrupts, sets up external
+ *   interrupts for button presses, and initializes USART2 for serial
+ *   communication. The program appears to be a template that combines
+ *   LED blinking, button handling, and UART communication
+ *   functionality with interrupt-driven operation.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

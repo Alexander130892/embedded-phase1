@@ -1,13 +1,15 @@
 /*
  * File:    Test_theory_median_RandMAX.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file appears to be a placeholder or test stub that defines
- *   constants for testing random number generation and median
- *   calculations (based on the filename) but currently only prints a
- *   nonsensical string and exits successfully.
+ *   This C file appears to be a test stub or placeholder that only
+ *   prints a long nonsensical string, despite its filename suggesting
+ *   it should test theoretical median calculations with random maximum
+ *   values. The file defines constants for function calls, columns,
+ *   and lines but doesn't actually implement any median calculation or
+ *   random number generation functionality.
  */
  //Libraries
 #include <stdio.h>

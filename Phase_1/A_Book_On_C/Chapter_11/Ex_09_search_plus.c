@@ -1,14 +1,14 @@
 /*
  * File:    Ex_09_search_plus.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program searches for a specified string within a text file
- *   and prints matching lines, with an optional -n flag to include
+ *   This C program searches for a specified string within a text file
+ *   and prints all matching lines, with an optional -n flag to include
  *   line numbers in the output. It handles long lines by truncating
- *   them at 255 characters while warning the user and ensuring logical
- *   line counting remains accurate.
+ *   them at 255 characters while issuing warnings and properly
+ *   counting logical line numbers.
  */
 #include <stdio.h>
 #include <stdlib.h>

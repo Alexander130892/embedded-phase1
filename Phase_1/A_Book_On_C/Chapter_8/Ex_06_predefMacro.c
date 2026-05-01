@@ -1,12 +1,13 @@
 /*
  * File:    Ex_06_predefMacro.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the use of predefined C preprocessor macros
- *   by printing compilation information including the date, filename,
- *   line number, C standard compliance flag, and compilation time.
+ *   This C program demonstrates the use of predefined macros by
+ *   printing compilation information including the date, filename,
+ *   current line number, C standard compliance flag, and compilation
+ *   time.
  */
 //write pack into one line
 #include <stdio.h>

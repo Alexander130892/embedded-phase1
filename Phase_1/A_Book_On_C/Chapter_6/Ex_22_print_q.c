@@ -1,14 +1,13 @@
 /*
  * File:    Ex_22_print_q.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file contains a palindrome checking function but its main
- *   purpose is to demonstrate complex C string indexing and pointer
- *   arithmetic by printing "hello!" through various string access
- *   methods. The palindrome function is defined but never called from
- *   main.
+ *   This C program prints "Hello!" by using clever pointer arithmetic
+ *   and array indexing on string literals to extract individual
+ *   characters, and includes an unused palindrome checking function
+ *   that ignores whitespace and case.
  */
 //Libraries
 #include <stdio.h>

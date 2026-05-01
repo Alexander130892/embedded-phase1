@@ -1,14 +1,15 @@
 /*
  * File:    Ex_11_wrt_rand.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program prompts the user for a number of random integers to
- *   generate and a filename, then writes those random numbers to the
- *   specified file with 6 numbers per line. It includes safety checks
- *   to prevent accidental file overwrites by asking for user
- *   confirmation if the target file already exists.
+ *   This C program prompts the user for a filename and number of
+ *   random integers to generate, then writes the specified quantity of
+ *   random numbers to the file with 6 numbers per line. It includes
+ *   safety features to check for file existence and prompt for
+ *   overwrite confirmation, and exits gracefully if the file cannot be
+ *   opened.
  */
 #include <stdio.h>
 #include <time.h>

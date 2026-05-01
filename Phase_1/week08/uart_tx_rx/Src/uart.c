@@ -1,14 +1,15 @@
 /*
  * File:    uart.c
  * Author:  Alexander130892
- * Date:    22-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements basic UART communication functions for an
- *   STM32F4 microcontroller, providing low-level serial transmission
- *   and reception of individual characters and strings through USART2.
- *   The implementation uses direct register manipulation to poll
- *   status flags and transfer data via the UART data register.
+ *   STM32F4 microcontroller, providing character and string
+ *   transmission/reception capabilities through USART2. The functions
+ *   use direct register manipulation to poll status flags and transfer
+ *   data, with string reception terminating on newline characters or
+ *   when reaching the maximum buffer length.
  */
 #include "uart.h"
 #include	"stm32f46re.h"

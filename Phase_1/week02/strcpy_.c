@@ -1,15 +1,15 @@
 /*
  * File:    strcpy_.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a custom version of the standard C library
- *   function `strcpy` that copies a string from source to destination
- *   and returns a pointer to the destination string. The
- *   implementation demonstrates string copying by overwriting the
- *   entire destination buffer and includes a test that shows the
- *   original string being completely replaced.
+ *   function `strcpy` that copies a null-terminated string from a
+ *   source to a destination buffer. The implementation uses pointer
+ *   arithmetic and post-increment operations to efficiently copy
+ *   characters until the null terminator is reached, returning the
+ *   original destination pointer to allow function chaining.
  */
  //Libraries
 #include <stdio.h>

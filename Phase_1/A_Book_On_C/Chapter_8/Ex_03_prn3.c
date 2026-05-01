@@ -1,13 +1,13 @@
 /*
  * File:    Ex_03_prn3.c
  * Author:  Alexander130892
- * Date:    28-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates a C macro that prints the names and values
- *   of three float variables in a formatted string, using the
- *   stringification operator (#) to convert variable names into string
- *   literals for display.
+ *   This file demonstrates a C macro that prints three float variables
+ *   along with their names and values in a formatted string, using the
+ *   stringification operator (#) to convert variable names to literal
+ *   strings in the output.
  */
 //write pack into one line
 #include <stdio.h>

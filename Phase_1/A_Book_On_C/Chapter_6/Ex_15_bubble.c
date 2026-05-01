@@ -1,14 +1,14 @@
 /*
  * File:    Ex_15_bubble.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a bubble sort algorithm to sort an array of
  *   double values in ascending order, with an optimized version that
  *   stops early if no swaps are made during a pass. The program
- *   demonstrates the sorting by printing an array before and after
- *   applying the bubble sort function.
+ *   demonstrates the sorting by printing a polynomial coefficient
+ *   array before and after applying the bubble sort.
  */
 //Libraries
 #include <stdio.h>

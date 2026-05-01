@@ -1,17 +1,16 @@
 /*
  * File:    Ex_03_execl_overlay.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This C program prompts the user to choose between three options
  *   (1, 2, or 3) and uses execl() to overlay the current process with
  *   one of three different programs (pgm1, pgm2, or pgm3) based on the
- *   user's selection. The execl() calls replace the current process
- *   image entirely, so any code after the execl() call will not
- *   execute unless the execl() fails.
+ *   user's selection. The execl() calls replace the entire current
+ *   process image, meaning the original program terminates and is
+ *   replaced by the chosen program.
  */
-
 // Compute Fibonacci numbers and print time asynchronously
 
 #include <stdio.h>

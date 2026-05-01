@@ -1,13 +1,15 @@
 /*
  * File:    Ex_36_sqrt_numerical.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a numerical square root calculation using
- *   Newton's method (also known as the Babylonian method) and tests it
- *   on numbers from 10 to 1000, displaying the computed square root
- *   and number of iterations required for convergence.
+ *   This file implements Newton's method (Babylonian method) to
+ *   numerically calculate square roots of integers from 10 to 1000,
+ *   displaying each result with the number of iterations required for
+ *   convergence. The program uses an iterative formula that refines
+ *   the square root approximation until the previous and current
+ *   values are equal.
  */
  //Libraries
 #include <stdio.h>

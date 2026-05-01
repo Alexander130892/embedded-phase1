@@ -1,13 +1,13 @@
 /*
  * File:    Ex_03_scope.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates variable scope in C by showing how a global
- *   variable `z` is modified by a function while a local parameter `x`
- *   remains unchanged, illustrating the difference between
- *   pass-by-value and global variable access.
+ *   variable `z` is modified within a function while a local parameter
+ *   `x` remains separate, ultimately printing the value 7 after adding
+ *   2 to the initial global value of 5.
  */
  //Libraries
 #include <stdio.h>

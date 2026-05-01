@@ -1,16 +1,13 @@
 /*
  * File:    pgm2.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This program calculates and prints the sum of all numeric
- *   command-line arguments passed to it, ignoring any non-numeric
- *   arguments.
+ *   This program sums all numeric command-line arguments passed to it
+ *   and prints the result along with the program name. It skips any
+ *   non-numeric arguments and only adds valid integers to the sum.
  */
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

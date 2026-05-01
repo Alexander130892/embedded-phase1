@@ -1,15 +1,14 @@
 /*
  * File:    get.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file prompts the user to input the number of disks for a
- *   Towers of Hanoi puzzle and validates that the input is a positive
- *   integer, terminating the program with an error message if the
- *   input is invalid.
+ *   This file implements a function that prompts the user to input the
+ *   number of disks for a Towers of Hanoi puzzle, validates that the
+ *   input is a positive integer, and terminates the program with an
+ *   error message if invalid input is provided.
  */
-
 #include "hanoi.h"
 
 int get_n_from_user(){

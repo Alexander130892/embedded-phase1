@@ -1,15 +1,16 @@
 /*
  * File:    Ex_08_concat_improved.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a linked list library with character data,
- *   demonstrating string-to-list conversion, list concatenation, and
- *   cycle detection functionality. The main function specifically
- *   tests concatenating two character-based linked lists and detects
- *   when concatenation operations create circular references in the
- *   list structure.
+ *   This file implements an improved linked list concatenation
+ *   function along with utility functions for character-based linked
+ *   lists, including cycle detection to identify when concatenation
+ *   creates circular references. The main function demonstrates how
+ *   concatenating a list with itself or creating chains can result in
+ *   cyclic linked lists, which are detected using the `is_cycle`
+ *   function.
  */
  //Libraries
 #include <stdio.h>

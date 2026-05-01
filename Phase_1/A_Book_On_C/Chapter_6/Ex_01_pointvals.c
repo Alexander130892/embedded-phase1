@@ -1,13 +1,14 @@
 /*
  * File:    Ex_01_pointvals.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates pointer arithmetic and dereferencing
- *   operations in C by printing the address of an integer variable and
- *   the results of various pointer-based calculations. It also casts
- *   pointer addresses to integers to show their numeric values.
+ *   operations by printing various calculations involving a pointer to
+ *   an integer, including the pointer's address, dereferenced values
+ *   with arithmetic operations, and the difference between pointer
+ *   addresses cast to integers.
  */
  //Libraries
 #include <stdio.h>

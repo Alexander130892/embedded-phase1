@@ -1,12 +1,12 @@
 /*
  * File:    Ex_27.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file tests whether an unsigned char variable initialized to
- *   0xff (255 in decimal) correctly equals 0xff, printing "Truth!" if
- *   the comparison succeeds or "Explain!" if it fails.
+ *   This file tests whether an unsigned char variable can hold and
+ *   correctly compare to the hexadecimal value 0xff (255), printing
+ *   "Truth!" if the comparison succeeds or "Explain!" if it fails.
  */
  //Libraries
 #include <stdio.h>

@@ -1,14 +1,14 @@
 /*
  * File:    Ex_02_typedef_define.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates the difference between `typedef` and
- *   `#define` by showing how `typedef` creates a true type alias that
- *   can be shadowed by local variables, while `#define` performs
- *   simple text substitution that would cause compilation errors in
- *   the same scenario.
+ *   This file demonstrates the difference between `#define` and
+ *   `typedef` by showing how `typedef` allows creating a new type name
+ *   (DOLLARS) that can be safely redeclared as a variable in an inner
+ *   scope, while `#define` would cause a compilation error in the same
+ *   situation.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_12_char.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates character overflow behavior by assigning
- *   values 256 and 257 to char variables and printing their actual
- *   stored values, showing how chars wrap around due to their limited
- *   range.
+ *   This file demonstrates character variable overflow behavior by
+ *   assigning values 256 and 257 to char variables and printing their
+ *   actual stored values, which will be 0 and 1 respectively due to
+ *   wraparound in 8-bit signed char representation.
  */
  //Libraries
 #include <stdio.h>

@@ -1,14 +1,13 @@
 /*
  * File:    Ex_010_trace.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program calculates and prints the trace (sum of diagonal
- *   elements) of a 3x3 matrix that is dynamically allocated as an
- *   array of pointers to double arrays. The matrix is initialized with
- *   zeros using calloc, so the trace will always be 0.0, and the
- *   program properly frees the allocated memory before terminating.
+ *   This file calculates the trace of a 3x3 matrix (the sum of
+ *   diagonal elements) using dynamic memory allocation, where the
+ *   matrix is represented as an array of pointers to dynamically
+ *   allocated rows rather than a contiguous block of memory.
  */
 //Libraries
 #include <stdio.h>

@@ -1,14 +1,15 @@
 /*
  * File:    Ex_07_complex_add.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates complex number addition using a custom
- *   complex struct, implementing the operation through both
- *   pass-by-value and pass-by-reference functions. It creates two
- *   complex numbers, adds them using both methods, and displays the
- *   results to show different parameter passing techniques in C.
+ *   struct, implementing two different approaches: one that returns
+ *   the result by value and another that uses pointers to modify the
+ *   result parameter directly. The program creates two complex
+ *   numbers, adds them using both methods, and displays the results to
+ *   show both implementations produce the same output.
  */
  //Libraries
 #include <stdio.h>

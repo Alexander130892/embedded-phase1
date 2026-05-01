@@ -1,14 +1,13 @@
 /*
  * File:    Ex_26_print_test.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file compares the memory sizes of two bit-field structures
- *   where one uses a zero-width bit-field separator and the other
- *   doesn't, printing the ratio of their sizes as a floating-point
- *   number. It demonstrates how zero-width bit-fields force alignment
- *   to the next storage unit boundary, affecting structure size.
+ *   This file tests the behavior of bit-field alignment in C
+ *   structures by comparing the size of a structure with an anonymous
+ *   zero-width bit-field (which forces alignment) to one without,
+ *   printing the ratio as a floating-point value.
  */
  //Libraries
 #include <stdio.h>

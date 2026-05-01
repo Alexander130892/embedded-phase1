@@ -1,14 +1,13 @@
 /*
  * File:    Ex_24_struct_test.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates bit field behavior in C structures by
- *   assigning incrementing values to bit fields of different widths
- *   (1, 2, and 3 bits) and printing how the values are truncated due
- *   to overflow when they exceed the maximum value each bit field can
- *   hold.
+ *   This file demonstrates the behavior of bit fields in a C struct by
+ *   assigning the same integer value to three unsigned bit fields of
+ *   different widths (1, 2, and 3 bits) and printing how each field
+ *   truncates the value based on its bit capacity.
  */
  //Libraries
 #include <stdio.h>

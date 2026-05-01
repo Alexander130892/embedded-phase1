@@ -1,14 +1,13 @@
 /*
  * File:    Ex_25_hex.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates that hexadecimal literals are
- *   case-insensitive by declaring three integer variables with the
- *   same hexadecimal value (0xABC) written in different cases and
- *   printing their decimal equivalents to show they are all equal to
- *   2748.
+ *   This file demonstrates hexadecimal number literals in C by
+ *   declaring three integer variables with hex values (0xabc, 0xABc,
+ *   0xABC) and printing their decimal equivalents to show that
+ *   hexadecimal notation is case-insensitive.
  */
  //Libraries
 #include <stdio.h>

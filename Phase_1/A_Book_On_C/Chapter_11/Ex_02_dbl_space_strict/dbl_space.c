@@ -1,14 +1,13 @@
 /*
  * File:    dbl_space.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file implements a text formatting utility that reads a file
- *   and outputs it with adjustable line spacing (single through
- *   quintuple spacing), defaulting to double spacing. It skips
- *   consecutive blank lines in the input and allows spacing control
- *   via command-line options (-1 through -5).
+ *   This program reads a text file and outputs it with adjustable line
+ *   spacing (1-5x) to stdout, defaulting to double spacing. It skips
+ *   consecutive newlines in the input and adds the specified number of
+ *   newlines after each line break.
  */
 #include <stdio.h>
 #include <stdlib.h>

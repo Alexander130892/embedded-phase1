@@ -1,15 +1,16 @@
 /*
  * File:    Ex_24_24_array_to_queue.c
  * Author:  Alexander130892
- * Date:    5-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program implements a linked list-based queue data structure
- *   and demonstrates converting an array to a queue and then back to
- *   an array, effectively preserving the original order through FIFO
- *   operations. The main function creates an array, converts it to a
- *   queue using enqueue operations, then converts it back to an array
- *   using dequeue operations and prints the result.
+ *   This file demonstrates the conversion of data between arrays and a
+ *   linked-list-based queue data structure by converting an integer
+ *   array to a queue and then back to an array, printing the resulting
+ *   values. The program implements a complete queue ADT with
+ *   enqueue/dequeue operations and shows that the FIFO
+ *   (first-in-first-out) property preserves the original array order
+ *   through the conversion process.
  */
  //Libraries
 #include <stdio.h>

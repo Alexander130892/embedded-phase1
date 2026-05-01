@@ -1,14 +1,15 @@
 /*
  * File:    Ex_08_complex_matrix_add.c
  * Author:  Alexander130892
- * Date:    31-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program performs addition of two 3x5 matrices containing
- *   complex numbers (with real and imaginary parts) and displays the
- *   result. The program defines a complex number structure, implements
- *   matrix addition by adding corresponding complex elements, and
- *   includes functions to print matrices and add complex numbers.
+ *   This C program demonstrates matrix addition using complex numbers
+ *   by defining a complex number structure and functions to add two
+ *   3x5 matrices of complex numbers element-wise. The program
+ *   initializes two complex matrices, performs the addition operation,
+ *   and displays the original and resulting matrices in a readable
+ *   format.
  */
  //Libraries
 #include <stdio.h>

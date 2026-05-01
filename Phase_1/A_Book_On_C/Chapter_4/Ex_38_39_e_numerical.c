@@ -1,13 +1,14 @@
 /*
  * File:    Ex_38_39_e_numerical.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This C program calculates the mathematical constant e (Euler's
  *   number) using two different numerical methods: the limit
- *   definition (1+1/n)^n and the Taylor series expansion (sum of
- *   1/n!), comparing their convergence rates and accuracy.
+ *   definition (1 + 1/n)^n and the Taylor series expansion using
+ *   factorials. It compares the convergence rates of both approaches
+ *   and displays the results with iteration counts.
  */
  //Libraries
 #include <stdio.h>

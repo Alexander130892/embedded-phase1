@@ -1,14 +1,14 @@
 /*
  * File:    Ex_14_enum_month.c
  * Author:  Alexander130892
- * Date:    27-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This C program demonstrates the use of enums by defining months of
- *   the year and displaying each month alongside its previous month,
- *   with special handling to wrap December to January. It prints a
- *   formatted table showing current and previous month pairs for all
- *   12 months.
+ *   the year and implementing a function to calculate the previous
+ *   month for each month. It prints a table showing each month
+ *   alongside its corresponding previous month, with special handling
+ *   for January wrapping around to December.
  */
 //Libraries
 #include <stdio.h>

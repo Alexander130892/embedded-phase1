@@ -1,18 +1,17 @@
 /*
  * File:    memset_.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file implements a custom version of the standard C library
  *   function `memset`, which fills a block of memory with a specified
- *   byte value. The implementation uses a simple loop to set each byte
- *   and includes comprehensive tests demonstrating typical usage
- *   patterns and edge cases like value truncation and zero-length
- *   operations.
+ *   byte value. The implementation uses pointer arithmetic to set `n`
+ *   consecutive bytes starting at address `s` to the value `c`
+ *   (truncated to unsigned char), and includes comprehensive test
+ *   cases to verify correct behavior including edge cases like
+ *   zero-length operations and value truncation.
  */
-
-
 /*
  * File:    memset_.c
  * Author:  Alexander Vindelinckx

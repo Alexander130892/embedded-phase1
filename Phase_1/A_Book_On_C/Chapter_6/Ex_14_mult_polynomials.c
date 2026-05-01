@@ -1,15 +1,14 @@
 /*
  * File:    Ex_14_mult_polynomials.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program implements polynomial arithmetic operations,
- *   specifically multiplication of two polynomials represented as
- *   coefficient arrays. It multiplies two predefined polynomials and
- *   prints the resulting coefficients, with the multiplication
- *   function using nested loops to compute the convolution of
- *   coefficients.
+ *   This C program implements polynomial arithmetic by multiplying two
+ *   polynomials represented as coefficient arrays and displaying the
+ *   result. It uses nested loops to perform polynomial multiplication
+ *   by distributing terms and accumulating coefficients at the
+ *   appropriate power positions.
  */
 //Libraries
 #include <stdio.h>

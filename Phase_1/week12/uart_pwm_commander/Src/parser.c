@@ -4,13 +4,13 @@
  * Date:    30-4-2026
  *
  * Description:
- *   This file implements a command parser for an STM32 microcontroller
- *   that processes text commands received via UART to control LED
- *   operations including on/off switching, PWM duty cycle adjustment,
- *   and status reporting. The parser uses a command table structure to
- *   map command strings ("led", "pwm", "status") to their respective
- *   handler functions and validates arguments before executing the
- *   requested operations.
+ *   This file implements a command parser for an STM32F446RE
+ *   microcontroller that processes text commands received via UART to
+ *   control LED operations including on/off control, PWM duty cycle
+ *   adjustment, and status reporting. The parser supports three
+ *   commands ("led", "pwm", "status") and uses a command table
+ *   structure to dispatch appropriate handler functions based on the
+ *   parsed input.
  */
 #include "stm32f446re.h"
 #include "timer.h"

@@ -1,15 +1,15 @@
 /*
  * File:    Ex_08_Changed_Dining_philisophers.c
  * Author:  Alexander130892
- * Date:    15-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program implements a modified version of the classic dining
- *   philosophers problem using 5 philosophers as separate processes,
- *   where chopsticks are represented by semaphores and philosopher 3
- *   uses a different chopstick pickup order to avoid deadlock. The
- *   program handles SIGINT to collect and display statistics on how
- *   many times each philosopher ate before termination.
+ *   This file implements a solution to the dining philosophers problem
+ *   using 5 philosophers as separate processes, where philosopher 3
+ *   picks up chopsticks in reverse order to prevent deadlock. The
+ *   program uses semaphores for chopstick synchronization, pipes for
+ *   inter-process communication, and signal handlers to collect and
+ *   report eating statistics when interrupted with Ctrl+C.
  */
 //Libraries
 #include <stdio.h>

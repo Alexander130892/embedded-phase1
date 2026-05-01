@@ -7,9 +7,9 @@
  *   This header file defines timer functionality for a
  *   microcontroller, providing PWM generation and millisecond timing
  *   capabilities using a 16MHz clock divided down to 1kHz operation.
- *   It includes interrupt handling, initialization functions, and a
- *   millis() function for tracking elapsed time, with configurable
- *   duty cycle control for PWM output.
+ *   It includes interrupt handling, PWM initialization, LED blinking
+ *   control, and a millisecond counter function similar to Arduino's
+ *   millis().
  */
 #ifndef TIMER_H_
 #define TIMER_H_

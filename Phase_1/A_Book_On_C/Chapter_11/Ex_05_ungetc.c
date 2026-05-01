@@ -1,15 +1,16 @@
 /*
  * File:    Ex_05_ungetc.c
  * Author:  Alexander130892
- * Date:    11-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This C program demonstrates the ungetc() function by reading the
- *   first three characters from a file, displaying them, then pushing
- *   them back onto the input stream in reverse order and reading them
- *   again. The program shows how ungetc() allows characters to be
- *   "ungotten" and re-read, with the characters being retrieved in
- *   LIFO (last-in-first-out) order.
+ *   This file demonstrates the `ungetc()` function by reading the
+ *   first three characters from a file, displaying them, then using
+ *   `ungetc()` to push them back onto the input stream in reverse
+ *   order, and finally reading three characters again to show they
+ *   were successfully returned to the stream. The program includes an
+ *   unused `putlinenr()` function that would add line numbers to file
+ *   output.
  */
 #include <stdio.h>
 #include <stdlib.h>

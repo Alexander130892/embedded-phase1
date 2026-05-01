@@ -1,14 +1,13 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file demonstrates a merge sort implementation by sorting a
+ *   This file demonstrates the merge sort algorithm by sorting a
  *   predefined array of 15 integers and displaying the array contents
  *   before and after sorting.
  */
-
 #include "mergesort.h"
 
 int main(){

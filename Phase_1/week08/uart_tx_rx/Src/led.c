@@ -1,13 +1,13 @@
 /*
  * File:    led.c
  * Author:  Alexander130892
- * Date:    22-4-2026
+ * Date:    30-4-2026
  *
  * Description:
- *   This file provides low-level GPIO control functions for an LED
- *   connected to pin PA10 on an STM32F4 microcontroller, allowing
- *   initialization, on/off control, and state reading through direct
- *   register manipulation.
+ *   This file provides basic LED control functions for an STM32F46RE
+ *   microcontroller, specifically managing an LED connected to GPIO
+ *   pin PA10 through initialization, on/off control, and state reading
+ *   functions.
  */
 #include 	"led.h"
 #include	"stm32f46re.h"

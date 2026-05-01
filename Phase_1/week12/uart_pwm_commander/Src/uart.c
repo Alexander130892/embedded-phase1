@@ -4,16 +4,13 @@
  * Date:    30-4-2026
  *
  * Description:
- *   This file implements UART communication for an STM32F446RE
- *   microcontroller, providing functions to initialize USART2, send
- *   characters and strings, and receive data using interrupt-driven
- *   circular buffer handling. It uses direct register manipulation to
- *   configure GPIO pins PA2/PA3 for UART functionality and handles
- *   incoming data through an interrupt service routine that stores
- *   received characters in a circular buffer for later processing.
+ *   This file implements a UART driver for STM32F446RE that provides
+ *   serial communication functionality with interrupt-driven reception
+ *   using a circular buffer and polling-based transmission. It
+ *   includes initialization of USART2 on pins PA2/PA3, functions to
+ *   send characters and strings, and an interrupt handler that stores
+ *   received data in a buffer for later retrieval as complete strings.
  */
-
-
 #include 	"uart.h"
 #include	"stm32f446re.h"
 

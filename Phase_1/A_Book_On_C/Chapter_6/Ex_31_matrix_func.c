@@ -1,14 +1,14 @@
 /*
  * File:    Ex_31_matrix_func.c
  * Author:  Alexander130892
- * Date:    25-3-2026
+ * Date:    30-4-2026
  *
  * Description:
  *   This file demonstrates passing a 3x3 integer matrix to a function
- *   and prints selected matrix elements (a[1][0], -a[1][1], a[0][0],
- *   a[2][2]) in a formatted output. The program serves as an example
- *   of matrix function parameter passing using both array notation and
- *   pointer notation in the function declaration.
+ *   and prints specific matrix elements (a[1][0], -a[1][1], a[0][0],
+ *   a[2][2]) followed by ".... infinity". The program serves as an
+ *   example of matrix function parameter passing in C, showing two
+ *   equivalent syntax forms for array parameters.
  */
 //Libraries
 #include <stdio.h>
