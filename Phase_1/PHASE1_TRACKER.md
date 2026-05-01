@@ -211,7 +211,7 @@ Week 12 — Deliverable + Documentation
  - [x] Tag the repo: git tag v1.0-phase1
  - [x] Clean up dead code, add comments where missing
  - [x] Write a short Phase 1 retrospective (NOTES.md)
- - [ ] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
+ - [x] C10 — Finite State Machines — FSMs are a fundamental embedded design pattern you'll use in your UART command parser. The concepts translate directly even though the chip differs.
 
 🏁 M6 checkpoint: GitHub repo published. Phase 1 complete. ✅
 
