@@ -1,7 +1,7 @@
 /*
  * File:    Ex_01_pow_xn.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a simple power function that calculates x

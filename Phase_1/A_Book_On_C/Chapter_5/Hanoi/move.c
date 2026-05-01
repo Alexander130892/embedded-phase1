@@ -1,12 +1,13 @@
 /*
  * File:    move.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements the recursive solution to the Tower of Hanoi
- *   puzzle, moving n disks from tower A to tower C using tower B as
- *   auxiliary storage while printing each move step with a counter.
+ *   This file implements the recursive solution for the Tower of Hanoi
+ *   puzzle, printing each step of moving n disks from tower A to tower
+ *   C using tower B as an auxiliary. It uses a global counter to
+ *   number each move sequentially.
  */
 #include "hanoi.h"
 void move(int n, char A, char B, char C){

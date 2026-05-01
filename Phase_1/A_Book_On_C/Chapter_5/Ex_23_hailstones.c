@@ -1,14 +1,14 @@
 /*
  * File:    Ex_23_hailstones.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements the Collatz conjecture (hailstone sequence)
- *   algorithm, which repeatedly applies the rule of dividing even
- *   numbers by 2 or multiplying odd numbers by 3 and adding 1 until
- *   reaching 1. It prints the complete sequence starting from 114 and
- *   counts the number of steps required to reach 1.
+ *   starting from the number 114, recursively applying the rules of
+ *   dividing by 2 if even or multiplying by 3 and adding 1 if odd
+ *   until reaching 1. It prints each number in the sequence and counts
+ *   the total steps needed to reach 1.
  */
  //Libraries
 #include <stdio.h>

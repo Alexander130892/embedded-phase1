@@ -1,16 +1,16 @@
 /*
  * File:    Ex_28_double_ended_queue.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a double-ended queue (deque) data structure
- *   using a fixed-size array that allows insertion and removal of
- *   elements from both ends. The implementation uses a middle-out
- *   approach where the deque starts at the center of the array and
- *   expands in both directions, with the main function demonstrating
- *   basic operations like adding/removing from front/rear and testing
- *   boundary conditions.
+ *   using a fixed-size array, allowing elements to be added and
+ *   removed from both the front and rear ends. The implementation uses
+ *   a middle-starting approach where the deque begins at the center of
+ *   the array and expands bidirectionally, with the main function
+ *   demonstrating basic operations like adding, removing, and handling
+ *   empty/full conditions.
  */
  //Libraries
 #include <stdio.h>

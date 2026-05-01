@@ -1,14 +1,13 @@
 /*
  * File:    Ex_04_linenrs.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This program reads a text file specified as a command-line
- *   argument and prints its contents to stdout with line numbers
- *   prefixed to each line. It uses left-aligned 3-digit formatting for
- *   the line numbers and handles newlines by incrementing the line
- *   counter and starting a new numbered line.
+ *   argument and displays its contents with line numbers prefixed to
+ *   each line. It prints each line with a left-aligned 3-digit line
+ *   number followed by the original file content.
  */
 #include <stdio.h>
 #include <stdlib.h>

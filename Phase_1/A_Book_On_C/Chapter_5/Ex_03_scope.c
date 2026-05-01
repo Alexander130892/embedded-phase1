@@ -1,13 +1,13 @@
 /*
  * File:    Ex_03_scope.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates variable scope in C by showing how a global
- *   variable `z` is modified within a function while a local parameter
- *   `x` remains separate, ultimately printing the value 7 after adding
- *   2 to the initial global value of 5.
+ *   This C program demonstrates variable scope by showing how a global
+ *   variable `z` is modified within a function while the local
+ *   parameter `x` remains unchanged, ultimately printing the value 7
+ *   after `z` is incremented by 2 inside function `f`.
  */
  //Libraries
 #include <stdio.h>

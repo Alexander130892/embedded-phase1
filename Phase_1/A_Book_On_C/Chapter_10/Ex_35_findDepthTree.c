@@ -1,15 +1,15 @@
 /*
  * File:    Ex_35_findDepthTree.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a binary search tree (BST) with various
- *   tree analysis functions, including counting total nodes, searching
- *   for specific values, counting leaf nodes, and calculating tree
- *   depth. The main function creates a BST from an integer array and
- *   demonstrates these operations by printing the results of inorder
- *   traversal and various counting functions.
+ *   This file implements various tree analysis functions for binary
+ *   search trees, including counting total nodes, searching for
+ *   specific values, counting leaf nodes, and calculating tree depth.
+ *   The main function demonstrates these capabilities by creating a
+ *   BST from an array and testing each counting function with expected
+ *   results.
  */
  //Libraries
 #include <stdio.h>

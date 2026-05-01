@@ -1,13 +1,15 @@
 /*
  * File:    merge.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements the merge function that combines two sorted
- *   arrays into a single sorted array by comparing elements from both
- *   arrays and copying them in ascending order to the destination
- *   array.
+ *   This file implements the merge operation for merge sort, combining
+ *   two sorted arrays `a` and `b` of sizes `m` and `n` respectively
+ *   into a single sorted array `c`. The function uses a two-pointer
+ *   technique to efficiently merge the arrays in ascending order,
+ *   handling remaining elements from either array after the main
+ *   comparison loop.
  */
 #include "mergesort.h"
 

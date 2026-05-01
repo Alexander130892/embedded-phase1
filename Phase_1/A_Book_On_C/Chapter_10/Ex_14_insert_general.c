@@ -1,15 +1,16 @@
 /*
  * File:    Ex_14_insert_general.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates various insertion operations on a
- *   singly linked list of characters, including functions to insert at
- *   the head, tail, after a specific element, and at a specific
- *   position. It creates a linked list from the string "TestString"
- *   and tests each insertion method before printing the results and
- *   cleaning up memory.
+ *   This file implements a character-based linked list with
+ *   comprehensive insertion functions that can insert elements at the
+ *   head, tail, after a specific character, or at a specific position.
+ *   It demonstrates these insertion operations by converting
+ *   "TestString" to a linked list and performing various insertions
+ *   including handling edge cases like inserting beyond the list
+ *   length.
  */
  //Libraries
 #include <stdio.h>

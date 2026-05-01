@@ -1,15 +1,15 @@
 /*
  * File:    Ex_11_insert_head.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a linked list data structure that stores
- *   characters, with functionality to convert strings to linked lists
- *   and insert new elements at the head of the list. The program
- *   demonstrates creating a linked list from the string "TestString",
- *   inserting the character 'A' at the beginning, and displaying the
- *   results.
+ *   This C program implements a linked list that stores characters,
+ *   with functions to convert a string into a linked list, print the
+ *   list, and insert new elements at the head of the list. The main
+ *   function demonstrates these operations by creating a linked list
+ *   from "TestString", inserting 'A' at the beginning, and displaying
+ *   the results.
  */
  //Libraries
 #include <stdio.h>

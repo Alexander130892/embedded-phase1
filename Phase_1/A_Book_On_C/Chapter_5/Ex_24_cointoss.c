@@ -1,16 +1,13 @@
 /*
  * File:    Ex_24_cointoss.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file simulates one million coin tosses and tracks the
- *   percentage of heads, the longest consecutive streak of the same
- *   result (heads or tails), and the longest alternating streak
- *   between different results. Despite its filename suggesting coin
- *   toss functionality, it contains an unused hailstones function
- *   prototype that doesn't relate to the actual coin simulation
- *   implementation.
+ *   This program simulates one million coin tosses and calculates
+ *   statistics including the percentage of heads, the longest
+ *   consecutive streak of the same result (heads or tails), and the
+ *   longest alternating streak between different results.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_06_typedef_function_pointer.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates how to use typedef to create function
- *   pointer types in C by defining PFDD as a pointer to functions that
- *   take a double and return a double, then using it to call the sin
- *   and cos functions with PI as input.
+ *   This file demonstrates how to create and use typedef declarations
+ *   for function pointers in C by defining a type alias for functions
+ *   that take a double parameter and return a double, then using it to
+ *   call the sin and cos functions with PI as an argument.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,14 @@
 /*
  * File:    Ex_01_fork.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates the fork() system call by creating three
- *   successive child processes, resulting in 8 total processes (1
- *   original + 7 children) that each print the return value of the
- *   last fork() call they executed.
+ *   This file demonstrates the fork() system call by creating multiple
+ *   child processes through three consecutive fork() calls, resulting
+ *   in 8 total processes that each print the return value of the last
+ *   fork() call (which will be 0 for child processes and the child's
+ *   PID for parent processes).
  */
 #include <stdio.h>
 #include <stdlib.h>

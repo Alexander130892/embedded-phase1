@@ -1,13 +1,15 @@
 /*
  * File:    bisection.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements the bisection method for finding roots of a
- *   function by recursively narrowing down an interval where the
- *   function changes sign until the root is found within a specified
- *   tolerance.
+ *   function by recursively narrowing down the interval containing the
+ *   root until the midpoint is sufficiently close to the actual root.
+ *   The function increments a global counter and terminates when
+ *   either an exact root is found or the interval width falls below a
+ *   specified epsilon threshold.
  */
 #include "find_roots.h"
 

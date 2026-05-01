@@ -1,12 +1,13 @@
 /*
  * File:    Ex_24_fabs copy.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the difference between the `abs()` and
- *   `fabs()` functions by computing the absolute value of -2 using
- *   both integer and floating-point absolute value functions.
+ *   `fabs()` functions by applying both to the integer value -2,
+ *   showing that `abs()` returns an integer absolute value while
+ *   `fabs()` returns a floating-point absolute value.
  */
  //Libraries
 #include <stdio.h>

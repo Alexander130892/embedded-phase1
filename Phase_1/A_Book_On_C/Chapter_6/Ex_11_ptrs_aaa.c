@@ -1,15 +1,14 @@
 /*
  * File:    Ex_11_ptrs_aaa.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates pointer arithmetic by initializing an
- *   integer array and a pointer to the 4th element, then prints the
- *   values at that position and the next position using pointer
- *   dereferencing. The program outputs the values 6 and 8 from the
- *   array using pointer notation with placeholder question marks in
- *   the format strings.
+ *   This file demonstrates pointer arithmetic by creating an integer
+ *   array, setting a pointer to the 4th element (index 3), and
+ *   printing the values at that position and the next position using
+ *   pointer dereferencing. The program outputs the values 6 and 8 with
+ *   placeholder question marks in the format strings.
  */
  //Libraries
 #include <stdio.h>

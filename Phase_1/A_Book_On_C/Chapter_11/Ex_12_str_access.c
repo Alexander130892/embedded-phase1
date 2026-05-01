@@ -1,15 +1,14 @@
 /*
  * File:    Ex_12_str_access.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates different string access methods by
- *   reading characters from a string using sscanf with a fixed pointer
- *   versus an incrementing pointer, writing the results to two
- *   separate files to show that the fixed pointer repeatedly reads the
- *   same character while the incrementing pointer reads each character
- *   sequentially.
+ *   This program demonstrates the difference between using a string
+ *   array name versus a pointer when accessing string characters,
+ *   writing the first character 'a' three times to "tmp1" (since the
+ *   array name `s` doesn't advance) and the full string "abc" to
+ *   "tmp2" (since the pointer `p` increments through each character).
  */
 #include <stdio.h>
 #include <time.h>

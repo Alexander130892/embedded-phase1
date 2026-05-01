@@ -1,16 +1,15 @@
 /*
  * File:    Ex_23_largenumbers.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program performs arithmetic operations (addition and
- *   multiplication) on large integers that are stored as arrays of
- *   individual digits, allowing calculations beyond the range of
- *   standard integer data types. It demonstrates big integer
- *   arithmetic by adding two large numbers and multiplying two others,
- *   then displaying the results with proper formatting that suppresses
- *   leading zeros.
+ *   multiplication) on large integers that are too big to fit in
+ *   standard integer types by representing them as arrays of
+ *   individual digits. It demonstrates adding two large numbers and
+ *   multiplying two large numbers, then displays the formatted results
+ *   with proper digit alignment.
  */
 //Libraries
 #include <stdio.h>

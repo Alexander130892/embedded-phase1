@@ -1,13 +1,14 @@
 /*
  * File:    Ex_014_3d_matrix.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates dynamic allocation and manipulation of a
- *   3D integer matrix (2x3x4 dimensions) by allocating memory, filling
- *   it with random values between -5 and 5, printing the contents in a
- *   formatted layout, and properly deallocating the memory.
+ *   This file demonstrates dynamic allocation and manipulation of a 3D
+ *   matrix (2x3x4 dimensions) in C, filling it with random integers
+ *   between -5 and 5, printing the contents, and properly deallocating
+ *   the memory. It serves as an educational example of working with
+ *   triple pointers and multi-dimensional dynamic arrays.
  */
 //Libraries
 #include <stdio.h>

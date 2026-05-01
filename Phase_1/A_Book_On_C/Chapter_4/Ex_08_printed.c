@@ -1,16 +1,15 @@
 /*
  * File:    Ex_08_printed.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates various boolean expressions and
- *   logical operations by printing the results of character
- *   comparisons, logical OR operations, negation operations, and
- *   floating-point arithmetic comparisons. It serves as an educational
- *   example showing how different logical and comparison operators
- *   behave in C, particularly with edge cases involving very large
- *   floating-point numbers.
+ *   This file demonstrates C programming concepts by printing the
+ *   results of various logical and comparison expressions, including
+ *   character comparisons, logical operators, and floating-point
+ *   arithmetic comparisons. It serves as an educational example
+ *   showing how C evaluates different types of boolean expressions and
+ *   outputs their numeric results (0 for false, 1 for true).
  */
  //Libraries
 #include <stdio.h>

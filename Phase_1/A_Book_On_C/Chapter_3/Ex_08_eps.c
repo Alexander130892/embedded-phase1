@@ -1,15 +1,15 @@
 /*
  * File:    Ex_08_eps.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file tests floating-point precision by checking whether
- *   adding a very small epsilon value (1e-15) to 1.0 produces a number
- *   that is distinguishable from 1.0 in floating-point arithmetic. It
- *   prints "True" if the comparison detects a difference or "False" if
- *   the epsilon is too small to be represented in the floating-point
- *   format.
+ *   This file demonstrates floating-point precision limitations by
+ *   testing whether adding a very small epsilon value (1e-15) to 1.0
+ *   produces a number that is distinguishable from 1.0 in
+ *   floating-point arithmetic. The program prints "True" if the
+ *   addition is detectable or "False" if the epsilon is too small to
+ *   affect the floating-point representation.
  */
  //Libraries
 #include <stdio.h>

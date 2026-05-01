@@ -1,13 +1,13 @@
 /*
  * File:    pgm1.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program prints its own name followed by all command-line
- *   arguments passed to it, then exits successfully. Despite defining
- *   N as 13 and declaring fork(), the program only uses basic I/O to
- *   echo the command line.
+ *   This C program prints the program name followed by all
+ *   command-line arguments passed to it, then exits successfully.
+ *   Despite defining N=13 and declaring fork(), the main function only
+ *   performs argument echoing without using these declarations.
  */
 #include <stdio.h>
 #include <stdlib.h>

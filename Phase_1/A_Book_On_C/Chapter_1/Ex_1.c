@@ -1,13 +1,13 @@
 /*
  * File:    Ex_1.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates different ways to format and display the
- *   phrase "She sells sea shells by the seashore" using printf
- *   statements - first as a single line, then split across three
- *   lines, and finally enclosed in a decorative box made of asterisks.
+ *   This file demonstrates three different ways to display the phrase
+ *   "She sells sea shells by the seashore" using printf statements: as
+ *   a single line, split across three lines, and formatted within a
+ *   decorative asterisk border box.
  */
 #include <stdio.h>
 #include <stdlib.h>

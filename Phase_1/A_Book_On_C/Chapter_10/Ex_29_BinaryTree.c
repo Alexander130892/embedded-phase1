@@ -1,16 +1,16 @@
 /*
  * File:    Ex_29_BinaryTree.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C file implements a binary tree data structure with functions
- *   for tree creation, traversal (preorder, inorder, postorder), and
- *   analysis operations like counting nodes, leaves, and calculating
- *   tree depth. The program creates a binary tree from an array using
- *   level-order indexing and demonstrates various tree operations with
- *   test cases including empty, single-node, and manually constructed
- *   trees.
+ *   This file implements a binary tree data structure with character
+ *   data, providing functions to create trees from arrays using
+ *   level-order indexing and perform standard operations like tree
+ *   traversals (preorder, inorder, postorder) and counting nodes,
+ *   leaves, and depth. The main function demonstrates these operations
+ *   on a sample tree and includes test cases for edge conditions like
+ *   empty and single-node trees.
  */
  //Libraries
 #include <stdio.h>

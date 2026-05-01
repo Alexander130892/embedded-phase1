@@ -1,12 +1,14 @@
 /*
  * File:    Ex_21_random_cards.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This program simulates drawing 5 random playing cards from a
- *   standard deck, ensuring no duplicate cards are selected, and then
- *   displays the resulting hand with each card's rank and suit.
+ *   standard deck, ensuring no duplicates are selected, and then
+ *   displays the hand with each card's rank and suit. It uses
+ *   rejection sampling to avoid drawing the same card twice by
+ *   regenerating random cards until a unique one is found.
  */
 //write pack into one line
 #include <stdio.h>

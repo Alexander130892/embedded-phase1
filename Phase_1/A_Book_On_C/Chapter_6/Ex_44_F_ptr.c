@@ -1,13 +1,13 @@
 /*
  * File:    Ex_44_F_ptr.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates different syntactic ways to call
- *   functions using function pointers and excessive
- *   parentheses/dereference operators, with functions f, g, and h each
- *   printing a message and calling the next function in sequence.
+ *   This C program demonstrates different syntaxes for calling
+ *   functions through function pointers, with each function (f, g, h)
+ *   using increasingly complex pointer dereference notation to call
+ *   the next function in sequence.
  */
 //Libraries
 #include <stdio.h>

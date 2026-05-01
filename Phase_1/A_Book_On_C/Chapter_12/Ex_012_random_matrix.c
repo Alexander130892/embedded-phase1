@@ -1,13 +1,14 @@
 /*
  * File:    Ex_012_random_matrix.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program creates a 3x4 matrix, fills it with random integers
- *   between -5 and +5, and prints the result to the console. The
- *   program demonstrates dynamic memory allocation for a 2D matrix and
- *   includes proper memory cleanup after use.
+ *   This program creates a 3x4 integer matrix, fills it with random
+ *   integers between -5 and +5, prints the matrix to the console, and
+ *   then frees the allocated memory. The matrix allocation has a bug
+ *   where rows and columns are swapped in the memory allocation but
+ *   accessed correctly in the fill and print functions.
  */
 //Libraries
 #include <stdio.h>

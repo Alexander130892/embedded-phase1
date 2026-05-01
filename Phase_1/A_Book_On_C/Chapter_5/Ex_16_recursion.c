@@ -1,13 +1,13 @@
 /*
  * File:    Ex_16_recursion.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates recursion by calling main() recursively to
- *   print "The Universe is never ending!" 17 times with an
- *   incrementing counter, and includes an unused prime factorization
- *   function that decomposes a number into its prime factors.
+ *   This file demonstrates recursion by having the main function call
+ *   itself 17 times, printing a counter and the message "The Universe
+ *   is never ending!" each time, and includes an unused prime
+ *   factorization function.
  */
  //Libraries
 #include <stdio.h>

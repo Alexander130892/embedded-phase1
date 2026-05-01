@@ -1,15 +1,14 @@
 /*
  * File:    stm32f446re.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This header file defines memory-mapped register addresses and
- *   offsets for STM32F446RE microcontroller peripherals, specifically
- *   for GPIO port A, RCC clock control, and Timer 2 functionality. It
- *   provides the necessary constants for low-level hardware
- *   programming to control an LED on pin PA10 and configure timer
- *   operations.
+ *   This header file defines memory-mapped register base addresses and
+ *   offsets for the STM32F446RE microcontroller, specifically for GPIO
+ *   port A, RCC clock control, and Timer 2 peripherals. It appears to
+ *   be set up for controlling an LED on pin PA10 using timer-based
+ *   functionality.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

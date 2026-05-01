@@ -1,13 +1,12 @@
 /*
  * File:    Ex_24_assembly_test.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a simple countdown loop that prints
- *   decreasing integer values from 9 down to 1, likely created as a
- *   test case for examining assembly code generation or debugging
- *   assembly output.
+ *   This file implements a simple countdown loop that prints the
+ *   values of a variable `i` starting from 9 down to 1, demonstrating
+ *   pre-decrement operation in a while loop condition.
  */
  //Libraries
 #include <stdio.h>

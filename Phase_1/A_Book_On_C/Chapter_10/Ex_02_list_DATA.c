@@ -1,15 +1,16 @@
 /*
  * File:    Ex_02_list_DATA.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a linked list data structure to store and
- *   manipulate person data (name, age, weight), with functions to
- *   create the list from an array, print it, and count elements
- *   meeting age/weight criteria. It uses recursive approaches for list
- *   creation and memory deallocation, and includes comprehensive test
- *   cases to verify the functionality.
+ *   This file implements a linked list data structure to store person
+ *   records (name, age, weight) and demonstrates basic linked list
+ *   operations including recursive creation, traversal, memory
+ *   cleanup, and a function to count people above specified age and
+ *   weight thresholds. The program tests these operations with sample
+ *   data and includes comprehensive test cases for edge conditions
+ *   like empty lists and single elements.
  */
  //Libraries
 #include <stdio.h>

@@ -1,7 +1,7 @@
 /*
  * File:    Ex_03_ptrdiff.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the use of the ptrdiff_t data type by

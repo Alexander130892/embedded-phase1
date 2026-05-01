@@ -1,13 +1,13 @@
 /*
  * File:    Ex_12_is_fib_prime.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program generates the first 17 Fibonacci numbers (3rd
- *   through 19th) and checks whether each Fibonacci number and its
- *   corresponding position number are prime, displaying the results in
- *   a formatted output.
+ *   This program calculates the first 17 Fibonacci numbers (3rd
+ *   through 19th) and checks whether each Fibonacci number is prime,
+ *   while also displaying whether the corresponding position number
+ *   itself is prime.
  */
  //Libraries
 #include <stdio.h>

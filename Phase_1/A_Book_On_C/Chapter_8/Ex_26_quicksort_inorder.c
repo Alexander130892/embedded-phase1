@@ -1,16 +1,15 @@
 /*
  * File:    Ex_26_quicksort_inorder.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a quicksort algorithm with an optimized pivot
- *   selection strategy that uses the median-of-three method and
- *   handles arrays with duplicate elements efficiently. The program
- *   sorts an array of 1 million random integers and demonstrates the
- *   algorithm's performance by running quicksort multiple times on the
- *   already-sorted result, showcasing how the pivot selection prevents
- *   worst-case behavior on ordered data.
+ *   This file implements a quicksort algorithm that uses a
+ *   median-of-three pivot selection strategy to sort an array of one
+ *   million random integers. The program demonstrates the algorithm's
+ *   performance by running quicksort multiple times on the same sorted
+ *   array and printing sample elements from the beginning, middle, and
+ *   end of the array before and after sorting.
  */
 //write pack into one line
 

@@ -1,16 +1,15 @@
 /*
  * File:    Ex_10_restaurants.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program manages a list of 20 restaurants with different food
- *   types and displays restaurants of a specific type (hamburger
- *   restaurants in this case) sorted by their average cost in
- *   ascending order. The program uses a struct to store restaurant
- *   data, an enum for food types, and qsort with a custom comparison
- *   function to sort the entire list before filtering and displaying
- *   results.
+ *   This file manages a restaurant database with 20 restaurants,
+ *   storing their names, food types, and average costs, then filters
+ *   and displays restaurants of a specific type (hamburger restaurants
+ *   in this case) sorted by cost in ascending order. The program uses
+ *   an enum for food categories and qsort for sorting the entire list
+ *   before filtering and printing the results.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_22_print_q.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program prints "Hello!" by using clever pointer arithmetic
- *   and array indexing on string literals to extract individual
- *   characters, and includes an unused palindrome checking function
- *   that ignores whitespace and case.
+ *   This file prints "Hello!" by using complex pointer arithmetic and
+ *   string indexing to extract individual characters, and includes an
+ *   unused palindrome checking function that ignores whitespace and
+ *   case.
  */
 //Libraries
 #include <stdio.h>

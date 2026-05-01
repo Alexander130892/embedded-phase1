@@ -1,16 +1,13 @@
 /*
  * File:    Ex_15.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates string manipulation functions by copying
- *   two parts of a nursery rhyme into separate strings, displaying
- *   them using both printf and a custom character-by-character
- *   printing function, then concatenating them together and displaying
- *   the result. The custom prn_string function iterates through a
- *   string using pointer arithmetic to print each character
- *   individually.
+ *   This C program demonstrates string manipulation by copying two
+ *   strings, printing them using both printf and a custom
+ *   character-by-character printing function, then concatenating the
+ *   strings and displaying the result using both methods.
  */
 #include <stdio.h>
 #include <string.h>

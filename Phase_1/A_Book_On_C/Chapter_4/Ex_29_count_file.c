@@ -1,13 +1,14 @@
 /*
  * File:    Ex_29_count_file.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file reads characters from standard input and counts the
- *   occurrences of different character types (blanks, digits,
- *   lowercase letters, uppercase letters, newlines, and others), then
- *   displays the results in a formatted table with totals.
+ *   This C program reads input character by character from stdin and
+ *   counts different types of characters (blanks, digits, lowercase
+ *   letters, uppercase letters, newlines, and others), then displays
+ *   the counts in a formatted table along with the total character
+ *   count.
  */
  //Libraries
 #include <stdio.h>

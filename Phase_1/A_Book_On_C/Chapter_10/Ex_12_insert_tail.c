@@ -1,14 +1,14 @@
 /*
  * File:    Ex_12_insert_tail.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program implements a singly linked list that stores
- *   characters and provides functionality to insert elements at both
- *   the head and tail of the list. It converts a test string
- *   "TestString" into a linked list, then demonstrates inserting the
- *   character 'A' at both ends before printing the results.
+ *   characters, demonstrating insertion operations at both the head
+ *   and tail of the list. It converts a test string "TestString" into
+ *   a linked list, inserts 'A' at both ends, and prints the results to
+ *   show the before and after states.
  */
  //Libraries
 #include <stdio.h>

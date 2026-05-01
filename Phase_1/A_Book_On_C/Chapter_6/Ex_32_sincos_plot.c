@@ -1,14 +1,14 @@
 /*
  * File:    Ex_32_sincos_plot.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program creates an ASCII text-based plot of sine and cosine
- *   functions over one complete period (0 to 2π) in a 24x80 character
- *   grid. It displays the sine function using 'S' characters and the
- *   cosine function using 'C' characters, with coordinate axes drawn
- *   using dashes, pipes, and a plus sign at the origin.
+ *   This file creates a text-based plot of sine and cosine functions
+ *   over one complete period (0 to 2π) using ASCII characters in a
+ *   24x80 terminal screen. The sine function is plotted with 'S'
+ *   characters and cosine with 'C' characters, with coordinate axes
+ *   drawn using '-', '|', and '+' symbols.
  */
 //Libraries
 #include <stdio.h>

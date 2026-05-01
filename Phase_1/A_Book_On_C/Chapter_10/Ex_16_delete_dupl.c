@@ -1,14 +1,15 @@
 /*
  * File:    Ex_16_delete_dupl.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program implements a doubly linked list that removes
- *   duplicate characters from a string by converting the string to a
- *   linked list and then deleting all duplicate nodes. The program
- *   demonstrates various linked list operations including insertion,
- *   deletion, and traversal in both forward and reverse directions.
+ *   duplicate characters from a string, demonstrated by converting the
+ *   string "TestStriengeT" to a linked list and then eliminating all
+ *   duplicate occurrences of each character. The program includes
+ *   various linked list operations like insertion, deletion, and
+ *   traversal in both forward and reverse directions.
  */
  //Libraries
 #include <stdio.h>

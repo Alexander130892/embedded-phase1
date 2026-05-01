@@ -1,15 +1,15 @@
 /*
  * File:    Ex_05_concurrent_matrix_multiplication copy.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program performs matrix multiplication using concurrent
- *   processing by forking N child processes, where each child computes
- *   one row of the result matrix and sends it back to the parent via
- *   pipes. The parent process collects all computed rows to form the
- *   final result matrix, demonstrating parallel computation with
- *   inter-process communication.
+ *   This file performs concurrent matrix multiplication by forking N
+ *   child processes, where each child computes one row of the result
+ *   matrix and communicates it back to the parent process through
+ *   pipes. The program multiplies two 4x4 matrices using parallel
+ *   processing, with matrix A initialized to sequential values and
+ *   matrix B as an identity matrix.
  */
 //Libraries
 #include <stdio.h>

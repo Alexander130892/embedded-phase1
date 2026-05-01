@@ -1,13 +1,14 @@
 /*
  * File:    Ex_04_a_b_c.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This header file defines a macro A_B_C that expands to a complete
  *   main function which prints "A Big Cheery "hello"!" to the console.
  *   The macro uses line continuation backslashes to pack the entire
- *   function definition into what appears as a single logical line.
+ *   function definition into what appears as a single line when the
+ *   macro is used.
  */
 //write pack into one line
 

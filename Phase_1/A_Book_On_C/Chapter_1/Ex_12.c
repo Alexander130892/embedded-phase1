@@ -1,13 +1,13 @@
 /*
  * File:    Ex_12.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program generates and displays a formatted table showing
- *   integers from 1 to 10 alongside their corresponding 2nd, 3rd, 4th,
- *   and 5th powers. The output is neatly organized in columns with
- *   headers and separators for clear readability.
+ *   the powers (2nd through 5th) of integers from 1 to 10. It prints a
+ *   nicely aligned table with column headers and calculated values for
+ *   each integer's square, cube, fourth power, and fifth power.
  */
 #include <stdio.h>
 #include <stdlib.h>

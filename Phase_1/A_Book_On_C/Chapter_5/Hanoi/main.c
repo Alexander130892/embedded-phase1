@@ -1,14 +1,13 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a Tower of Hanoi solver that calculates and
- *   displays the number of moves required to solve the puzzle, then
- *   estimates how long it would take to move 64 disks at one disk per
- *   day. It tracks the total move count in a global variable and
- *   outputs the result in billions of years.
+ *   This file implements a solution to the Tower of Hanoi puzzle,
+ *   prompting the user for the number of disks and then calculating
+ *   how many moves are required, with a final message estimating it
+ *   would take billions of years to move 64 disks at one disk per day.
  */
 #include "hanoi.h"
 

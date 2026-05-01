@@ -1,13 +1,14 @@
 /*
  * File:    Ex_14_putchar_int.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates the behavior of the putchar() function by
- *   showing that it prints characters to stdout immediately but
- *   returns their ASCII values, which are then printed by printf in
- *   reverse order due to function call evaluation order.
+ *   This file demonstrates the behavior of putchar() function calls
+ *   within a printf statement, showing that putchar() returns an
+ *   integer value while also outputting characters, with the
+ *   characters being printed before their corresponding return values
+ *   due to output buffering.
  */
  //Libraries
 #include <stdio.h>

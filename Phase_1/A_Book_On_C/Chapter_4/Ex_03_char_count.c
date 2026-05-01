@@ -1,12 +1,13 @@
 /*
  * File:    Ex_03_char_count.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program reads character input from stdin until EOF and counts
- *   the total number of characters, separating them into digits (0-9)
- *   and non-digit characters, then displays the counts.
+ *   This program reads characters from standard input until EOF and
+ *   counts how many are digits (0-9) versus other characters, then
+ *   prints the total character count along with the breakdown of
+ *   digits and non-digits.
  */
  //Libraries
 #include <stdio.h>

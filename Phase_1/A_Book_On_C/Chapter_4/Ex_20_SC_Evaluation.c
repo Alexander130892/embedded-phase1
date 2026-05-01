@@ -1,14 +1,15 @@
 /*
  * File:    Ex_20_SC_Evaluation.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates short-circuit evaluation in C by showing
- *   how logical operators (&& and ||) can prevent the execution of
- *   subsequent expressions when the result is already determined, as
- *   evidenced by variables remaining unchanged when their assignment
- *   expressions are short-circuited.
+ *   This file demonstrates short-circuit evaluation in C logical
+ *   operators (&& and ||) by showing how the right-hand side
+ *   expressions are not evaluated when the result can be determined
+ *   from the left-hand side alone. It prints the values of variables
+ *   to illustrate that assignments in the second operand are skipped
+ *   when short-circuiting occurs.
  */
  //Libraries
 #include <stdio.h>

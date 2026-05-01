@@ -1,15 +1,15 @@
 /*
  * File:    Ex_13_sum_n.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program calculates the sum of integers from abs(n) to
- *   2*abs(n)-1 using both for and while loops, then multiplies the
- *   result by the sign of n to handle negative inputs. The program has
- *   a bug where it prints the return value of putchar('1') instead of
- *   sum_for, and contains unused constants that suggest it may be part
- *   of a larger exercise set.
+ *   This file calculates the sum of integers from abs(n) to 2*abs(n)-1
+ *   using both for and while loops, then adjusts the sign based on
+ *   whether the input n is positive or negative. It contains a bug in
+ *   the printf statement that calls putchar('1') instead of printing
+ *   sum_for, and has unused constants and headers that suggest it may
+ *   be part of a larger exercise.
  */
  //Libraries
 #include <stdio.h>

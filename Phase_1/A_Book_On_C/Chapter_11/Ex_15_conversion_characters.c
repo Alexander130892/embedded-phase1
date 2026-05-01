@@ -1,15 +1,14 @@
 /*
  * File:    Ex_15_conversion_characters.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the `%n` conversion specifier in printf,
- *   which writes the number of characters printed so far to integer
- *   pointer arguments, then displays the stored values to show how
- *   many characters were output at each `%n` position.
+ *   which writes the number of characters printed so far to the
+ *   corresponding integer pointer arguments, then displays those
+ *   stored counts.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

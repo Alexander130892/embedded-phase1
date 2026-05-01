@@ -1,18 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This is a bare-metal STM32 microcontroller program that configures
- *   UART2 communication and continuously transmits "A Hello World!"
- *   followed by a carriage return and newline every second through the
- *   serial port. The program uses direct register manipulation to
- *   initialize GPIO pins, enable clocks, configure UART settings, and
- *   implements basic UART transmission functions without using any HAL
- *   libraries.
+ *   This STM32 microcontroller program configures UART2 communication
+ *   and GPIO settings to continuously transmit "A Hello World!
+"
+ *   via UART every second using register-level programming. It
+ *   performs low-level hardware initialization by directly
+ *   manipulating memory-mapped registers for clocks, GPIO alternate
+ *   functions, and UART configuration without using HAL libraries.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

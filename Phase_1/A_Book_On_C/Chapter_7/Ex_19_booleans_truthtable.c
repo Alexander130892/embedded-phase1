@@ -1,15 +1,16 @@
 /*
  * File:    Ex_19_booleans_truthtable.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file generates and displays a truth table for three different
- *   4-input boolean functions using precomputed lookup tables stored
- *   as 16-bit integers. It evaluates each function for all 16 possible
- *   combinations of 4 boolean inputs (b1, b2, b3, b4) by using bit
- *   manipulation to extract results from the lookup tables rather than
- *   computing the logical expressions directly.
+ *   boolean functions using 4-bit inputs, employing precomputed lookup
+ *   tables stored as uint16_t values where each bit position
+ *   represents the function result for that input combination. The
+ *   program efficiently evaluates boolean expressions by using bit
+ *   manipulation to index into the lookup tables rather than computing
+ *   the logical operations directly.
  */
 #include <stdio.h>
 #include <stdint.h>

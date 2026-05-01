@@ -1,16 +1,16 @@
 /*
  * File:    Ex_33_dissection.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates array and pointer relationships by
+ *   This file demonstrates C array and pointer relationships by
  *   creating a 3x5 integer array, filling it with sequential values,
- *   and displaying the data using different access methods including
- *   array indexing, pointer arithmetic, and various pointer
- *   dereference operations. The file also contains unused helper
- *   functions for plotting characters on a screen grid, suggesting it
- *   may be part of a larger graphics or educational exercise.
+ *   and then displaying the same data through different access methods
+ *   (array notation, pointer arithmetic, and various dereference
+ *   operations). The program also includes unused helper functions for
+ *   drawing coordinate axes on a character screen, suggesting it may
+ *   be part of a larger graphics tutorial.
  */
 //Libraries
 #include <stdio.h>

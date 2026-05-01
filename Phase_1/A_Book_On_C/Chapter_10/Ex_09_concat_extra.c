@@ -1,14 +1,14 @@
 /*
  * File:    Ex_09_concat_extra.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a linked list data structure that stores
- *   characters and demonstrates string-to-list conversion and list
+ *   This C program implements a linked list library for character
+ *   data, demonstrating string-to-list conversion and list
  *   concatenation functionality. The main function converts two
- *   strings into linked lists, concatenates them together, and prints
- *   the results while also testing for cycles in the lists.
+ *   strings into linked lists, concatenates them, and prints the
+ *   results while testing cycle detection and memory management.
  */
  //Libraries
 #include <stdio.h>

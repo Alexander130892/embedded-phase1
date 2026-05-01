@@ -1,13 +1,13 @@
 /*
  * File:    Ex_25_str_change.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates the difference between modifying string
- *   arrays versus string literals in C, specifically showing that
- *   attempting to modify a string literal through a pointer results in
- *   undefined behavior (likely a segmentation fault).
+ *   This file demonstrates the difference between modifiable character
+ *   arrays and immutable string literals by attempting to modify a
+ *   string literal through a pointer, which results in undefined
+ *   behavior and likely a runtime error.
  */
 //Libraries
 #include <stdio.h>

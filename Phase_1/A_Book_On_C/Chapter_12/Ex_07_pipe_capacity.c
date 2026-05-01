@@ -1,15 +1,14 @@
 /*
  * File:    Ex_07_pipe_capacity.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates how to determine a pipe's buffer capacity
- *   by having a child process write bytes to a non-blocking pipe until
- *   it becomes full, then having the parent process drain and count
- *   the total bytes that were buffered. The program measures and
- *   reports the pipe's internal buffer size by counting successful
- *   writes before receiving an EAGAIN error.
+ *   This program determines the buffer capacity of a pipe by having a
+ *   child process write bytes in non-blocking mode until the pipe
+ *   fills up, then the parent process drains and counts the total
+ *   bytes to verify the capacity. It demonstrates pipe buffer limits
+ *   and non-blocking I/O behavior when the buffer becomes full.
  */
 //Libraries
 #include <stdio.h>

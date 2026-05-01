@@ -1,13 +1,13 @@
 /*
  * File:    Ex_27_struct_equality.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates that while you can assign one struct to
- *   another in C (copying all member values), you cannot directly
- *   compare structs for equality using the == operator, which would
- *   result in a compilation error.
+ *   This file demonstrates that while struct assignment is valid in C
+ *   (copying all members from one struct to another), direct struct
+ *   equality comparison using the == operator is not supported and
+ *   will cause a compilation error.
  */
  //Libraries
 #include <stdio.h>

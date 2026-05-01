@@ -1,10 +1,10 @@
 /*
  * File:    Ex_28_set_union.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements basic set operations using bitwise operations
+ *   This C program implements set operations using bitwise operations
  *   on unsigned long integers, where each bit represents a set
  *   element, and demonstrates union, intersection, and complement
  *   operations with both binary and element-based display functions.

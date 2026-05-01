@@ -1,16 +1,16 @@
 /*
  * File:    Ex_14.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates pointer arithmetic and string
- *   manipulation by performing character operations on strings,
- *   including printing characters with ASCII offsets and replacing
- *   specific characters ('e' with 'E' and spaces with newlines) in a
+ *   This file demonstrates pointer arithmetic and string manipulation
+ *   in C by performing character operations on variables and strings,
+ *   including incrementing ASCII values and replacing characters in a
  *   substring starting from position 14 of "she sells sea shells by
- *   the seashore". The program showcases various pointer dereferencing
- *   techniques and string traversal methods.
+ *   the seashore". The program prints various outputs showing pointer
+ *   dereferencing, ASCII arithmetic results, and modified string
+ *   content where 'e' becomes 'E' and spaces become newlines.
  */
 #include <stdio.h>
 #include <stdlib.h>

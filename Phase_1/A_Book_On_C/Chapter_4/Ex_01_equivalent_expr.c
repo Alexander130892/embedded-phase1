@@ -1,13 +1,12 @@
 /*
  * File:    Ex_01_equivalent_expr.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the logical equivalence between two
- *   conditional expressions by showing that `!(a>b)` and `a<b` produce
- *   the same result when `a=1` and `b=2`, printing "Truth!" twice to
- *   confirm both conditions evaluate to true.
+ *   conditional expressions by showing that `!(a>b)` and `a<b` both
+ *   evaluate to true when a=1 and b=2, printing "Truth!" twice.
  */
  //Libraries
 #include <stdio.h>

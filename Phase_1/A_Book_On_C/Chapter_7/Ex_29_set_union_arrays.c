@@ -1,14 +1,15 @@
 /*
  * File:    Ex_29_set_union_arrays.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a bit vector-based set data structure using
+ *   This file implements a bit-vector based set data structure using
  *   arrays of unsigned integers, providing operations like union,
- *   intersection, and complement on sets of integers. It demonstrates
- *   the set union operation by creating two sets, adding elements to
- *   them, computing their union, and displaying the result.
+ *   intersection, complement, add, remove, and membership testing. The
+ *   main function demonstrates the set union operation by creating two
+ *   sets, adding elements to them, computing their union, and
+ *   displaying the result.
  */
 //write pack into one line
 #include <stdio.h>

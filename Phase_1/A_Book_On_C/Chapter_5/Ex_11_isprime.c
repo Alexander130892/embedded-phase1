@@ -1,14 +1,14 @@
 /*
  * File:    Ex_11_isprime.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program checks if a number is prime by testing divisibility
- *   from 2 up to the square root of the number. The program tests
- *   whether 10 is prime and prints the result, demonstrating the
- *   isprime() function which returns 1 for prime numbers and 0 for
- *   non-prime numbers.
+ *   This C program implements a prime number checker that tests
+ *   whether a given integer is prime by checking for divisors up to
+ *   the square root of the number. The main function tests the number
+ *   10 and prints whether it is prime or not using the isprime
+ *   function.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,14 @@
 /*
  * File:    print_arr.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a utility function that prints an integer
- *   array in a formatted bracketed list, displaying each element with
- *   3-character width spacing and separating elements with spaces
- *   before closing with a bracket and newline.
+ *   array in a formatted style, displaying elements with 3-character
+ *   spacing inside square brackets. The function uses a conditional
+ *   operator to add spaces between elements and close the bracket with
+ *   a newline after the last element.
  */
 #include "mergesort.h"
 

@@ -1,13 +1,13 @@
 /*
  * File:    hanoi.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This header file declares functions and a global counter for
- *   implementing the Tower of Hanoi puzzle, including user input for
- *   the number of disks and the recursive move function that transfers
- *   disks between three pegs.
+ *   This header file declares the interface for a Tower of Hanoi
+ *   solver, providing functions to get the number of disks from user
+ *   input and recursively move disks between three pegs, along with a
+ *   global counter variable to track operations.
  */
 #include <assert.h>
 #include <stdio.h>

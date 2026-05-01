@@ -1,14 +1,13 @@
 /*
  * File:    Ex_19_tmpnam.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates the tmpnam() function by generating and
- *   printing three different temporary file names to show how the
- *   function creates unique temporary file names on each call.
+ *   This file demonstrates the `tmpnam()` function by generating and
+ *   printing three unique temporary filenames to show how the function
+ *   creates different temporary file names on each call.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

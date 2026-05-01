@@ -1,14 +1,13 @@
 /*
  * File:    Ex_01_husbandwife.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates a simple implementation of linked data
- *   structures using husband and wife structs that contain pointers to
- *   each other, creating a bidirectional relationship. It initializes
- *   a married couple and prints out their relationship by accessing
- *   one spouse's name through the other's pointer.
+ *   This C program demonstrates a basic implementation of mutually
+ *   referencing structures by creating husband and wife structs that
+ *   point to each other as spouses, then prints out their marital
+ *   relationship.
  */
  //Libraries
 #include <stdio.h>

@@ -1,15 +1,13 @@
 /*
  * File:    Ex_32_continue.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the behavior of the `continue` statement in
- *   C by printing characters in a loop where the continue statement
- *   causes an infinite loop that skips the unreachable code after it.
- *   The program outputs "1" followed by an endless sequence of "24"
- *   because the continue statement prevents execution from reaching
- *   the lines that would print "3" and "5".
+ *   C by executing an infinite loop that prints "124" repeatedly, as
+ *   the `continue` statement causes the unreachable code after it
+ *   (printing '3' and '5') to be skipped.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,14 @@
 /*
  * File:    Ex_25_birthdaygame.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file simulates the birthday paradox for groups of 2-20 people
- *   using birth months instead of specific dates, running one million
- *   Monte Carlo simulations for each group size to calculate the
- *   probability that at least two people share the same birth month.
+ *   This program simulates the birthday paradox by running Monte Carlo
+ *   simulations to calculate the probability that at least two people
+ *   in groups of 2-20 share the same birth month. It performs one
+ *   million trials for each group size and prints the success rate as
+ *   a percentage.
  */
  //Libraries
 #include <stdio.h>

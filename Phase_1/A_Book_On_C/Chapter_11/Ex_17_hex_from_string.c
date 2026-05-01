@@ -1,14 +1,13 @@
 /*
  * File:    Ex_17_hex_from_string.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates how to parse a hexadecimal string
- *   representation into an integer using sscanf with the %x format
- *   specifier, converting "0xabc" to its decimal equivalent 2748.
+ *   This file demonstrates how to convert a hexadecimal string
+ *   representation into an integer using sscanf, parsing "0xabc" and
+ *   displaying its decimal equivalent value.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

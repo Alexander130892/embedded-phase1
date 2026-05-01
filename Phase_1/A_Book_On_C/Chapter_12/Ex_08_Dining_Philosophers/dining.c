@@ -1,15 +1,14 @@
 /*
  * File:    dining.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a solution to the classic dining philosophers
- *   problem using 5 philosophers who must share chopsticks to eat,
- *   with semaphores implemented via Unix pipes to coordinate access to
- *   shared resources. The solution prevents deadlock by having one
- *   philosopher (philosopher 0) pick up chopsticks in reverse order
- *   compared to the others.
+ *   This file implements the classic dining philosophers problem with
+ *   5 philosophers who alternate between thinking and eating, using
+ *   semaphores implemented via Unix pipes to manage shared chopsticks.
+ *   It prevents deadlock by having philosopher 0 pick up the right
+ *   chopstick first while all others pick up the left chopstick first.
  */
 //Libraries
 #include <stdio.h>

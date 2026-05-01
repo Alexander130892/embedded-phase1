@@ -1,16 +1,16 @@
 /*
  * File:    Ex_08_ptrs_addr_types.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates pointer arithmetic by showing how adding
- *   integers to pointers of different data types (char, int, double,
- *   long double) results in different memory address increments based
- *   on the size of each data type. It prints the memory addresses
- *   after incrementing each pointer type by 1 and 3 to illustrate how
- *   pointer arithmetic scales by the size of the pointed-to type
- *   rather than by single bytes.
+ *   integer values to pointers of different data types (char, int,
+ *   double, long double) results in different memory address
+ *   increments based on the size of each data type. It prints the
+ *   resulting addresses when adding 1 and 3 to various pointer types
+ *   to illustrate how pointer arithmetic scales by the size of the
+ *   pointed-to type.
  */
  //Libraries
 #include <stdio.h>

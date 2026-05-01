@@ -1,15 +1,15 @@
 /*
  * File:    Ex_17_next_daydate_pack.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates date packing by compressing day,
- *   month, and year values into a single 16-bit unsigned short using
- *   bitwise operations, then calculates and displays the next day. The
- *   program packs dates into a compact binary format (5 bits for day,
- *   4 bits for month, 7 bits for year) and includes functionality to
- *   unpack and increment to the next calendar date.
+ *   This C program implements a date packing system that stores day,
+ *   month, and year values in a compact 16-bit unsigned short using
+ *   bit manipulation, and provides functionality to calculate the next
+ *   day from a packed date. The program demonstrates packing a
+ *   user-input date into binary format, unpacking it back to verify
+ *   the data, and then computing and displaying the following day.
  */
 //Libraries
 #include <stdio.h>

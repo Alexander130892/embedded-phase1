@@ -1,14 +1,13 @@
 /*
  * File:    Ex_19_union.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C file demonstrates union data structures by defining a basic
- *   union with multiple data types sharing the same memory location
- *   and a more complex union that interprets a byte as either raw data
- *   or individual bit fields for status register manipulation, though
- *   the main function contains no actual implementation.
+ *   This file demonstrates C union declarations, including a basic
+ *   union with different data types and a typedef union that uses bit
+ *   fields to represent a status register, but contains no functional
+ *   implementation in the main function.
  */
  //Libraries
 #include <stdio.h>

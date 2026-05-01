@@ -1,14 +1,15 @@
 /*
  * File:    mergesort.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a recursive merge sort algorithm that divides
- *   arrays by the largest power of 2 less than the array size rather
- *   than splitting exactly in half. The file contains two
- *   commented-out iterative implementations and uses a helper merge
- *   function to combine sorted subarrays.
+ *   This file implements a recursive merge sort algorithm that sorts
+ *   an integer array by dividing it at the largest power of 2 less
+ *   than the array size, recursively sorting both halves, and then
+ *   merging them back together. The file also contains two
+ *   commented-out iterative versions of merge sort, including one that
+ *   required array sizes to be powers of 2.
  */
 #include "mergesort.h"
 // void merge_sort(int key[], int n){

@@ -1,15 +1,15 @@
 /*
  * File:    uart.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This header file defines register offsets and function prototypes
- *   for UART/USART2 communication, providing an interface for sending
- *   and receiving both individual characters and strings over a serial
- *   connection. It includes memory-mapped register definitions for
- *   status, data, baud rate, and control registers along with basic
- *   transmission and reception functions.
+ *   for UART (USART2) communication, providing an interface for
+ *   sending and receiving both individual characters and strings over
+ *   a serial connection. It includes memory-mapped register
+ *   definitions for status, data, baud rate, and control registers
+ *   needed to configure and operate the UART peripheral.
  */
 #ifndef UART_H
 #define UART_H

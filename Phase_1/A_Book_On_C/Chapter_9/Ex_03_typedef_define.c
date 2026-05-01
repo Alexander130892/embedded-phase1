@@ -1,15 +1,15 @@
 /*
  * File:    Ex_03_typedef_define.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the difference between using `#define` and
  *   `typedef` to create string aliases in C, showing how `#define
  *   string char*` creates arrays of character pointers while a
  *   commented `typedef char* string` would create different behavior.
- *   The program prints a sentence by concatenating string array
- *   elements to illustrate this concept.
+ *   The program prints a simple sentence by concatenating string
+ *   elements from two arrays.
  */
  //Libraries
 #include <stdio.h>

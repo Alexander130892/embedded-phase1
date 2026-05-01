@@ -1,13 +1,13 @@
 /*
  * File:    Ex_14_greetings.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program defines a macro that takes three arguments and prints
- *   a greeting message to each of them, demonstrating the use of the
- *   stringification operator (#) to convert macro parameters into
- *   string literals.
+ *   This file demonstrates C preprocessor macro functionality by
+ *   defining a GREETINGS macro that takes three parameters and uses
+ *   the stringification operator (#) to convert them into a formatted
+ *   greeting message that gets printed to stdout.
  */
 //write pack into one line
 #include <stdio.h>

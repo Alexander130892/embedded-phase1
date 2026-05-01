@@ -1,15 +1,15 @@
 /*
  * File:    Ex_13_insert_after.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a linked list data structure for storing
- *   characters and demonstrates various insertion operations including
- *   inserting at the head, tail, and after a specific element. It
- *   converts a test string "TestString" into a linked list and
- *   performs insertions of the character 'A' at different positions to
- *   showcase the functionality.
+ *   This C program implements a singly linked list that stores
+ *   character data, with functions to insert elements at the head,
+ *   tail, and after a specified character. It demonstrates these
+ *   operations by converting the string "TestString" to a linked list
+ *   and performing various insertions including inserting 'A' after
+ *   the first occurrence of 's'.
  */
  //Libraries
 #include <stdio.h>

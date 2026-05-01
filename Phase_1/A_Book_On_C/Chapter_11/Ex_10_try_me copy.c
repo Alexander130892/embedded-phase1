@@ -1,11 +1,11 @@
 /*
  * File:    Ex_10_try_me copy.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates the difference between stdout and
- *   stderr output streams by printing the first part of a tongue
+ *   This C program demonstrates the difference between standard output
+ *   and standard error streams by printing the first part of a tongue
  *   twister to stdout and the second part to stderr.
  */
 #include <stdio.h>

@@ -1,15 +1,15 @@
 /*
  * File:    fixed_array_stack.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a fixed-size stack data structure using an
  *   array with a maximum capacity of 100 integer elements, providing
  *   standard stack operations (push, pop, top, isEmpty, isFull). The
- *   main function runs comprehensive tests demonstrating LIFO
- *   behavior, boundary conditions, and error handling for empty/full
- *   stack scenarios.
+ *   main function contains comprehensive tests that demonstrate LIFO
+ *   behavior, boundary conditions, and error handling for empty and
+ *   full stack scenarios.
  */
  //Libraries
 #include <stdio.h>

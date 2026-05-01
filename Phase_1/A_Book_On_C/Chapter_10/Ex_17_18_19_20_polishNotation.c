@@ -1,15 +1,14 @@
 /*
  * File:    Ex_17_18_19_20_polishNotation.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a stack-based evaluator for Polish
- *   (prefix) notation mathematical expressions, parsing
- *   comma-separated strings containing numbers and operators (+, -, *)
- *   and computing their results. It uses a linked-list stack data
- *   structure to process the expressions by pushing values onto a
- *   stack and applying operators to operands in the correct order.
+ *   This C program parses and evaluates mathematical expressions
+ *   written in Polish (prefix) notation using a stack-based algorithm.
+ *   It converts comma-separated Polish notation strings into a stack
+ *   data structure, then evaluates the expression by processing
+ *   operators and operands to compute the final numerical result.
  */
  //Libraries
 #include <stdio.h>

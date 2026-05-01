@@ -1,10 +1,10 @@
 /*
  * File:    pgm2.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program calculates and prints the sum of all valid integer
+ *   This C program calculates and prints the sum of all numeric
  *   command-line arguments passed to it, skipping any arguments that
  *   cannot be parsed as integers.
  */

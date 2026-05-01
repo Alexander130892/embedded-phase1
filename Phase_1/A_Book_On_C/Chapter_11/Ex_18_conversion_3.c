@@ -1,15 +1,14 @@
 /*
  * File:    Ex_18_conversion_3.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates the behavior of converting a negative
- *   number string ("-1") to an unsigned integer using sscanf, which
- *   results in the value wrapping around to the maximum unsigned
- *   integer value due to how signed-to-unsigned conversion works in C.
+ *   This file demonstrates the behavior of converting a negative
+ *   number string to an unsigned integer using sscanf, which results
+ *   in the negative value being interpreted as a large positive
+ *   unsigned value due to two's complement representation.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_22_float_promotion.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates that arithmetic operations between float
- *   variables do not get automatically promoted to double precision,
- *   showing the sizeof results for float, double, and a float addition
- *   operation to verify they remain as float type.
+ *   variables in C do not automatically promote the result to double
+ *   precision, as evidenced by printing the sizes of float, double,
+ *   and the result of adding two floats.
  */
  //Libraries
 #include <stdio.h>

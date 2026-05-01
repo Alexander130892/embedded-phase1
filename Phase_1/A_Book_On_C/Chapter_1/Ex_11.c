@@ -1,12 +1,12 @@
 /*
  * File:    Ex_11.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This program prompts the user to input their name and age, then
- *   displays a greeting message showing their name and what their age
- *   will be next year.
+ *   displays a greeting message stating what their age will be next
+ *   year.
  */
 #include <stdio.h>
 #include <stdlib.h>

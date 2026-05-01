@@ -1,15 +1,14 @@
 /*
  * File:    Ex_14_hex_printf.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates hexadecimal formatting in C by printing the
- *   decimal number 11259375 in both lowercase and uppercase
- *   hexadecimal format using the %#x and %#X printf format specifiers,
- *   which include the "0x" prefix.
+ *   This file demonstrates hexadecimal formatting in printf by
+ *   converting the decimal number 11259375 to hexadecimal
+ *   representation, showing both lowercase (%#x) and uppercase (%#X)
+ *   formats with the "0x" prefix.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

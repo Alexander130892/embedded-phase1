@@ -1,15 +1,14 @@
 /*
  * File:    Ex_05_reverse_int_bitrep.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file prints the binary representation of an integer (0xAAAA)
- *   in both normal bit order and reversed bit order, with spaces
- *   separating each byte. The program demonstrates two different
- *   approaches to displaying bits: left-to-right using left shifts and
- *   a high-order mask, versus right-to-left using right shifts and a
- *   low-order mask.
+ *   This file demonstrates printing the binary representation of an
+ *   integer both in normal bit order and in reverse bit order. It uses
+ *   bitwise operations to extract and display individual bits, with
+ *   the reverse function reading bits from least significant to most
+ *   significant bit position.
  */
 //Libraries
 #include <stdio.h>

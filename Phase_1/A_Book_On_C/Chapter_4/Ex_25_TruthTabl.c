@@ -1,14 +1,14 @@
 /*
  * File:    Ex_25_TruthTabl.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file generates and displays truth tables for three different
- *   Boolean functions using four binary variables (b1, b2, b3, b4),
- *   showing all 16 possible input combinations and their corresponding
- *   outputs for an OR operation, an AND operation, and a complex
- *   Boolean expression.
+ *   boolean functions operating on four binary variables (b1, b2, b3,
+ *   b4). It systematically evaluates all 16 possible input
+ *   combinations for an OR function, an AND function, and a complex
+ *   boolean expression involving negations and logical operators.
  */
  //Libraries
 #include <stdio.h>

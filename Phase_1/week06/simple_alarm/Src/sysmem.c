@@ -1,15 +1,15 @@
 /*
  * File:    sysmem.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements the `_sbrk()` system call for STM32
  *   microcontrollers, which manages dynamic memory allocation for the
- *   newlib C library's heap used by `malloc()` and related functions.
- *   It allocates memory starting from the `_end` symbol and includes
- *   protection to prevent the heap from growing into the reserved MSP
- *   stack space.
+ *   newlib C library's heap by tracking and extending the heap
+ *   boundary. It includes stack overflow protection by preventing the
+ *   heap from growing into the reserved MSP stack space using
+ *   linker-defined memory boundaries.
  */
 /**
  ******************************************************************************

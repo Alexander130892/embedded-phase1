@@ -1,15 +1,15 @@
 /*
  * File:    Ex_30_caesar_encrypt.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a Caesar cipher encryption and decryption
- *   program that shifts alphabetic characters by 3 positions while
- *   preserving case and leaving non-alphabetic characters unchanged.
- *   It demonstrates both encoding and decoding a test string using a
- *   reusable caesar() function that handles negative shifts for
- *   decryption.
+ *   program that shifts alphabetic characters by a fixed offset (3
+ *   positions) while preserving case and leaving non-alphabetic
+ *   characters unchanged. It demonstrates both encoding and decoding a
+ *   test string using a reusable caesar() function that handles
+ *   positive and negative shifts with proper wraparound.
  */
 //Libraries
 #include <stdio.h>

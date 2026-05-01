@@ -1,16 +1,13 @@
 /*
  * File:    Ex_24_quicksort_string.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program implements the quicksort algorithm to sort an array
- *   of strings in lexicographical (alphabetical) order using pointer
- *   arithmetic and custom macros for swapping and ordering operations.
- *   The program demonstrates sorting a predefined array of 5 strings
- *   and includes a pivot selection strategy that uses the
- *   median-of-three method with fallback logic for handling duplicate
- *   elements.
+ *   of strings in lexicographic order using string comparison. It uses
+ *   a median-of-three pivot selection strategy and includes extensive
+ *   macro definitions for swapping and ordering operations.
  */
 //write pack into one line
 

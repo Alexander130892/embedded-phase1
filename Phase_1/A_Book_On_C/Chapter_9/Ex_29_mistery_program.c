@@ -1,13 +1,15 @@
 /*
  * File:    Ex_29_mistery_program.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program uses a union and endianness-specific hexadecimal
- *   values to store and print the message "Hello, world!" by treating
- *   the same memory location as both an array of integers and a
- *   character string.
+ *   This program uses a union and hexadecimal constants to store and
+ *   print the string "Hello, world!" by exploiting the memory layout
+ *   differences between little-endian and big-endian systems. The
+ *   hexadecimal values are conditionally defined based on the system's
+ *   byte order to ensure the correct character sequence is produced
+ *   when the integer array is interpreted as a character string.
  */
  //Libraries
 #include <stdio.h>

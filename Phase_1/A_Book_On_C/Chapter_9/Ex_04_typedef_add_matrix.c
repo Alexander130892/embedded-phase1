@@ -1,12 +1,13 @@
 /*
  * File:    Ex_04_typedef_add_matrix.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This C program demonstrates matrix addition using a typedef to
- *   define a 5x5 integer matrix type, then adds two 3x3 matrices
- *   element-wise and prints the result.
+ *   define a custom matrix type, adding two 5x5 integer matrices and
+ *   printing the result. The program uses a typedef to create a
+ *   cleaner interface for working with 2D arrays as matrices.
  */
  //Libraries
 #include <stdio.h>

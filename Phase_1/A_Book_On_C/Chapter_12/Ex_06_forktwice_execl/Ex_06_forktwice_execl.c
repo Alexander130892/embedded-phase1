@@ -1,14 +1,13 @@
 /*
  * File:    Ex_06_forktwice_execl.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program creates a child process using fork() and then
- *   replaces both the parent and child processes with different
- *   executables using execl() - the child runs "pgm2" with arguments
- *   "1", "2", "3", "go", while the parent runs "pgm3" with no
- *   arguments.
+ *   This file creates two child processes using fork() and replaces
+ *   each with different programs using execl() - one child executes
+ *   "pgm2" with arguments "1", "2", "3", "go", while the parent
+ *   process executes "pgm3" with no arguments.
  */
 // Compute Fibonacci numbers and print time asynchronously
 

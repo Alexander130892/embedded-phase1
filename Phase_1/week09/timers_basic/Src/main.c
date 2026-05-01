@@ -1,18 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This STM32F446RE microcontroller program initializes GPIO pin PA10
- *   as an LED output and configures Timer 2 to create a millisecond
- *   counter, then blinks the LED every 1000 milliseconds in an
- *   infinite loop. The program uses direct register manipulation to
- *   configure the hardware peripherals and implements a custom
- *   millis() function that tracks timer overflows to provide
- *   millisecond timing.
+ *   as an LED output and configures TIM2 to create a millisecond
+ *   timer, then continuously blinks the LED every 1000 milliseconds
+ *   using direct register manipulation. The program implements a
+ *   custom `millis()` function that tracks timer overflows to provide
+ *   millisecond-accurate timing similar to Arduino's millis()
+ *   function.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

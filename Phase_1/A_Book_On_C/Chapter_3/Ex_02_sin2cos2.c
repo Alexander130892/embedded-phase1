@@ -1,15 +1,13 @@
 /*
  * File:    Ex_02_sin2cos2.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates the fundamental trigonometric identity
- *   sin²(x) + cos²(x) = 1 by calculating and printing the sum of
- *   squared sine and cosine values for x values from 0 to 2π in
- *   increments of 0.1. The output shows the mathematical identity
- *   holds true across the range, with results displayed in hexadecimal
- *   floating-point format for precision verification.
+ *   This C program calculates and prints the value of sin²(x) +
+ *   cos²(x) for x values from 0 to 2π in increments of 0.1,
+ *   demonstrating the fundamental trigonometric identity that this
+ *   expression should always equal 1.
  */
  //Libraries
 #include <stdio.h>

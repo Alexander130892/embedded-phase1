@@ -1,16 +1,13 @@
 /*
  * File:    Ex_09_printed.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates C's if-else statement precedence and
- *   associativity by testing nested conditional logic where an outer
- *   if condition (i==1) is false, causing the entire nested if-else
- *   block to be skipped and leaving the variable i unchanged. The
- *   program prints the final value of i (which remains 7) to show that
- *   no arithmetic operations were performed due to the failed initial
- *   condition.
+ *   This file demonstrates C's if-else statement binding behavior by
+ *   testing nested conditional statements with variables i=7 and j=7,
+ *   showing that the else clause binds to the inner if statement
+ *   rather than the outer one, resulting in the output of two values.
  */
  //Libraries
 #include <stdio.h>

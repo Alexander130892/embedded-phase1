@@ -1,14 +1,15 @@
 /*
  * File:    Ex_12_polynomials.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements and compares two methods for evaluating
- *   polynomials: a standard approach using pow() function and Horner's
- *   method for more efficient computation. Both functions evaluate the
- *   same 5th-degree polynomial with coefficients [1,2,3,4,5,6] at x=2
- *   and print the results.
+ *   This file implements two different methods for evaluating
+ *   polynomials at a given point: a direct method using power
+ *   calculations and Horner's method for more efficient computation.
+ *   Both functions evaluate the same 5th-degree polynomial at x=2 and
+ *   print the results to demonstrate that both approaches produce
+ *   identical outputs.
  */
  //Libraries
 #include <stdio.h>

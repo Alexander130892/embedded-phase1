@@ -1,11 +1,11 @@
 /*
  * File:    Ex_21_dbl_space.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This program reads a text file specified as a command-line
- *   argument and outputs its contents to stdout with double spacing by
+ *   argument and outputs its contents to stdout with double-spacing by
  *   adding an extra newline character after each existing newline. If
  *   the wrong number of arguments is provided, it prints usage
  *   information to stderr and exits.

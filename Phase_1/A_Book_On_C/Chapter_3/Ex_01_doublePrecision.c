@@ -1,15 +1,14 @@
 /*
  * File:    Ex_01_doublePrecision.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates the precision limits of double-precision
- *   floating-point numbers by printing the same value assigned to two
- *   variables with different precision levels using both decimal and
- *   hexadecimal formats. It shows how doubles can only maintain about
- *   15-17 significant decimal digits, with trailing digits being lost
- *   or altered during storage.
+ *   This file demonstrates the precision limitations of
+ *   double-precision floating-point numbers by printing the same value
+ *   with different trailing digits using both decimal and hexadecimal
+ *   representations to show that they are stored identically due to
+ *   finite precision.
  */
  //Libraries
 #include <stdio.h>

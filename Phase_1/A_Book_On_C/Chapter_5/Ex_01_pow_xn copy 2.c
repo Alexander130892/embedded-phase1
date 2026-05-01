@@ -1,12 +1,13 @@
 /*
  * File:    Ex_01_pow_xn copy 2.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a custom power function that calculates
- *   x raised to the power of n using iterative multiplication, and
- *   demonstrates it by computing 3.5^7 and printing the result.
+ *   This C program implements a simple iterative power function that
+ *   calculates x raised to the power of n by multiplying x by itself n
+ *   times in a loop. The main function demonstrates this by computing
+ *   3.5^7 and printing the result with two decimal places.
  */
  //Libraries
 #include <stdio.h>

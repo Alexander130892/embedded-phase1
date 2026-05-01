@@ -1,13 +1,13 @@
 /*
  * File:    Ex_16_assert.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates undefined behavior by left-shifting an
+ *   This C program demonstrates undefined behavior by left-shifting an
  *   integer by 65 bits (which exceeds the bit width of most integer
- *   types) and then uses an assertion to verify that the resulting
- *   value is greater than 200000.
+ *   types), prints the result, and then uses an assertion to check if
+ *   the shifted value is greater than 200000.
  */
 //write pack into one line
 

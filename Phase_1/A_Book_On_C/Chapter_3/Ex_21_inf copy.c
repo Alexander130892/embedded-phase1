@@ -1,12 +1,13 @@
 /*
  * File:    Ex_21_inf copy.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file calculates and displays the mathematical power function
- *   x^x for values of x ranging from 143.0 to 144.9 in increments of
- *   0.1, printing the results in scientific notation.
+ *   This file computes and prints the mathematical function x^x (x
+ *   raised to the power of x) for values of x ranging from 143.0 to
+ *   144.9 in increments of 0.1, displaying the results in scientific
+ *   notation.
  */
  //Libraries
 #include <stdio.h>

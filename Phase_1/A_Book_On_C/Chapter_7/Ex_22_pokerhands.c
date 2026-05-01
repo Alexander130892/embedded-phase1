@@ -1,15 +1,15 @@
 /*
  * File:    Ex_22_pokerhands.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program simulates dealing 100,000 five-card poker hands and
- *   calculates the statistical probabilities of getting a flush,
- *   straight, and full house. It randomly generates cards without
- *   duplication for each hand, checks for the three poker hand types,
- *   and displays the percentage occurrence of each along with printing
- *   the first occurrence of flushes and straights.
+ *   This file simulates dealing 100,000 poker hands and calculates the
+ *   statistical probability of getting flushes, straights, and full
+ *   houses by randomly generating 5-card hands and checking for these
+ *   specific poker combinations. It prints the first occurrence of
+ *   each hand type and displays the final percentage statistics for
+ *   each combination.
  */
 //write pack into one line
 #include <stdio.h>

@@ -1,17 +1,14 @@
 /*
  * File:    parser.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This header file defines a command parser system that maps text
- *   commands to handler functions, designed to process UART-like
- *   communication commands for controlling hardware components such as
- *   LEDs and PWM outputs.
+ *   commands to corresponding handler functions, with a structure for
+ *   associating command names with their execution functions and
+ *   temporary implementations for LED, PWM, and status commands.
  */
-
-
-
 #ifndef PARSER_H
 #define PARSER_H
 

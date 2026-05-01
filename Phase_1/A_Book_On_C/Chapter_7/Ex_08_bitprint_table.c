@@ -1,15 +1,14 @@
 /*
  * File:    Ex_08_bitprint_table.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program prints a table showing the binary representations
- *   of powers of 2 (from 2^0 to 2^31) alongside their corresponding
- *   masks (2^n - 1), and demonstrates the bitprint function by also
- *   printing the binary representation of the multi-character constant
- *   'ab'. The bitprint function displays integers as binary strings
- *   with spaces separating each byte for readability.
+ *   This file prints a table showing the binary representation of
+ *   powers of 2 (from 2^0 to 2^31) alongside their corresponding masks
+ *   (value - 1) in binary format. The program demonstrates bit
+ *   patterns and includes a `bitprint` function that displays integers
+ *   as binary strings with byte separation.
  */
 //Libraries
 #include <stdio.h>

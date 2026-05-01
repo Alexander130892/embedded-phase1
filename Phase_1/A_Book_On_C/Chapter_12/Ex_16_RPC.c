@@ -1,14 +1,14 @@
 /*
  * File:    Ex_16_RPC.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C file implements a remote procedure call (RPC) client that
- *   polls a specified host to retrieve system statistics including
- *   boot time and current time. It uses the rstat RPC service to
- *   gather timing information from remote hosts and outputs the
- *   results in a formatted "DATA" line.
+ *   This file implements an RPC (Remote Procedure Call) client that
+ *   polls a remote host to retrieve system statistics including boot
+ *   time and current time using the rstat service. It makes a remote
+ *   call to the specified host and prints the retrieved timing data if
+ *   the call succeeds.
  */
 //Libraries
 #include <stdio.h>

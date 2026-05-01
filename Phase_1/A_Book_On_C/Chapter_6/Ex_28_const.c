@@ -1,13 +1,12 @@
 /*
  * File:    Ex_28_const.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates undefined behavior by attempting to modify
  *   a const char array through a non-const pointer, which violates the
- *   const qualifier and may cause a runtime error or unpredictable
- *   results.
+ *   const qualifier and may cause unpredictable results or crashes.
  */
 //Libraries
 #include <stdio.h>

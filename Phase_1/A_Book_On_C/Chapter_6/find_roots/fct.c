@@ -1,14 +1,14 @@
 /*
  * File:    fct.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file defines three mathematical functions (f1, f2, f3) that
- *   represent different equations whose roots can be found using
- *   numerical methods. The functions include a cubic polynomial, a
- *   combination of trigonometric and polynomial terms, and an
- *   exponential-polynomial equation.
+ *   appear to be test cases for a root-finding algorithm, with f1
+ *   being a cubic polynomial, f2 combining trigonometric and
+ *   polynomial terms, and f3 combining exponential and polynomial
+ *   terms.
  */
 #include "find_roots.h"
 

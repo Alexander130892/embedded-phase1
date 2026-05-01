@@ -1,14 +1,15 @@
 /*
  * File:    Ex_03_getstring.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program reads the first two lines from an input file
- *   specified as a command-line argument, displays them on the
- *   console, and writes them to an output file named "output.txt". It
- *   uses dynamic memory allocation to store each line and includes
- *   basic error handling for file operations.
+ *   This program reads exactly two lines from an input file specified
+ *   as a command line argument, displays them on the console, and
+ *   writes them to an output file named "output.txt". It uses dynamic
+ *   memory allocation to store each line with a maximum buffer size of
+ *   255 characters and includes proper error handling for file
+ *   operations.
  */
 #include <stdio.h>
 #include <stdlib.h>

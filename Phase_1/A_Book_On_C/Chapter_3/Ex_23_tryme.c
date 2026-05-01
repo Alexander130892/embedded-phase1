@@ -1,14 +1,15 @@
 /*
  * File:    Ex_23_tryme.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file reads characters from standard input and echoes them to
- *   standard output until EOF is reached, but contains a bug where the
- *   loop variable 'c' is declared as char instead of int, which can
- *   cause issues on platforms where char is unsigned by default since
- *   EOF is typically -1.
+ *   This file reads characters from standard input using `getchar()`
+ *   and echoes them to standard output using `putchar()` until EOF is
+ *   encountered. The program contains a bug where the variable `c` is
+ *   declared as `char` instead of `int`, which can cause issues on
+ *   platforms where `char` is unsigned by default since EOF is
+ *   typically -1.
  */
  //Libraries
 #include <stdio.h>

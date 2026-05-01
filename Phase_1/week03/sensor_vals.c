@@ -1,15 +1,14 @@
 /*
  * File:    sensor_vals.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates packing and unpacking two 4-bit sensor
- *   values into a single byte for efficient storage, with functions to
- *   combine the values using bit shifting and masking operations. It
- *   includes a utility function to print the binary representation of
- *   values and tests the pack/unpack functionality in the main
- *   function.
+ *   This file demonstrates packing two 4-bit sensor values into a
+ *   single byte and then unpacking them back into separate values,
+ *   using bitwise operations to efficiently store and retrieve the
+ *   data. It includes a utility function to print the binary
+ *   representation of values for visualization purposes.
  */
  //Libraries
 #include <stdio.h>

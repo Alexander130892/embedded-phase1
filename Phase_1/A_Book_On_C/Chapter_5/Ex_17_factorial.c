@@ -1,12 +1,13 @@
 /*
  * File:    Ex_17_factorial.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file calculates the factorial of 5 using a recursive function
- *   and prints the result (120) along with a message "The Universe is
- *   never ending!".
+ *   This file calculates and prints the factorial of 5 using a
+ *   recursive function implementation. The program outputs the result
+ *   (120) along with the message "The Universe is never ending!" and
+ *   includes an unused static counter variable.
  */
  //Libraries
 #include <stdio.h>

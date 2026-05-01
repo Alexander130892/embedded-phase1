@@ -1,15 +1,15 @@
 /*
  * File:    Ex_25_quicksort_small_array.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a hybrid quicksort algorithm that switches to
- *   insertion sort for small subarrays (fewer than 7 elements) and
- *   uses a sophisticated pivot selection strategy to handle arrays
- *   with many duplicate values. It generates and sorts an array of
- *   10,000 random integers (0-9), demonstrating the algorithm's
- *   performance on arrays with high duplication.
+ *   insertion sort for small subarrays (less than 7 elements) and uses
+ *   a sophisticated pivot selection strategy to handle arrays with
+ *   many duplicate values. It sorts an array of 10,000 random integers
+ *   between 0-9 and displays samples from the beginning, middle, and
+ *   end of the array before and after sorting.
  */
 //write pack into one line
 

@@ -1,15 +1,15 @@
 /*
  * File:    Ex_26_quicksort_reverse_order.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements a modified quicksort algorithm that
- *   sorts an array of one million random integers in descending
- *   (reverse) order rather than ascending order. The modification is
- *   achieved by changing the comparison operators in the order,
- *   find_pivot, and partition functions to reverse the standard
- *   sorting behavior.
+ *   This file implements a quicksort algorithm that sorts an array of
+ *   one million random integers in descending (reverse) order rather
+ *   than ascending order. The program demonstrates the sorting
+ *   performance by running quicksort multiple times and displays
+ *   sample elements from the beginning, middle, and end of the array
+ *   before and after sorting.
  */
 //write pack into one line
 

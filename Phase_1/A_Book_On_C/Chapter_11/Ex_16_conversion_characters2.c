@@ -1,15 +1,14 @@
 /*
  * File:    Ex_16_conversion_characters2.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the difference between printf format
- *   specifiers "%0+17d" and "%+017d" when formatting positive
- *   integers, showing how the order of flags (zero-padding and plus
- *   sign) affects the output formatting.
+ *   specifiers "%0+17d" and "%+017d" when formatting a positive
+ *   integer, showing how the order of flags affects zero-padding and
+ *   sign display behavior.
  */
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

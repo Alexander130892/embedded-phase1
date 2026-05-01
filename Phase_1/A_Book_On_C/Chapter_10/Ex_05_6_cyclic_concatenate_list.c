@@ -1,14 +1,16 @@
 /*
  * File:    Ex_05_6_cyclic_concatenate_list.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program implements linked list operations with a focus on
- *   concatenation and cycle detection, where it converts strings to
- *   linked lists of characters, concatenates a list to itself to
- *   create a cycle, and then uses the `is_cycle()` function to detect
- *   whether circular references exist in the linked structure.
+ *   This file implements a linked list data structure with character
+ *   data and demonstrates cyclic list creation by concatenating a list
+ *   to itself, then uses a cycle detection function to verify the
+ *   presence of cycles in the resulting structure. The program
+ *   converts strings to linked lists, concatenates them (including
+ *   self-concatenation to create cycles), and tests for cyclic
+ *   behavior using a detection algorithm.
  */
  //Libraries
 #include <stdio.h>

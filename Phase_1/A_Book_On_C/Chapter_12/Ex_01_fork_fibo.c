@@ -1,16 +1,15 @@
 /*
  * File:    Ex_01_fork_fibo.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program uses fork() to create two concurrent processes: a
- *   child process that computes and prints the first 30 Fibonacci
- *   numbers, and a parent process that prints elapsed time every
- *   second. The two processes run asynchronously, demonstrating
- *   parallel execution where Fibonacci calculations proceed
- *   independently while time updates are displayed at regular
- *   intervals.
+ *   This program uses fork() to create two processes that run
+ *   concurrently: a child process that computes and prints the first
+ *   30 Fibonacci numbers, and a parent process that prints elapsed
+ *   time every second. The program demonstrates asynchronous execution
+ *   by having both processes output their results simultaneously
+ *   without synchronization.
  */
 // Compute Fibonacci numbers and print time asynchronously
 

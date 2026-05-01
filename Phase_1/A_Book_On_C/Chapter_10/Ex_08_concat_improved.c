@@ -1,16 +1,15 @@
 /*
  * File:    Ex_08_concat_improved.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements an improved linked list concatenation
- *   function along with utility functions for character-based linked
- *   lists, including cycle detection to identify when concatenation
- *   creates circular references. The main function demonstrates how
- *   concatenating a list with itself or creating chains can result in
- *   cyclic linked lists, which are detected using the `is_cycle`
- *   function.
+ *   This C program demonstrates linked list concatenation and cycle
+ *   detection by converting strings to linked lists, concatenating
+ *   them (including intentionally creating cycles), and using a cycle
+ *   detection function to identify when lists become circular. The
+ *   program specifically tests scenarios where concatenation results
+ *   in cyclic linked lists and warns about potential infinite loops.
  */
  //Libraries
 #include <stdio.h>

@@ -1,15 +1,15 @@
 /*
  * File:    Ex_10_iterative_concat.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a linked list library in C that converts
- *   strings to linked lists and demonstrates concatenation operations,
- *   with a focus on detecting and creating cyclic lists through the
- *   concatenate function. The program tests cycle detection by
- *   concatenating different linked lists and checking for cycles using
- *   a custom `is_cycle` function.
+ *   This file implements a linked list data structure for characters
+ *   and demonstrates string-to-list conversion, list concatenation,
+ *   and cycle detection. The main function creates two linked lists
+ *   from strings, concatenates them (including self-concatenation to
+ *   create cycles), and tests for cyclic behavior in the resulting
+ *   lists.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program finds roots of multiple mathematical functions using
- *   the bisection method over the interval [-100, 100] and reports the
- *   approximate roots, function values at those roots, and the number
- *   of function calls required for each computation.
+ *   This file tests a bisection root-finding algorithm on three
+ *   different functions (f1, f2, f3) within the interval [-100, 100],
+ *   printing the approximate roots, function values at those roots,
+ *   and the number of function calls required for each test case.
  */
 #include "find_roots.h"
 

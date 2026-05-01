@@ -1,16 +1,15 @@
 /*
  * File:    Ex_33_heapsort.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements the heapsort algorithm using a min-heap
- *   approach, which builds a min-heap from the input array, repeatedly
- *   extracts the minimum element to the end (producing descending
- *   order), then reverses the array to achieve final ascending order.
- *   The implementation includes comprehensive test cases and a
- *   visualization function that displays the heap's tree structure
- *   level by level.
+ *   This file implements the heapsort algorithm using a min-heap data
+ *   structure to sort integer arrays in ascending order. It builds a
+ *   min-heap, extracts elements to achieve descending order, then
+ *   reverses the array to get the final ascending sort, with
+ *   comprehensive test cases demonstrating the sorting on various
+ *   input patterns.
  */
  //Libraries
 #include <stdio.h>

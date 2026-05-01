@@ -1,12 +1,14 @@
 /*
  * File:    pgm3.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program simply displays the current system date and time by
- *   executing the "date" command through a system call, then exits
- *   successfully.
+ *   This C program simply executes the system "date" command to
+ *   display the current date and time, then exits successfully.
+ *   Despite including several headers and defining constants that
+ *   suggest more complex functionality, the actual implementation only
+ *   calls the system date command.
  */
 #include <stdio.h>
 #include <stdlib.h>

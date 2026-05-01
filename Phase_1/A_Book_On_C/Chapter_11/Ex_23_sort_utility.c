@@ -1,15 +1,14 @@
 /*
  * File:    Ex_23_sort_utility.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program is a utility wrapper that takes a filename as a
- *   command-line argument and executes the Unix `sort -r` command on
- *   that file to display its contents in reverse sorted order. It
- *   includes basic input validation to ensure exactly one argument is
- *   provided and that the filename is not too long to prevent buffer
- *   overflow.
+ *   This file implements a command-line utility that takes a filename
+ *   as an argument and executes the Unix `sort -r` command on that
+ *   file to display its contents in reverse sorted order. It includes
+ *   basic error checking for argument count and filename length to
+ *   prevent buffer overflow when constructing the system command.
  */
  //Libraries
 #include <stdio.h>

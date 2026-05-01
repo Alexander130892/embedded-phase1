@@ -1,16 +1,15 @@
 /*
  * File:    Ex_28_prio_scheduler.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a priority-based job scheduler that reads job
- *   requests from input (labeled A, B, C, or D with corresponding
- *   process IDs), stores them in separate priority queues, and then
- *   outputs the scheduled jobs organized by priority level. The
- *   scheduler uses four distinct queues where A has the highest
- *   priority (1) and D has the lowest priority (4), processing jobs
- *   within each priority level in the order they were received.
+ *   requests labeled A, B, C, or D from input, stores them in separate
+ *   priority queues, and then outputs the scheduled jobs grouped by
+ *   their original queue category. The scheduler uses a linked-list
+ *   priority queue where jobs with lower numerical priority values
+ *   (A=1, B=2, C=3, D=4) are processed first within each queue.
  */
  //Libraries
 #include <stdio.h>

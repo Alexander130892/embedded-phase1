@@ -1,13 +1,14 @@
 /*
  * File:    Ex_013_determinant.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file creates and displays a 3x3 matrix filled with random
- *   integers between -5 and 5, and includes a determinant calculation
- *   function using Gaussian elimination with partial pivoting, though
- *   the determinant function is defined but not called in main.
+ *   This file creates a 3x3 matrix filled with random integers and
+ *   prints it to the console, but despite having a determinant
+ *   calculation function implemented using Gaussian elimination with
+ *   partial pivoting, the main function never actually calls it to
+ *   compute or display the determinant.
  */
 //Libraries
 #include <stdio.h>

@@ -1,17 +1,16 @@
 /*
  * File:    parser.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a command parser that processes text commands
  *   ("led", "pwm", "status") and dispatches them to appropriate
- *   handler functions using a lookup table. The handlers currently
- *   output test messages to simulate hardware control operations like
- *   LED switching, PWM duty cycle setting, and status reporting.
+ *   handler functions for controlling hardware components. It includes
+ *   argument validation and currently uses printf statements as
+ *   placeholder implementations for actual hardware control that will
+ *   be added later.
  */
-
-
 #include "parser.h"
 #include <string.h>
 #include <stdlib.h>

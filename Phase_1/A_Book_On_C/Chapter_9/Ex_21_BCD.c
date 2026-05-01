@@ -1,15 +1,16 @@
 /*
  * File:    Ex_21_BCD.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates Binary Coded Decimal (BCD) conversion by
- *   implementing functions to convert between standard binary integers
- *   and a custom BCD structure that stores each decimal digit in
- *   separate 4-bit fields. It converts the number 12345678 to BCD
- *   format, prints each digit individually, then converts it back to
- *   verify the round-trip conversion works correctly.
+ *   This file demonstrates Binary Coded Decimal (BCD) encoding by
+ *   converting an unsigned integer to a BCD structure where each
+ *   decimal digit is stored in a separate 4-bit field, then converting
+ *   it back to verify the process. The program uses bit fields to
+ *   efficiently pack 8 decimal digits into a single structure and
+ *   includes functions to convert between binary and BCD
+ *   representations.
  */
  //Libraries
 #include <stdio.h>

@@ -1,7 +1,7 @@
 /*
  * File:    get.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a function that prompts the user to input the

@@ -1,13 +1,12 @@
 /*
  * File:    Ex_01_tryme.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates the stringification operator (#) in C
- *   macros by defining a PRN macro that converts its argument into a
- *   string literal and prints it, resulting in the output "Hello from
- *   main()".
+ *   This C program demonstrates macro stringification by defining a
+ *   macro PRN(x) that prints the literal text of its argument as a
+ *   string, resulting in the output "Hello from main()" when executed.
  */
 //write pack into one line
 #include <stdio.h>

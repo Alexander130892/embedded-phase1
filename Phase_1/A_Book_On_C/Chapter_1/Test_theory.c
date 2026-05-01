@@ -1,14 +1,14 @@
 /*
  * File:    Test_theory.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file benchmarks the performance of the rand() function by
- *   making 100 million calls to it and measuring the elapsed time. It
- *   displays the first 24 random values (modulo 101) in a formatted
- *   grid, then calculates and prints timing statistics including the
- *   average time per function call.
+ *   This C program benchmarks the performance of the rand() function
+ *   by making 100 million calls to it and measuring the total
+ *   execution time. It displays the first 24 generated random numbers
+ *   (modulo 101) in a formatted grid, then outputs timing statistics
+ *   including the elapsed time and average time per function call.
  */
  //Libraries
 #include <stdio.h>

@@ -1,13 +1,13 @@
 /*
  * File:    Ex_25_signed_bitfield.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the behavior of signed bitfields by
- *   continuously incrementing and printing two bitfield members (3-bit
- *   and 4-bit) in an infinite loop, showing how they wrap around due
- *   to their limited bit storage and signed nature.
+ *   continuously incrementing and printing two bitfield members (a
+ *   3-bit and a 4-bit field) in an infinite loop, showing how they
+ *   wrap around due to their limited bit ranges and signed nature.
  */
  //Libraries
 #include <stdio.h>

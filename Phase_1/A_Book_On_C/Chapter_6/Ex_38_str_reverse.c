@@ -1,13 +1,13 @@
 /*
  * File:    Ex_38_str_reverse.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file implements a string reversal function that reverses a
  *   string in-place by swapping characters from both ends moving
- *   toward the center, and demonstrates it by reversing the alphabet
- *   string and printing the original, reversed, and final states.
+ *   inward, and demonstrates it by reversing the alphabet string and
+ *   printing the original, reversed, and final states.
  */
  //Libraries
 #include <stdio.h>

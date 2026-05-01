@@ -1,13 +1,13 @@
 /*
  * File:    led.h
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This header file defines an interface for controlling an LED with
- *   functions to initialize, turn on/off, and check the current state
- *   of the LED. It provides a simple abstraction layer for basic LED
- *   operations in an embedded system.
+ *   This header file defines a simple LED control interface with
+ *   functions to initialize, turn on/off, and check the state of an
+ *   LED. It provides a basic abstraction layer for LED hardware
+ *   control in embedded systems.
  */
 #ifndef LED_H
 #define LED_H

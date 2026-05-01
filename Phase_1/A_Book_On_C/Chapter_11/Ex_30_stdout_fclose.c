@@ -1,13 +1,13 @@
 /*
  * File:    Ex_30_stdout_fclose.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This C program demonstrates what happens when you close the stdout
- *   stream - it prints "Hello!" successfully, then closes stdout with
- *   fclose(), causing the subsequent "Goodbye!" printf to fail
- *   silently since there's no longer a valid output stream.
+ *   This program demonstrates what happens when stdout is closed
+ *   mid-execution by printing "Hello!", closing the stdout stream with
+ *   fclose(), then attempting to print "Goodbye!" which will fail
+ *   silently since stdout is no longer available.
  */
  //Libraries
 #include <stdio.h>

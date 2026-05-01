@@ -1,13 +1,13 @@
 /*
  * File:    Ex_011_offset_vector.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates pointer arithmetic by creating an offset
- *   array where a dynamically allocated integer array is shifted so
- *   that years (1989-1998) can be used directly as array indices, then
- *   stores and displays car sales data for each year.
+ *   array where the pointer is shifted backwards so that array indices
+ *   correspond to years (1989-1998), storing and displaying the number
+ *   of cars sold for each year.
  */
 //Libraries
 #include <stdio.h>

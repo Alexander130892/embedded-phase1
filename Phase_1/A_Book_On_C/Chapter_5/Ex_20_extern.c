@@ -1,14 +1,15 @@
 /*
  * File:    Ex_20_extern.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
  *   This file demonstrates the use of the `extern` keyword in C by
- *   declaring external variables `a`, `b`, and `c` in main() and then
- *   defining them as static variables at the end of the file, printing
- *   their values (1, 2, 3) to show how external variable declarations
- *   work within the same source file.
+ *   declaring external variables in main() and then defining those
+ *   same variables as static at the end of the file, printing their
+ *   values (1, 2, 3). The code illustrates variable linkage concepts,
+ *   though the `extern` declaration is redundant since the variables
+ *   are defined in the same file.
  */
  //Libraries
 #include <stdio.h>

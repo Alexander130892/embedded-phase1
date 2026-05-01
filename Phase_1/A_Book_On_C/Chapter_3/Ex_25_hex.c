@@ -1,13 +1,13 @@
 /*
  * File:    Ex_25_hex.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates hexadecimal number literals in C by
- *   declaring three integer variables with hex values (0xabc, 0xABc,
- *   0xABC) and printing their decimal equivalents to show that
- *   hexadecimal notation is case-insensitive.
+ *   This file demonstrates hexadecimal number representation in C by
+ *   declaring three integer variables with hexadecimal values (0xabc,
+ *   0xABc, 0xABC) and printing their decimal equivalents to show that
+ *   hexadecimal literals are case-insensitive.
  */
  //Libraries
 #include <stdio.h>

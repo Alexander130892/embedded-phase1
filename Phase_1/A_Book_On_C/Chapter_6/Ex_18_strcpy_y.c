@@ -1,14 +1,13 @@
 /*
  * File:    Ex_18_strcpy_y.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This program demonstrates the dangerous behavior of strcpy when
- *   source and destination strings overlap, copying the entire
- *   alphabet string "abcdefghijklmnopqrstuvwxyz" over itself starting
- *   from 3 characters before the end, resulting in undefined behavior
- *   due to overlapping memory regions.
+ *   This file demonstrates the dangerous behavior of using strcpy()
+ *   with overlapping memory regions by copying the entire alphabet
+ *   string to a position near its end, resulting in undefined behavior
+ *   and memory corruption.
  */
 //Libraries
 #include <stdio.h>

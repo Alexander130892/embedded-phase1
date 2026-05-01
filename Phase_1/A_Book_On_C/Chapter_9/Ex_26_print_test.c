@@ -1,13 +1,14 @@
 /*
  * File:    Ex_26_print_test.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file tests the behavior of bit-field alignment in C
- *   structures by comparing the size of a structure with an anonymous
- *   zero-width bit-field (which forces alignment) to one without,
- *   printing the ratio as a floating-point value.
+ *   This file compares the memory sizes of two similar bit-field
+ *   structures to demonstrate how zero-width bit-field members affect
+ *   structure padding and alignment. It prints the ratio of sizes
+ *   between a structure with a zero-width bit-field separator and one
+ *   without, showing the memory layout differences.
  */
  //Libraries
 #include <stdio.h>

@@ -1,12 +1,13 @@
 /*
  * File:    Ex_07_printf_literals.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates basic printf formatting by calculating and
- *   displaying the sum of two integers (21 + 31 = 52) using the %d
- *   format specifier for integer output.
+ *   This file demonstrates basic printf functionality by printing a
+ *   simple arithmetic expression, displaying "Why is 21 + 31 equal to
+ *   52?" where the sum is calculated and formatted using the %d
+ *   placeholder.
  */
  //Libraries
 #include <stdio.h>

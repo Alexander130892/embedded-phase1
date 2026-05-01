@@ -1,17 +1,15 @@
 /*
  * File:    Ex_03_04_list_sorted_DATA.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file implements a linked list data structure for storing
- *   person records (name, age, weight) with comprehensive
- *   functionality including creation, printing, sorting by different
- *   fields using comparison functions, and counting records that meet
- *   specific criteria. It demonstrates various linked list operations
- *   through test cases that create lists, sort them by
- *   age/name/weight, and filter records based on age and weight
- *   thresholds.
+ *   This C program implements a linked list data structure that stores
+ *   person records (name, age, weight) with functionality to create,
+ *   print, sort, and filter the list. It demonstrates various linked
+ *   list operations including recursive creation and deallocation,
+ *   bubble sort with custom comparison functions, and counting
+ *   elements that meet specific criteria.
  */
  //Libraries
 #include <stdio.h>

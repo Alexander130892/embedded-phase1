@@ -1,15 +1,15 @@
 /*
  * File:    Ex_25_sizeof.c
  * Author:  Alexander130892
- * Date:    30-4-2026
+ * Date:    1-5-2026
  *
  * Description:
- *   This file demonstrates how the sizeof operator works differently
- *   with arrays versus pointers, showing that array names retain size
- *   information locally but decay to pointers when passed to
- *   functions. It also includes unused helper functions for performing
- *   arithmetic operations on large numbers represented as digit
- *   arrays.
+ *   This file demonstrates the behavior of the sizeof operator in C by
+ *   showing how it returns different values for arrays versus
+ *   pointers, including how array parameters in functions decay to
+ *   pointers. The program also includes unused functions for
+ *   performing arithmetic operations on large numbers represented as
+ *   digit arrays.
  */
 //Libraries
 #include <stdio.h>
