@@ -28,9 +28,9 @@
 - [x] Exercise: configure SPI1 bare-metal — enable RCC, set GPIO to AF mode (MOSI/MISO/SCK/NSS), write CR1 directly
 - [x] Exercise: implement `spi_send_byte()` and `spi_receive_byte()` — poll on TXE/RXNE flags in SR
 - [x] Exercise: implement `spi_transfer()` for full-duplex — send + receive simultaneously
-- [ ] Exercise: read the WHO_AM_I register from your sensor to verify comms are working
-- [ ] Verify with oscilloscope or logic analyser if available (even a cheap 8-channel clone is enough)
-- [ ] Commit to `week13/spi_basic/`
+- [x] Exercise: read the WHO_AM_I register from your sensor to verify comms are working
+- [x] Verify with oscilloscope or logic analyser if available (even a cheap 8-channel clone is enough)
+- [x] Commit to `week13/spi_basic/`
 
 > 🏁 **M7 checkpoint:** SPI TX/RX verified; sensor responds to register read.
 
