@@ -18,16 +18,16 @@
 > ~10 hrs | R3 Ch.9 (SPI section) + target sensor datasheet
 
 **Study tasks**
-- [ ] R3 Ch.9 — SPI protocol: clock polarity (CPOL), clock phase (CPHA), master/slave framing
-- [ ] Reference Manual: SPI section — SPIx_CR1, CR2, SR, DR register descriptions
-- [ ] Understand NSS management: software vs hardware — know why software NSS is safer for bare-metal
-- [ ] Study SPI clock speed constraints: PCLK prescaler, how to calculate actual baud rate
-- [ ] Pick a target sensor: **MPU-6050 (IMU) via SPI** or substitute with any SPI peripheral you have on hand
+- [x] R3 Ch.9 — SPI protocol: clock polarity (CPOL), clock phase (CPHA), master/slave framing
+- [x] Reference Manual: SPI section — SPIx_CR1, CR2, SR, DR register descriptions
+- [x] Understand NSS management: software vs hardware — know why software NSS is safer for bare-metal
+- [x] Study SPI clock speed constraints: PCLK prescaler, how to calculate actual baud rate
+- [x] Pick a target sensor: **MPU-6050 (IMU) via SPI** or substitute with any SPI peripheral you have on hand
 
 **Exercises**
-- [ ] Exercise: configure SPI1 bare-metal — enable RCC, set GPIO to AF mode (MOSI/MISO/SCK/NSS), write CR1 directly
-- [ ] Exercise: implement `spi_send_byte()` and `spi_receive_byte()` — poll on TXE/RXNE flags in SR
-- [ ] Exercise: implement `spi_transfer()` for full-duplex — send + receive simultaneously
+- [x] Exercise: configure SPI1 bare-metal — enable RCC, set GPIO to AF mode (MOSI/MISO/SCK/NSS), write CR1 directly
+- [x] Exercise: implement `spi_send_byte()` and `spi_receive_byte()` — poll on TXE/RXNE flags in SR
+- [x] Exercise: implement `spi_transfer()` for full-duplex — send + receive simultaneously
 - [ ] Exercise: read the WHO_AM_I register from your sensor to verify comms are working
 - [ ] Verify with oscilloscope or logic analyser if available (even a cheap 8-channel clone is enough)
 - [ ] Commit to `week13/spi_basic/`
