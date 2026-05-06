@@ -1,10 +1,14 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    6-5-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file configures Timer 2 for a microcontroller to
+ *   generate millisecond timing by setting up a 1kHz interrupt
+ *   frequency and provides a millis() function to return elapsed time
+ *   in milliseconds using an overflow counter.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 

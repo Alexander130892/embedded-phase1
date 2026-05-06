@@ -1,3 +1,18 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    6-5-2026
+ *
+ * Description:
+ *   This STM32F446RE microcontroller program continuously tests
+ *   communication with a BMP280 sensor over SPI by reading its device
+ *   ID and reporting the test results via UART. It performs
+ *   initialization of clocks, GPIO, SPI, and UART interfaces, then
+ *   enters an infinite loop that checks if the BMP280 responds with
+ *   the expected ID (0x58) and sends status messages over UART with a
+ *   simple delay between iterations.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

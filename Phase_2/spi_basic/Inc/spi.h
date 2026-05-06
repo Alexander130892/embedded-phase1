@@ -1,10 +1,15 @@
 /*
- * spi.h
+ * File:    spi.h
+ * Author:  Alexander130892
+ * Date:    6-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface for SPI (Serial Peripheral
+ *   Interface) communication functions including GPIO and SPI
+ *   initialization, data transfer, and specifies the pin assignments
+ *   for SPI1 peripheral (SCK on PA5, MISO on PA6, MOSI on PA7, CS on
+ *   PB6).
  */
-
 #ifndef SPI_H_
 #define SPI_H_
 

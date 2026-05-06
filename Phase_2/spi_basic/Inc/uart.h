@@ -1,3 +1,15 @@
+/*
+ * File:    uart.h
+ * Author:  Alexander130892
+ * Date:    6-5-2026
+ *
+ * Description:
+ *   This header file defines the interface for UART serial
+ *   communication functionality, providing functions to send/receive
+ *   characters and strings along with a circular buffer implementation
+ *   using head and tail pointers for interrupt-driven data handling.
+ */
+
 #ifndef UART_H
 #define UART_H
 
