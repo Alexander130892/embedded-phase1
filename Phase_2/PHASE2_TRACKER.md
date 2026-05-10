@@ -39,15 +39,17 @@
 #### Week 14 — SPI: DMA + Multi-byte Transfers
 > ~10 hrs | R3 Ch.9 (DMA integration) + Reference Manual DMA section
 
-- [ ] R3 Ch.9 — SPI DMA mode: understand why DMA matters for high-throughput sensor reads
-- [ ] Reference Manual: DMA chapter — channel mapping, CCR, CNDTR, CPAR, CMAR registers
-- [ ] Understand DMA stream/channel pairing for your specific SPI peripheral
-- [ ] Study DMA transfer complete and error interrupt flags — how to clear them
-- [ ] Exercise: configure DMA for SPI1 RX — transfer N bytes into a buffer without CPU polling
-- [ ] Exercise: implement `spi_read_registers()` — burst read multiple registers in one CS assertion
-- [ ] Exercise: read accelerometer + gyroscope data continuously from sensor
-- [ ] Parse raw register values into meaningful units (apply sensitivity scale factor from datasheet)
-- [ ] Commit to `week14/spi_dma/`
+- [x] R3 Ch.9 — SPI DMA mode: understand why DMA matters for high-throughput sensor reads
+- [x] Reference Manual: DMA chapter — channel mapping, CCR, CNDTR, CPAR, CMAR registers
+- [x] Understand DMA stream/channel pairing for your specific SPI peripheral
+- [x] Study DMA transfer complete and error interrupt flags — how to clear them
+- [x] Exercise: configure DMA for SPI1 RX — transfer N bytes into a buffer without CPU polling
+- [x] Exercise: implement `spi_read_registers()` — burst read multiple registers in one CS assertion
+- [x] Exercise: initialise SH1107 OLED over SPI — send init command sequence via DMA TX
+- [x] Exercise: implement `oled_write_buffer()` — DMA TX transfer of full 128x128 framebuffer
+- [x] Exercise: read BMP280 temperature + pressure continuously and render values on OLED
+- [x] Parse raw BMP280 register values into meaningful units (apply compensation formulas from datasheet)
+- [x] Commit to `week14/spi_dma/`
 
 ---
 
@@ -296,7 +298,7 @@
 
 | Week | Topic | Status |
 |------|-------|--------|
-| 13 | SPI Fundamentals + Sensor | 🔲 Not started |
+| 13 | SPI Fundamentals + Sensor | ✅ Done |
 | 14 | SPI DMA + Multi-byte Transfers | 🔲 Not started |
 | 15 | I2C Fundamentals + Sensor Driver | 🔲 Not started |
 | 16 | I2C Multi-byte Reads + Error Handling | 🔲 Not started |
