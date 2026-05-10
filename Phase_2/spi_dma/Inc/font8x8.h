@@ -1,3 +1,17 @@
+/*
+ * File:    font8x8.h
+ * Author:  Alexander130892
+ * Date:    10-5-2026
+ *
+ * Description:
+ *   This header file defines a static constant array containing bitmap
+ *   font data for 8x8 pixel ASCII characters (codes 32-127), where
+ *   each character is represented by 8 bytes with each byte defining a
+ *   vertical column and the LSB representing the top pixel. The font
+ *   data is stored in a column-major format suitable for rendering
+ *   text on low-resolution displays or embedded systems.
+ */
+
 #ifndef FONT8X8_H_
 #define FONT8X8_H_
 

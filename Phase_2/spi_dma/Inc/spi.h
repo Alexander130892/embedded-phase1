@@ -1,10 +1,16 @@
 /*
- * spi.h
+ * File:    spi.h
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface for an SPI communication
+ *   module that uses DMA (Direct Memory Access) for efficient data
+ *   transfers, with GPIO pins configured on ports PA5-PA7 and PB6. It
+ *   provides functions for initialization, DMA-based read/write
+ *   operations, and basic SPI transfers, along with DMA status flags
+ *   to indicate when data is ready to be processed.
  */
-
 #ifndef SPI_H_
 #define SPI_H_
 

@@ -1,10 +1,14 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines timer functionality for generating
+ *   millisecond timestamps, using Timer 2 with a prescaler and
+ *   auto-reload configuration to achieve 1kHz interrupts that
+ *   increment an overflow counter for the millis() function.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 

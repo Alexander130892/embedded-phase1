@@ -1,3 +1,19 @@
+/*
+ * File:    syscalls.c
+ * Author:  Alexander130892
+ * Date:    10-5-2026
+ *
+ * Description:
+ *   This file provides minimal system call stubs required by the
+ *   Newlib C library for STM32 microcontrollers, implementing basic
+ *   I/O operations and returning appropriate error codes for
+ *   unsupported POSIX functions. Most system calls are stubbed to fail
+ *   gracefully since they're not applicable in a bare-metal
+ *   microcontroller environment, while _read and _write functions
+ *   delegate to weak I/O character functions for basic console
+ *   operations.
+ */
+
 /**
  ******************************************************************************
  * @file      syscalls.c

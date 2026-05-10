@@ -1,10 +1,15 @@
 /*
- * spi.c
+ * File:    spi.c
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and configures SPI1 on an STM32F446RE
+ *   microcontroller for master mode operation at 250kHz with multiple
+ *   chip select lines. It sets up the necessary GPIO pins for SPI
+ *   communication (PA5-PA7 for SPI signals, PB3-PB6 for chip selects)
+ *   and includes a transfer function for sending/receiving 8-bit data.
  */
-
 #include "spi.h"
 #include "stm32f446re.h"
 
