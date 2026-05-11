@@ -1,3 +1,15 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    11-5-2026
+ *
+ * Description:
+ *   This C file controls an 8x8 LED matrix using a MAX7219 driver chip
+ *   via SPI communication, displaying bitmap patterns like hearts,
+ *   smiley faces, and other symbols with the ability to animate
+ *   transitions between them.
+ */
+
 
 /*
     Notes:
