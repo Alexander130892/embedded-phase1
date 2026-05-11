@@ -1,10 +1,16 @@
 /*
- * bmp280.h
+ * File:    bmp280.h
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: May 5, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface for communicating with a
+ *   BMP280 environmental sensor, providing functions to read
+ *   temperature and pressure measurements along with compensation
+ *   parameters needed for accurate sensor data conversion. It includes
+ *   low-level register access functions and higher-level functions for
+ *   sensor configuration and calibrated data retrieval.
  */
-
 #ifndef BMP280_H_
 #define BMP280_H_
 

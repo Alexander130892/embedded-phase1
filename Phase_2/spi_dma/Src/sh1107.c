@@ -1,11 +1,17 @@
 /*
- * sh1107.c
+ * File:    sh1107.c
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: May 9, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a driver for the SH1107 OLED display
+ *   controller, providing functions to initialize the display, send
+ *   commands and data via SPI interface, and perform basic operations
+ *   like clearing the screen and drawing characters to a framebuffer.
+ *   The driver includes both standard SPI transfer functions and
+ *   DMA-optimized bulk data transfer capabilities for efficient
+ *   display updates.
  */
-
-
 #include "sh1107.h"
 #include "font8x8.h"
 

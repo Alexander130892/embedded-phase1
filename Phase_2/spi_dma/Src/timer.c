@@ -1,11 +1,15 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    10-5-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a millisecond timer using STM32F446RE's TIM2
+ *   hardware timer, providing a `millis()` function that returns
+ *   elapsed milliseconds by polling the timer's overflow flag. It also
+ *   includes an interrupt handler that maintains an overflow counter
+ *   that resets every 500 milliseconds.
  */
-
-
 #include "timer.h"
 #include "stm32f446re.h"
 #include <stdint.h>

@@ -1,3 +1,18 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    10-5-2026
+ *
+ * Description:
+ *   This STM32F446RE microcontroller program interfaces with a BMP280
+ *   temperature/pressure sensor via SPI and displays readings on an
+ *   SH1107 OLED display, while also outputting sensor data through
+ *   UART for debugging. The program continuously reads sensor data in
+ *   a loop, validates the BMP280 connection, and formats the
+ *   temperature and pressure measurements for both display and serial
+ *   output.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c
