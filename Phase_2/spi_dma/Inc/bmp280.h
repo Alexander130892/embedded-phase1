@@ -1,15 +1,15 @@
 /*
  * File:    bmp280.h
  * Author:  Alexander130892
- * Date:    10-5-2026
+ * Date:    11-5-2026
  *
  * Description:
- *   This header file defines the interface for communicating with a
- *   BMP280 environmental sensor, providing functions to read
- *   temperature and pressure measurements along with compensation
- *   parameters needed for accurate sensor data conversion. It includes
- *   low-level register access functions and higher-level functions for
- *   sensor configuration and calibrated data retrieval.
+ *   This header file defines the interface for controlling a BMP280
+ *   temperature and pressure sensor, including functions for register
+ *   access, configuration, and reading compensated temperature and
+ *   pressure values. It includes a compensation parameters structure
+ *   that stores calibration coefficients needed for converting raw
+ *   sensor data to accurate measurements.
  */
 #ifndef BMP280_H_
 #define BMP280_H_

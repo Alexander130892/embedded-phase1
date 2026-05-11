@@ -1,16 +1,16 @@
 /*
  * File:    sh1107.c
  * Author:  Alexander130892
- * Date:    10-5-2026
+ * Date:    11-5-2026
  *
  * Description:
- *   This file implements a driver for the SH1107 OLED display
+ *   This file implements a device driver for the SH1107 OLED display
  *   controller, providing functions to initialize the display, send
- *   commands and data via SPI interface, and perform basic operations
- *   like clearing the screen and drawing characters to a framebuffer.
- *   The driver includes both standard SPI transfer functions and
- *   DMA-optimized bulk data transfer capabilities for efficient
- *   display updates.
+ *   commands and data via SPI communication, clear the screen, and
+ *   draw characters using an 8x8 font. The driver uses direct register
+ *   manipulation for GPIO control and includes both standard and
+ *   DMA-based data transfer methods for updating the 128x128 pixel
+ *   display.
  */
 #include "sh1107.h"
 #include "font8x8.h"
