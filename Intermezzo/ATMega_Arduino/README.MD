@@ -62,9 +62,3 @@ make clean    # remove build artifacts
 | Interrupt vectors | `startup_stm32*.s` | `avr/interrupt.h` macros |
 | Linker script | `.ld` file | handled by `-mmcu` flag |
 
-## Next steps
-
-- **Timer interrupt blink** — replace `_delay_ms` with Timer1 CTC interrupt
-- **UART** — `UBRR0H/L`, `UDR0` without `Serial.print()`
-- **SPI / I2C** — `SPCR`, `TWCR` raw registers
-- **PWM** — `TCCR0A/B`, `OCR0A` for fast/phase-correct PWM
