@@ -97,10 +97,9 @@ int main(void)
 void spi_init(void)
 {
     // CS, MOSI, SCK as output
-    CS_DDR  |=  (1 << CS_PIN);
-    DDRB    |=  (1 << PB3) | (1 << PB5);
+    DDRB    |=  (1 << CS_PIN) | (1 << PB3) | (1 << PB5);
     CS_PORT |=  (1 << CS_PIN);      // CS idle high
- 
+
     SPCR = (1 << SPE)  |    //  SPI enable
            (1 << MSTR) |    //  Master mode
            (1 << SPR0);     //  clock = fosc/16 (1 MHz @ 16 MHz)
