@@ -94,13 +94,11 @@ int main(void)
         show(heart);
         for(volatile uint32_t d = 0; d < 1000000; d++);
  
-    //     show(cross);
-    //    for(volatile uint32_t d = 0; d < 1000000; d++);
- 
-    //     // Scroll smiley → heart → arrow
-    //     scroll(smiley, heart,  50);
-    //     scroll(heart,  arrow,  50);
-    //     scroll(arrow,  smiley, 50);
+        //     show(cross);
+        //    for(volatile uint32_t d = 0; d < 1000000; d++);
+    
+        scroll(heart,  heart,  50);
+        //     scroll(arrow,  smiley, 50);
     }
  
     return 0;
