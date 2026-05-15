@@ -1,14 +1,16 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    12-5-2026
+ * Date:    15-5-2026
  *
  * Description:
- *   This file implements a driver for controlling an 8x8 LED matrix
- *   display using a MAX7219 chip via SPI communication on an AVR
- *   microcontroller. It displays bitmap patterns (smiley, heart,
- *   cross, arrow) with animation capabilities including scrolling
- *   transitions between different symbols.
+ *   This file implements an 8x8 LED matrix display controller using a
+ *   MAX7219 driver chip and SPI communication on an AVR
+ *   microcontroller, displaying predefined bitmap symbols (smiley,
+ *   heart, cross, arrow) with animation capabilities. The program
+ *   continuously cycles through showing static images and includes a
+ *   scroll function to animate transitions between different bitmap
+ *   patterns.
  */
 /*
     Notes:
