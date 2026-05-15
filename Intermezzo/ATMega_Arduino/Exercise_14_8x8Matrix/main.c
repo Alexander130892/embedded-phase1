@@ -4,10 +4,11 @@
  * Date:    12-5-2026
  *
  * Description:
- *   This file controls an 8x8 LED matrix display using a MAX7219
- *   driver chip via SPI communication, displaying predefined bitmap
- *   symbols like hearts, smiley faces, crosses, and arrows with
- *   animation capabilities.
+ *   This file implements a driver for controlling an 8x8 LED matrix
+ *   display using a MAX7219 chip via SPI communication on an AVR
+ *   microcontroller. It displays bitmap patterns (smiley, heart,
+ *   cross, arrow) with animation capabilities including scrolling
+ *   transitions between different symbols.
  */
 /*
     Notes:
