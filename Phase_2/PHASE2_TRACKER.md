@@ -56,17 +56,17 @@
 #### Week 15 — I2C Fundamentals + Sensor Driver
 > ~10 hrs | R3 Ch.9 (I2C section) + sensor datasheet
 
-- [ ] R3 Ch.9 — I2C protocol: START/STOP conditions, addressing (7-bit vs 10-bit), ACK/NACK
-- [ ] Reference Manual: I2C section — CR1, CR2, OAR1, DR, SR1, SR2 register descriptions
-- [ ] Understand I2C error conditions: bus busy (BUSY flag), arbitration loss (ARLO), ACK failure (AF) — know how to recover
-- [ ] Study clock stretching and why it matters for slow peripherals
-- [ ] Study the I2C timing configuration for your MCU speed (standard 100 kHz vs fast 400 kHz)
-- [ ] Pick a target I2C sensor: **BMP280 (pressure/temp)**, BME280, or any I2C device you have
-- [ ] Exercise: configure I2C1 bare-metal — enable RCC, set GPIO to open-drain AF mode with pull-ups
-- [ ] Exercise: implement `i2c_write_byte()` and `i2c_read_byte()` — poll on SR1/SR2 flags
-- [ ] Exercise: implement `i2c_write_register()` and `i2c_read_register()` convenience wrappers
-- [ ] Exercise: read WHO_AM_I / chip ID from sensor to verify comms
-- [ ] Commit to `week15/i2c_basic/`
+- [x] R3 Ch.9 — I2C protocol: START/STOP conditions, addressing (7-bit vs 10-bit), ACK/NACK
+- [x] Reference Manual: I2C section — CR1, CR2, OAR1, DR, SR1, SR2 register descriptions
+- [x] Understand I2C error conditions: bus busy (BUSY flag), arbitration loss (ARLO), ACK failure (AF) — know how to recover
+- [x] Study clock stretching and why it matters for slow peripherals
+- [x] Study the I2C timing configuration for your MCU speed (standard 100 kHz vs fast 400 kHz)
+- [x] Pick a target I2C sensor: **BMP280 (pressure/temp)**, BME280, or any I2C device you have
+- [x] Exercise: configure I2C1 bare-metal — enable RCC, set GPIO to open-drain AF mode with pull-ups
+- [x] Exercise: implement `i2c_write_byte()` and `i2c_read_byte()` — poll on SR1/SR2 flags
+- [x] Exercise: implement `i2c_write_register()` and `i2c_read_register()` convenience wrappers
+- [x] Exercise: read WHO_AM_I / chip ID from sensor to verify comms
+- [x] Commit to `week15/i2c_basic/`
 
 > 🏁 **M8 checkpoint:** I2C sensor responding; raw readings available.
 
@@ -299,9 +299,9 @@
 | Week | Topic | Status |
 |------|-------|--------|
 | 13 | SPI Fundamentals + Sensor | ✅ Done |
-| 14 | SPI DMA + Multi-byte Transfers | 🔲 Not started |
-| 15 | I2C Fundamentals + Sensor Driver | 🔲 Not started |
-| 16 | I2C Multi-byte Reads + Error Handling | 🔲 Not started |
+| 14 | SPI DMA + Multi-byte Transfers | ✅ Done |
+| 15 | I2C Fundamentals + Sensor Driver | ✅ Done |
+| 16 | I2C Multi-byte Reads + Error Handling | 🟡 In progress |
 | 17 | Protocol Integration + Mini Data Logger | 🔲 Not started |
 | 18 | RTOS Concepts + FreeRTOS Basics | 🔲 Not started |
 | 19 | Queues + Inter-task Communication | 🔲 Not started |
