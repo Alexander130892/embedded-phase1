@@ -1,10 +1,16 @@
 /*
- * spi.h
+ * File:    spi.h
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header declares the interface for SPI communication using DMA
+ *   on an STM32 microcontroller, exposing functions to initialize GPIO
+ *   and SPI peripherals, configure DMA RX/TX channels, and perform
+ *   blocking or DMA-driven SPI transfers. It also exposes volatile
+ *   flags to signal when DMA stream operations have completed and are
+ *   ready to be read.
  */
-
 #ifndef SPI_H_
 #define SPI_H_
 

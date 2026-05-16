@@ -1,10 +1,14 @@
 /*
- * mpu6050.h
+ * File:    mpu6050.h
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header defines the interface for an MPU6050 IMU driver,
+ *   declaring the I2C device addresses, a struct to hold raw 16-bit
+ *   accelerometer and gyroscope readings, and functions to initialize
+ *   the sensor, read motion data, and query its WHO_AM_I register.
  */
-
 #ifndef MPU6050_MPU6050_H_
 #define MPU6050_MPU6050_H_
 

@@ -1,10 +1,17 @@
 /*
- * i2c.c
+ * File:    i2c.c
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- *  Created on: May 13, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements an I2C1 driver for an STM32 microcontroller,
+ *   handling GPIO configuration (PB8/PB9 in open-drain alternate
+ *   function mode), peripheral initialization (standard mode at 100
+ *   kHz with a 16 MHz APB1 clock), and low-level bus operations
+ *   including start/stop generation, byte read/write, address
+ *   transmission with ACK failure detection, and register-level
+ *   read/write helpers.
  */
-
 #include "i2c.h"
 
 void init_i2c_gpio(void){
