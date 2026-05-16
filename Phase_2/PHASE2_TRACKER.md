@@ -75,13 +75,14 @@
 #### Week 16 — I2C: Multi-byte Reads + Error Handling
 > ~10 hrs | Reference Manual I2C section + sensor datasheet
 
-- [ ] Implement burst read sequence (repeated START for multi-byte I2C reads — critical for IMUs)
-- [ ] Understand why the "two-byte read" sequence in STM32 I2C is non-obvious (refer to RM errata / application notes)
-- [ ] Implement robust error recovery: detect BUSY/ARLO/AF flags and attempt bus reset
-- [ ] Exercise: read temperature + pressure from BMP280 with compensation formula from datasheet
-- [ ] Exercise: build a minimal `bmp280.c` / `bmp280.h` driver pair — clean API, no register addresses leaked outside the driver
-- [ ] Study driver layering: HAL → transport layer → device driver. Model your own code on this pattern even without HAL.
-- [ ] Commit to `week16/i2c_driver/`
+- [x] Implement burst read sequence (repeated START for multi-byte I2C reads — critical for IMUs)
+- [x] Understand why the "two-byte read" sequence in STM32 I2C is non-obvious (refer to RM errata / application notes)
+- [x] Implement robust error recovery: detect BUSY/ARLO/AF flags and attempt bus reset
+- [x] Exercise: read temperature + pressure from BMP280 with compensation formula from datasheet
+- [x] Exercise: build a minimal `bmp280.c` / `bmp280.h` driver pair — clean API, no register addresses leaked outside the driver
+- [x] Study driver layering: HAL → transport layer → device driver. Model your own code on this pattern even without HAL.
+- [x] Extra: Do the same for MPU6050
+- [x] Commit to `week16/i2c_driver/`
 
 ---
 
