@@ -1,14 +1,15 @@
 /*
+ * File:    i2c.h
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- * i2c.h — bare-metal I2C driver for STM32F4, I2C1 (PB8/PB9)
- *
- * Assumptions:
- *   - Single master bus — ARLO (arbitration loss) not handled.
- *     If porting to multi-master, add ARLO checks after each transaction.
- *   - 7-bit addressing only
+ * Description:
+ *   This header file declares the interface for an I2C driver
+ *   targeting the STM32F446RE microcontroller, providing functions for
+ *   bus initialization, GPIO setup, start/stop/restart conditions,
+ *   byte-level read/write operations, and higher-level register access
+ *   and burst reads for communicating with I2C peripheral devices.
  */
-
-
 #ifndef I2C_H_
 #define I2C_H_
 

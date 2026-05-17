@@ -1,10 +1,17 @@
 /*
- * bmp280_internal.h
+ * File:    bmp280_internal.h
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This internal header defines register addresses, calibration
+ *   parameter types, and compensation function prototypes for the
+ *   BMP280 pressure/temperature sensor driver. It is intended for use
+ *   only within the driver's own translation units, declaring the
+ *   shared `comp_param_t` structure that holds factory calibration
+ *   coefficients used by the temperature and pressure compensation
+ *   calculations.
  */
-
 #ifndef BMP280_BMP280_INTERNAL_H_
 #define BMP280_BMP280_INTERNAL_H_
 

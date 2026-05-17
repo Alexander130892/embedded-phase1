@@ -1,10 +1,16 @@
 /*
- * spi.c
+ * File:    spi.c
+ * Author:  Alexander130892
+ * Date:    16-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and configures SPI1 on an STM32F446RE
+ *   microcontroller as a full-duplex SPI master with software slave
+ *   management, operating at 250 kHz using Mode 0 (CPOL=0, CPHA=0). It
+ *   also configures the associated GPIO pins on PORTA (PA5–PA7) as SPI
+ *   alternate-function pins and PORTB (PB3–PB6) as GPIO chip-select
+ *   outputs, and provides a basic SPI byte transfer function.
  */
-
 #include "spi.h"
 #include "stm32f446re.h"
 
