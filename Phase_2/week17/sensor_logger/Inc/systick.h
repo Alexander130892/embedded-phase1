@@ -1,10 +1,15 @@
 /*
- * systick.h
+ * File:    systick.h
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 17, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header declares the interface for a SysTick timer module
+ *   configured to generate 1 ms tick interrupts on a 16 MHz system
+ *   clock. It exposes functions to initialize the timer, handle the
+ *   SysTick interrupt, and retrieve the current millisecond tick
+ *   count.
  */
-
 #ifndef SYSTICK_H_
 #define SYSTICK_H_
 

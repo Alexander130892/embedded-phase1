@@ -1,14 +1,13 @@
 /*
  * File:    spi.h
  * Author:  Alexander130892
- * Date:    6-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file defines the interface for SPI (Serial Peripheral
- *   Interface) communication functions including GPIO and SPI
- *   initialization, data transfer, and specifies the pin assignments
- *   for SPI1 peripheral (SCK on PA5, MISO on PA6, MOSI on PA7, CS on
- *   PB6).
+ *   This header file declares the interface for initializing and using
+ *   SPI1 communication on an STM32 microcontroller, including GPIO
+ *   setup and a byte-transfer function. It maps the SPI1 pins to PA5
+ *   (SCK), PA6 (MISO), PA7 (MOSI), and PB6 (chip select).
  */
 #ifndef SPI_H_
 #define SPI_H_

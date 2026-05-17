@@ -5,11 +5,11 @@
  *
  * Description:
  *   This file implements the BMP280 sensor's temperature and pressure
- *   compensation formulas, converting raw ADC readings into calibrated
- *   values using the device's stored trimming parameters. It maintains
- *   a static `t_fine` intermediate value shared between the two
- *   compensation functions, as required by the BMP280 datasheet
- *   algorithm.
+ *   compensation algorithms, converting raw ADC readings into
+ *   calibrated values using the device's stored trimming parameters.
+ *   It maintains a static `t_fine` intermediate value shared between
+ *   the two compensation functions, as required by the BMP280
+ *   datasheet's fixed-point formula specification.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"

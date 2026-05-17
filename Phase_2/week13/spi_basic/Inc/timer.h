@@ -1,13 +1,15 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    6-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file configures Timer 2 for a microcontroller to
- *   generate millisecond timing by setting up a 1kHz interrupt
- *   frequency and provides a millis() function to return elapsed time
- *   in milliseconds using an overflow counter.
+ *   This header defines configuration and interface for a millisecond
+ *   timer using TIM2 on an STM32 microcontroller, with prescaler and
+ *   auto-reload values set to generate a 1 kHz (1 ms) interrupt from a
+ *   16 MHz clock. It declares the TIM2 interrupt handler and a
+ *   `millis()` function that returns elapsed milliseconds by tracking
+ *   timer overflow counts.
  */
 #ifndef TIMER_H_
 #define TIMER_H_

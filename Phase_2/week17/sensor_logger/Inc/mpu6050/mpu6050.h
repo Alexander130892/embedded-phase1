@@ -1,10 +1,15 @@
 /*
- * mpu6050.h
+ * File:    mpu6050.h
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header defines the interface for an MPU6050 inertial
+ *   measurement unit driver, declaring functions to initialize the
+ *   device, read raw accelerometer and gyroscope data, and verify the
+ *   device identity via its WHO_AM_I register. It supports both I2C
+ *   address variants determined by the AD0 pin state.
  */
-
 #ifndef MPU6050_MPU6050_H_
 #define MPU6050_MPU6050_H_
 

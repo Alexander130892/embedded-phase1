@@ -1,10 +1,17 @@
 /*
- * bmp280_internal.h
+ * File:    bmp280_internal.h
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This internal header file defines register addresses, SPI
+ *   read/write masks, and configuration constants for the BMP280
+ *   pressure/temperature sensor, along with a packed struct for
+ *   storing factory calibration (compensation) parameters and
+ *   declarations for the compensation calculation functions used to
+ *   convert raw ADC readings into calibrated temperature and pressure
+ *   values.
  */
-
 #ifndef BMP280_BMP280_INTERNAL_H_
 #define BMP280_BMP280_INTERNAL_H_
 

@@ -4,11 +4,12 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This header file defines the interface for a BMP280 barometric
+ *   This header file declares the interface for a BMP280 barometric
  *   pressure and temperature sensor driver, supporting both SPI and
- *   I2C communication protocols. It declares functions for
- *   initializing the sensor, verifying its identity, and reading
- *   compensated temperature and pressure values over either bus.
+ *   I2C communication protocols. It provides functions for device
+ *   initialization, identity verification, and reading compensated
+ *   temperature and pressure values, with I2C functions accepting a
+ *   configurable device address (SDO-pin-dependent).
  */
 #ifndef BMP280_H_
 #define BMP280_H_

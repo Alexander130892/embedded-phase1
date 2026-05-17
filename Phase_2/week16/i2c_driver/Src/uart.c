@@ -4,13 +4,11 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This file implements a UART driver for the STM32F446RE
- *   microcontroller, configuring USART2 on pins PA2 (TX) and PA3 (RX)
- *   at 115200 baud with interrupt-driven reception using a circular
- *   buffer. It provides functions to initialize the peripheral,
- *   transmit individual characters or strings by polling the transmit
- *   register, and retrieve received strings line-by-line from the
- *   interrupt-populated buffer.
+ *   This file implements a UART driver for the STM32F446RE's USART2
+ *   peripheral, configuring PA2/PA3 as TX/RX pins at 115200 baud. It
+ *   provides character and string transmission functions, and uses an
+ *   interrupt-driven circular buffer to receive incoming data, which
+ *   can be consumed line-by-line via `uart_receive_string`.
  */
 #include 	"uart.h"
 #include	"stm32f446re.h"

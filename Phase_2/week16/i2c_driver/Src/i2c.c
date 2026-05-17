@@ -4,13 +4,12 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This file implements a bare-metal I2C1 driver for an STM32
- *   microcontroller, handling GPIO initialization (PB8/PB9 in
- *   open-drain alternate function mode), peripheral configuration
- *   (standard mode at 100 kHz with a 16 MHz APB1 clock), and core I2C
- *   operations including start/stop generation, byte read/write,
- *   address transmission, and single-register read/write transactions
- *   with acknowledge-failure detection.
+ *   This file implements an I2C1 driver for an STM32 microcontroller,
+ *   handling GPIO initialization (PB8/PB9 in open-drain alternate
+ *   function mode), peripheral configuration (standard mode at 100 kHz
+ *   on a 16 MHz APB1 clock), and core bus operations including
+ *   start/stop generation, byte-level read/write, address transmission
+ *   with ACK failure detection, and register-level read/write helpers.
  */
 #include "i2c.h"
 

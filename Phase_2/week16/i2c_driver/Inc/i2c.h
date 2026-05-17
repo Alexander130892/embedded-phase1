@@ -6,10 +6,10 @@
  * Description:
  *   This header file declares the interface for an I2C driver
  *   targeting the STM32F446RE microcontroller, providing functions for
- *   initializing the peripheral and GPIO pins, generating
- *   start/stop/restart conditions, and performing single-byte and
- *   multi-byte read/write operations to device registers, including a
- *   bus reset utility.
+ *   initializing the bus and GPIO, generating start/stop/restart
+ *   conditions, and performing byte-level read/write operations
+ *   including register access and burst reads. It also exposes a bus
+ *   reset function to recover from error states.
  */
 #ifndef I2C_H_
 #define I2C_H_

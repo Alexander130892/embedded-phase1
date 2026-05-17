@@ -1,14 +1,14 @@
 /*
  * File:    sh1107.h
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file defines the interface for controlling an SH1107
- *   OLED display controller via SPI communication on an STM32F446RE
- *   microcontroller. It provides functions for initialization, sending
- *   commands/data, clearing the display, DMA writing, and drawing
- *   characters/strings to a framebuffer.
+ *   This header file defines the interface for a driver controlling an
+ *   SH1107-based OLED display over SPI on an STM32F446RE
+ *   microcontroller. It declares functions for initializing the
+ *   display, sending commands and data, clearing the screen, DMA-based
+ *   framebuffer writes, and rendering characters and strings.
  */
 #ifndef SH1107_H_
 #define SH1107_H_

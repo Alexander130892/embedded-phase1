@@ -1,16 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This file implements a main program for an STM32F446RE
- *   microcontroller that reads temperature and pressure data from a
- *   BMP280 sensor via SPI and displays the values on an SH1107 OLED
- *   display, while also sending the readings over UART for debugging.
- *   The program continuously polls the sensor in a loop and updates
- *   both the display and UART output with formatted temperature and
- *   pressure measurements.
+ *   This file is the main entry point for an STM32F446RE embedded
+ *   application that reads temperature and pressure data from a BMP280
+ *   sensor over SPI using DMA, then transmits the formatted results
+ *   via UART and displays static sensor data on an SH1107 OLED screen.
+ *   It initializes the system clocks, SPI, UART, DMA, and both
+ *   peripherals before entering an infinite loop that polls the
+ *   BMP280, validates its device ID (0x58), and outputs compensated
+ *   readings every approximate delay cycle.
  */
 /**
  ******************************************************************************

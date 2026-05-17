@@ -1,10 +1,17 @@
 /*
- * spi.c
+ * File:    spi.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a bare-metal SPI1 driver for an STM32
+ *   microcontroller, configuring the peripheral as a full-duplex
+ *   master at 250 kHz with software slave management and mapping its
+ *   signals to GPIO pins PA5–PA7 (SCK, MISO, MOSI) via alternate
+ *   function 5. It exposes single-byte polled transfers and a
+ *   burst-read function that sends an address followed by repeated
+ *   dummy writes to clock in multiple response bytes.
  */
-
 #include "spi.h"
 
 

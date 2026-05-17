@@ -1,10 +1,16 @@
 /*
- * i2c.c
+ * File:    i2c.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 13, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a bare-metal I2C1 driver for an STM32
+ *   microcontroller, handling peripheral and GPIO initialization
+ *   (PB8/PB9 in open-drain alternate function mode) as well as
+ *   low-level bus operations including start/restart/stop condition
+ *   generation and single-byte read/write with polling and timeout
+ *   protection.
  */
-
 #include "i2c.h"
 
 

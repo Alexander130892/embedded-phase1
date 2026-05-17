@@ -1,10 +1,14 @@
 /*
- * bmp280.h
+ * File:    bmp280.h
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 5, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file declares the interface for communicating with a
+ *   BMP280 sensor, providing functions to read and write registers
+ *   over SPI as well as read the device's WHO_AM_I identification
+ *   register via both SPI and I2C protocols.
  */
-
 #ifndef BMP280_H_
 #define BMP280_H_
 

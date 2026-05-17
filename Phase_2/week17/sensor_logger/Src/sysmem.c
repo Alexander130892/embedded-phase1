@@ -1,3 +1,18 @@
+/*
+ * File:    sysmem.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
+ *
+ * Description:
+ *   This file implements the `_sbrk` system call for newlib's heap
+ *   allocator on an STM32 microcontroller, allowing `malloc` and
+ *   related functions to request additional memory at runtime. It
+ *   tracks the heap high-water mark starting from the linker-defined
+ *   `_end` symbol and guards against the heap colliding with the
+ *   reserved MSP stack region, returning `ENOMEM` if the limit would
+ *   be exceeded.
+ */
+
 /**
  ******************************************************************************
  * @file      sysmem.c

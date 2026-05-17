@@ -1,10 +1,17 @@
 /*
- * spi.c
+ * File:    spi.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and manages SPI1 communication on an
+ *   STM32F446RE microcontroller, configuring the peripheral in
+ *   full-duplex master mode at 250 kHz with software slave management
+ *   and setting up the associated GPIO pins (PA5/6/7 for SPI signals,
+ *   PB3–6 for chip-select lines). It also declares DMA completion
+ *   flags and provides a `spi_transfer` function for byte-level data
+ *   exchange.
  */
-
 #include "spi.h"
 #include "stm32f446re.h"
 

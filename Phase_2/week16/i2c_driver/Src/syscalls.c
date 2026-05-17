@@ -4,13 +4,12 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This file provides minimal stub implementations of the low-level
- *   system calls (newlib syscalls) required by the C standard library
- *   on an STM32 bare-metal target, satisfying the linker without a
- *   full OS. I/O operations (`_read`/`_write`) are routed through weak
- *   `__io_getchar`/`__io_putchar` hooks, while all other unsupported
- *   calls (file, process, etc.) return appropriate errors or hang
- *   indefinitely on exit.
+ *   This file provides minimal stub implementations of low-level
+ *   system calls (syscalls) required by the Newlib C library for a
+ *   bare-metal STM32 microcontroller environment. Most operations like
+ *   file I/O, process control, and filesystem access are either
+ *   unsupported (returning errors) or redirected to weak
+ *   `__io_putchar`/`__io_getchar` hooks for basic character-level I/O.
  */
 /**
  ******************************************************************************

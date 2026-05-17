@@ -5,11 +5,11 @@
  *
  * Description:
  *   This header file defines memory-mapped base addresses and register
- *   offsets for the STM32F446RE microcontroller's peripherals,
+ *   offsets for key peripherals of the STM32F446RE microcontroller,
  *   including RCC, GPIO (A/B), TIM2, NVIC, SYSCFG, EXTI, DMA2, USART2,
  *   and SPI1. It serves as a low-level hardware abstraction layer for
- *   bare-metal register access without using vendor-provided HAL or
- *   CMSIS libraries.
+ *   bare-metal register access without relying on vendor-provided HAL
+ *   or CMSIS libraries.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

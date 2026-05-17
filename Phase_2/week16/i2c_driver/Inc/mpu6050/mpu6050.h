@@ -4,11 +4,11 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This header defines the interface for an MPU6050 IMU driver,
- *   declaring the I2C device addresses, a data structure for storing
- *   raw 16-bit accelerometer and gyroscope readings, and functions to
- *   initialize the sensor, read motion data, and query the WHO_AM_I
- *   register.
+ *   This header file defines the interface for an MPU6050 IMU driver,
+ *   declaring I2C device address constants, a data structure for
+ *   storing raw 16-bit accelerometer and gyroscope readings, and
+ *   functions for initializing the sensor, reading motion data, and
+ *   querying its WHO_AM_I register.
  */
 #ifndef MPU6050_MPU6050_H_
 #define MPU6050_MPU6050_H_

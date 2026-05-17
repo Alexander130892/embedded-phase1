@@ -5,11 +5,11 @@
  *
  * Description:
  *   This header file declares the interface for a UART communication
- *   driver, exposing functions for initializing the peripheral,
- *   sending individual characters or strings, and receiving strings
- *   via interrupt-driven input. It defines a circular buffer with
- *   `head` and `tail` volatile indices for managing incoming data,
- *   along with the USART2 interrupt handler used to populate it.
+ *   module, providing functions to initialize the USART2 peripheral,
+ *   transmit individual characters or strings, and receive strings via
+ *   interrupt-driven buffering. It defines a circular buffer with
+ *   `head` and `tail` indices used to manage incoming data received
+ *   through the `USART2_IRQHandler` interrupt service routine.
  */
 #ifndef UART_H
 #define UART_H

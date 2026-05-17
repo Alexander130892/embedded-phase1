@@ -1,3 +1,18 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
+ *
+ * Description:
+ *   This file is the main entry point for an STM32F446RE bare-metal
+ *   firmware application that initializes I2C, UART, and GPIO clocks,
+ *   then repeatedly polls a BMP280 pressure/temperature sensor over
+ *   I2C and reports whether it is detected correctly (chip ID 0x58)
+ *   via UART. It also includes an `i2c_scan` utility function that
+ *   sweeps all valid I2C addresses and prints any responding devices
+ *   to UART.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c
