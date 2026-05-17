@@ -1,7 +1,7 @@
 /*
  * File:    mpu6050.c
  * Author:  Alexander130892
- * Date:    16-5-2026
+ * Date:    17-5-2026
  *
  * Description:
  *   This file implements a driver for the MPU-6050 IMU sensor over

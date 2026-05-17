@@ -1,18 +1,16 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    16-5-2026
+ * Date:    17-5-2026
  *
  * Description:
  *   This file is the main entry point for an STM32F446RE embedded
  *   application that initializes the FPU, clocks, I2C, and UART
  *   peripherals, then continuously reads accelerometer and gyroscope
  *   data from an MPU6050 sensor over I2C and transmits the formatted
- *   results via UART. It also includes an unused I2C bus scanner
- *   utility function that probes all standard 7-bit addresses and
- *   reports any responding devices over UART.
+ *   results via UART. It also includes an unused `i2c_scan` utility
+ *   function that probes the I2C bus for connected devices.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

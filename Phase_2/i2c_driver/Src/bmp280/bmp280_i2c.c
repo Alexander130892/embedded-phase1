@@ -1,17 +1,17 @@
 /*
  * File:    bmp280_i2c.c
  * Author:  Alexander130892
- * Date:    16-5-2026
+ * Date:    17-5-2026
  *
  * Description:
  *   This file implements the I2C communication interface for the
- *   BMP280 pressure and temperature sensor on an STM32F446RE
- *   microcontroller, providing functions to initialize the sensor,
- *   read its WHO_AM_I register, and retrieve compensated temperature
- *   and pressure readings. Notably, the pressure reading function
- *   simultaneously reads both pressure and temperature ADC values in a
- *   single burst, as temperature data is required for accurate
- *   pressure compensation.
+ *   BMP280 pressure and temperature sensor on an STM32F446RE,
+ *   providing functions to initialize the sensor, read calibration
+ *   compensation parameters, and retrieve compensated temperature and
+ *   pressure readings. Notably, the pressure reading function
+ *   simultaneously reads both pressure and temperature raw data, as a
+ *   valid temperature fine value is required by the BMP280
+ *   compensation formula for accurate pressure calculation.
  */
 #include <string.h>
 #include "stm32f446re.h"

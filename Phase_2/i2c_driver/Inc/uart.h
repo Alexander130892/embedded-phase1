@@ -1,17 +1,16 @@
 /*
  * File:    uart.h
  * Author:  Alexander130892
- * Date:    16-5-2026
+ * Date:    17-5-2026
  *
  * Description:
  *   This header file declares the interface for a UART communication
- *   module, providing functions to initialise the peripheral, send
- *   individual characters or strings, and receive strings via
- *   interrupt-driven buffering. It exposes a circular buffer with
- *   `head` and `tail` indices, along with the USART2 interrupt handler
- *   used to populate it.
+ *   driver, exposing functions for initializing the peripheral,
+ *   sending individual characters or strings, and receiving strings
+ *   via interrupt-driven input. It defines a circular buffer with
+ *   `head` and `tail` volatile indices for managing incoming data,
+ *   along with the USART2 interrupt handler used to populate it.
  */
-
 #ifndef UART_H
 #define UART_H
 
