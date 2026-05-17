@@ -11,7 +11,7 @@ sudo apt install gcc-avr avr-libc avrdude
 # macOS
 brew install avr-gcc avrdude
 
-# Windows
+# Windows (untested)
 # Install WinAVR or use the toolchain bundled inside Arduino IDE:
 # C:\Program Files\Arduino\hardware\tools\avr\bin\
 ```
@@ -20,11 +20,11 @@ brew install avr-gcc avrdude
 
 ```
 avr-baremetal/
-├── main.c          ← your application (bare register access)
-├── Makefile        ← build + flash targets
-└── .vscode/
-    ├── c_cpp_properties.json   ← IntelliSense for avr-gcc headers
-    └── tasks.json              ← Ctrl+Shift+B → Build / Flash
+├── main.c          // your application (bare register access)
+├── Makefile        // build + flash targets
+└── .vscode/        // optional
+    ├── c_cpp_properties.json   // IntelliSense for avr-gcc headers
+    └── tasks.json              // Ctrl+Shift+B → Build / Flash
 ```
 
 ## Workflow
