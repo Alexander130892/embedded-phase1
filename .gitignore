@@ -18,6 +18,7 @@ Release/
 *.elf
 *.bin
 *.map
+*.hex
 *.lst
 
 # CubeIDE workspace metadata

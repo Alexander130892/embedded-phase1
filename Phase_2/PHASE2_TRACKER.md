@@ -89,15 +89,15 @@
 #### Week 17 — Protocol Integration + Mini Data Logger
 > ~10 hrs | Original code + R7 (Barr Group coding standard — review)
 
-- [ ] Wire up at least **two sensors** — one SPI, one I2C — simultaneously
-- [ ] Exercise: read from both sensors in a polling loop; multiplex over UART to host terminal
-- [ ] Exercise: implement a simple CSV output format: `timestamp_ms, ax, ay, az, gx, gy, gz, temp, pressure`
-- [ ] Exercise: add `log start` / `log stop` UART commands from your Phase 1 command parser
-- [ ] Add proper `volatile` usage for any shared buffers touched by ISRs
-- [ ] Review Barr Group standard sections on header files, assertions, and data encapsulation — apply to your drivers
-- [ ] Refactor into clean modules: `spi.c`, `i2c.c`, `mpu6050.c`, `bmp280.c`, `uart.c`, `main.c`
-- [ ] Write a Makefile that builds the whole project cleanly from scratch
-- [ ] Commit to `week17/sensor_logger/` — this becomes the seed project for the FreeRTOS port
+- [x] Wire up at least **two sensors** — one SPI, one I2C — simultaneously
+- [x] Exercise: read from both sensors in a polling loop; multiplex over UART to host terminal
+- [x] Exercise: implement a simple CSV output format: `timestamp_ms, ax, ay, az, gx, gy, gz, temp, pressure`
+- [x] Exercise: add `log start` / `log stop` UART commands from your Phase 1 command parser
+- [x] Add proper `volatile` usage for any shared buffers touched by ISRs
+- [x] Review Barr Group standard sections on header files, assertions, and data encapsulation — apply to your drivers
+- [x] Refactor into clean modules: `spi.c`, `i2c.c`, `mpu6050.c`, `bmp280.c`, `uart.c`, `main.c`
+- [x] Write a Makefile that builds the whole project cleanly from scratch
+- [x] Commit to `week17/sensor_logger/` — this becomes the seed project for the FreeRTOS port
 
 > 🏁 **M9 checkpoint:** Multi-sensor polling logger working over UART. Codebase modular and Makefile-driven.
 
