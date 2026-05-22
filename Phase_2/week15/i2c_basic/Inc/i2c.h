@@ -1,14 +1,15 @@
 /*
  * File:    i2c.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header file declares the interface for an I2C communication
- *   driver targeting the STM32F446RE microcontroller, providing
- *   functions for initializing the GPIO and I2C peripheral, generating
- *   start/stop/restart conditions, and reading or writing individual
- *   bytes and registers to addressed I2C devices.
+ *   This header file declares the interface for an I2C driver
+ *   targeting the STM32F446RE microcontroller, providing functions for
+ *   initializing GPIO and the I2C peripheral, generating
+ *   start/stop/restart conditions, and performing byte-level
+ *   read/write operations including register-based access to I2C slave
+ *   devices.
  */
 #ifndef I2C_H_
 #define I2C_H_

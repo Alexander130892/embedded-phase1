@@ -1,14 +1,14 @@
 /*
  * File:    systick.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header declares the interface for a SysTick timer module
- *   configured to generate 1 ms tick interrupts on a 16 MHz system
- *   clock. It exposes functions to initialize the timer, handle the
- *   SysTick interrupt, and retrieve the current millisecond tick
- *   count.
+ *   This header declares the interface for a SysTick timer module that
+ *   initializes a 1ms periodic interrupt at 16MHz and provides a
+ *   function to retrieve the current millisecond tick count. The
+ *   `SYSTICK_MS_VALUE` macro defines the reload value (15999) used to
+ *   achieve the 1ms interval.
  */
 #ifndef SYSTICK_H_
 #define SYSTICK_H_

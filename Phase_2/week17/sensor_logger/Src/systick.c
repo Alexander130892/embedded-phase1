@@ -1,14 +1,15 @@
 /*
  * File:    systick.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file configures the ARM Cortex-M SysTick timer to generate
- *   periodic 1-millisecond interrupts using the 16 MHz processor
- *   clock. It maintains a running millisecond counter via the
- *   `SysTick_Handler` ISR, which can be read externally through
- *   `systick_get_ms()`.
+ *   This file configures the ARM Cortex-M SysTick timer to generate a
+ *   periodic interrupt every millisecond using the 16 MHz processor
+ *   clock, incrementing a global `tick_ms` counter in the interrupt
+ *   handler. It exposes a `systick_get_ms()` function to retrieve the
+ *   current millisecond tick count for use as a time reference
+ *   elsewhere in the system.
  */
 //SYSTICK
 #include "systick.h"

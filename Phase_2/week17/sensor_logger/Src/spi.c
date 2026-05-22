@@ -1,16 +1,15 @@
 /*
  * File:    spi.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements a bare-metal SPI1 driver for an STM32
- *   microcontroller, configuring the peripheral as a full-duplex
- *   master at 250 kHz with software slave management and mapping its
- *   signals to GPIO pins PA5–PA7 (SCK, MISO, MOSI) via alternate
- *   function 5. It exposes single-byte polled transfers and a
- *   burst-read function that sends an address followed by repeated
- *   dummy writes to clock in multiple response bytes.
+ *   This file initializes and drives STM32's SPI1 peripheral in
+ *   full-duplex master mode at 250 kHz using software slave
+ *   management, with PA5/PA6/PA7 configured as alternate-function SPI
+ *   pins. It provides a polled single-byte transfer function and a
+ *   burst-read helper that sends an address byte followed by dummy
+ *   bytes to clock in multiple response bytes.
  */
 #include "spi.h"
 

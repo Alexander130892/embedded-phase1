@@ -1,17 +1,16 @@
 /*
  * File:    sysmem.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements the `_sbrk` syscall for the newlib C library
- *   on an STM32 microcontroller, enabling dynamic memory allocation
- *   (e.g., `malloc`) by managing heap growth in RAM. It tracks a heap
- *   watermark starting at the linker-defined `_end` symbol and
- *   prevents the heap from overrunning the reserved MSP stack region,
- *   returning `ENOMEM` if the limit is exceeded.
+ *   This file implements the `_sbrk` syscall for newlib's heap
+ *   management on an STM32 microcontroller, enabling dynamic memory
+ *   allocation via `malloc` and related functions. It grows the heap
+ *   upward from the linker-defined `_end` symbol while guarding
+ *   against collision with the reserved MSP stack region at the top of
+ *   RAM.
  */
-
 /**
  ******************************************************************************
  * @file      sysmem.c

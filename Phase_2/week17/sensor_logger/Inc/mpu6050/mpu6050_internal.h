@@ -1,15 +1,15 @@
 /*
  * File:    mpu6050_internal.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This internal header file defines the register addresses and
- *   configuration values used to interface with the MPU6050 IMU
- *   sensor, including registers for gyroscope, accelerometer, power
- *   management, and device identity. It also specifies default
- *   configuration values and a startup delay constant for driver
- *   initialization.
+ *   This internal header file defines register addresses and
+ *   configuration constants for the MPU6050 IMU sensor, including
+ *   registers for gyroscope/accelerometer configuration, power
+ *   management, and device identification. It is intended for use
+ *   within the MPU6050 driver implementation rather than exposed to
+ *   external consumers.
  */
 #ifndef MPU6050_MPU6050_INTERNAL_H_
 #define MPU6050_MPU6050_INTERNAL_H_

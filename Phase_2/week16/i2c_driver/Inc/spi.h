@@ -1,15 +1,15 @@
 /*
  * File:    spi.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header file declares the interface for SPI1 peripheral
- *   communication on an STM32 microcontroller, including GPIO and SPI
- *   initialization, DMA-based read/write transfers, and a blocking
- *   byte transfer function. It also exposes volatile flags
- *   (`dma_s0_flag`, `dma_s3_flag`) to signal when DMA receive/transmit
- *   operations have completed and data is ready.
+ *   This header declares the interface for SPI1 peripheral
+ *   communication on an STM32 (or similar) microcontroller, including
+ *   GPIO and SPI initialization, DMA-based read/write transfers, and a
+ *   blocking single-byte transfer function. It exposes two volatile
+ *   flags to signal when DMA stream 0 and stream 3 receive operations
+ *   have completed and data is ready to be read.
  */
 #ifndef SPI_H_
 #define SPI_H_

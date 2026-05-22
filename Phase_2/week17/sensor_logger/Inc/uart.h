@@ -1,16 +1,15 @@
 /*
  * File:    uart.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header defines the interface for a UART2 peripheral driver,
- *   providing initialization, character/string transmission, and
- *   interrupt-driven string reception functions, along with constants
- *   for baud rate configuration and a maximum buffer length of 64
- *   bytes.
+ *   This header defines the interface for a UART (serial
+ *   communication) driver, providing initialization routines for the
+ *   peripheral and GPIO pins, functions to transmit individual
+ *   characters or strings, a function to receive strings into a
+ *   buffer, and an interrupt handler for USART2.
  */
-
 #ifndef UART_H
 #define UART_H
 

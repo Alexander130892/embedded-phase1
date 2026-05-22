@@ -1,15 +1,14 @@
 /*
  * File:    spi.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header declares the interface for an SPI1 peripheral driver
- *   using DMA-based transfers, providing functions to initialize GPIO
- *   pins, SPI, and DMA channels for both transmit and receive, along
- *   with blocking single-byte transfer support. It also exposes
- *   volatile DMA completion flags (`dma_s0_flag`, `dma_s3_flag`) used
- *   to signal when DMA read/write operations have finished.
+ *   This header defines the interface for SPI1 communication on an
+ *   STM32 microcontroller, including initialization of GPIO pins, SPI,
+ *   and DMA channels for efficient buffered read/write transfers. It
+ *   exposes DMA completion flags and functions for single-byte
+ *   blocking transfers as well as DMA-driven bulk reads and writes.
  */
 #ifndef SPI_H_
 #define SPI_H_

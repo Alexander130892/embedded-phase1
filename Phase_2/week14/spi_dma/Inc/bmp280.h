@@ -1,15 +1,15 @@
 /*
  * File:    bmp280.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This header file defines the interface for a BMP280 temperature
- *   and pressure sensor driver, declaring functions for register
- *   read/write operations, sensor configuration, and compensated
- *   temperature and pressure data retrieval. It also defines the
- *   `comp_param_t` structure to hold the sensor's factory calibration
- *   coefficients used in the compensation calculations.
+ *   and pressure sensor driver, declaring functions for SPI/I2C
+ *   register access, sensor configuration, and compensated temperature
+ *   and pressure readings. It also defines the `comp_param_t`
+ *   structure to hold the device's factory calibration coefficients
+ *   used in the compensation calculations.
  */
 #ifndef BMP280_H_
 #define BMP280_H_

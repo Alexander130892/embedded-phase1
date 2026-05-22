@@ -1,15 +1,14 @@
 /*
  * File:    mpu6050_internal.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header defines internal register address constants for the
- *   MPU6050 IMU sensor, specifically the accelerometer output,
+ *   This internal header defines register address constants for the
+ *   MPU6050 IMU sensor, specifically for the accelerometer output,
  *   gyroscope output, power management, and device identity registers.
  *   It is intended for use within the MPU6050 driver implementation to
- *   map named register addresses to their corresponding I2C register
- *   locations.
+ *   avoid hardcoding raw register addresses throughout the code.
  */
 #ifndef MPU6050_MPU6050_INTERNAL_H_
 #define MPU6050_MPU6050_INTERNAL_H_

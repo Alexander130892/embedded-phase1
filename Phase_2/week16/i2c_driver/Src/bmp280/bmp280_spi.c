@@ -1,16 +1,17 @@
 /*
  * File:    bmp280_spi.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This file implements a BMP280 barometric pressure and temperature
- *   sensor driver for an STM32F446RE microcontroller using SPI
- *   communication, providing functions to read/write registers,
- *   retrieve factory calibration compensation parameters, and
- *   calculate compensated temperature and pressure values. All code is
- *   currently commented out, suggesting it is a work-in-progress or
- *   temporarily disabled implementation.
+ *   sensor driver for an STM32F446RE microcontroller over SPI,
+ *   including register read/write helpers, DMA-based burst reads,
+ *   trimming compensation parameter loading, and Bosch's integer
+ *   compensation formulas for converting raw ADC values to calibrated
+ *   temperature and pressure readings. The entire file is commented
+ *   out, indicating it is either a work-in-progress or has been
+ *   superseded by another implementation.
  */
 ///*
 // * bmp280.c

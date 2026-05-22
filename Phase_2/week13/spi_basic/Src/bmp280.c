@@ -1,16 +1,15 @@
 /*
  * File:    bmp280.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements a low-level SPI driver interface for the
+ *   This file implements low-level SPI communication functions for a
  *   BMP280 pressure/temperature sensor on an STM32F446RE
- *   microcontroller, providing register read and write functions that
- *   manually control the chip-select line (GPIOB pin 6) and wait for
- *   SPI bus idle before deasserting CS. It also includes a convenience
- *   function to read the BMP280's WHO_AM_I register (0xD0) for device
- *   identification.
+ *   microcontroller, providing register read and write operations via
+ *   manual chip-select (PB6) toggling. It includes a helper to read
+ *   the WHO_AM_I identification register (0xD0) to verify sensor
+ *   presence.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"

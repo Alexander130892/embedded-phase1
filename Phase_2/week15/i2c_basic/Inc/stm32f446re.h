@@ -1,15 +1,15 @@
 /*
  * File:    stm32f446re.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This header file defines base addresses and register offsets for
  *   key peripherals of the STM32F446RE microcontroller, including RCC,
- *   GPIO (A/B), TIM2, NVIC, SYSCFG, EXTI, DMA2, USART2, and SPI1. It
- *   serves as a low-level hardware abstraction layer for bare-metal
- *   register access without relying on vendor-provided HAL or CMSIS
- *   libraries.
+ *   GPIO, TIM2, NVIC, EXTI, SYSCFG, DMA2, USART2, and SPI1, used for
+ *   bare-metal register-level programming. It provides a low-level
+ *   hardware abstraction layer that allows direct memory-mapped access
+ *   to peripheral registers without relying on vendor HAL libraries.
  */
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_

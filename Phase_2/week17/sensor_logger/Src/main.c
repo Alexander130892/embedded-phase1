@@ -1,18 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This STM32F446RE embedded application initializes SPI (BMP280
- *   pressure/temperature sensor), I2C (MPU6050 IMU), and UART
- *   peripherals, then continuously samples and streams sensor data —
- *   timestamp, temperature, pressure, accelerometer (XYZ), and
- *   gyroscope (XYZ) — over UART at approximately 1 Hz. It also accepts
- *   simple UART commands ("log on"/"log off") to toggle data logging
- *   at runtime.
+ *   This file is the main entry point for an STM32F446RE embedded
+ *   application that reads sensor data from a BMP280 (temperature and
+ *   pressure via SPI) and an MPU6050 (accelerometer and gyroscope via
+ *   I2C), then transmits the formatted readings over UART at
+ *   approximately 1-second intervals. It also accepts simple UART
+ *   commands ("log on"/"log off") to enable or disable continuous data
+ *   logging.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

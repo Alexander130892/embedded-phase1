@@ -1,16 +1,16 @@
 /*
  * File:    bmp280_spi.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements an SPI interface driver for the BMP280
+ *   This file implements SPI communication for the BMP280
  *   pressure/temperature sensor on an STM32F446RE microcontroller,
  *   providing functions to initialize the sensor, configure
  *   oversampling settings, read calibration compensation parameters,
  *   and perform burst reads of raw temperature and pressure data. It
- *   manages chip-select (CS) toggling on GPIOB and includes BSY-flag
- *   polling with timeout handling to ensure safe SPI transactions.
+ *   manages the SPI chip-select (CS) line manually via GPIOB and
+ *   includes timeout handling for SPI bus-busy conditions.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"

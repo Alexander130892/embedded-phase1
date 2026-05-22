@@ -1,15 +1,14 @@
 /*
  * File:    bmp280.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements low-level communication functions for the
- *   BMP280 pressure/temperature sensor on an STM32F446RE
- *   microcontroller, supporting both SPI and I2C interfaces. It
- *   provides register read/write operations over SPI using manual
- *   chip-select (GPIO PB6) control, and a who-am-I register read over
- *   both interfaces for device identification.
+ *   This file implements low-level register read/write communication
+ *   with a BMP280 pressure/temperature sensor over SPI (using manual
+ *   GPIO chip-select toggling on GPIOB pin 6), and includes a stub for
+ *   reading the sensor's WHO_AM_I register via I2C as an alternative
+ *   interface.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"

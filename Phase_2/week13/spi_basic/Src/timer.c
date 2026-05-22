@@ -1,17 +1,15 @@
 /*
  * File:    timer.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This file implements millisecond timing functionality for an
  *   STM32F446RE microcontroller using TIM2, configured to overflow
- *   every 1 ms via a 16 MHz clock with a prescaler of 159 and an
- *   auto-reload value of 99. It provides a `millis()` function that
- *   tracks elapsed milliseconds by polling the timer's update
- *   interrupt flag, and a `TIM2_IRQHandler` that increments an
- *   overflow counter (wrapping at 500) on each timer overflow
- *   interrupt.
+ *   every 1 ms via a 100 kHz timer clock and an ARR of 99. It provides
+ *   a `millis()` function that polls the update interrupt flag to
+ *   track elapsed milliseconds, and a `TIM2_IRQHandler` that
+ *   increments a counter (wrapping at 500) on each overflow interrupt.
  */
 #include "timer.h"
 #include "stm32f446re.h"

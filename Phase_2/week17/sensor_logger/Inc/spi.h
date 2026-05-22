@@ -1,15 +1,15 @@
 /*
  * File:    spi.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header file declares the interface for an SPI1 peripheral
- *   driver on an STM32F446RE microcontroller, mapping the bus to pins
- *   PA5/PA6/PA7 with PB6 as chip select. It exposes functions for
- *   initializing the SPI peripheral and GPIO pins, performing
- *   single-byte transfers, and executing burst reads from a specified
- *   register address.
+ *   This header defines the interface for SPI1 peripheral
+ *   communication on an STM32F446RE microcontroller, mapping the bus
+ *   to pins PA5/PA6/PA7 (SCK/MISO/MOSI) with PB6 as chip select. It
+ *   declares functions for initializing the SPI and GPIO hardware,
+ *   performing single-byte transfers, and reading multiple bytes in a
+ *   burst from a specified address.
  */
 #ifndef SPI_H_
 #define SPI_H_

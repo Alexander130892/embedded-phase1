@@ -1,14 +1,14 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This STM32F446RE embedded application initializes SPI, UART, and
- *   GPIO peripherals along with the necessary RCC clocks, then
- *   repeatedly polls a BMP280 pressure/temperature sensor via SPI and
- *   reports its WHO_AM_I register result over UART for debugging
- *   purposes.
+ *   GPIO peripherals to communicate with a BMP280 pressure/temperature
+ *   sensor, then continuously polls the sensor's WHO_AM_I register and
+ *   reports over UART whether the device is correctly identified
+ *   (0x58).
  */
 /**
  ******************************************************************************

@@ -1,16 +1,14 @@
 /*
  * File:    sh1107.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This file implements a driver for the SH1107 128×128 OLED display
- *   controller, handling initialization, SPI command/data
- *   transmission, screen clearing, and framebuffer rendering via both
- *   direct byte writes and DMA transfers. It controls the display over
- *   SPI using GPIO pins for chip-select and data/command signaling,
- *   and includes a partial character-drawing function that uses an 8×8
- *   bitmap font.
+ *   controller, handling initialization, SPI command/data transmission
+ *   via direct register manipulation, screen clearing, and framebuffer
+ *   rendering including character drawing using an 8×8 font. It
+ *   supports both byte-by-byte and DMA-based full-screen writes.
  */
 #include "sh1107.h"
 #include "font8x8.h"

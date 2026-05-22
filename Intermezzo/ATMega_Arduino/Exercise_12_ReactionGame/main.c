@@ -1,18 +1,17 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This file implements a Simon Says memory game on an ATmega328P
- *   microcontroller, where the MCU displays a growing random sequence
- *   of LEDs and the player must press the corresponding buttons in the
- *   correct order. A wrong input flashes all LEDs and resets the game,
- *   while successfully completing all 10 levels triggers a rapid
- *   victory flash before restarting.
+ *   This file implements a Simon Says-style memory game on an
+ *   ATmega328P microcontroller, where a growing random sequence of
+ *   LEDs is displayed and the player must press the corresponding
+ *   buttons in the correct order. A correct full sequence triggers a
+ *   rapid win flash, while any wrong button press flashes all LEDs and
+ *   resets the game; Timer1 runs freely to seed the random number
+ *   generator on the first button press.
  */
-
-
 /*
     Notes:
         need timer to seed rand()

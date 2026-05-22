@@ -1,15 +1,16 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This header defines configuration and interface for a millisecond
- *   timer using TIM2 on an STM32 microcontroller, with prescaler and
- *   auto-reload values set to generate a 1 kHz (1 ms) interrupt from a
- *   16 MHz clock. It declares the TIM2 interrupt handler and a
- *   `millis()` function that returns elapsed milliseconds by tracking
- *   timer overflow counts.
+ *   timer using TIM2 on an STM32 microcontroller, where the prescaler
+ *   (PSC=159) and auto-reload register (ARR=99) divide a 16 MHz clock
+ *   down to a 1 kHz interrupt rate. It declares the TIM2 interrupt
+ *   handler and a `millis()` function that returns elapsed
+ *   milliseconds by tracking timer overflows via a static volatile
+ *   counter.
  */
 #ifndef TIMER_H_
 #define TIMER_H_

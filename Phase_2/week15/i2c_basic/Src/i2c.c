@@ -1,14 +1,15 @@
 /*
  * File:    i2c.c
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
  *   This file implements a bare-metal I2C1 driver for an STM32
- *   microcontroller, handling GPIO initialisation (PB8/PB9 in
- *   open-drain alternate function mode) and low-level I2C operations
- *   including start/stop conditions, byte read/write, and
- *   single-register read/write transactions.
+ *   microcontroller, handling GPIO configuration (PB8/PB9 in
+ *   open-drain alternate function mode), peripheral initialisation at
+ *   100 kHz standard mode, and low-level operations including
+ *   start/stop condition generation, byte read/write, address
+ *   transmission, and single-register read/write transactions.
  */
 #include "i2c.h"
 

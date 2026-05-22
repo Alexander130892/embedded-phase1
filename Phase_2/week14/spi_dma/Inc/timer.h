@@ -1,14 +1,15 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    17-5-2026
+ * Date:    22-5-2026
  *
  * Description:
- *   This header file configures Timer 2 (TIM2) on a microcontroller to
- *   generate a 1000 Hz interrupt by defining prescaler and auto-reload
- *   register values for a 16 MHz clock. It declares the TIM2 interrupt
- *   handler and a `millis()` function that tracks elapsed milliseconds
- *   using a volatile overflow counter incremented by the timer ISR.
+ *   This header defines configuration and interface for a millisecond
+ *   timer using TIM2 on a microcontroller running at 16 MHz, with
+ *   prescaler and auto-reload values set to generate a 1 kHz interrupt
+ *   frequency. It declares the TIM2 interrupt handler and a `millis()`
+ *   function that returns elapsed milliseconds by tracking timer
+ *   overflow counts.
  */
 #ifndef TIMER_H_
 #define TIMER_H_
