@@ -1,14 +1,16 @@
 /*
  * File:    font8x8.h
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file defines a lookup table for rendering ASCII
- *   characters 32-127 in an 8x8 pixel bitmap font, where each
- *   character is represented as an array of 8 bytes with each byte
- *   encoding one vertical column of pixels (LSB representing the top
- *   pixel).
+ *   This header file defines a static lookup table containing 8x8
+ *   pixel bitmap font data for ASCII characters 32–127, where each
+ *   character is represented as 8 bytes with each byte encoding one
+ *   column of pixels (LSB = top pixel). It is intended to be included
+ *   directly in rendering code that draws text to low-level displays
+ *   or framebuffers by iterating over the column bytes for a given
+ *   character.
  */
 #ifndef FONT8X8_H_
 #define FONT8X8_H_

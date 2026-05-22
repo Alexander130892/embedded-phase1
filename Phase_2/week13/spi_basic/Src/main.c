@@ -1,18 +1,15 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    6-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This STM32F446RE microcontroller program continuously tests
- *   communication with a BMP280 sensor over SPI by reading its device
- *   ID and reporting the test results via UART. It performs
- *   initialization of clocks, GPIO, SPI, and UART interfaces, then
- *   enters an infinite loop that checks if the BMP280 responds with
- *   the expected ID (0x58) and sends status messages over UART with a
- *   simple delay between iterations.
+ *   This STM32F446RE embedded application initializes SPI, UART, and
+ *   GPIO peripherals along with the necessary RCC clocks, then
+ *   repeatedly polls a BMP280 pressure/temperature sensor via SPI and
+ *   reports its WHO_AM_I register result over UART for debugging
+ *   purposes.
  */
-
 /**
  ******************************************************************************
  * @file           : main.c

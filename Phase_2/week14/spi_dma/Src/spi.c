@@ -1,15 +1,15 @@
 /*
  * File:    spi.c
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This file initializes and configures SPI1 peripheral on an
- *   STM32F446RE microcontroller in master mode with full-duplex
- *   communication at 250kHz baud rate. It sets up the necessary GPIO
- *   pins for SPI functionality (PA5-PA7 as alternate function pins,
- *   PB3-PB6 as GPIO outputs for chip select) and provides a function
- *   for SPI data transfer.
+ *   This file initializes and configures SPI1 on an STM32F446RE
+ *   microcontroller as a software-managed master in full-duplex Mode
+ *   0, operating at 250 kHz with MSB-first 8-bit frames. It also sets
+ *   up the associated GPIO pins (PA5/6/7 as SPI alternate functions
+ *   and PB3–6 as chip-select outputs) and declares DMA completion
+ *   flags for later use.
  */
 #include "spi.h"
 #include "stm32f446re.h"

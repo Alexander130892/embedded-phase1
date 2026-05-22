@@ -4,13 +4,12 @@
  * Date:    17-5-2026
  *
  * Description:
- *   This file initializes and configures SPI1 on an STM32F446RE
- *   microcontroller as a master device in full-duplex, Mode 0,
- *   MSB-first operation at 250 kHz, along with the associated GPIO
- *   pins (PA5–PA7 for SPI signals via AF5, PB3–PB6 for chip-select
- *   lines). It also provides a `spi_transfer` function for byte-level
- *   SPI communication and declares DMA stream flags, suggesting
- *   support for DMA-based transfers elsewhere.
+ *   This file initializes and manages SPI1 communication on an
+ *   STM32F446RE microcontroller, configuring it as a software-managed
+ *   master in full-duplex Mode 0 at 250 kHz with DMA flag support. It
+ *   also sets up the associated GPIO pins (PA5–PA7 for SPI alternate
+ *   functions and PB3–PB6 for chip-select lines) and provides a
+ *   byte-level SPI transfer function.
  */
 #include "spi.h"
 #include "stm32f446re.h"

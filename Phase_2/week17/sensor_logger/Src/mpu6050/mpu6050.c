@@ -1,10 +1,17 @@
 /*
- * mpu6050.c
+ * File:    mpu6050.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a driver for the MPU6050 IMU sensor,
+ *   providing functions to initialize the device over I2C (configuring
+ *   power, sample rate, gyroscope, and accelerometer settings with
+ *   small startup delays between writes) and to read raw 16-bit
+ *   accelerometer and gyroscope data via a burst I2C read. It also
+ *   includes a utility function to read the WHO_AM_I register for
+ *   device identification.
  */
-
 #include "mpu6050_internal.h"
 #include "mpu6050.h"
 #include "status.h"

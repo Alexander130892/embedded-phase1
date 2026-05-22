@@ -1,15 +1,17 @@
 /*
  * File:    uart.c
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This file implements UART communication functionality for an
- *   STM32F446RE microcontroller, providing functions to initialize
- *   USART2, send characters and strings, and receive strings using
- *   interrupt-driven circular buffer handling. It uses direct register
- *   manipulation to configure GPIO pins, set up UART parameters at
- *   115200 baud, and handle received data through interrupts.
+ *   This file implements a bare-metal UART driver for USART2 on an
+ *   STM32F446RE microcontroller, providing functions to initialise the
+ *   peripheral (configuring GPIO alternate functions, baud rate, and
+ *   NVIC interrupts), transmit characters and strings, and receive
+ *   strings via an interrupt-driven circular buffer. Incoming bytes
+ *   are stored in the buffer by the `USART2_IRQHandler` ISR and
+ *   consumed by `uart_receive_string`, which signals completion when a
+ *   carriage return or newline is detected.
  */
 #include 	"uart.h"
 #include	"stm32f446re.h"

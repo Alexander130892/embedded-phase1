@@ -1,3 +1,17 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    17-5-2026
+ *
+ * Description:
+ *   This file implements a Simon Says memory game on an ATmega328P
+ *   microcontroller, where the MCU displays a growing random sequence
+ *   of LEDs and the player must press the corresponding buttons in the
+ *   correct order. A wrong input flashes all LEDs and resets the game,
+ *   while successfully completing all 10 levels triggers a rapid
+ *   victory flash before restarting.
+ */
+
 
 /*
     Notes:

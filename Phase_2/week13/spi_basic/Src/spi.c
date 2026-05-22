@@ -1,14 +1,17 @@
 /*
  * File:    spi.c
  * Author:  Alexander130892
- * Date:    6-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This file configures SPI1 on an STM32F446RE microcontroller as a
- *   master device operating at 250kHz in full-duplex mode with
- *   software-managed chip select. It initializes the necessary GPIO
- *   pins (PA5-PA7 for SPI signals, PB6 for chip select) and provides a
- *   transfer function for simultaneous transmit/receive operations.
+ *   This file initializes and drives the SPI1 peripheral on an
+ *   STM32F446RE microcontroller, configuring it as a full-duplex SPI
+ *   master at 250 kHz with software slave management and Motorola Mode
+ *   0 framing. It also configures the associated GPIO pins
+ *   (PA5/PA6/PA7 as SPI alternate functions, PB6 as a manual
+ *   chip-select output) and provides a blocking `spi_transfer`
+ *   function that simultaneously transmits and receives a single byte
+ *   by polling the TXE and RXNE status flags.
  */
 #include "spi.h"
 #include "stm32f446re.h"

@@ -1,15 +1,15 @@
 /*
  * File:    bmp280.h
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file defines the interface for controlling a BMP280
- *   temperature and pressure sensor, including functions for register
- *   access, configuration, and reading compensated temperature and
- *   pressure values. It includes a compensation parameters structure
- *   that stores calibration coefficients needed for converting raw
- *   sensor data to accurate measurements.
+ *   This header file defines the interface for a BMP280 temperature
+ *   and pressure sensor driver, declaring functions for register
+ *   read/write operations, sensor configuration, and compensated
+ *   temperature and pressure data retrieval. It also defines the
+ *   `comp_param_t` structure to hold the sensor's factory calibration
+ *   coefficients used in the compensation calculations.
  */
 #ifndef BMP280_H_
 #define BMP280_H_

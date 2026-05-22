@@ -1,12 +1,13 @@
 /*
  * File:    bmp280.h
  * Author:  Alexander130892
- * Date:    6-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This header file defines the interface for communicating with a
- *   BMP280 sensor, providing functions to read and write registers and
- *   check the device identity.
+ *   This header file declares the interface for communicating with a
+ *   BMP280 sensor, providing functions to read and write registers
+ *   over a communication bus and retrieve the device's WHO_AM_I
+ *   identification register.
  */
 #ifndef BMP280_H_
 #define BMP280_H_

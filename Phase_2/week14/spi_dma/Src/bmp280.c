@@ -1,15 +1,15 @@
 /*
  * File:    bmp280.c
  * Author:  Alexander130892
- * Date:    11-5-2026
+ * Date:    17-5-2026
  *
  * Description:
- *   This file implements a driver for the BMP280 temperature and
- *   pressure sensor on an STM32F446RE microcontroller, providing
- *   functions to communicate with the sensor via SPI and read
- *   compensated temperature and pressure values. It includes low-level
- *   register read/write operations, calibration parameter retrieval,
- *   and sensor data acquisition with built-in compensation algorithms.
+ *   This file implements a driver for the BMP280 pressure and
+ *   temperature sensor over SPI on an STM32F446RE microcontroller,
+ *   providing functions to read/write registers, retrieve factory
+ *   compensation parameters, and convert raw ADC readings into
+ *   compensated temperature and pressure values using the datasheet's
+ *   integer compensation formulas.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"
