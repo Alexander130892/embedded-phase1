@@ -113,13 +113,13 @@
 > ~10 hrs | R1-RTOS (Shawn Hymel Ep. 1–4) + R2-RTOS Ch. 1–3
 
 **Study tasks**
-- [ ] R1-RTOS Ep.1–2 — What is an RTOS? Tasks, scheduler, preemption vs cooperative
-- [ ] R2-RTOS Ch.1 — The FreeRTOS distribution: directory structure, configuration (`FreeRTOSConfig.h`), port selection
-- [ ] R2-RTOS Ch.2 — The FreeRTOS kernel: tick, task states (running, ready, blocked, suspended), `configTICK_RATE_HZ`
-- [ ] R2-RTOS Ch.3 — Task management: `xTaskCreate()`, `vTaskDelete()`, `vTaskDelay()`, `uxTaskPriorityGet()`
-- [ ] Understand stack sizing: why each task needs its own stack, how to estimate size, `uxTaskGetStackHighWaterMark()`
-- [ ] Understand `configMAX_PRIORITIES` and why you should keep priority levels few and intentional
-- [ ] Exercise: port FreeRTOS to your Nucleo board manually (no CubeMX) — copy the correct Cortex-M port files, write a minimal `FreeRTOSConfig.h`
+- [x] R1-RTOS Ep.1–3 — What is an RTOS? Tasks, scheduler, preemption vs cooperative
+- [x] R2-RTOS Ch.1 — The FreeRTOS distribution: directory structure, configuration (`FreeRTOSConfig.h`), port selection
+- [x] R2-RTOS Ch.3 — The FreeRTOS kernel: tick, task states (running, ready, blocked, suspended), `configTICK_RATE_HZ`
+- [x] R2-RTOS Ch.4 — Task management: `xTaskCreate()`, `vTaskDelete()`, `vTaskDelay()`, `uxTaskPriorityGet()`
+- [x] Understand stack sizing: why each task needs its own stack, how to estimate size, `uxTaskGetStackHighWaterMark()`
+- [x] Understand `configMAX_PRIORITIES` and why you should keep priority levels few and intentional
+- [x] Exercise: port FreeRTOS to your Nucleo board manually (no CubeMX) — copy the correct Cortex-M port files, write a minimal `FreeRTOSConfig.h`
 - [ ] Exercise: create two tasks — `vLEDTask` (blink) and `vUARTTask` (print "tick" every second) — verify both run concurrently
 - [ ] Commit to `week18/freertos_intro/`
 
