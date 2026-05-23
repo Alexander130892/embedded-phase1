@@ -120,18 +120,18 @@
 - [x] Understand stack sizing: why each task needs its own stack, how to estimate size, `uxTaskGetStackHighWaterMark()`
 - [x] Understand `configMAX_PRIORITIES` and why you should keep priority levels few and intentional
 - [x] Exercise: port FreeRTOS to your Nucleo board manually (no CubeMX) — copy the correct Cortex-M port files, write a minimal `FreeRTOSConfig.h`
-- [ ] Exercise: create two tasks — `vLEDTask` (blink) and `vUARTTask` (print "tick" every second) — verify both run concurrently
-- [ ] Commit to `week18/freertos_intro/`
+- [x] Exercise: create two tasks — `vLEDTask` (blink) and `vUARTTask` (print "tick" every second) — verify both run concurrently
+- [x] Commit to `week18/freertos_intro/`
 
 ---
 
 #### Week 19 — Queues + Inter-task Communication
 > ~10 hrs | R1-RTOS Ep. 5–7 + R2-RTOS Ch. 4
 
-- [ ] R1-RTOS Ep.5–6 — Queues: producer/consumer pattern, blocking sends and receives
-- [ ] R2-RTOS Ch.4 — Queue management: `xQueueCreate()`, `xQueueSend()`, `xQueueReceive()`, `xQueueSendFromISR()`
-- [ ] Understand queue length vs item size — know when to pass data vs pointers
-- [ ] Understand `xQueueSendFromISR()` and `portYIELD_FROM_ISR()` — critical for ISR → task handoff
+- [x] R1-RTOS Ep.5–6 — Queues: producer/consumer pattern, blocking sends and receives
+- [x] R2-RTOS Ch.4 — Queue management: `xQueueCreate()`, `xQueueSend()`, `xQueueReceive()`, `xQueueSendFromISR()`
+- [x] Understand queue length vs item size — know when to pass data vs pointers
+- [x] Understand `xQueueSendFromISR()` and `portYIELD_FROM_ISR()` — critical for ISR → task handoff
 - [ ] Exercise: create a sensor task that reads from UART ISR via queue — replace polling RX with `xQueueReceiveFromISR`
 - [ ] Exercise: implement a `vSensorReadTask` that posts sensor readings to a queue, and a `vLogTask` that pulls from it and transmits over UART
 - [ ] Verify no data is lost under continuous logging at 115200 baud
