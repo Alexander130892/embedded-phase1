@@ -132,10 +132,10 @@
 - [x] R2-RTOS Ch.4 — Queue management: `xQueueCreate()`, `xQueueSend()`, `xQueueReceive()`, `xQueueSendFromISR()`
 - [x] Understand queue length vs item size — know when to pass data vs pointers
 - [x] Understand `xQueueSendFromISR()` and `portYIELD_FROM_ISR()` — critical for ISR → task handoff
-- [ ] Exercise: create a sensor task that reads from UART ISR via queue — replace polling RX with `xQueueReceiveFromISR`
-- [ ] Exercise: implement a `vSensorReadTask` that posts sensor readings to a queue, and a `vLogTask` that pulls from it and transmits over UART
-- [ ] Verify no data is lost under continuous logging at 115200 baud
-- [ ] Commit to `week19/freertos_queues/`
+- [x] Exercise: create a sensor task that reads from UART ISR via queue — replace polling RX with `xQueueReceiveFromISR`
+- [x] Exercise: implement a `vSensorReadTask` that posts sensor readings to a queue, and a `vLogTask` that pulls from it and transmits over UART
+- [x] Verify no data is lost under continuous logging at 115200 baud
+- [x] Commit to `week19/freertos_queues/`
 
 > 🏁 **M10 checkpoint:** Queue-based sensor → UART pipeline functional.
 
