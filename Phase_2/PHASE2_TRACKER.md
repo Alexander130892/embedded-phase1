@@ -144,14 +144,14 @@
 #### Week 20 — Semaphores + Mutexes
 > ~10 hrs | R1-RTOS Ep. 8–10 + R2-RTOS Ch. 5–6
 
-- [ ] R1-RTOS Ep.8–9 — Binary semaphores: signalling between ISR and task (vs queues — know the tradeoff)
-- [ ] R2-RTOS Ch.5 — Semaphore management: binary, counting, `xSemaphoreGive()`, `xSemaphoreTake()`, ISR variants
-- [ ] R2-RTOS Ch.6 — Mutex: priority inheritance, why a mutex ≠ binary semaphore, deadlock conditions to avoid
-- [ ] Study priority inversion — understand the scenario and why FreeRTOS mutexes mitigate it
-- [ ] Exercise: replace timer ISR flag with binary semaphore — `xSemaphoreGiveFromISR()` in TIM2 ISR, `xSemaphoreTake()` in sensor task
-- [ ] Exercise: protect the shared UART TX function with a mutex — prevent garbled output when two tasks write simultaneously
-- [ ] Exercise: deliberately create a priority inversion scenario (optional) — observe and explain the outcome
-- [ ] Commit to `week20/freertos_sync/`
+- [x] R1-RTOS Ep.8–9 — Binary semaphores: signalling between ISR and task (vs queues — know the tradeoff)
+- [x] R2-RTOS Ch.5 — Semaphore management: binary, counting, `xSemaphoreGive()`, `xSemaphoreTake()`, ISR variants
+- [x] R2-RTOS Ch.6 — Mutex: priority inheritance, why a mutex ≠ binary semaphore, deadlock conditions to avoid
+- [x] Study priority inversion — understand the scenario and why FreeRTOS mutexes mitigate it
+- [x] Exercise: replace timer ISR flag with binary semaphore — `xSemaphoreGiveFromISR()` in TIM2 ISR, `xSemaphoreTake()` in sensor task
+- [x] Exercise: protect the shared UART TX function with a mutex — prevent garbled output when two tasks write simultaneously
+- [x] Exercise: deliberately create a priority inversion scenario (optional) — observe and explain the outcome -- see video
+- [x] Commit to `week20/freertos_sync/`
 
 ---
 

@@ -27,7 +27,7 @@ import requests
 AUTHOR      = os.environ.get("AUTHOR_NAME", "Alexander Vindelinckx")
 API_KEY     = os.environ.get("ANTHROPIC_API_KEY", "")
 API_URL     = "https://api.anthropic.com/v1/messages"
-MODEL       = "claude-sonnet-4-6"
+MODEL       = "claude-haiku-4-5-20251001"
 
 # Matches the full header block so we can replace it on subsequent runs
 HEADER_RE = re.compile(
