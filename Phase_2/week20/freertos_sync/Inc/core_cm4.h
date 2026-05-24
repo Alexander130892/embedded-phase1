@@ -1,3 +1,18 @@
+/*
+ * File:    core_cm4.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file provides the CMSIS (Cortex Microcontroller Software
+ *   Interface Standard) peripheral access layer definitions and
+ *   abstractions for ARM Cortex-M4 processors, including core register
+ *   structures, interrupt handling, and compiler-specific
+ *   configurations. It enables portable, standardized access to
+ *   Cortex-M4 core peripherals across different development
+ *   environments and toolchains.
+ */
+
 /**************************************************************************//**
  * @file     core_cm4.h
  * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File

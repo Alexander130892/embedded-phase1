@@ -1,3 +1,16 @@
+/*
+ * File:    cmsis_gcc.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file provides GCC-specific compiler abstractions and macro
+ *   definitions for CMSIS (Cortex Microcontroller Software Interface
+ *   Standard), mapping portable CMSIS keywords to their GCC
+ *   equivalents for inline assembly, function attributes, and
+ *   unaligned memory access operations.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_gcc.h
  * @brief    CMSIS compiler GCC header file

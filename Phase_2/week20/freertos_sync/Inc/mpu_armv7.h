@@ -1,3 +1,17 @@
+/*
+ * File:    mpu_armv7.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file provides CMSIS-compliant API definitions and macros for
+ *   configuring the ARM Memory Protection Unit (MPU) on Armv7-M
+ *   processors, including region size constants, access permission
+ *   levels, and configuration macros. It serves as a standardized
+ *   hardware abstraction layer for MPU setup and management on ARM
+ *   Cortex-M devices.
+ */
+
 /******************************************************************************
  * @file     mpu_armv7.h
  * @brief    CMSIS MPU API for Armv7-M MPU

@@ -1,3 +1,18 @@
+/*
+ * File:    cmsis_compiler.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file is a CMSIS (Cortex Microcontroller Software Interface
+ *   Standard) compiler abstraction header that conditionally includes
+ *   compiler-specific headers and defines portable macros based on the
+ *   detected compiler toolchain (Arm Compiler, GCC, IAR, TI, or
+ *   TASKING). It enables cross-compiler compatibility for ARM embedded
+ *   development by providing uniform compiler intrinsics and
+ *   attributes across different toolchains.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_compiler.h
  * @brief    CMSIS compiler generic header file

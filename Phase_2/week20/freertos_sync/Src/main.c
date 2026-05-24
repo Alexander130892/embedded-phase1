@@ -1,3 +1,16 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This is an STM32F446RE microcontroller application that uses
+ *   FreeRTOS to implement a multi-task data acquisition and logging
+ *   system for an MPU6050 inertial measurement unit (IMU), where
+ *   sensor data is read, formatted, and transmitted over UART through
+ *   a producer-consumer pipeline using queues and semaphores.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

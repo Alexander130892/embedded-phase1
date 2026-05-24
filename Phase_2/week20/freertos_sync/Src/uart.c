@@ -1,3 +1,16 @@
+/*
+ * File:    uart.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file initializes and manages UART2 communication on an
+ *   STM32F446RE microcontroller, configuring GPIO pins PA2/PA3 for
+ *   serial I/O at 115200 baud, and implements an interrupt handler
+ *   that queues received characters into a FreeRTOS message queue for
+ *   task-based processing.
+ */
+
 
 
 #include 	"uart.h"

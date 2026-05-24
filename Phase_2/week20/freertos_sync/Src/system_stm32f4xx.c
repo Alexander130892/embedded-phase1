@@ -1,3 +1,17 @@
+/*
+ * File:    system_stm32f4xx.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file initializes the STM32F4xx Cortex-M4 microcontroller's
+ *   system clock and core peripherals, providing the SystemInit()
+ *   function called at startup and SystemCoreClockUpdate() to track
+ *   runtime clock changes. It defines essential parameters like
+ *   oscillator frequencies and vector table placement for the CMSIS
+ *   device abstraction layer.
+ */
+
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.c

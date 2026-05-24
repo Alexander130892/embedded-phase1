@@ -1,10 +1,16 @@
 /*
- * i2c.c
+ * File:    i2c.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
  *
- *  Created on: May 13, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements I2C communication for an STM32
+ *   microcontroller, providing functions to initialize GPIO pins and
+ *   the I2C1 peripheral in standard mode (100 kHz), and to perform I2C
+ *   bus operations such as start, stop, restart, byte transmission,
+ *   and reception. The implementation directly manipulates hardware
+ *   registers for low-level control of the I2C bus protocol.
  */
-
 #include "i2c.h"
 
 

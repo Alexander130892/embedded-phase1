@@ -1,3 +1,16 @@
+/*
+ * File:    cmsis_version.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This file defines version constants for the CMSIS Core(M) library,
+ *   specifically version 5.6, which can be used by applications to
+ *   check compatibility or identify the CMSIS version at compile time.
+ *   It also includes compiler-specific pragmas to treat the file as a
+ *   system header for analysis tools.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_version.h
  * @brief    CMSIS Core(M) Version definitions

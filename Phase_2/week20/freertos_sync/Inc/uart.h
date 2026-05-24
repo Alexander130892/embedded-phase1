@@ -1,3 +1,16 @@
+/*
+ * File:    uart.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This header file defines the interface for UART communication on
+ *   an embedded system, providing functions to initialize UART/GPIO,
+ *   send characters and strings, receive strings, and handle USART2
+ *   interrupts. It sets up configuration constants for a 115200 baud
+ *   rate and maximum message length of 64 bytes.
+ */
+
 #ifndef UART_H
 #define UART_H
 

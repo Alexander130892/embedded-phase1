@@ -1,10 +1,15 @@
 /*
- * status.h
+ * File:    status.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines a status enumeration type (`status_t`)
+ *   that represents various communication and timeout error states
+ *   across SPI, I2C, and UART interfaces, along with a maximum timeout
+ *   constant. It provides a centralized way to report operation
+ *   success or specific failure conditions throughout the codebase.
  */
-
 #ifndef STATUS_H_
 #define STATUS_H_
 

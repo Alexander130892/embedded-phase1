@@ -1,10 +1,15 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file declares functions to initialize a 16 MHz Timer 2
+ *   peripheral configured to generate 1 kHz interrupts (1 ms period)
+ *   on an STM32 microcontroller. It defines prescaler and auto-reload
+ *   register values needed to achieve the desired timing frequency
+ *   from the default APB1 clock.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 

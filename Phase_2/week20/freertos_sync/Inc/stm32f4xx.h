@@ -1,3 +1,17 @@
+/*
+ * File:    stm32f4xx.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This is the main CMSIS device header file for STM32F4xx
+ *   microcontrollers that provides peripheral access layer definitions
+ *   and requires the user to select their specific STM32F4 device
+ *   variant before compilation. It serves as the unified include file
+ *   for STM32F4 applications and optionally configures whether to use
+ *   HAL drivers or direct register access.
+ */
+
 /**
   ******************************************************************************
   * @file    stm32f4xx.h

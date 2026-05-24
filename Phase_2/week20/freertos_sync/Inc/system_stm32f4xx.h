@@ -1,3 +1,17 @@
+/*
+ * File:    system_stm32f4xx.h
+ * Author:  Alexander130892
+ * Date:    24-5-2026
+ *
+ * Description:
+ *   This CMSIS header file provides system-level definitions and
+ *   functions for STM32F4xx microcontrollers, including declarations
+ *   for the SystemCoreClock variable and clock prescaler tables, along
+ *   with initialization and clock update functions. It serves as the
+ *   interface between the hardware abstraction layer and the core
+ *   system clock configuration for Cortex-M4 based STM32F4 devices.
+ */
+
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.h

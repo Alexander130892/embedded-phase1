@@ -1,10 +1,14 @@
 /*
- * mpu6050.c
+ * File:    mpu6050.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements driver functions for the MPU6050 inertial
+ *   measurement unit, providing initialization, WHO_AM_I
+ *   identification, and sensor data reading (accelerometer and
+ *   gyroscope values) via I2C communication.
  */
-
 #include "mpu6050_internal.h"
 #include "mpu6050.h"
 #include "status.h"

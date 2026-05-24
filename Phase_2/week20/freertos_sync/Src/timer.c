@@ -1,10 +1,16 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    24-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and configures Timer 2 (TIM2) on an
+ *   STM32F446RE microcontroller to generate periodic interrupts, and
+ *   implements an interrupt handler that signals a FreeRTOS semaphore
+ *   when the timer overflows. The timer is set up with specific
+ *   prescaler and auto-reload values to create timed events that
+ *   synchronize task execution in the FreeRTOS scheduler.
  */
-
 #include <stdbool.h>
 #include "timer.h"
 #include "FreeRTOS.h"
