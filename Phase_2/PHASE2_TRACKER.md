@@ -158,13 +158,13 @@
 #### Week 21 — Software Timers + Task Notifications
 > ~10 hrs | R1-RTOS Ep. 11–12 + R2-RTOS Ch. 7–8
 
-- [ ] R2-RTOS Ch.7 — Software timers: one-shot vs auto-reload, timer daemon task, `xTimerCreate()`, `xTimerStart()`
-- [ ] R2-RTOS Ch.8 — Task notifications: lighter than semaphores, direct-to-task signalling, `xTaskNotifyGive()` / `ulTaskNotifyTake()`
-- [ ] Understand when to use task notifications vs semaphores (rule of thumb: notifications when only one task waits)
-- [ ] Exercise: implement a watchdog-style heartbeat using a software timer — reset a flag every 5 s, assert if missed
-- [ ] Exercise: replace the binary semaphore in Week 20 with a task notification — compare code clarity
-- [ ] Exercise: implement a `log rate` UART command to change sensor polling interval at runtime via timer period update
-- [ ] Commit to `week21/freertos_timers/`
+- [x] R2-RTOS Ch.7 — Software timers: one-shot vs auto-reload, timer daemon task, `xTimerCreate()`, `xTimerStart()`
+- [x] R2-RTOS Ch.8 — Task notifications: lighter than semaphores, direct-to-task signalling, `xTaskNotifyGive()` / `ulTaskNotifyTake()`
+- [x] Understand when to use task notifications vs semaphores (rule of thumb: notifications when only one task waits)
+- [x] Exercise: implement a watchdog-style heartbeat using a software timer — reset a flag every 5 s, assert if missed
+- [x] Exercise: replace the binary semaphore in Week 20 with a task notification — compare code clarity
+- [x] Exercise: implement a `log rate` UART command to change sensor polling interval at runtime via timer period update
+- [x] Commit to `week21/freertos_timers/`
 
 > 🏁 **M11 checkpoint:** Dynamic logging rate configurable over UART at runtime.
 
