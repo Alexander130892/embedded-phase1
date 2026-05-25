@@ -1,3 +1,15 @@
+/*
+ * File:    uart.h
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This header file defines the UART interface for serial
+ *   communication, providing functions to initialize UART/GPIO, send
+ *   characters and strings, receive strings, and handle USART2
+ *   interrupts on an embedded system.
+ */
+
 #ifndef UART_H
 #define UART_H
 

@@ -1,10 +1,16 @@
 /*
- * mpu6050.h
+ * File:    mpu6050.h
+ * Author:  Alexander130892
+ * Date:    25-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface for communicating with an
+ *   MPU6050 inertial measurement unit (IMU), providing structures and
+ *   functions to initialize the sensor and read accelerometer and
+ *   gyroscope data. The file declares the sensor's I2C addresses and
+ *   data structure, along with functions for initialization, data
+ *   reading, and device identification.
  */
-
 #ifndef MPU6050_MPU6050_H_
 #define MPU6050_MPU6050_H_
 

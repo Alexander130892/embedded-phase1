@@ -1,10 +1,14 @@
 /*
- * mpu6050_internal.h
+ * File:    mpu6050_internal.h
+ * Author:  Alexander130892
+ * Date:    25-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines register addresses and configuration
+ *   values for the MPU6050 inertial measurement unit (IMU), enabling
+ *   communication with the accelerometer and gyroscope sensors via I2C
+ *   protocol.
  */
-
 #ifndef MPU6050_MPU6050_INTERNAL_H_
 #define MPU6050_MPU6050_INTERNAL_H_
 

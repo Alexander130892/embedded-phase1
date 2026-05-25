@@ -1,3 +1,16 @@
+/*
+ * File:    uart.c
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This file implements UART2 communication on an STM32F446RE
+ *   microcontroller, providing initialization of GPIO pins and UART
+ *   peripheral, functions to transmit characters and strings, and an
+ *   interrupt handler that receives data into a FreeRTOS queue while
+ *   tracking overflow events.
+ */
+
 
 
 #include 	"uart.h"

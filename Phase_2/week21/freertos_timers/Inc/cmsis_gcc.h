@@ -1,3 +1,17 @@
+/*
+ * File:    cmsis_gcc.h
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This file provides GCC-specific compiler abstractions and macros
+ *   for CMSIS (Cortex Microcontroller Software Interface Standard),
+ *   mapping portable keywords like `__INLINE`, `__PACKED`, and
+ *   `__ALIGNED` to their GCC equivalents using attributes and pragmas.
+ *   It also suppresses certain GCC warnings and defines macros for
+ *   unaligned memory access operations.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_gcc.h
  * @brief    CMSIS compiler GCC header file

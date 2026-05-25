@@ -1,3 +1,18 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This is the main initialization file for an STM32F446RE
+ *   microcontroller project that sets up a FreeRTOS-based system to
+ *   acquire data from an MPU6050 accelerometer/gyroscope sensor via
+ *   I2C, process the data, and transmit it over UART. The system uses
+ *   multiple tasks, queues, semaphores, and timers to manage sensor
+ *   polling, data logging, and serial communication in a real-time
+ *   environment.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

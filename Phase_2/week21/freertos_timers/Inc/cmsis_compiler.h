@@ -1,3 +1,18 @@
+/*
+ * File:    cmsis_compiler.h
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This file provides a compiler-agnostic abstraction layer for CMSIS
+ *   (Cortex Microcontroller Software Interface Standard) by detecting
+ *   the active compiler and including the appropriate
+ *   compiler-specific header file (supporting Arm Compiler, GCC, IAR,
+ *   TI Arm, and TASKING toolchains). It defines standardized macros
+ *   for compiler intrinsics, attributes, and inline assembly across
+ *   different compiler implementations.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_compiler.h
  * @brief    CMSIS compiler generic header file

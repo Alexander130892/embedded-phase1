@@ -1,3 +1,18 @@
+/*
+ * File:    system_stm32f4xx.c
+ * Author:  Alexander130892
+ * Date:    25-5-2026
+ *
+ * Description:
+ *   This file initializes the STM32F4xx microcontroller's system clock
+ *   and core peripherals by providing the SystemInit() function that
+ *   runs at startup, along with SystemCoreClock variable and
+ *   SystemCoreClockUpdate() function to manage and track the core
+ *   clock frequency. It serves as the CMSIS (Cortex Microcontroller
+ *   Software Interface Standard) system source file for STM32F4
+ *   devices.
+ */
+
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.c
