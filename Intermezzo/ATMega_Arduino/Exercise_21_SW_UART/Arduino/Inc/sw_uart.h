@@ -1,3 +1,15 @@
+/*
+ * File:    sw_uart.h
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This header file defines the interface for a software-based UART
+ *   implementation, providing functions for initializing the UART,
+ *   managing a receive buffer, and transmitting/receiving individual
+ *   bytes and strings.
+ */
+
 #ifndef SW_UART_H
 #define SW_UART_H
 

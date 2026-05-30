@@ -1,3 +1,17 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This STM32F446RE microcontroller program initializes UART2 and
+ *   UART4 interfaces, then enters an infinite loop that transmits
+ *   characters ('A', 'B', 'C') over UART4 while monitoring a circular
+ *   buffer from UART2 input and displaying received data. The program
+ *   uses GPIO polling on pin PA1 as a control signal and includes
+ *   software delays between operations.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

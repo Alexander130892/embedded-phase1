@@ -1,3 +1,17 @@
+/*
+ * File:    uart.h
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This header file defines the interface for configuring and
+ *   communicating over two UART peripherals (UART2 and UART4) on an
+ *   embedded microcontroller, providing functions for initialization,
+ *   GPIO setup, character/string transmission, and interrupt handling.
+ *   It specifies baud rate constants, maximum message length, and
+ *   alternate function mappings for the UART modules.
+ */
+
 #ifndef UART_H
 #define UART_H
 

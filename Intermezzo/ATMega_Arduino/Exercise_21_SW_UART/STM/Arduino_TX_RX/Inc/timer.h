@@ -1,10 +1,16 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    30-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines timer initialization and utility
+ *   functions for an embedded system, specifically configuring Timer 2
+ *   to generate a 2 Hz interrupt with 1 ms tick resolution for
+ *   millisecond-level timekeeping. It provides functions to initialize
+ *   the timer, handle its interrupt, and retrieve elapsed
+ *   milliseconds.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 
