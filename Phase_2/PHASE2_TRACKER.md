@@ -302,13 +302,13 @@
 | 13 | SPI Fundamentals + Sensor | ✅ Done |
 | 14 | SPI DMA + Multi-byte Transfers | ✅ Done |
 | 15 | I2C Fundamentals + Sensor Driver | ✅ Done |
-| 16 | I2C Multi-byte Reads + Error Handling | 🟡 In progress |
-| 17 | Protocol Integration + Mini Data Logger | 🔲 Not started |
-| 18 | RTOS Concepts + FreeRTOS Basics | 🔲 Not started |
-| 19 | Queues + Inter-task Communication | 🔲 Not started |
-| 20 | Semaphores + Mutexes | 🔲 Not started |
-| 21 | Software Timers + Task Notifications | 🔲 Not started |
-| 22 | Memory Management + Stack Auditing | 🔲 Not started |
+| 16 | I2C Multi-byte Reads + Error Handling | ✅ Done|
+| 17 | Protocol Integration + Mini Data Logger | ✅ Done |
+| 18 | RTOS Concepts + FreeRTOS Basics | ✅ Done |
+| 19 | Queues + Inter-task Communication | ✅ Done |
+| 20 | Semaphores + Mutexes | ✅ Done |
+| 21 | Software Timers + Task Notifications | ✅ Done |
+| 22 | Memory Management + Stack Auditing | 🟡 In progress |
 | 23 | FreeRTOS Integration: Multi-sensor Logger | 🔲 Not started |
 | 24 | FreeRTOS Deliverable + Docs | 🔲 Not started |
 | 25 | Linux Basics + Raspberry Pi Setup | 🔲 Not started |
