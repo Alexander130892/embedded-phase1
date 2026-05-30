@@ -134,11 +134,8 @@ ISR(TIMER1_COMPA_vect){
                 break;
             case 9:     //  Stop bit
                 PORTD   |= (1u << PD7);
-                bit_counter++;
-                break;
-            case 10:    // Reset, not done in 9 to make sure there is at least one stop period
+                TCCR1B  &= ~(1 << CS10);
                 bit_counter = 0;
-                TCCR1B &= ~(1 << CS10);     // stop timer
                 sw_uart_state = IDLE;
                 break;
             default:    // Send the correct bit
