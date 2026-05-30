@@ -32,6 +32,7 @@
         Tests done:
             STM output to Arduino confirmed via Arduino Serial monitor  (clean ABC - continuously)
             Arduino output to STM - confirmed via STM Serial monitor    (clean 1,2,3 at Arduino reset)
+            Output/Baudrate confirmed w/ Logic Analyzer
 
         Future work:
             Error flags - 
