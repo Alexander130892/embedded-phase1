@@ -1,3 +1,17 @@
+/*
+ * File:    sw_uart.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This file implements a software-based UART (serial communication)
+ *   interface for an AVR microcontroller using GPIO pins and timer
+ *   interrupts to bit-bang serial data transmission and reception. It
+ *   manages serial communication through a circular buffer,
+ *   timer-based sampling/transmission, and external interrupts to
+ *   detect incoming data.
+ */
+
 #include "sw_uart.h"
 #include "uart.h"
 #include <avr/io.h>

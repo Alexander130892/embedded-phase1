@@ -1,10 +1,17 @@
 /*
- * stm32f446re.h
+ * File:    stm32f446re.h
+ * Author:  Alexander130892
+ * Date:    30-5-2026
  *
- *  Created on: Apr 29, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines memory addresses and register offsets for
+ *   the STM32F446RE microcontroller, providing a mapping of peripheral
+ *   base addresses and their internal register locations for
+ *   configurable modules including GPIO, timers, USART, SPI, DMA,
+ *   NVIC, and EXTI. It serves as a register definition reference for
+ *   bare-metal embedded programming without relying on vendor HAL
+ *   libraries.
  */
-
 #ifndef STM32F46RE_H_
 #define STM32F46RE_H_
 

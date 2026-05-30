@@ -1,3 +1,17 @@
+/*
+ * File:    sysmem.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This file implements the `_sbrk()` low-level memory allocation
+ *   function for newlib on STM32 microcontrollers, managing dynamic
+ *   heap growth while preventing collision with the stack. It tracks
+ *   the heap's high watermark and returns memory blocks to
+ *   malloc/calloc while enforcing a boundary between the heap and the
+ *   reserved MSP stack space.
+ */
+
 /**
  ******************************************************************************
  * @file      sysmem.c

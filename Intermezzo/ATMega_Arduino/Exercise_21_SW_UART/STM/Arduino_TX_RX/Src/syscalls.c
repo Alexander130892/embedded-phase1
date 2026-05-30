@@ -1,3 +1,18 @@
+/*
+ * File:    syscalls.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This file provides minimal system call stubs for embedded STM32
+ *   microcontroller development, implementing required Newlib libc
+ *   functions with basic or no-op behavior since the embedded
+ *   environment lacks a traditional operating system. Most functions
+ *   either fail gracefully with appropriate errno values or delegate
+ *   I/O operations to weak `__io_putchar()` and `__io_getchar()`
+ *   functions that can be overridden by the application.
+ */
+
 /**
  ******************************************************************************
  * @file      syscalls.c

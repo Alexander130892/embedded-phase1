@@ -1,3 +1,17 @@
+/*
+ * File:    uart.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
+ *
+ * Description:
+ *   This file initializes and configures UART2 and UART4 peripherals
+ *   on an STM32F446RE microcontroller, setting up GPIO pins, baud
+ *   rates, and interrupt handling for serial communication at 9600
+ *   baud. It implements low-level register manipulation to enable UART
+ *   transmit/receive functionality and provides a character
+ *   transmission function with timeout protection.
+ */
+
 
 #include 	"uart.h"
 #include	"stm32f446re.h"

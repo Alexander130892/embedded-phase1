@@ -1,10 +1,17 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    30-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes Timer 2 (TIM2) on an STM32F446RE
+ *   microcontroller by configuring its clock, prescaler, auto-reload
+ *   value, and enabling counting in up-direction mode. The code
+ *   includes commented-out interrupt handling logic that could toggle
+ *   a signal via UART, suggesting this timer was designed for periodic
+ *   timing operations but the interrupt functionality is currently
+ *   disabled.
  */
-
 #include "timer.h"
 #include "uart.h"
 #include "stm32f446re.h"

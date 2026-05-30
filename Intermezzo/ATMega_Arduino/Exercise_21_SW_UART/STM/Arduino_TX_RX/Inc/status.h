@@ -1,10 +1,14 @@
 /*
- * status.h
+ * File:    status.h
+ * Author:  Alexander130892
+ * Date:    30-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines a status enumeration type that represents
+ *   various communication protocol states and error conditions,
+ *   including timeouts for SPI, I2C, and UART interfaces, plus
+ *   I2C-specific errors (arbitration loss and acknowledge failure).
  */
-
 #ifndef STATUS_H_
 #define STATUS_H_
 
