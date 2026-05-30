@@ -1,15 +1,1 @@
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Inc/hw_uart.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Inc/sw_uart.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Inc/uart.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Src/hw_uart.c
 Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Src/main.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/Arduino/Src/sw_uart.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Inc/status.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Inc/stm32f446re.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Inc/timer.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Inc/uart.h
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Src/main.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Src/syscalls.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Src/sysmem.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Src/timer.c
-Intermezzo/ATMega_Arduino/Exercise_21_SW_UART/STM/Arduino_TX_RX/Src/uart.c

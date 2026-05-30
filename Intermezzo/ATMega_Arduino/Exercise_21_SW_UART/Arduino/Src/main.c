@@ -4,16 +4,12 @@
  * Date:    30-5-2026
  *
  * Description:
- *   This Arduino program implements a half-duplex software UART
- *   communication test at 9600 baud, transmitting three bytes (0x1,
- *   0x2, 0x3) to an STM32 microcontroller while receiving "ABC\n"
- *   responses and displaying them via hardware UART to a serial
- *   monitor. It uses a state-machine-based timer interrupt for
- *   software UART operations and implements CSMA-like collision
- *   avoidance by checking line idle status before transmission.
+ *   This Arduino (AVR) program implements a software UART transmitter
+ *   that sends three bytes (0x1, 0x2, 0x3) to an STM32 microcontroller
+ *   at 9600 baud, while simultaneously receiving ASCII characters from
+ *   the STM32 via software UART and echoing them to the serial monitor
+ *   via hardware UART.
  */
-
-
 /*
     Notes:
         Some garbage values on start-up when transmitting
