@@ -173,14 +173,14 @@
 #### Week 22 — Memory Management + Stack Auditing
 > ~10 hrs | R2-RTOS Ch. 2 (heap) + FreeRTOS source (heap_4.c)
 
-- [ ] R2-RTOS Ch.2 — Heap memory: heap_1 through heap_5, what each trades off, why heap_4 is the typical choice
-- [ ] Understand `configTOTAL_HEAP_SIZE` — how to estimate total heap needed across all tasks and queues
-- [ ] Study stack overflow detection: `configCHECK_FOR_STACK_OVERFLOW`, hook function, watermark polling
-- [ ] Implement `vApplicationStackOverflowHook()` — trap to a UART error message + spin loop for debugging
-- [ ] Exercise: audit all task stacks using `uxTaskGetStackHighWaterMark()` — print a report over UART on demand
-- [ ] Exercise: intentionally overflow a task stack (in a test branch) — confirm the hook fires
-- [ ] Exercise: implement a `mem` UART command — report free heap via `xPortGetFreeHeapSize()`
-- [ ] Commit to `week22/freertos_memory/`
+- [x] R2-RTOS Ch.2 — Heap memory: heap_1 through heap_5, what each trades off, why heap_4 is the typical choice
+- [x] Understand `configTOTAL_HEAP_SIZE` — how to estimate total heap needed across all tasks and queues
+- [x] Study stack overflow detection: `configCHECK_FOR_STACK_OVERFLOW`, hook function, watermark polling
+- [x] Implement `vApplicationStackOverflowHook()` — trap to a UART error message + spin loop for debugging
+- [x] Exercise: audit all task stacks using `uxTaskGetStackHighWaterMark()` — print a report over UART on demand
+- [x] Exercise: intentionally overflow a task stack (in a test branch) — confirm the hook fires
+- [x] Exercise: implement a `mem` UART command — report free heap via `xPortGetFreeHeapSize()`
+- [x] Commit to `week22/freertos_memory/`
 
 ---
 
