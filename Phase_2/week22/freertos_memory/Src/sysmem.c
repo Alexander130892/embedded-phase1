@@ -1,3 +1,15 @@
+/*
+ * File:    sysmem.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file implements the `_sbrk()` low-level memory allocation
+ *   function for STM32 embedded systems, enabling dynamic memory
+ *   management through malloc and other C library functions while
+ *   protecting the heap from colliding with the MSP stack.
+ */
+
 /**
  ******************************************************************************
  * @file      sysmem.c

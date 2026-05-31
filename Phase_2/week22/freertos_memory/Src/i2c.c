@@ -1,10 +1,14 @@
 /*
- * i2c.c
+ * File:    i2c.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
  *
- *  Created on: May 13, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements I2C1 peripheral driver functions for an STM32
+ *   microcontroller, including GPIO configuration, I2C initialization
+ *   at 100 kHz standard mode, and basic I2C communication operations
+ *   (start, stop, read/write bytes) with timeout protection.
  */
-
 #include "i2c.h"
 
 

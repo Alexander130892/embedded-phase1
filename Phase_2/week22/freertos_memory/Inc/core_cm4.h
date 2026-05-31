@@ -1,3 +1,18 @@
+/*
+ * File:    core_cm4.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This CMSIS header file provides the Cortex-M4 core peripheral
+ *   access layer abstraction, defining macros, data structures, and
+ *   inline functions to enable portable access to ARM Cortex-M4
+ *   processor registers and core peripherals across different compiler
+ *   toolchains. It includes compiler-specific handling for FPU
+ *   (floating-point unit) support and enforces MISRA-C compliance
+ *   exceptions for effective low-level hardware programming.
+ */
+
 /**************************************************************************//**
  * @file     core_cm4.h
  * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File

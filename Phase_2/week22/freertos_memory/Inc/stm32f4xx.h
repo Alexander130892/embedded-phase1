@@ -1,3 +1,17 @@
+/*
+ * File:    stm32f4xx.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This is the main CMSIS (Cortex Microcontroller Software Interface
+ *   Standard) header file for STM32F4xx microcontrollers that provides
+ *   peripheral register definitions and device selection
+ *   configuration. It serves as the unified include file for
+ *   applications to select their specific STM32F4 device variant and
+ *   configure whether to use HAL drivers or direct register access.
+ */
+
 /**
   ******************************************************************************
   * @file    stm32f4xx.h

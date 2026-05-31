@@ -1,3 +1,17 @@
+/*
+ * File:    cmsis_gcc.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file provides GCC compiler-specific macro definitions for
+ *   CMSIS (Cortex Microcontroller Software Interface Standard),
+ *   mapping portable compiler keywords and attributes to their GCC
+ *   equivalents. It enables ARM embedded code to use consistent syntax
+ *   across different compilers while suppressing certain GCC warnings
+ *   and providing utilities for unaligned memory access.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_gcc.h
  * @brief    CMSIS compiler GCC header file

@@ -1,10 +1,16 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and configures Timer 2 (TIM2) on an
+ *   STM32F446RE microcontroller to generate periodic interrupts at a
+ *   configurable interval, with NVIC interrupt handling setup for
+ *   FreeRTOS task synchronization. The commented-out interrupt handler
+ *   suggests the timer was previously used to wake a sensor task via
+ *   notification or semaphore but is no longer actively used.
  */
-
 #include <stdbool.h>
 #include "timer.h"
 #include "FreeRTOS.h"

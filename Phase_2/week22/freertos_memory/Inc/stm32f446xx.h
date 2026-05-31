@@ -1,3 +1,17 @@
+/*
+ * File:    stm32f446xx.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file provides the CMSIS device peripheral access layer for
+ *   the STM32F446xx microcontroller, defining data structures,
+ *   memory-mapped register addresses, bit definitions, and macros for
+ *   accessing all peripheral registers. It serves as the hardware
+ *   abstraction interface between application code and the STM32F446xx
+ *   hardware peripherals.
+ */
+
 /**
   ******************************************************************************
   * @file    stm32f446xx.h
