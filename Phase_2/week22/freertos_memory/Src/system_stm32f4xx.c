@@ -1,3 +1,15 @@
+/*
+ * File:    system_stm32f4xx.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file initializes the STM32F4xx microcontroller's system clock
+ *   and core peripherals, providing functions to configure the clock
+ *   tree at startup and update the system clock variable during
+ *   runtime execution.
+ */
+
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.c

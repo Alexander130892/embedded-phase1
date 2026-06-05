@@ -1,3 +1,17 @@
+/*
+ * File:    syscalls.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file provides minimal POSIX system call implementations for
+ *   STM32 embedded systems, allowing standard C library functions like
+ *   printf and scanf to work on microcontroller hardware by delegating
+ *   I/O to weak `__io_putchar` and `__io_getchar` functions. Most file
+ *   system and process management calls are stubbed to return errors
+ *   since they are not applicable to bare-metal embedded environments.
+ */
+
 /**
  ******************************************************************************
  * @file      syscalls.c

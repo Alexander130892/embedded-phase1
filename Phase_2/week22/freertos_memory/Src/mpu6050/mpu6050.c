@@ -1,10 +1,18 @@
 /*
- * mpu6050.c
+ * File:    mpu6050.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements driver functions for the MPU6050 6-axis
+ *   inertial measurement unit (IMU), providing initialization, sensor
+ *   data reading, and device identification capabilities via I2C
+ *   communication. The initialization configures the sensor's power
+ *   management, sampling rate, and accelerometer/gyroscope settings,
+ *   while the data reading function retrieves and parses raw
+ *   acceleration and angular velocity measurements into a structured
+ *   format.
  */
-
 #include "mpu6050_internal.h"
 #include "mpu6050.h"
 #include "status.h"

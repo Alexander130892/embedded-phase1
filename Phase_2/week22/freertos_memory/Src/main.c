@@ -1,3 +1,17 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This is an embedded C program for an STM32F446RE microcontroller
+ *   that implements a real-time system using FreeRTOS to read sensor
+ *   data from an MPU6050 IMU via I2C, log the data, and transmit it
+ *   over UART. The system uses multiple tasks, queues, semaphores, and
+ *   timers to manage concurrent operations in a structured pipeline
+ *   architecture.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

@@ -1,3 +1,15 @@
+/*
+ * File:    mpu_armv7.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This file defines CMSIS-compliant API macros and constants for
+ *   configuring the Memory Protection Unit (MPU) on Armv7-M
+ *   processors, including region size definitions, access permission
+ *   levels, and helper macros for MPU register configuration.
+ */
+
 /******************************************************************************
  * @file     mpu_armv7.h
  * @brief    CMSIS MPU API for Armv7-M MPU

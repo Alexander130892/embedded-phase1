@@ -1,3 +1,15 @@
+/*
+ * File:    cmsis_version.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
+ *
+ * Description:
+ *   This header file defines version constants for the CMSIS Core(M)
+ *   library, providing macros to identify the main and sub version
+ *   numbers used by ARM's Cortex-M microcontroller software interface
+ *   standard.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_version.h
  * @brief    CMSIS Core(M) Version definitions

@@ -1,10 +1,14 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    31-5-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file provides initialization and interrupt handling
+ *   for Timer 2 on an STM32 microcontroller, configured to generate a
+ *   1 Hz periodic interrupt by prescaling a 16 MHz clock down to 1 kHz
+ *   and setting an auto-reload period of 1000 ms.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 
