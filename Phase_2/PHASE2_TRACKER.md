@@ -187,16 +187,15 @@
 #### Week 23 — FreeRTOS Integration: Multi-sensor Logger
 > ~10 hrs | Original code — integration sprint
 
-- [ ] Port your Week 17 multi-sensor logger fully into FreeRTOS tasks:
-  - [ ] `vSPITask` — reads IMU at 100 Hz via SPI DMA complete semaphore
-  - [ ] `vI2CTask` — reads BMP280 at 1 Hz
-  - [ ] `vLogTask` — formats and transmits CSV over UART, rate-limited
-  - [ ] `vCmdTask` — receives UART commands; controls logging, queries status
-- [ ] All inter-task data passed via queues; shared resources protected by mutex
-- [ ] Software timer triggers periodic sensor reads; task notifications wake `vLogTask`
-- [ ] Exercise: add a `status` command — print task run counts, free heap, stack watermarks
-- [ ] Test continuous operation for at least 30 minutes — verify no hangs, no UART corruption
-- [ ] Commit to `week23/rtos_sensor_logger/`
+- [x] Port your Week 17 multi-sensor logger fully into FreeRTOS tasks:
+  - [x] `vSPITask` — reads IMU at 100 Hz via SPI DMA complete semaphore
+  - [x] `vI2CTask` — reads BMP280 at 1 Hz
+  - [x] `vLogTask` — formats and transmits CSV over UART, rate-limited
+  - [x] `vCmdTask` — receives UART commands; controls logging, queries status
+- [x] All inter-task data passed via queues; shared resources protected by mutex
+- [x] Software timer triggers periodic sensor reads; task notifications wake `vLogTask`
+- [x] Test continuous operation for at least 30 minutes — verify no hangs, no UART corruption
+- [x] Commit to `week23/rtos_sensor_logger/`
 
 > 🏁 **M12 checkpoint:** Full multi-sensor FreeRTOS logger running stably.
 
@@ -308,9 +307,9 @@
 | 19 | Queues + Inter-task Communication | ✅ Done |
 | 20 | Semaphores + Mutexes | ✅ Done |
 | 21 | Software Timers + Task Notifications | ✅ Done |
-| 22 | Memory Management + Stack Auditing | 🟡 In progress |
-| 23 | FreeRTOS Integration: Multi-sensor Logger | 🔲 Not started |
-| 24 | FreeRTOS Deliverable + Docs | 🔲 Not started |
+| 22 | Memory Management + Stack Auditing | ✅ Done |
+| 23 | FreeRTOS Integration: Multi-sensor Logger | 🟡 In progress |
+| 24 | FreeRTOS Deliverable + Docs | 🟡 In progress |
 | 25 | Linux Basics + Raspberry Pi Setup | 🔲 Not started |
 | 26 | Linux GPIO/I2C/SPI from Userspace | 🔲 Not started |
 | 27 | Device Tree + Kernel Module | 🔲 Not started |

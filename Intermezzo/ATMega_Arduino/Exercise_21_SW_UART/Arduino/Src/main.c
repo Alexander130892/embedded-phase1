@@ -42,10 +42,10 @@
         
 
     Wiring:
-    PD0 (UnoRx) -- Pxx (STM Tx)     -- Ch 1 (Logic Analyzer)
-    PD1 (UnoTx) -- Pxx (STM Rx)     -- Ch 2 (Logic Analyzer)
-    GND         --  GND             -- GND  (Logic Analyzer)
-    USB -- STM  -- 5V -- 5V (Uno)
+        PD6 (UnoRx) -- PA0 (STM Tx)     -- Ch 1 (Logic Analyzer)
+        PD7 (UnoTx) -- PA1 (STM Rx)     -- Ch 2 (Logic Analyzer)
+        GND         --  GND             -- GND  (Logic Analyzer)
+        USB -- STM  -- 5V -- 5V (Uno)
 
 */
 
@@ -86,11 +86,9 @@ Exercise:
 
 int main(void)
 {
-    DDRD  |= (1u << PD7);   // output
-    PORTD |= (1u << PD7);   // idle high — UART idle state
+
     hw_uart_init(MYUBRR);
     sw_uart_init(MYUBRR);
-    DDRB |= (1u << PB5);    // PB5 as output
     sei();                  // Set Enable Interrupts
     for(volatile uint32_t d = 0; d < 10000; d++);  // settling delay
     while(!(PIND & (1u << PD6)));  // wait until RX line is idle

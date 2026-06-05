@@ -29,8 +29,9 @@ char buffer[MAX_LENGTH];
 uart_return_state_t sw_uart_init(uint16_t ubrr){ // SW UART
     // Set GPIO
     DDRD    |= (1u << PD7);     //  Output, Tx
+    PORTD   |= (1u << PD7);   // idle high — UART idle state
     DDRD    &= ~(1u << PD6);    //  Input, Rx
-    PORTD   |= (1u << PD7);     //  Internal Pull up activated
+    PORTD   |= (1u << PD6);     //  Internal Pull up activated
     PCMSK2 |= (1u << PCINT22);   // PD6 = PCINT22
     PCICR  |= (1u << PCIE2);     // enable PCINT2 group
     // Init Timers
