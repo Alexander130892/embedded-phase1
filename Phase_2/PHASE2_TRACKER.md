@@ -204,7 +204,7 @@
 #### Week 24 — FreeRTOS Deliverable + Documentation
 > ~10 hrs | Polish, README, retrospective
 
-- [ ] Refactor into clean final module structure: `tasks/`, `drivers/`, `config/`, `main.c`
+- [x] Refactor into clean final module structure: `tasks/`, `drivers/`, `config/`, `main.c`
 - [ ] Write `README.md` covering:
   - [ ] Project overview and feature list
   - [ ] Hardware setup (board, sensors, wiring)
