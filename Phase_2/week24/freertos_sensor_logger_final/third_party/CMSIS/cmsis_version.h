@@ -1,3 +1,15 @@
+/*
+ * File:    cmsis_version.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
+ *
+ * Description:
+ *   This header file defines version constants for CMSIS Core(M),
+ *   providing macro definitions that combine a main version (5) and
+ *   sub version (6) into a single version number used to identify the
+ *   CMSIS release.
+ */
+
 /**************************************************************************//**
  * @file     cmsis_version.h
  * @brief    CMSIS Core(M) Version definitions

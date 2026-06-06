@@ -1,10 +1,15 @@
 /*
- * kernel_objects.c
+ * File:    kernel_objects.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file declares and initializes FreeRTOS kernel objects
+ *   (queues, semaphores, timers, and task handles) used for inter-task
+ *   communication and synchronization in an embedded system that reads
+ *   sensor data from a BMP280 barometer and MPU6050 accelerometer via
+ *   SPI/I2C, processes UART commands, and logs CSV data.
  */
-
 #include "kernel_objects.h"
 
 QueueHandle_t xQueue_bmp280;

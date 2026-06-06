@@ -1,10 +1,14 @@
 /*
- * bmp280_core.c
+ * File:    bmp_core.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 5, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements temperature and pressure compensation
+ *   functions for a BMP280 barometric sensor, converting raw ADC
+ *   values into calibrated temperature and pressure readings using
+ *   device-specific calibration parameters stored in comp_params.
  */
-
 #include "stm32f446re.h"
 #include "drivers/bmp280/bmp280.h"
 #include "drivers/bmp280/bmp280_internal.h"

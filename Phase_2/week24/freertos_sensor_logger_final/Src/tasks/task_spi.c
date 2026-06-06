@@ -1,10 +1,15 @@
 /*
- * task_spi.c
+ * File:    task_spi.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements an RTOS task that periodically reads
+ *   temperature data from a BMP280 sensor via SPI, sending successful
+ *   readings to a queue and handling communication via UART and
+ *   synchronization primitives. The task is triggered by a timer
+ *   callback that notifies it to perform the next sensor read.
  */
-
 #include <stdint.h>
 #include "tasks/task_spi.h"
 #include "rtos/kernel_objects.h"

@@ -1,10 +1,15 @@
 /*
- * bmp280.c
+ * File:    bmp280_i2c.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 5, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements I2C communication functions for a BMP280
+ *   barometric pressure and temperature sensor on an STM32F446RE
+ *   microcontroller, providing initialization, calibration parameter
+ *   retrieval, and reading of temperature and pressure measurements
+ *   over I2C.
  */
-
 #include <string.h>
 #include "stm32f446re.h"
 #include "bmp280.h"

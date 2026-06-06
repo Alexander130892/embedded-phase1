@@ -1,10 +1,16 @@
 /*
- * mpu6050.c
+ * File:    mpu6050.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a driver for the MPU6050 6-axis inertial
+ *   measurement unit (accelerometer and gyroscope), providing
+ *   initialization, sensor data reading, and device identification
+ *   functions via I2C communication. It configures the sensor's sample
+ *   rate and measurement ranges, then reads raw 16-bit acceleration
+ *   and angular velocity values from the device.
  */
-
 #include "drivers/mpu6050/mpu6050_internal.h"
 #include "drivers/mpu6050/mpu6050.h"
 #include "drivers/status.h"

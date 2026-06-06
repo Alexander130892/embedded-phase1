@@ -1,10 +1,14 @@
 /*
- * kernel_objects.h
+ * File:    kernel_objects.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file declares global FreeRTOS kernel objects (queues,
+ *   semaphores, timers, and tasks) used for managing inter-task
+ *   communication in an embedded system that interfaces with BMP280
+ *   and MPU6050 sensors via SPI/I2C protocols and UART communication.
  */
-
 #ifndef RTOS_KERNEL_OBJECTS_H_
 #define RTOS_KERNEL_OBJECTS_H_
 

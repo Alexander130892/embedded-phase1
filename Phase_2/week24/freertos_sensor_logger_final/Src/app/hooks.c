@@ -1,10 +1,14 @@
 /*
- * hooks.c
+ * File:    hooks.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements FreeRTOS application hooks, with a stack
+ *   overflow handler that logs the offending task name via UART and
+ *   halts execution for debugger inspection, while other hooks are
+ *   left empty.
  */
-
 #include "app/hooks.h"
 #include "drivers/uart.h"
 

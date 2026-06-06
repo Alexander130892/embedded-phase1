@@ -1,10 +1,17 @@
 /*
- * task_log.c
+ * File:    task_log.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a logging task that reads sensor data from an
+ *   MPU6050 (accelerometer/gyroscope) and BMP280
+ *   (pressure/temperature) sensor via queues, formats the data, and
+ *   outputs it over UART while handling sensor timeouts and
+ *   synchronizing access with a mutex. The task runs continuously in
+ *   an RTOS environment, polling queues for new sensor measurements
+ *   and logging them in CSV format.
  */
-
 #include <stdint.h>
 #include <stdio.h>
 #include "tasks/task_log.h"

@@ -1,10 +1,14 @@
 /*
- * spi.h
+ * File:    spi.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 3, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the SPI (Serial Peripheral Interface)
+ *   driver interface for an STM32F446RE microcontroller, providing
+ *   functions to initialize SPI communication and perform single/burst
+ *   data transfers over the configured pins.
  */
-
 #ifndef SPI_H_
 #define SPI_H_
 

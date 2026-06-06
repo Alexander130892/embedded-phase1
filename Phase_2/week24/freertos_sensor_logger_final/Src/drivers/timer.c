@@ -1,10 +1,16 @@
 /*
- * timer.c
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file initializes and manages Timer 2 on an STM32F446RE
+ *   microcontroller, configuring it to generate periodic interrupts
+ *   that notify a FreeRTOS I2C task. The timer runs with a prescaler
+ *   and auto-reload values that determine its overflow frequency,
+ *   triggering an interrupt handler that sends task notifications to
+ *   wake the I2C task.
  */
-
 #include <stdbool.h>
 #include "drivers/timer.h"
 #include "FreeRTOS.h"

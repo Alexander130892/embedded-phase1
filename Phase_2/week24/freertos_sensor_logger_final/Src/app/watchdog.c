@@ -1,10 +1,14 @@
 /*
- * watchdog.c
+ * File:    watchdog.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This watchdog file monitors the responsiveness of two sensors
+ *   (MPU6050 and BMP280) by periodically checking if they've cleared
+ *   their timeout flags, and notifies a logging task if either sensor
+ *   fails to respond within the timer interval.
  */
-
 #include "app/watchdog.h"
 
 volatile bool b_timeout_mpu6050 = false;

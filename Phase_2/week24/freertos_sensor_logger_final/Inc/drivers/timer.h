@@ -1,10 +1,15 @@
 /*
- * timer.h
+ * File:    timer.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 22, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface and configuration for
+ *   Timer2 on an embedded microcontroller, setting up a 100 Hz timer
+ *   with a 10 ms period through specific prescaler and auto-reload
+ *   values. It provides functions to initialize, enable, and disable
+ *   the timer.
  */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 

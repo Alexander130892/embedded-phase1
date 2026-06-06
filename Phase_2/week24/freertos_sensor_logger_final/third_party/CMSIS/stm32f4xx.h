@@ -1,3 +1,15 @@
+/*
+ * File:    stm32f4xx.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
+ *
+ * Description:
+ *   This file provides the CMSIS peripheral access layer header for
+ *   STM32F4xx microcontrollers, allowing application code to select a
+ *   specific device variant and choose between using HAL drivers or
+ *   direct register access.
+ */
+
 /**
   ******************************************************************************
   * @file    stm32f4xx.h

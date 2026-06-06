@@ -1,11 +1,14 @@
 /*
- * bmp280.c
+ * File:    bmp280_spi.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 5, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements SPI communication with a BMP280 barometric
+ *   pressure and temperature sensor on an STM32F446RE microcontroller,
+ *   handling register read/write operations, GPIO chip-select control,
+ *   and sensor initialization through SPI protocol.
  */
-
-
 #include "stm32f446re.h"
 #include "drivers/bmp280/bmp280.h"
 #include "drivers/bmp280/bmp280_internal.h"

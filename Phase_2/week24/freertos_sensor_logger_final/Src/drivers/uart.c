@@ -1,3 +1,16 @@
+/*
+ * File:    uart.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
+ *
+ * Description:
+ *   This file implements UART driver functionality for an STM32F446RE
+ *   microcontroller, initializing USART2 on pins PA2/PA3 at 115200
+ *   baud and providing interrupt-driven character
+ *   transmission/reception with FreeRTOS queue integration for
+ *   received data buffering.
+ */
+
 
 #include "drivers/uart.h"
 #include "rtos/kernel_objects.h"

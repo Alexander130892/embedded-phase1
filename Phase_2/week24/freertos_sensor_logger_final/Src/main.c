@@ -1,3 +1,17 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
+ *
+ * Description:
+ *   This file initializes an STM32F446RE microcontroller with multiple
+ *   peripherals (UART, I2C, SPI, timers) and sensor drivers (MPU6050,
+ *   BMP280), then creates and starts an FreeRTOS kernel with four
+ *   concurrent tasks for sensor reading, command parsing, and data
+ *   logging. The program uses queues, mutexes, and timers to
+ *   coordinate inter-task communication and periodic sensor sampling.
+ */
+
 /**
  ******************************************************************************
  * @file           : main.c

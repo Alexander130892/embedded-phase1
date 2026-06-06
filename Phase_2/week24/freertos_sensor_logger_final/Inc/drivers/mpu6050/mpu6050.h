@@ -1,10 +1,15 @@
 /*
- * mpu6050.h
+ * File:    mpu6050.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 16, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines the interface for an MPU6050 6-axis
+ *   inertial measurement unit (IMU) driver, providing functions to
+ *   initialize the device, read accelerometer and gyroscope data, and
+ *   verify device identity. It includes the necessary data structures
+ *   and I2C address constants for communicating with the sensor.
  */
-
 #ifndef MPU6050_MPU6050_H_
 #define MPU6050_MPU6050_H_
 

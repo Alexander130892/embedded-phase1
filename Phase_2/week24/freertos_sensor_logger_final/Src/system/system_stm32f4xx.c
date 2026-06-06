@@ -1,3 +1,16 @@
+/*
+ * File:    system_stm32f4xx.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
+ *
+ * Description:
+ *   This file provides system initialization and clock management for
+ *   STM32F4xx microcontrollers, including the SystemInit() function
+ *   called at startup, the SystemCoreClock variable that tracks the
+ *   core clock frequency, and the SystemCoreClockUpdate() function to
+ *   refresh the clock value when it changes during execution.
+ */
+
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.c

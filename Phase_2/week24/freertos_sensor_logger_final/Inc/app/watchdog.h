@@ -1,10 +1,14 @@
 /*
- * watchdog.h
+ * File:    watchdog.h
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This header file defines a watchdog timer interface that monitors
+ *   sensor health by tracking timeouts for MPU6050 and BMP280 sensors,
+ *   with a heartbeat timer callback function that executes every 5
+ *   seconds.
  */
-
 #ifndef APP_WATCHDOG_H_
 #define APP_WATCHDOG_H_
 

@@ -1,10 +1,16 @@
 /*
- * task_cmd.c
+ * File:    task_cmd.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements a command-line interface task that receives
+ *   UART commands, parses them, and executes operations such as
+ *   starting/stopping sensor logging, displaying task stack usage, or
+ *   reporting heap memory statistics. It uses FreeRTOS queues,
+ *   semaphores, and timers to manage concurrent access to UART and
+ *   control BMP280 and MPU6050 sensor tasks.
  */
-
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>

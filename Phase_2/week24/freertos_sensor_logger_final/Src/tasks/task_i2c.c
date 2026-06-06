@@ -1,10 +1,15 @@
 /*
- * task_i2c.c
+ * File:    task_i2c.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: Jun 6, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements an I2C task that reads sensor data from an
+ *   MPU6050 accelerometer/gyroscope device and queues the data for
+ *   other tasks to consume. The task waits for notifications to
+ *   trigger reads, handles communication timeouts, and synchronizes
+ *   UART output using a mutex.
  */
-
 #include <stdint.h>
 #include "tasks/task_i2c.h"
 #include "rtos/kernel_objects.h"

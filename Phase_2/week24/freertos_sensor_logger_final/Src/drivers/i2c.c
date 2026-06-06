@@ -1,10 +1,16 @@
 /*
- * i2c.c
+ * File:    i2c.c
+ * Author:  Alexander130892
+ * Date:    6-6-2026
  *
- *  Created on: May 13, 2026
- *      Author: alexandervindelinckx
+ * Description:
+ *   This file implements I2C communication drivers for an STM32F446RE
+ *   microcontroller, providing functions to initialize GPIO pins and
+ *   the I2C1 peripheral, then manage I2C bus operations including
+ *   start/stop conditions and byte-level read/write transfers. It uses
+ *   direct register manipulation to configure the I2C interface for
+ *   100 kHz standard mode communication on pins PB8 and PB9.
  */
-
 #include "drivers/i2c.h"
 #include "stm32f446re.h"
 
