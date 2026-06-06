@@ -205,16 +205,16 @@
 > ~10 hrs | Polish, README, retrospective
 
 - [x] Refactor into clean final module structure: `tasks/`, `drivers/`, `config/`, `main.c`
-- [ ] Write `README.md` covering:
-  - [ ] Project overview and feature list
-  - [ ] Hardware setup (board, sensors, wiring)
-  - [ ] FreeRTOS task diagram (ASCII or drawn): tasks, queues, semaphores, mutexes
-  - [ ] Build instructions (make, flash)
-  - [ ] Design decisions: queue depths, task priorities, heap allocator choice
-  - [ ] Lessons learned / what you'd do differently
-- [ ] Add ASCII task architecture diagram to README
-- [ ] Tag the repo: `git tag v1.0-phase2-rtos`
-- [ ] Write a short FreeRTOS retrospective in `NOTES.md`
+- [x] Write `README.md` covering:
+  - [x] Project overview and feature list
+  - [x] Hardware setup (board, sensors, wiring)
+  - [x] FreeRTOS task diagram (ASCII or drawn): tasks, queues, semaphores, mutexes
+  - [x] Build instructions (make, flash)
+  - [x] Design decisions: queue depths, task priorities, heap allocator choice
+  - [x] Lessons learned / what you'd do differently
+- [x] Add ASCII task architecture diagram to README
+- [x] Tag the repo: `git tag v1.0-phase2-rtos`
+- [x] Write a short FreeRTOS retrospective in `NOTES.md`
 
 > 🏁 **M13 checkpoint:** FreeRTOS deliverable repo published. ✅
 
