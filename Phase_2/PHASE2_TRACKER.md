@@ -230,7 +230,7 @@
 > ~10 hrs | R3-Linux Ch. 1–3
 
 **Study tasks**
-- [ ] R3-Linux Ch.1 — The elements of embedded Linux: toolchain, bootloader, kernel, root filesystem — the four artefacts
+- [x] R3-Linux Ch.1 — The elements of embedded Linux: toolchain, bootloader, kernel, root filesystem — the four artefacts
 - [ ] R3-Linux Ch.2 — Toolchains: native vs cross-compilation, sysroot, what `arm-linux-gnueabihf-gcc` is and why it differs from `arm-none-eabi-gcc`
 - [ ] R3-Linux Ch.3 — All about bootloaders: U-Boot basics, boot sequence on Raspberry Pi (GPU → bootcode.bin → kernel)
 - [ ] Understand the Pi's boot chain — contrast with STM32's vector table boot
@@ -308,9 +308,9 @@
 | 20 | Semaphores + Mutexes | ✅ Done |
 | 21 | Software Timers + Task Notifications | ✅ Done |
 | 22 | Memory Management + Stack Auditing | ✅ Done |
-| 23 | FreeRTOS Integration: Multi-sensor Logger | 🟡 In progress |
-| 24 | FreeRTOS Deliverable + Docs | 🟡 In progress |
-| 25 | Linux Basics + Raspberry Pi Setup | 🔲 Not started |
+| 23 | FreeRTOS Integration: Multi-sensor Logger | ✅ Done|
+| 24 | FreeRTOS Deliverable + Docs | ✅ Done |
+| 25 | Linux Basics + Raspberry Pi Setup | 🟡 In progress|
 | 26 | Linux GPIO/I2C/SPI from Userspace | 🔲 Not started |
 | 27 | Device Tree + Kernel Module | 🔲 Not started |
 | 28 | Linux Integration + Phase 2 Deliverable | 🔲 Not started |

@@ -17,7 +17,9 @@
 #include "uart.h"
 
 uart_return_state_t hw_uart_init(uint16_t ubrr);
-uart_return_state_t hw_uart_transmit(uint8_t data);
+
+uart_return_state_t hw_uart_queue(uint8_t data);
+uart_return_state_t hw_uart_drain(void);
 uart_return_state_t hw_uart_receive_string(char* str);
 
 #endif

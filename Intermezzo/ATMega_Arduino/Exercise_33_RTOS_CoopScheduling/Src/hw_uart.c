@@ -19,9 +19,12 @@
 #include "uart.h"
 #include "hw_uart.h"
 
-static volatile uint8_t head = 0;
-static volatile uint8_t tail = 0;
-static char buffer[MAX_LENGTH];
+static volatile uint8_t rx_head = 0;
+static volatile uint8_t rx_tail = 0;
+static char rx_buffer[MAX_LENGTH];
+static volatile uint8_t tx_head = 0;
+static volatile uint8_t tx_tail = 0;
+static char tx_buffer[MAX_LENGTH];
 volatile uart_return_state_t    hw_uart_return_state = STATUS_OK;
 
 // ----- HW UART -----
@@ -43,12 +46,35 @@ uart_return_state_t hw_uart_transmit(uint8_t data){
     return STATUS_OK;
 }
 
+uart_return_state_t hw_uart_queue(uint8_t data){
+	if (((tx_head +1) % MAX_LENGTH) == tx_tail){
+		return BUFFER_OVERFLOW;
+	}else{
+		tx_buffer[tx_head]= data;
+		tx_head++;
+		return STATUS_OK;
+	}
+}
+uart_return_state_t hw_uart_drain(void){
+	if((UCSR0A & (1u << UDRE0))){ // UART TX available
+		if(tx_head != tx_tail){	// 
+			UDR0 = tx_buffer[tx_tail];
+			tx_tail = (tx_tail +1) % MAX_LENGTH;
+			return STATUS_OK;
+		}else{
+			return BUFFER_EMPTY;
+		}
+	}else{
+		return UART_BUSY;
+	}
+}
+
 uart_return_state_t hw_uart_receive_string(char* str){
 	static uint8_t index = 0;
 	uart_return_state_t complete = BUFFER_EMPTY;
-	while(head != tail)
+	while(rx_head != rx_tail)
 	{
-		if (buffer[tail] == '\r' || buffer[tail] == '\n')
+		if (rx_buffer[rx_tail] == '\r' || rx_buffer[rx_tail] == '\n')
 		{
 			if (index > 0)
 			{
@@ -56,24 +82,24 @@ uart_return_state_t hw_uart_receive_string(char* str){
 				index = 0;
 				complete = STATUS_OK;
 			}
-			tail = (tail + 1) % MAX_LENGTH;
+			rx_tail = (rx_tail + 1) % MAX_LENGTH;
 		}
 		else
 		{
 			if (index < MAX_LENGTH - 1)
 			{
-				str[index++] = buffer[tail];
+				str[index++] = rx_buffer[rx_tail];
 			}
-			tail = (tail + 1) % MAX_LENGTH;
+			rx_tail = (rx_tail + 1) % MAX_LENGTH;
 		}
 	}
 	return complete;
 }
 
 ISR(USART_RX_vect) {
-    if((head + 1) % MAX_LENGTH != tail) {   // buffer not full
-        buffer[head] = UDR0;
-        head = (head + 1) % MAX_LENGTH;
+    if((rx_head + 1) % MAX_LENGTH != rx_tail) {   // buffer not full
+        rx_buffer[rx_head] = UDR0;
+        rx_head = (rx_head + 1) % MAX_LENGTH;
     } else {
         (void)UDR0;   // must read even if discarding — otherwise Interrupt is not cleared
         hw_uart_return_state = BUFFER_OVERFLOW;
