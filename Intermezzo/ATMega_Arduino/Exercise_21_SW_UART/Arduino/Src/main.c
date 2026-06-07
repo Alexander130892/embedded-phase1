@@ -74,6 +74,10 @@ Exercise:
     STM is master in UART to avoid conflict on half-duplex line
  */
 
+#include "hw_uart.h"
+
+#define WAKEUP_DELAY 10000
+
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -81,23 +85,15 @@ Exercise:
 #include <stdbool.h>
 
 #include "uart.h"
-#include "sw_uart.h"
 #include "hw_uart.h"
 
 int main(void)
 {
-
     hw_uart_init(MYUBRR);
-    sw_uart_init(MYUBRR);
     sei();                  // Set Enable Interrupts
-    for(volatile uint32_t d = 0; d < 10000; d++);  // settling delay
-    while(!(PIND & (1u << PD6)));  // wait until RX line is idle
-    sendByte(0x1);
-    while(!(PIND & (1u << PD6)));  // wait until RX line is idle
-    sendByte(0x2);
-    while(!(PIND & (1u << PD6)));  // wait until RX line is idle
-    sendByte(0x3);
-    for(volatile uint32_t d = 0; d < 10000; d++);  // settling delay
+    for(volatile uint32_t d = 0; d < 10000; d++);  // blocking delay
+
+    for(volatile uint32_t d = 0; d < 10000; d++);  // blocking delay
 
     for(;;) {
         char output[MAX_LENGTH];
@@ -112,4 +108,5 @@ int main(void)
     }
     return 0;   // never reached
 }
+
 

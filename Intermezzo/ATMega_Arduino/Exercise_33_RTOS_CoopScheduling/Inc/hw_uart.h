@@ -1,4 +1,3 @@
-
 /*
  * File:    hw_uart.h
  * Author:  Alexander130892
@@ -19,5 +18,6 @@
 
 uart_return_state_t hw_uart_init(uint16_t ubrr);
 uart_return_state_t hw_uart_transmit(uint8_t data);
+uart_return_state_t hw_uart_receive_string(char* str);
 
 #endif

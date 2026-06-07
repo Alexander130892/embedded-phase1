@@ -20,7 +20,7 @@ Exercise:
 
 int main(void)
 {
-    PORTD   = (PORTD & (0xF << 2)) | (0xA << 2);      
+    PORTD   = (PORTD & ~(0xF << 2)) | (0xA << 2);      
     while (1) {
        
     }
