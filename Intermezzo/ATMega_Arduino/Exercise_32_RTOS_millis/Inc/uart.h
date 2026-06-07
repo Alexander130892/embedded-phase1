@@ -22,6 +22,6 @@
 #define MAX_LENGTH  64          // RingBuffer Size
 
 typedef enum { IDLE, START_SAMPLE, TRANSMITTING, RECEIVING } sw_uart_state_t;
-typedef enum { STATUS_OK, FRAMING_ERROR, BUFFER_OVERFLOW, BUFFER_EMPTY} uart_return_state_t;
+typedef enum { STATUS_OK, FRAMING_ERROR, BUFFER_OVERFLOW, BUFFER_EMPTY, UART_BUSY} uart_return_state_t;
 
 #endif

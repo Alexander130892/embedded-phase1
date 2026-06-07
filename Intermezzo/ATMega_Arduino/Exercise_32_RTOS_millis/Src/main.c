@@ -74,15 +74,16 @@ int main(void)
     uint32_t prev_time_g = 0;
     uint32_t prev_time_b = 0;
     uint32_t prev_time_uart = 0;
+    uint32_t prev_time_pb = 0;
     const uint32_t period_r = 500;
     const uint32_t period_g = 750;
     const uint32_t period_b = 1000;
     const uint32_t period_uart = 1000;
+    const uint32_t period_pb = 200;
     timer0_init();
     for(volatile uint32_t d = 0; d < WAKEUP_DELAY; d++);  // settling delay
     for(;;) {
         uint32_t now_time = millis();
-
         if((now_time-prev_time_r) > period_r){
             LED_PORT ^=  (1 << LED_R_PIN);   /* Toggle LED */
             prev_time_r = now_time;
@@ -96,18 +97,22 @@ int main(void)
             prev_time_b = now_time;
         }
         if((now_time-prev_time_uart) > period_uart){
-            hw_uart_transmit('S');
-            hw_uart_transmit('\r');
-            hw_uart_transmit('\n');
+            hw_uart_queue('S');
+            hw_uart_queue('\r');
+            hw_uart_queue('\n');
             prev_time_uart = now_time;
         }
-
-        if((PIND & (1u << PB_PIN))){
-            hw_uart_transmit('P');
-            hw_uart_transmit('B');
-            hw_uart_transmit('\r');
-            hw_uart_transmit('\n');
+        if((now_time-prev_time_pb) > period_pb){
+            if((PIND & (1u << PB_PIN))){
+                hw_uart_queue('P');
+                hw_uart_queue('B');
+                hw_uart_queue('\r');
+                hw_uart_queue('\n');
+                
+            }
+            prev_time_pb = now_time;
         }
+        hw_uart_drain();
     }
     return 0;   // never reached
 }
