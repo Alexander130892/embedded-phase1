@@ -1,14 +1,13 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This Arduino (AVR) program implements a software UART transmitter
- *   that sends three bytes (0x1, 0x2, 0x3) to an STM32 microcontroller
- *   at 9600 baud, while simultaneously receiving ASCII characters from
- *   the STM32 via software UART and echoing them to the serial monitor
- *   via hardware UART.
+ *   This Arduino sketch blinks an LED on PB5 every second and detects
+ *   pushbutton presses on PD2, transmitting "PB
+" to serial output
+ *   whenever the button is pressed.
  */
 /*
     Notes:
