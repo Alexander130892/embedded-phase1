@@ -1,14 +1,15 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This Arduino (AVR) program implements a software UART transmitter
- *   that sends three bytes (0x1, 0x2, 0x3) to an STM32 microcontroller
- *   at 9600 baud, while simultaneously receiving ASCII characters from
- *   the STM32 via software UART and echoing them to the serial monitor
- *   via hardware UART.
+ *   This Arduino firmware implements a software UART receiver at 9600
+ *   baud to receive bytes from an STM32 microcontroller, then echoes
+ *   them back via hardware UART to a serial monitor. It uses
+ *   interrupt-driven reception with a ring buffer and demonstrates
+ *   half-duplex UART communication between two microcontrollers with
+ *   the STM32 configured as the bus master.
  */
 /*
     Notes:

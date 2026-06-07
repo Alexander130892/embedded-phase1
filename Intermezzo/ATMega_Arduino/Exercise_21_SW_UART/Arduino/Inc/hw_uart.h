@@ -1,3 +1,14 @@
+/*
+ * File:    hw_uart.h
+ * Author:  Alexander130892
+ * Date:    7-6-2026
+ *
+ * Description:
+ *   This header file declares the hardware abstraction layer interface
+ *   for UART communication, providing functions to initialize the UART
+ *   peripheral and transmit single bytes of data.
+ */
+
 
 /*
  * File:    hw_uart.h
