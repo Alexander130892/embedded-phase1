@@ -1,3 +1,15 @@
+/*
+ * File:    timer.c
+ * Author:  Alexander130892
+ * Date:    7-6-2026
+ *
+ * Description:
+ *   This file implements a millisecond timer for AVR microcontrollers
+ *   using Timer0 in CTC mode, maintaining a running millisecond
+ *   counter that increments via interrupt and can be read safely via
+ *   the millis() function.
+ */
+
 
 
 #include <avr/io.h>

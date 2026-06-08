@@ -3,9 +3,13 @@
  * Author:  Alexander130892
  * Date:    7-6-2026
  *
-
+ * Description:
+ *   This header file defines constants and functions for a timer
+ *   module that provides millisecond-precision timekeeping on a 16 MHz
+ *   microcontroller using a prescaler of 64. It exposes initialization
+ *   and a `millis()` function to retrieve elapsed time in
+ *   milliseconds.
  */
-
 #ifndef TIMER_H
 #define TIMER_H
 

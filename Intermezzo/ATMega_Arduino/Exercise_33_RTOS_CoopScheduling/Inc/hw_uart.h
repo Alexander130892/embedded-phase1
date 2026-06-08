@@ -1,15 +1,14 @@
 /*
  * File:    hw_uart.h
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This header file declares hardware-level UART initialization and
- *   transmission functions for a microcontroller, providing an
- *   interface to configure the UART baud rate and send single bytes of
- *   data.
+ *   This header file declares the hardware abstraction layer interface
+ *   for UART communication, providing functions to initialize the UART
+ *   peripheral and perform character and string transmission/reception
+ *   operations.
  */
-
 #ifndef HW_UART_H
 #define HW_UART_H
 

@@ -3,9 +3,12 @@
  * Author:  Alexander130892
  * Date:    7-6-2026
  *
-
+ * Description:
+ *   This header file defines constants and function declarations for a
+ *   millisecond timer implementation on a microcontroller with a 16
+ *   MHz clock, configured to increment a counter every millisecond
+ *   using a prescaler of 64 and an auto-reload value of 249.
  */
-
 #ifndef TIMER_H
 #define TIMER_H
 

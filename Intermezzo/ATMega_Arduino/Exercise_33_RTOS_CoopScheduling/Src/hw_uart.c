@@ -1,17 +1,17 @@
 /*
  * File:    hw_uart.c
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This file implements hardware UART communication for an AVR
- *   microcontroller, providing initialization and polling-based
- *   transmission functions for serial data output. The code is
- *   configured for 8-bit data frames with 1 stop bit, and includes
- *   commented-out interrupt-driven implementations that were
- *   previously used but replaced with the simpler polling approach.
+ *   This file implements a hardware UART driver for an AVR
+ *   microcontroller with interrupt-driven reception using a circular
+ *   buffer and polling-based transmission. It provides initialization,
+ *   single-byte transmission, and string reception functions that
+ *   extract complete lines (terminated by '' or '
+') from the
+ *   receive buffer.
  */
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>

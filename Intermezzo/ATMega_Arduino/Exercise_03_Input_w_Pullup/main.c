@@ -1,14 +1,14 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    1-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This AVR microcontroller program sets pins PD2 through PD5 to the
- *   binary pattern 1010 (hexadecimal A) in a single operation, then
- *   enters an infinite loop.
+ *   This AVR microcontroller program writes the binary pattern 1010 to
+ *   pins PD2 through PD5 on PORTD using bitwise operations, then
+ *   enters an infinite loop. The operation preserves the state of all
+ *   other pins on PORTD while only modifying the target 4-bit range.
  */
-
 #include <avr/io.h>
 #include <util/delay.h>
 

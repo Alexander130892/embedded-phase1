@@ -1,15 +1,14 @@
 /*
  * File:    uart.h
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This header file defines configuration constants and data types
- *   for a software-based UART implementation operating at 9600 baud on
- *   a 16 MHz microcontroller, including timing parameters, ring buffer
- *   size, and state/status enumerations for communication handling.
+ *   This header file defines configuration constants and type
+ *   definitions for a software-based UART implementation, specifying
+ *   clock parameters, baud rate settings, and ring buffer dimensions
+ *   along with state and error enumerations.
  */
-
 #ifndef UART_H
 #define UART_H
 

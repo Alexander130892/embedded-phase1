@@ -1,14 +1,13 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    30-5-2026
+ * Date:    7-6-2026
  *
  * Description:
- *   This Arduino (AVR) program implements a software UART transmitter
- *   that sends three bytes (0x1, 0x2, 0x3) to an STM32 microcontroller
- *   at 9600 baud, while simultaneously receiving ASCII characters from
- *   the STM32 via software UART and echoing them to the serial monitor
- *   via hardware UART.
+ *   This program configures an Arduino Uno to blink three RGB LEDs at
+ *   different intervals (500ms, 750ms, 1000ms) and periodically
+ *   transmits status messages via UART while detecting pushbutton
+ *   presses on PD2 and outputting them serially.
  */
 /*
     Notes:
