@@ -1,3 +1,17 @@
+/*
+ * File:    task.c
+ * Author:  Alexander130892
+ * Date:    8-6-2026
+ *
+ * Description:
+ *   This file implements task functions for an AVR microcontroller
+ *   system that manage hardware peripherals including three LEDs (red,
+ *   green, blue), a buzzer, buttons, and UART communication. Each task
+ *   function handles a specific peripheral operation—toggling LEDs,
+ *   activating the buzzer, detecting button presses, and sending debug
+ *   tick messages over UART.
+ */
+
 
 
 #include <stdint.h>

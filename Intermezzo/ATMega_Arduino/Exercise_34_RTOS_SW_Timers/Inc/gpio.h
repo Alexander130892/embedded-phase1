@@ -1,11 +1,14 @@
 /*
- * File:    task.h
+ * File:    gpio.h
  * Author:  Alexander130892
- * Date:    7-6-2026
+ * Date:    8-6-2026
  *
-
+ * Description:
+ *   This header file defines GPIO pin mappings for an AVR
+ *   microcontroller, configuring pins for an RGB LED, a piezo buzzer
+ *   on port B, and a pushbutton on port D, along with a function to
+ *   initialize these GPIO pins.
  */
-
 #ifndef GPIO_H
 #define GPIO_H
 

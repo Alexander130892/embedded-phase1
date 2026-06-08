@@ -1,14 +1,16 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    7-6-2026
+ * Date:    8-6-2026
  *
  * Description:
- *   This header file defines constants and functions for a timer
- *   module that provides millisecond-precision timekeeping on a 16 MHz
- *   microcontroller using a prescaler of 64. It exposes initialization
- *   and a `millis()` function to retrieve elapsed time in
- *   milliseconds.
+ *   This header file defines software timers and hardware timer
+ *   initialization for a 16 MHz microcontroller, providing functions
+ *   to manage millisecond-precision timing for peripherals like
+ *   buzzers, LEDs, UART, and button debouncing. It configures Timer0
+ *   and Timer1 with a prescaler of 64 to achieve 1 millisecond
+ *   resolution and exposes a software timer API with start and
+ *   expiration check functions.
  */
 #ifndef TIMER_H
 #define TIMER_H

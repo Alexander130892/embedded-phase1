@@ -1,13 +1,14 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    7-6-2026
+ * Date:    8-6-2026
  *
  * Description:
- *   This program configures an Arduino Uno to blink three RGB LEDs at
- *   different intervals (500ms, 750ms, 1000ms) and periodically
- *   transmits status messages via UART while detecting pushbutton
- *   presses on PD2 and outputting them serially.
+ *   This is an Arduino Uno firmware that initializes GPIO, UART, and
+ *   timers to manage LED blinking, button debouncing, and a buzzer
+ *   with periodic task execution in a main loop. It communicates with
+ *   an STM microcontroller via serial while monitoring a pushbutton
+ *   input and controlling RGB LED outputs through PWM.
  */
 /*
     Notes:
