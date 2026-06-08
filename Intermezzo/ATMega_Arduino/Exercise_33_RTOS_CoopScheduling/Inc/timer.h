@@ -17,8 +17,8 @@
 ARR = 249
 */
 #define FOSC    16000000        // Clock Speed
-#define PSC     64              //  16MHz / 64 = 250 000
-#define TIMER_ARR     249             // 250 000 / 1000 = 250 --> 249+1
+#define TIMER0_PSC     64              //  16MHz / 64 = 250 000
+#define TIMER0_ARR     249             // 250 000 / 1000 = 250 --> 249+1
 
 void timer0_init(void);
 uint32_t millis(void);
