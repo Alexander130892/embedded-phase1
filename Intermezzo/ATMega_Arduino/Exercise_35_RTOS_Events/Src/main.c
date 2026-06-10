@@ -1,14 +1,15 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    10-6-2026
  *
  * Description:
- *   This is an Arduino Uno firmware that initializes GPIO, UART, and
- *   timers to manage LED blinking, button debouncing, and a buzzer
- *   with periodic task execution in a main loop. It communicates with
- *   an STM microcontroller via serial while monitoring a pushbutton
- *   input and controlling RGB LED outputs through PWM.
+ *   This file implements the main control loop for an AVR
+ *   microcontroller system that initializes GPIO, UART, and timers,
+ *   then continuously processes events from a queue (such as button
+ *   presses) and handles timeouts for a buzzer. The system uses an
+ *   event-driven architecture to manage hardware interactions and
+ *   logging via serial communication.
  */
 /*
     Notes:

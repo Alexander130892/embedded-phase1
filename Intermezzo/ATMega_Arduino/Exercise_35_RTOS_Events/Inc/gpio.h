@@ -1,13 +1,13 @@
 /*
  * File:    gpio.h
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    10-6-2026
  *
  * Description:
- *   This header file defines GPIO pin mappings for an AVR
- *   microcontroller, configuring pins for an RGB LED, a piezo buzzer
- *   on port B, and a pushbutton on port D, along with a function to
- *   initialize these GPIO pins.
+ *   This header file defines GPIO pin configurations for an
+ *   Arduino-like microcontroller, mapping LED pins (internal, red,
+ *   green, blue) and a piezo buzzer on Port B, plus a pushbutton on
+ *   Port D, along with an initialization function.
  */
 #ifndef GPIO_H
 #define GPIO_H

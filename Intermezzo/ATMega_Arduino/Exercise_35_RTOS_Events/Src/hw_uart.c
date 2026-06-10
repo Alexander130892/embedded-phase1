@@ -1,18 +1,16 @@
 /*
  * File:    hw_uart.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    10-6-2026
  *
  * Description:
- *   This file implements a hardware UART driver for AVR
- *   microcontrollers with interrupt-driven reception and transmission
- *   using circular buffers, providing functions to initialize the
- *   UART, transmit/queue data, and extract complete lines from the
- *   receive buffer. Notable behavior includes non-blocking queued
- *   transmission with overflow detection and line-based string
- *   reception that handles both CR and LF line terminators.
+ *   This file implements interrupt-driven UART communication for an
+ *   AVR microcontroller, providing buffered transmit and receive
+ *   functionality with circular buffers for asynchronous serial data
+ *   handling. It includes initialization, direct transmission, queued
+ *   transmission with drain capability, and string reception
+ *   terminated by carriage return or newline characters.
  */
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdint.h>

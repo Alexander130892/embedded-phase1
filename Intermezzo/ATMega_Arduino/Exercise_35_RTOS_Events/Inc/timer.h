@@ -1,16 +1,14 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    10-6-2026
  *
  * Description:
- *   This header file defines software timers and hardware timer
- *   initialization for a 16 MHz microcontroller, providing functions
- *   to manage millisecond-precision timing for peripherals like
- *   buzzers, LEDs, UART, and button debouncing. It configures Timer0
- *   and Timer1 with a prescaler of 64 to achieve 1 millisecond
- *   resolution and exposes a software timer API with start and
- *   expiration check functions.
+ *   This header file defines timer configuration and software timer
+ *   utilities for a 16 MHz microcontroller, providing prescaler/reload
+ *   values for 1ms tick resolution and a simple SoftTimer structure
+ *   for managing multiple independent software timers used by buzzers,
+ *   LEDs, UART, and button debouncing.
  */
 #ifndef TIMER_H
 #define TIMER_H

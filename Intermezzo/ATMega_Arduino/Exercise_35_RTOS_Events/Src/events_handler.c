@@ -1,3 +1,18 @@
+/*
+ * File:    events_handler.c
+ * Author:  Alexander130892
+ * Date:    10-6-2026
+ *
+ * Description:
+ *   This file implements an event dispatcher for an AVR-based washing
+ *   machine controller that routes hardware events (button presses,
+ *   door sensors, water level, timeouts, motor errors) to their
+ *   respective handler functions using a function pointer lookup
+ *   table. The handlers perform actions like starting timers,
+ *   controlling a buzzer, and queuing UART messages for external
+ *   communication.
+ */
+
 // event_handler.c
 #include "events_handler.h"
 #include "timer.h"
