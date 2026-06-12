@@ -1,14 +1,1 @@
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/events.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/events_handler.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/gpio.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/hw_uart.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/task.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/timer.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Inc/uart.h
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/events.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/events_handler.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/gpio.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/hw_uart.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/main.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/task.c
-Intermezzo/ATMega_Arduino/Exercise_35_RTOS_Events/Src/timer.c
+Phase_2/week25/cross_hello/hello.c
