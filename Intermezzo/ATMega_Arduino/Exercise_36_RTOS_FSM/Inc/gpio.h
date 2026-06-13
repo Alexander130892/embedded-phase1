@@ -20,7 +20,10 @@
 #define LED_R_PIN   PB2
 #define LED_G_PIN   PB3
 #define LED_B_PIN   PB4
-#define PIEZZO_PIN  PB1 
+
+#define PIEZZO_DDR   DDRD
+#define PIEZZO_PORT  PORTD 
+#define PIEZZO_PIN  PD5 
 
 #define PB_DDR   DDRD
 #define PB_PORT  PORTD

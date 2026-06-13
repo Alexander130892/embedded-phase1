@@ -34,6 +34,8 @@
 
 #define WAKEUP_DELAY 10000
 
+
+
 int main(void)
 {
     gpio_init();
@@ -43,25 +45,14 @@ int main(void)
     timer0_init();
     timer1_pwm_init();
     sw_timerStart(&timer_uart, 1000);
+    sw_timerStart(&timer_LED, 500);
     for(volatile uint32_t d = 0; d < WAKEUP_DELAY; d++);  // settling delay
     for(;;) {
-        schedulerRun();
-        //taskQueueFlood(); // Test only -- 
-        Event ev;
-        if(getEvent(&ev)) {
-            logEvent(ev);      // print event name to terminal
-            handleEvent(ev);
-        }
-        if(sw_timerExpired(&timer_buzzer)){
-            postEvent((Event){EV_TIMEOUT, TIMEOUT_BUZZER_START});
-        }
-        if(sw_timerExpired(&timer_buzzer_off)){
-            postEvent((Event){EV_TIMEOUT, TIMEOUT_BUZZER_STOP});
-        }
-        if(sw_timerExpired(&timer_autoClose)){
-            postEvent((Event){EV_TIMEOUT, TIMEOUT_DOOR_AUTO_CLOSE});
-        }        
+        schedulerRun();        // produce events from inputs/timers
+        processEvents();       // consume events --> FSM transitions
+        door_fsm_do_actions(); // periodic actions for current state
     }
     return 0;   // never reached
 }
+
 

@@ -92,3 +92,22 @@ void door_fsm_handle(Event ev){
             break;
     }
 }
+void door_fsm_do_actions(void){
+    if(sw_timerExpired(&timer_LED)){
+        sw_timerStart(&timer_LED, 500);
+        switch(door_state){
+            case STATE_CLOSED: 
+                LED_PORT ^= (1 << LED_B_PIN);
+                break;
+            case STATE_OPENING:  
+                LED_PORT ^= (1 << LED_G_PIN);
+                break;
+            case STATE_OPEN:   
+                LED_PORT ^= (1 << LED_R_PIN);
+                break;
+            case STATE_CLOSING:
+                LED_PORT ^= (1 << LED_G_PIN);
+                break;
+        }
+    }
+}

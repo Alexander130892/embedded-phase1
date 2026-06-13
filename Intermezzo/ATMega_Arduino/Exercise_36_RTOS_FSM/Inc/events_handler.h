@@ -5,5 +5,6 @@
 #include "events.h"
 
 void handleEvent(Event ev);
+void processEvents(void);
 
 #endif

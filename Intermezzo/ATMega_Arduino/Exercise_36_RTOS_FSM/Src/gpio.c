@@ -24,7 +24,7 @@ void gpio_init(void){
     LED_DDR     |= (1u << LED_R_PIN);
     LED_DDR     |= (1u << LED_G_PIN);
     LED_DDR     |= (1u << LED_B_PIN);
-    LED_DDR     |= (1u << PIEZZO_PIN);
+    PIEZZO_DDR     |= (1u << PIEZZO_PIN);
     /* Configure PB2 as input */
     PB_DDR      &= ~(1u << PB_PIN);
     PB_PORT     |= (1 << PB_PIN); // pull up resistor

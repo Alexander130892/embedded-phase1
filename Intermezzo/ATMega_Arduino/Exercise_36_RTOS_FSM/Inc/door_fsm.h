@@ -12,6 +12,7 @@ typedef enum {
 
 void door_fsm_handle(Event ev);
 void door_fsm_init(void);
+void door_fsm_do_actions(void);
 DoorState door_fsm_get_state(void);
 
 #endif

@@ -99,3 +99,20 @@ static void onLimitOpen(Event ev) {
 static void onLimitClosed(Event ev) {
     door_fsm_handle(ev);
 }
+
+void processEvents(void){
+    Event ev;
+        while(getEvent(&ev)) {
+            logEvent(ev);      // print event name to terminal
+            handleEvent(ev);
+        }
+        if(sw_timerExpired(&timer_buzzer)){
+            postEvent((Event){EV_TIMEOUT, TIMEOUT_BUZZER_START});
+        }
+        if(sw_timerExpired(&timer_buzzer_off)){
+            postEvent((Event){EV_TIMEOUT, TIMEOUT_BUZZER_STOP});
+        }
+        if(sw_timerExpired(&timer_autoClose)){
+            postEvent((Event){EV_TIMEOUT, TIMEOUT_DOOR_AUTO_CLOSE});
+        }        
+}
