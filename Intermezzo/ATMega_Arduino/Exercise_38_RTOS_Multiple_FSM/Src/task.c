@@ -1,19 +1,17 @@
 /*
  * File:    task.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    13-6-2026
  *
  * Description:
- *   This file implements task functions for an AVR microcontroller
- *   system that manage hardware peripherals including three LEDs (red,
- *   green, blue), a buzzer, buttons, and UART communication. Each task
- *   function handles a specific peripheral operation—toggling LEDs,
- *   activating the buzzer, detecting button presses, and sending debug
- *   tick messages over UART.
+ *   This file implements a task scheduler for an AVR microcontroller
+ *   that periodically executes four tasks: button polling, serial
+ *   input processing, timer expiration checking, and a debug tick
+ *   output. The scheduler runs periodic tasks at their specified
+ *   intervals (10ms for most tasks, 1000ms for tick) and posts events
+ *   to the system based on user input, button presses, and timer
+ *   expirations.
  */
-
-
-
 #include <stdint.h>
 #include <avr/io.h>
 #include "task.h"

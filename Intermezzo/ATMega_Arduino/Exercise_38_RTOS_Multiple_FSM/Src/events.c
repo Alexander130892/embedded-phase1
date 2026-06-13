@@ -1,19 +1,16 @@
 /*
- * File:    task.c
+ * File:    events.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    13-6-2026
  *
  * Description:
- *   This file implements task functions for an AVR microcontroller
- *   system that manage hardware peripherals including three LEDs (red,
- *   green, blue), a buzzer, buttons, and UART communication. Each task
- *   function handles a specific peripheral operation—toggling LEDs,
- *   activating the buzzer, detecting button presses, and sending debug
- *   tick messages over UART.
+ *   This file implements a circular event queue for an AVR
+ *   microcontroller system, providing interrupt-safe functions to post
+ *   and retrieve events, along with a logging function to output event
+ *   names via UART. The queue uses head/tail pointers with atomic
+ *   operations (cli/sei) to safely handle concurrent access between
+ *   interrupt handlers and main code.
  */
-
-
-
 #include <stdint.h>
 #include <stdbool.h>
 #include <avr/io.h>

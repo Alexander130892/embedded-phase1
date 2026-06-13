@@ -1,14 +1,13 @@
 /*
  * File:    task.h
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    13-6-2026
  *
  * Description:
- *   This header file defines a task scheduling system with structures
- *   and function pointers for managing periodic tasks, while also
- *   declaring task functions for controlling LEDs (red, green, blue),
- *   a buzzer, buttons, and a system tick, along with a volatile flag
- *   for button state.
+ *   This header file defines a task scheduling system with a Task
+ *   structure that stores a function pointer, execution period, and
+ *   last run time, along with a scheduler function to execute tasks at
+ *   specified intervals.
  */
 #ifndef TASK_H
 #define TASK_H
