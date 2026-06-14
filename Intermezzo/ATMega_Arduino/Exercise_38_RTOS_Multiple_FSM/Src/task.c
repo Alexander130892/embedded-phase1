@@ -1,16 +1,14 @@
 /*
  * File:    task.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
  *   This file implements a task scheduler for an AVR microcontroller
- *   that periodically executes four tasks: button polling, serial
- *   input processing, timer expiration checking, and a debug tick
- *   output. The scheduler runs periodic tasks at their specified
- *   intervals (10ms for most tasks, 1000ms for tick) and posts events
- *   to the system based on user input, button presses, and timer
- *   expirations.
+ *   that manages periodic tasks including button polling, serial input
+ *   processing, timer expiration checks, and debug output, each
+ *   running at different intervals. The scheduler uses a tick-based
+ *   system to execute tasks when their periods elapse.
  */
 #include <stdint.h>
 #include <avr/io.h>

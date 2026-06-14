@@ -1,14 +1,14 @@
 /*
  * File:    timer.h
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
  *   This header file defines timer initialization and software timer
- *   management for an embedded system with a 16MHz clock, providing
- *   functions to initialize hardware timers and manage multiple
- *   software timers for controlling peripherals like buzzers, LEDs,
- *   and buttons.
+ *   management for a microcontroller running at 16 MHz, providing
+ *   functions to initialize hardware timers with 1ms resolution and
+ *   control software-based timers for various peripheral functions
+ *   like buzzer, LED, and button debouncing.
  */
 #ifndef TIMER_H
 #define TIMER_H

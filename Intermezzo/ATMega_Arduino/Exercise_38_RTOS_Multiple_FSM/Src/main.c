@@ -1,14 +1,15 @@
 /*
  * File:    main.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
- *   This is the main entry point for an AVR microcontroller
- *   application that initializes GPIO, timers, UART, and two finite
- *   state machines (door and washing machine), then continuously runs
- *   a scheduler-driven event loop to process inputs and execute state
- *   machine actions.
+ *   This file initializes an AVR microcontroller system for
+ *   controlling a door and washing machine using finite state
+ *   machines, then runs a main loop that continuously schedules tasks,
+ *   processes events, and executes state-specific actions. The system
+ *   uses timers, UART communication, and GPIO to manage hardware
+ *   interactions.
  */
 /*
     Notes:

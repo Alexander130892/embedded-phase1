@@ -1,17 +1,17 @@
 /*
  * File:    wm_fsm.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
- *   This file implements a finite state machine for a washing machine
- *   that manages the complete wash cycle (filling, washing, rinsing,
- *   draining, spinning) with event-driven state transitions,
- *   timer-based phase durations, and error handling for door open
- *   conditions and timeouts.
+ *   This file implements a finite state machine (FSM) for a washing
+ *   machine that manages the complete wash cycle from idle through
+ *   filling, washing, rinsing, spinning, and done states, responding
+ *   to events like start commands, timeouts, door openings, and
+ *   cancellations. It coordinates with a door FSM to ensure the door
+ *   is closed before operation and transitions between wash phases
+ *   based on timers and water level events.
  */
-
-
 #include "events.h"
 #include "wm_fsm.h"
 #include "hw_uart.h"

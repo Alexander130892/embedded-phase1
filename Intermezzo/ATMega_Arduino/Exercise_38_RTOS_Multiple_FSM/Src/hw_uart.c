@@ -1,14 +1,15 @@
 /*
  * File:    hw_uart.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
- *   This file implements UART communication for an AVR microcontroller
- *   using interrupt-driven circular buffers for both transmission and
- *   reception. It provides functions to initialize the UART,
- *   queue/transmit data, receive strings terminated by carriage return
- *   or newline, and print formatted strings.
+ *   This file implements interrupt-driven UART communication for an
+ *   AVR microcontroller, providing functions to initialize the
+ *   hardware UART, transmit/receive data using circular buffers, and
+ *   handle serial string I/O. It uses RX and TX interrupt service
+ *   routines to manage asynchronous serial communication with
+ *   configurable baud rates and automatic buffering.
  */
 #include <avr/io.h>
 #include <avr/interrupt.h>

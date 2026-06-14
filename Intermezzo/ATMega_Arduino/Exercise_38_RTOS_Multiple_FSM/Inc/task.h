@@ -1,13 +1,13 @@
 /*
  * File:    task.h
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
- *   This header file defines a task scheduling system with a Task
- *   structure that stores a function pointer, execution period, and
- *   last run time, along with a scheduler function to execute tasks at
- *   specified intervals.
+ *   This header file defines a simple task scheduling system with a
+ *   `Task` structure that holds a function pointer, execution period,
+ *   and last run time, along with a scheduler function to execute
+ *   registered tasks at specified intervals.
  */
 #ifndef TASK_H
 #define TASK_H

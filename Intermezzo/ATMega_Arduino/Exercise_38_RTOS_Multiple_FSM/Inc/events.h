@@ -1,13 +1,13 @@
 /*
  * File:    events.h
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
- *   This header file defines an event system for what appears to be a
- *   washing machine controller, providing event types, a fixed-size
- *   queue, and functions to post, retrieve, and log events throughout
- *   the system.
+ *   This header file defines an event system for a washing machine
+ *   controller, providing an event queue structure with various event
+ *   types (button presses, door/water sensors, timeouts, errors) and
+ *   functions to post, retrieve, and log events.
  */
 #ifndef EVENTS_H
 #define EVENTS_H

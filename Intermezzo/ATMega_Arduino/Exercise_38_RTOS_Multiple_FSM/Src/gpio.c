@@ -1,7 +1,7 @@
 /*
  * File:    gpio.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
  *   This file initializes GPIO pins on an AVR microcontroller,

@@ -1,16 +1,14 @@
 /*
  * File:    timer.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    14-6-2026
  *
  * Description:
  *   This file implements a software timer system for an AVR
- *   microcontroller, using Timer0 to track system ticks and Timer1 to
- *   generate PWM signals for controlling a buzzer. It provides
- *   functions to start and check expiration of multiple software
- *   timers used throughout the application for tasks like buzzer
- *   control, LED management, button debouncing, and auto-close
- *   functionality.
+ *   microcontroller, using Timer0 to maintain system ticks and Timer1
+ *   for PWM-based buzzer control. It provides functions to start and
+ *   check expiration of multiple software timers used throughout the
+ *   application for various timing-dependent operations.
  */
 #include <avr/io.h>
 #include <avr/interrupt.h>
