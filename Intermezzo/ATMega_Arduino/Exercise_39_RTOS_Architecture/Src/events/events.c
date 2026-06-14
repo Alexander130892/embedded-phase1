@@ -1,0 +1,85 @@
+/*
+ * File:    task.c
+ * Author:  Alexander130892
+ * Date:    8-6-2026
+ *
+ * Description:
+ *   This file implements task functions for an AVR microcontroller
+ *   system that manage hardware peripherals including three LEDs (red,
+ *   green, blue), a buzzer, buttons, and UART communication. Each task
+ *   function handles a specific peripheral operation—toggling LEDs,
+ *   activating the buzzer, detecting button presses, and sending debug
+ *   tick messages over UART.
+ */
+
+
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include "events.h"
+#include "hw_uart.h"
+
+Event queue[EVENT_QUEUE_SIZE];
+static volatile uint8_t head = 0;
+static volatile uint8_t tail = 0;
+
+static const char* const names[] = {
+        [EV_NONE]           = "EV_NONE",
+        [EV_BUTTON_START]   = "EV_BUTTON_START",
+        [EV_BUTTON_CANCEL]  = "EV_BUTTON_CANCEL",
+        [EV_DOOR_OPEN]      = "EV_DOOR_OPEN",
+        [EV_DOOR_UNLOCKED]  = "EV_DOOR_UNLOCKED",
+        [EV_DOOR_CLOSED]    = "EV_DOOR_CLOSED",
+        [EV_WATER_LEVEL_OK] = "EV_WATER_LEVEL_OK",
+        [EV_TIMEOUT]        = "EV_TIMEOUT",
+        [EV_MOTOR_ERROR]    = "EV_MOTOR_ERROR",
+        [EV_LIMIT_OPEN]     = "EV_LIMIT_OPEN",
+        [EV_LIMIT_CLOSED]   = "EV_LIMIT_CLOSED",
+        [EV_START]          = "EV_START",
+        [EV_PHASE_TIMEOUT]  = "EV_PHASE_TIMEOUT",
+        [EV_WATER_TIMEOUT]  = "EV_WATER_TIMEOUT",
+        [EV_CANCEL]         = "EV_CANCEL",
+    };
+
+bool postEvent(Event event) {
+    bool result;
+    bool queue_overflow = false;
+    cli();
+    uint8_t next = (head + 1) % EVENT_QUEUE_SIZE;
+    if (next == tail){
+        queue_overflow = true;
+        result = false; // queue full
+    }
+    else{
+        queue[head] = event;
+        head = next;
+        result = true;
+    }
+    sei();
+    if(queue_overflow){
+        hw_uart_print("QUEUE OVERFLOW");   // debug -- ! dont print when isr are disabled
+    }
+    return result;
+}
+
+bool getEvent(Event *event) {
+    bool result;
+    cli();
+    if (head == tail){
+        result =  false; // empty
+    }else{
+        *event = queue[tail];
+        tail = (tail + 1) % EVENT_QUEUE_SIZE;
+        result = true;
+    }
+    sei();
+    return result;
+}
+
+void logEvent(Event ev) {
+    const char* name = (ev.type < EV_COUNT) ? names[ev.type] : "EV_UNKNOWN";
+    const char* p = name;
+    hw_uart_print(p);
+}
