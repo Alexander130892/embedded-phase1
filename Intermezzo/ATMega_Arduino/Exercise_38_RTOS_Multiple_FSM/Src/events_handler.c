@@ -1,3 +1,15 @@
+/*
+ * File:    events_handler.c
+ * Author:  Alexander130892
+ * Date:    13-6-2026
+ *
+ * Description:
+ *   This file implements a central event dispatcher for a washing
+ *   machine controller that routes hardware and timer events to their
+ *   corresponding finite state machines (door and washing machine
+ *   FSMs) and handles system actions like buzzer control.
+ */
+
 // event_handler.c
 #include "events_handler.h"
 #include "timer.h"

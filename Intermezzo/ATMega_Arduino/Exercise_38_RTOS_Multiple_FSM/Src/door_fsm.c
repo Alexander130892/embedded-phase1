@@ -1,3 +1,17 @@
+/*
+ * File:    door_fsm.c
+ * Author:  Alexander130892
+ * Date:    13-6-2026
+ *
+ * Description:
+ *   This file implements a finite state machine for a door control
+ *   system that manages four states (closed, opening, open, closing)
+ *   based on button and limit switch events, with visual feedback via
+ *   color-coded LEDs and an auto-close timeout feature. The FSM also
+ *   posts events to notify other subsystems when the door opens or
+ *   closes.
+ */
+
 #include "door_fsm.h"
 #include "events.h"
 #include "timer.h"

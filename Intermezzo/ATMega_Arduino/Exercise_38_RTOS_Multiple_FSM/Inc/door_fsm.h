@@ -1,3 +1,16 @@
+/*
+ * File:    door_fsm.h
+ * Author:  Alexander130892
+ * Date:    13-6-2026
+ *
+ * Description:
+ *   This header file defines a finite state machine for controlling a
+ *   door with four states (closed, opening, open, closing), each
+ *   associated with an LED color, and provides functions to initialize
+ *   the FSM, handle events, execute state actions, and query the
+ *   current state.
+ */
+
 #ifndef DOOR_FSM_H
 #define DOOR_FSM_H
 
