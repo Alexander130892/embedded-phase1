@@ -1,0 +1,144 @@
+/*
+ * File:    hw_uart.c
+ * Author:  Alexander130892
+ * Date:    8-6-2026
+ *
+ * Description:
+ *   This file implements a hardware UART driver for AVR
+ *   microcontrollers with interrupt-driven reception and transmission
+ *   using circular buffers, providing functions to initialize the
+ *   UART, transmit/queue data, and extract complete lines from the
+ *   receive buffer. Notable behavior includes non-blocking queued
+ *   transmission with overflow detection and line-based string
+ *   reception that handles both CR and LF line terminators.
+ */
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <stdint.h>
+
+#include "uart.h"
+#include "hw_uart.h"
+
+static volatile uint8_t rx_head = 0;
+static volatile uint8_t rx_tail = 0;
+static char rx_buffer[UART_BUFFER_SIZE];
+static volatile uint8_t tx_head = 0;
+static volatile uint8_t tx_tail = 0;
+static char tx_buffer[UART_BUFFER_SIZE];
+volatile uart_return_state_t    hw_uart_return_state = STATUS_OK;
+
+// ----- HW UART -----
+uart_return_state_t hw_uart_init(uint16_t ubrr){ // HW UART
+    //Set baud rate
+    UBRR0H  = (uint8_t)(ubrr>>8);
+    UBRR0L  = (uint8_t)ubrr;
+    // Enable USART Receive Complete Interrupt
+    UCSR0B  |= (1u << RXCIE0);
+    // Set frame format: 8data, 1stop bit 
+    UCSR0C  |= (0 << USBS0)|(3u << UCSZ00);
+    // Enable transmitter 
+    UCSR0B  |= (1u << TXEN0) |(1u << RXEN0);
+    return STATUS_OK;
+}
+//debug only (blocking)
+uart_return_state_t hw_uart_transmit(uint8_t data){
+    while(!(UCSR0A & (1u << UDRE0))); //Wait until UART is not busy
+    UDR0 = data;
+    return STATUS_OK;
+}
+
+uart_return_state_t hw_uart_queue(uint8_t data){
+    if (((tx_head + 1) % UART_BUFFER_SIZE) == tx_tail){
+        return BUFFER_OVERFLOW;
+    }else{
+        tx_buffer[tx_head] = data;
+        tx_head = (tx_head + 1) % UART_BUFFER_SIZE;
+        UCSR0B |= (1u << UDRIE0);   // enable TX interrupt
+        return STATUS_OK;
+    }
+}
+// Replaced by ISR
+/*
+uart_return_state_t hw_uart_drain(void){
+	if((UCSR0A & (1u << UDRE0))){ // UART TX available
+		if(tx_head != tx_tail){	// 
+			UDR0 = tx_buffer[tx_tail];
+			tx_tail = (tx_tail +1) % MAX_LENGTH;
+			return STATUS_OK;
+		}else{
+			return BUFFER_EMPTY;
+		}
+	}else{
+		return UART_BUSY;
+	}
+}
+*/
+
+uart_return_state_t hw_uart_receive_string(char* str){
+	static uint8_t index = 0;
+	uart_return_state_t complete = BUFFER_EMPTY;
+	while(rx_head != rx_tail)
+	{
+		if (rx_buffer[rx_tail] == '\r' || rx_buffer[rx_tail] == '\n')
+		{
+			if (index > 0)
+			{
+				str[index]   = '\0';
+				index = 0;
+				complete = STATUS_OK;
+			}
+			rx_tail = (rx_tail + 1) % UART_BUFFER_SIZE;
+		}
+		else
+		{
+			if (index < UART_BUFFER_SIZE - 1)
+			{
+				str[index++] = rx_buffer[rx_tail];
+			}
+			rx_tail = (rx_tail + 1) % UART_BUFFER_SIZE;
+		}
+	}
+	return complete;
+}
+
+ISR(USART_RX_vect) {
+    if((rx_head + 1) % UART_BUFFER_SIZE != rx_tail) {   // buffer not full
+        rx_buffer[rx_head] = UDR0;
+        rx_head = (rx_head + 1) % UART_BUFFER_SIZE;
+    } else {
+        (void)UDR0;   // must read even if discarding — otherwise Interrupt is not cleared
+        hw_uart_return_state = BUFFER_OVERFLOW;
+    }
+}
+ISR(USART_UDRE_vect) {
+    if(tx_head != tx_tail){
+        UDR0 = tx_buffer[tx_tail];
+        tx_tail = (tx_tail + 1) % UART_BUFFER_SIZE;
+    } else {
+        UCSR0B &= ~(1u << UDRIE0);  // buffer empty — disable interrupt
+    }
+}
+
+uart_return_state_t hw_uart_print(const char* str) {
+    while(*str){
+		hw_uart_queue(*str++);
+	} 
+    hw_uart_queue('\r');
+    hw_uart_queue('\n');
+	return STATUS_OK;
+}
+void hw_uart_print_uint32(uint32_t value) {
+    char buf[11u];              // max 10 digits + null terminator 
+    uint8_t i = 10u;
+    buf[i] = '\0';
+    if (value == 0u) {
+        buf[--i] = '0';
+    } else {
+        while (value > 0u) {
+            buf[--i] = (char)('0' + (value % 10u));
+            value /= 10u;
+        }
+    }
+    hw_uart_print(&buf[i]);
+}
