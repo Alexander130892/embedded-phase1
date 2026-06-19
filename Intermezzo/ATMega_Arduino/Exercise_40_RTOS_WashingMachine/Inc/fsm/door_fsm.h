@@ -1,3 +1,14 @@
+/*
+ * File:    door_fsm.h
+ * Author:  Alexander130892
+ * Date:    19-6-2026
+ *
+ * Description:
+ *   This header file defines a simple finite state machine for a door
+ *   with two states (open and closed), providing initialization, state
+ *   retrieval, and state update functions.
+ */
+
 #ifndef DOOR_FSM_H
 #define DOOR_FSM_H
 

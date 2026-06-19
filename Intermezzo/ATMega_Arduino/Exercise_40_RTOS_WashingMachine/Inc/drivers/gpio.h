@@ -1,28 +1,15 @@
 /*
  * File:    gpio.h
  * Author:  Alexander130892
- * Date:    15-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Pin mapping and GPIO driver interface for the washing machine
- *   project. All hardware pin assignments are defined here.
- *   Peripherals are mapped according to the hardware specification.
- *
- *   Mapping:
- *       D2  / PD2   Start button        (INPUT_PULLUP, active low)
- *       D3  / PD3   Cancel button       (INPUT_PULLUP, active low)
- *       D4  / PD4   Door contact        (INPUT_PULLUP, active low)
- *       D5  / PD5   Status LED GREEN    (OUTPUT)
- *       D6  / PD6   Status LED BLUE     (OUTPUT)
- *       A0  / PC0   Water level sensor  (ADC input)
- *       D8  / PB0   Relay               (OUTPUT, active high)
- *       D9  / PB1   Servo               OUTPUT
- *       D10 / PB2   Motor               (OUTPUT, PWM or on/off)
- *       D11 / PB3   Buzzer              (OUTPUT, PWM via OC2A)
- *       D12 / PB4   Status LED RED        (OUTPUT)
- *       D13 / PB5   Internal LED - HB   (OUTPUT)
+ *   This header file defines GPIO pin mappings and provides a driver
+ *   API for an AVR microcontroller-based washing machine controller,
+ *   managing input buttons (start/cancel/door), status LEDs
+ *   (green/blue/red/heartbeat), actuators (pump/valve/motor/buzzer),
+ *   and an ADC water level sensor.
  */
-
 #ifndef GPIO_H
 #define GPIO_H
 

@@ -1,3 +1,16 @@
+/*
+ * File:    wm_fsm.h
+ * Author:  Alexander130892
+ * Date:    19-6-2026
+ *
+ * Description:
+ *   This header file defines a finite state machine (FSM) for a
+ *   washing machine, specifying its operational states (filling,
+ *   washing, rinsing, spinning, etc.), error conditions, and the
+ *   interface functions to initialize, handle events, and query the
+ *   machine's state.
+ */
+
 #ifndef WM_FSM_H
 #define WM_FSM_H
 

@@ -1,14 +1,14 @@
 /*
  * File:    events.c
  * Author:  Alexander130892
- * Date:    14-6-2026
+ * Date:    19-6-2026
  *
  * Description:
-
+ *   This file implements a thread-safe, interrupt-safe circular event
+ *   queue for an AVR microcontroller, providing `postEvent()` to
+ *   enqueue events and `getEvent()` to dequeue them while protecting
+ *   against race conditions using interrupt disabling/enabling.
  */
-
-
-
 #include <stdint.h>
 #include <stdbool.h>
 #include <avr/interrupt.h>

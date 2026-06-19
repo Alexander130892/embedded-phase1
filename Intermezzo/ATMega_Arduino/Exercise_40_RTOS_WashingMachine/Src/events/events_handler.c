@@ -1,3 +1,17 @@
+/*
+ * File:    events_handler.c
+ * Author:  Alexander130892
+ * Date:    19-6-2026
+ *
+ * Description:
+ *   This file implements an event dispatcher for a washing machine
+ *   controller that routes system events (door open/close, water
+ *   level, timeouts, motor errors, user commands) to appropriate
+ *   handlers via a function pointer lookup table, with most events
+ *   forwarded to a washing machine state machine and debug logging
+ *   support.
+ */
+
 // event_handler.c
 #include "events_handler.h"
 #include "timer.h"

@@ -1,13 +1,15 @@
 /*
  * File:    hw_uart.h
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    19-6-2026
  *
  * Description:
  *   This header file declares the hardware-level UART interface
- *   functions for initializing the UART peripheral, queueing data for
- *   transmission, draining the transmit buffer, and receiving strings
- *   from the serial port.
+ *   functions for initializing the serial port, transmitting data
+ *   (queuing, draining, and printing strings), and receiving input on
+ *   an embedded system. The functions wrap low-level UART operations
+ *   and return status codes indicating success or failure of serial
+ *   communication operations.
  */
 #ifndef HW_UART_H
 #define HW_UART_H

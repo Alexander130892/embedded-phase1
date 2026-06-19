@@ -1,19 +1,14 @@
 /*
  * File:    motor_fsm.h
  * Author:  Alexander130892
- * Date:    17-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Motor FSM interface — table-driven implementation.
- *   Controls the washing machine motor via actuators.h.
- *
- *   States:
- *       MOTOR_STOPPED   — motor off
- *       MOTOR_SLOW      — washing speed
- *       MOTOR_FAST      — spinning speed
- *       MOTOR_ERROR     — fault detected
+ *   This header file defines a finite state machine for controlling a
+ *   motor with four states (stopped, slow, fast, error) and provides
+ *   functions to initialize the FSM, handle events, and query the
+ *   current motor state.
  */
-
 #ifndef MOTOR_FSM_H
 #define MOTOR_FSM_H
 

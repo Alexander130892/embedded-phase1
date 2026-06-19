@@ -1,19 +1,13 @@
 /*
  * File:    actuators.h
  * Author:  Alexander130892
- * Date:    15-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Actuator driver interface for the washing machine.
- *   Provides control functions for motor, pump and water valve.
- *   All hardware details are encapsulated here — FSMs and tasks
- *   must not access actuator pins directly.
- *
- *   Motor  : L298N ENA on PD5 — digital on/off
- *   Pump   : relay module on PB0 — active LOW
- *   Valve  : servo on PB1 — via servo.c (Timer1 OC1A)
+ *   This header file declares the interface for controlling physical
+ *   actuators including a motor, pump, and valve, providing
+ *   initialization and basic on/off control functions for each device.
  */
-
 #ifndef ACTUATORS_H
 #define ACTUATORS_H
 

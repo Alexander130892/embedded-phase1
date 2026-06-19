@@ -4,9 +4,12 @@
  * Date:    19-6-2026
  *
  * Description:
- *   Washing machine controller for Arduino Uno (ATmega328P).
- *   Implements a cooperative task scheduler with event-driven FSMs
- *   for wash cycle control and door monitoring. 
+ *   This file implements the main control loop for an AVR-based
+ *   washing machine controller using an event-driven architecture with
+ *   two finite state machines (door and wash cycle FSM). It
+ *   initializes hardware peripherals, runs a continuous scheduler that
+ *   processes events and triggers FSM state transitions, while
+ *   monitoring CPU idle time to validate system efficiency.
  */
 /*
     for wiring/mapping -- see gpio.h

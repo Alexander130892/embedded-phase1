@@ -1,13 +1,16 @@
 /*
  * File:    adc.c
  * Author:  Alexander130892
- * Date:    10-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   ADC driver for ATmega328P. Single conversion mode,
- *   AVcc reference, prescaler 128 (125kHz @ 16MHz).
+ *   This file provides ADC (Analog-to-Digital Converter)
+ *   initialization and reading functions for an AVR microcontroller,
+ *   configuring the ADC with a 125kHz clock and allowing
+ *   single-channel conversion reads. The `adc_read()` function selects
+ *   a channel, performs a blocking conversion, and returns the 10-bit
+ *   result.
  */
-
 #include <avr/io.h>
 #include "adc.h"
 

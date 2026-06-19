@@ -1,14 +1,14 @@
 /*
  * File:    buzzer.c
  * Author:  Alexander130892
- * Date:    15-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Buzzer driver using Timer2 CTC mode with toggle on OC2A (D11/PB3).
- *   Prescaler 64, OCR2A = 249 → 500Hz tone.
- *   f = 16MHz / (2 * 64 * (249+1)) = 500Hz
+ *   This file implements a buzzer driver for an AVR microcontroller
+ *   that generates a 500Hz square wave tone on pin PB3 using Timer 2
+ *   in CTC mode, with functions to initialize the timer, enable, and
+ *   disable the buzzer output.
  */
-
 #include <avr/io.h>
 #include "buzzer.h"
 

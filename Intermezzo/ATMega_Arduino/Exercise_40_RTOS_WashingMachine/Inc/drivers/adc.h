@@ -1,14 +1,14 @@
 /*
  * File:    adc.h
  * Author:  Alexander130892
- * Date:    10-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   ADC driver interface for ATmega328P.
- *   Configured for 10-bit single conversion mode,
- *   AVcc reference, prescaler 128 (125kHz @ 16MHz).
+ *   This header file declares the interface for an ADC
+ *   (Analog-to-Digital Converter) module, providing functions to
+ *   initialize the ADC and read analog values from a specified
+ *   channel.
  */
-
 #ifndef ADC_H
 #define ADC_H
 

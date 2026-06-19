@@ -1,14 +1,16 @@
 /*
  * File:    servo.c
  * Author:  Alexander130892
- * Date:    15-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Servo driver for ATmega328P using Timer1 OC1A (D9/PB1).
- *   Fast PWM mode 14 (TOP = ICR1), prescaler 8.
- *   Period: 20ms (50Hz). Pulse: 1ms-2ms.
+ *   This file controls a servo motor on an AVR microcontroller by
+ *   configuring Timer1 to generate a PWM signal on pin PB1 with a 20ms
+ *   period and pulse width ranging from 0.5ms (0°) to 2.5ms (180°).
+ *   The servo_setAngle() function linearly maps input angles (0–180°)
+ *   to the corresponding pulse widths via output compare register
+ *   updates.
  */
-
 #include <avr/io.h>
 #include "servo.h"
 

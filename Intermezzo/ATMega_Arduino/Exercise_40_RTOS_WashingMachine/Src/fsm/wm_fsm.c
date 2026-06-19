@@ -1,3 +1,16 @@
+/*
+ * File:    wm_fsm.c
+ * Author:  Alexander130892
+ * Date:    19-6-2026
+ *
+ * Description:
+ *   This file implements a finite state machine for a washing machine
+ *   that manages the washing cycle through states like filling,
+ *   washing, draining, and rinsing, while handling errors and
+ *   cancellations triggered by events such as motor failures, door
+ *   openings, and timeouts.
+ */
+
 
 #include "events.h"
 #include "buzzer.h"

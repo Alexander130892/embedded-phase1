@@ -1,16 +1,17 @@
 /*
  * File:    gpio.c
  * Author:  Alexander130892
- * Date:    15-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   This file initializes GPIO pins on an AVR microcontroller,
- *   configuring LED pins (internal, red, green, blue) and a piezo
- *   buzzer pin as outputs, while setting up a push button pin as
- *   input. The commented pull-up resistor line indicates optional
- *   input configuration for debouncing or noise reduction.
+ *   This file provides GPIO initialization and control functions for
+ *   an AVR microcontroller-based device with LEDs (green, blue, red,
+ *   heartbeat), buttons (start, cancel), a door sensor, and actuators
+ *   (pump, valve, motor, buzzer). It sets up output pins for the LEDs
+ *   and actuators, configures input pins with pull-ups for the buttons
+ *   and door sensor, and provides simple on/off/toggle functions for
+ *   each component.
  */
-
 #include <stdint.h>
 #include <stdbool.h>
 #include "gpio.h"

@@ -1,14 +1,14 @@
 /*
  * File:    actuators.c
  * Author:  Alexander130892
- * Date:    10-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   Actuator driver for the washing machine.
- *   Motor, pump and water valve control.
- *   No process logic — pure hardware abstraction.
+ *   This file implements control functions for physical actuators
+ *   (motor, pump, and servo-controlled valve) on an AVR
+ *   microcontroller, providing initialization and on/off control for
+ *   each device with direct GPIO manipulation and servo positioning.
  */
-
 #include <avr/io.h>
 #include "actuators.h"
 #include "gpio.h"

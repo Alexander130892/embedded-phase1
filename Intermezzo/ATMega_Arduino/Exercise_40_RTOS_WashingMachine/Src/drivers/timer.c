@@ -1,15 +1,15 @@
 /*
  * File:    timer.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    19-6-2026
  *
  * Description:
- *   This file implements a timer system for an AVR microcontroller,
- *   providing a hardware timer (Timer0) that increments a system tick
- *   counter via interrupts, and software timer functions that allow
- *   multiple independent timers to track elapsed time for buzzer, LED,
- *   UART, and button debounce operations. It also configures Timer1
- *   for PWM output at 500Hz with adjustable duty cycle.
+ *   This file implements a software timer system for an AVR
+ *   microcontroller using Timer0 interrupt to maintain a system tick
+ *   counter and provide timer management functions for various
+ *   application subsystems (LED, UART, phase, water, buzzer). The soft
+ *   timers track elapsed time by comparing current ticks against a
+ *   stored start time and duration.
  */
 #include <avr/io.h>
 #include <avr/interrupt.h>

@@ -1,12 +1,16 @@
 /*
  * File:    task.c
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    19-6-2026
  *
  * Description:
-
+ *   This file implements a real-time task scheduler for a washing
+ *   machine controller, managing periodic tasks like button input
+ *   detection, door/water sensor monitoring, LED status updates, and
+ *   serial command processing at different intervals (10–1000 ms). It
+ *   posts events to state machines (door and washing machine FSMs)
+ *   based on hardware inputs and commands received via UART.
  */
-
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
