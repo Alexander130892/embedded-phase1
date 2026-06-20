@@ -1,0 +1,4 @@
+libgpiod-cross/src/
+libgpiod-cross/install/
+*.o
+blink_led
