@@ -1,16 +1,15 @@
 /*
  * File:    blink_led.c
  * Author:  Alexander130892
- * Date:    20-6-2026
+ * Date:    21-6-2026
  *
  * Description:
- *   This program uses the libgpiod library to control an LED connected
- *   to GPIO pin 18, toggling it on and off every second in an infinite
- *   loop. It configures the GPIO chip, sets up the pin as an output,
- *   and then repeatedly drives it high and low with 1-second
- *   intervals.
+ *   This program uses the libgpiod library to control two LED outputs
+ *   on GPIO pins 18 and 23, toggling them on and off in a continuous
+ *   1-second blink cycle. It configures the GPIO chip, sets up the
+ *   pins as outputs, and then enters an infinite loop that alternates
+ *   the LED states with 1-second intervals.
  */
-
 #include <gpiod.h>
 #include <unistd.h>
 
