@@ -22,8 +22,8 @@ int main(void){
 
     struct gpiod_line_config * line_cfg = gpiod_line_config_new();
     // attach settings to offset 18...
-    const unsigned int offsets[1] = {18};
-    size_t num_offsets = 1;
+    const unsigned int offsets[2] = {18,23};
+    size_t num_offsets = 2;
     gpiod_line_config_add_line_settings(line_cfg, offsets, num_offsets, settings);
 
     struct gpiod_request_config * req_cfg = gpiod_request_config_new();
@@ -40,8 +40,10 @@ int main(void){
     // blink loop — only uses `request`
     while (1) {
         gpiod_line_request_set_value(request, 18, GPIOD_LINE_VALUE_ACTIVE);
+        gpiod_line_request_set_value(request, 23, GPIOD_LINE_VALUE_ACTIVE);
         sleep(1);
         gpiod_line_request_set_value(request, 18, GPIOD_LINE_VALUE_INACTIVE);
+        gpiod_line_request_set_value(request, 23, GPIOD_LINE_VALUE_INACTIVE);
         sleep(1);
     }
 
