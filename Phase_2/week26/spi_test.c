@@ -1,3 +1,16 @@
+/*
+ * File:    spi_test.c
+ * Author:  Alexander130892
+ * Date:    21-6-2026
+ *
+ * Description:
+ *   This program opens the SPI device `/dev/spidev0.0`, configures it
+ *   to SPI mode 0 at 500 kHz, and sends a read command to query the
+ *   WHOAMI register (0xD0) of a BMP280 sensor, printing the received
+ *   chip ID. It demonstrates basic SPI communication on Linux using
+ *   ioctl system calls.
+ */
+
 
 #include <stdint.h>
 #include <stdio.h>
