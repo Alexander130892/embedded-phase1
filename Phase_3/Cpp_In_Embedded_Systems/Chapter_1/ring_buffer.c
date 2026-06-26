@@ -1,3 +1,15 @@
+/*
+ * File:    ring_buffer.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This file implements a fixed-size circular ring buffer for
+ *   integers that automatically overwrites the oldest data when full,
+ *   and demonstrates its usage by pushing 10 values and then popping
+ *   and printing them in FIFO order.
+ */
+
 #include <stdio.h>
 
 #define BUFFER_SIZE 5
