@@ -33,18 +33,17 @@ typedef enum {
     EV_LIMIT_OPEN,
     EV_LIMIT_CLOSED,
     EV_COUNT
-} EventType;
+} event_type_t;
 
 typedef struct {
-    EventType type;
+    event_type_t type;
     int value;
-} Event;
+} event_t;
 
+extern event_t queue[EVENT_QUEUE_SIZE];
 
-extern Event queue[EVENT_QUEUE_SIZE];
-
-bool postEvent(Event event);
-bool getEvent(Event *event);
-void logEvent(Event event);
+bool postEvent(event_t event);
+bool getEvent(event_t *event);
+void logEvent(event_t event);
 
 #endif

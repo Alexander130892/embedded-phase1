@@ -231,28 +231,28 @@
 
 **Study tasks**
 - [x] R3-Linux Ch.1 — The elements of embedded Linux: toolchain, bootloader, kernel, root filesystem — the four artefacts
-- [ ] R3-Linux Ch.2 — Toolchains: native vs cross-compilation, sysroot, what `arm-linux-gnueabihf-gcc` is and why it differs from `arm-none-eabi-gcc`
-- [ ] R3-Linux Ch.3 — All about bootloaders: U-Boot basics, boot sequence on Raspberry Pi (GPU → bootcode.bin → kernel)
-- [ ] Understand the Pi's boot chain — contrast with STM32's vector table boot
-- [ ] Set up Raspberry Pi OS (Lite, no desktop) on Pi 4 or Pi 3 — headless via SSH
-- [ ] Verify cross-compiler on your host: compile a Hello World for ARM, SCP to Pi, run it
-- [ ] Set up `sshfs` or `rsync` workflow for fast host → Pi file transfer
-- [ ] Commit cross-compile Hello World to `week25/cross_hello/`
+- [x] R3-Linux Ch.2 — Toolchains: native vs cross-compilation, sysroot, what `arm-linux-gnueabihf-gcc` is and why it differs from `arm-none-eabi-gcc`
+- [x] R3-Linux Ch.3 — All about bootloaders: U-Boot basics, boot sequence on Raspberry Pi (GPU → bootcode.bin → kernel)
+- [x] Understand the Pi's boot chain — contrast with STM32's vector table boot
+- [x] Set up Raspberry Pi OS (Lite, no desktop) on Pi 4 or Pi 3 — headless via SSH
+- [x] Verify cross-compiler on your host: compile a Hello World for ARM, SCP to Pi, run it
+- [x] Set up `sshfs` or `rsync` workflow for fast host → Pi file transfer
+- [x] Commit cross-compile Hello World to `week25/cross_hello/`
 
 ---
 
 #### Week 26 — Linux Device Drivers Concepts + GPIO from Userspace
 > ~10 hrs | R3-Linux Ch. 9 + kernel docs
-
-- [ ] R3-Linux Ch.9 — Interfacing with device drivers: character devices, `/dev` nodes, `ioctl()`, `read()`/`write()`
-- [ ] Understand sysfs vs devfs vs `/proc` — know which to use for what
-- [ ] Study Linux GPIO interfaces: legacy sysfs (`/sys/class/gpio/`) vs modern `libgpiod` — use `libgpiod`
-- [ ] Study `/dev/spidev` and `/dev/i2c-*` userspace access — understand when userspace drivers are acceptable
-- [ ] Exercise: use `libgpiod` to blink an LED — `gpiod_get_value()`, `gpiod_set_value()`
-- [ ] Exercise: use `/dev/i2c-1` + `ioctl(I2C_SLAVE)` to read BMP280 from Pi userspace in C
-- [ ] Exercise: use `/dev/spidev0.0` to communicate with an SPI device from userspace in C
-- [ ] Compare userspace driver approach to your bare-metal STM32 register code — reflect on tradeoffs
-- [ ] Commit to `week26/linux_gpio_i2c_spi/`
+- [x] R3-Linux Ch.5 — Rootfile system - skim
+- [x] R3-Linux Ch.9 — Interfacing with device drivers: character devices, `/dev` nodes, `ioctl()`, `read()`/`write()`
+- [x] Understand sysfs vs devfs vs `/proc` — know which to use for what
+- [x] Study Linux GPIO interfaces: legacy sysfs (`/sys/class/gpio/`) vs modern `libgpiod` — use `libgpiod`
+- [x] Study `/dev/spidev` and `/dev/i2c-*` userspace access — understand when userspace drivers are acceptable
+- [x] Exercise: use `libgpiod` to blink an LED — `gpiod_get_value()`, `gpiod_set_value()`
+- [x] Exercise: use `/dev/i2c-1` + `ioctl(I2C_SLAVE)` to read BMP280 from Pi userspace in C
+- [x] Exercise: use `/dev/spidev0.0` to communicate with an SPI device from userspace in C
+- [x] Compare userspace driver approach to your bare-metal STM32 register code — reflect on tradeoffs
+- [x] Commit to `week26/linux_gpio_i2c_spi/`
 
 > 🏁 **M14 checkpoint:** GPIO, I2C, and SPI all exercised from Linux userspace in C.
 
@@ -261,13 +261,13 @@
 #### Week 27 — Device Tree Basics + Simple Kernel Module
 > ~10 hrs | R3-Linux Ch. 4, Ch. 11
 
-- [ ] R3-Linux Ch.4 — Configuring the kernel: `menuconfig`, kernel config options, what `CONFIG_` flags do
-- [ ] R3-Linux Ch.4 — Device Tree: what it is, why it replaced board files, `.dts` / `.dtsi` / `.dtb` relationship
-- [ ] Read the Pi's DT overlay system: understand `/boot/config.txt` overlay entries and what they expand to
-- [ ] R3-Linux Ch.11 — Writing a device driver: `module_init()`, `module_exit()`, `printk()`, `insmod`/`rmmod`/`lsmod`
-- [ ] Understand the difference between built-in and loadable modules (`.ko`)
-- [ ] Exercise: write a minimal "Hello, kernel" loadable module — verify with `dmesg`
-- [ ] Exercise: add a module parameter (`module_param()`) — pass a string at `insmod` time, print it with `printk()`
+- [x] R3-Linux Ch.4 — Configuring the kernel: `menuconfig`, kernel config options, what `CONFIG_` flags do
+- [x] R3-Linux Ch.4 — Device Tree: what it is, why it replaced board files, `.dts` / `.dtsi` / `.dtb` relationship
+- [x] Read the Pi's DT overlay system: understand `/boot/config.txt` overlay entries and what they expand to
+- [x] R3-Linux Ch.11 — Writing a device driver: `module_init()`, `module_exit()`, `printk()`, `insmod`/`rmmod`/`lsmod`
+- [x] Understand the difference between built-in and loadable modules (`.ko`)
+- [x] Exercise: write a minimal "Hello, kernel" loadable module — verify with `dmesg`
+- [x] Exercise: add a module parameter (`module_param()`) — pass a string at `insmod` time, print it with `printk()`
 - [ ] Exercise: write a character device module with `open()`, `read()`, `write()` file operations — expose a counter via `/dev/mydev`
 - [ ] Commit to `week27/kernel_module/`
 
@@ -276,7 +276,7 @@
 #### Week 28 — Linux Integration + Phase 2 Deliverable
 > ~10 hrs | Polish, cross-compile pipeline, documentation
 
-- [ ] Cross-compile your kernel module on the host for Pi target — verify it loads on Pi without recompiling on device
+- [x] Cross-compile your kernel module on the host for Pi target — verify it loads on Pi without recompiling on device
 - [ ] Exercise: build a small C application on the host that opens `/dev/mydev`, reads the counter, prints it — link the full pipeline
 - [ ] Exercise: write a simple init script (systemd `.service` unit) that `insmod`s your module at boot and starts your userspace app
 - [ ] Write `README.md` for the Linux block covering:
@@ -310,9 +310,9 @@
 | 22 | Memory Management + Stack Auditing | ✅ Done |
 | 23 | FreeRTOS Integration: Multi-sensor Logger | ✅ Done|
 | 24 | FreeRTOS Deliverable + Docs | ✅ Done |
-| 25 | Linux Basics + Raspberry Pi Setup | 🟡 In progress|
-| 26 | Linux GPIO/I2C/SPI from Userspace | 🔲 Not started |
-| 27 | Device Tree + Kernel Module | 🔲 Not started |
+| 25 | Linux Basics + Raspberry Pi Setup | ✅ Done|
+| 26 | Linux GPIO/I2C/SPI from Userspace | ✅ Done |
+| 27 | Device Tree + Kernel Module | 🟡 In progress|
 | 28 | Linux Integration + Phase 2 Deliverable | 🔲 Not started |
 
 > Update statuses to: `🟡 In progress` → `✅ Done`
