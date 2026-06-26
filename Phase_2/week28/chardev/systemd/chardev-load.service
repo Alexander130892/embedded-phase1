@@ -1,0 +1,12 @@
+[Unit]
+Description=Load chardev kernel module
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/insmod /home/avindeli/Github/Phase_2/week28/chardev/chardev.ko
+ExecStart=/home/avindeli/Github/Phase_2/week28/chardev/chardev-setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

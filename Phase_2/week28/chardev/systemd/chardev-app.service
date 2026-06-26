@@ -1,0 +1,13 @@
+[Unit]
+Description=Load Userspace program
+After=chardev-load.service
+Requires=chardev-load.service
+
+[Service]
+Type=oneshot
+
+ExecStart=/home/avindeli/Github/Phase_2/week28/chardev/user_program
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
