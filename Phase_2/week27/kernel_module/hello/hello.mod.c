@@ -1,3 +1,16 @@
+/*
+ * File:    hello.mod.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This is an auto-generated Linux kernel module metadata file that
+ *   defines the module's initialization structure, exported symbol
+ *   versions, and module information like name and dependencies. It
+ *   serves as the glue between the actual module code and the kernel's
+ *   module loading system.
+ */
+
 #include <linux/module.h>
 #include <linux/export-internal.h>
 #include <linux/compiler.h>

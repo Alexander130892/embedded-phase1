@@ -1,3 +1,16 @@
+/*
+ * File:    hello.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This is a simple Linux kernel module that prints initialization
+ *   and exit messages to the kernel log, accepting an optional string
+ *   parameter that defaults to "Hello there". The module demonstrates
+ *   basic kernel module structure with init/exit functions and module
+ *   metadata declarations.
+ */
+
 #include <linux/module.h>	/* Needed by all modules */
 #include <linux/kernel.h>	/* Needed for KERN_INFO */
 #include <linux/init.h>		/* Needed for the macros */

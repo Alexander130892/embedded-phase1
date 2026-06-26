@@ -1,1 +1,4 @@
-Phase_2/week26/spi_test.c
+Phase_2/week27/kernel_module/chardev/chardev.c
+Phase_2/week27/kernel_module/chardev/chardev.mod.c
+Phase_2/week27/kernel_module/hello/hello.c
+Phase_2/week27/kernel_module/hello/hello.mod.c

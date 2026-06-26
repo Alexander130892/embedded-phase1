@@ -1,3 +1,15 @@
+/*
+ * File:    chardev.mod.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This is a kernel module metadata file that defines module
+ *   initialization structures and symbol version information for a
+ *   character device driver, enabling the Linux kernel to properly
+ *   load, manage, and track dependencies for the compiled module.
+ */
+
 #include <linux/module.h>
 #include <linux/export-internal.h>
 #include <linux/compiler.h>
