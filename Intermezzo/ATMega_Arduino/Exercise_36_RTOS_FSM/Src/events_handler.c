@@ -1,3 +1,16 @@
+/*
+ * File:    events_handler.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This file implements an event dispatcher for an embedded appliance
+ *   (likely a washing machine) that routes hardware events like button
+ *   presses, door sensors, and timeouts to appropriate handlers, with
+ *   some events forwarded to a door finite state machine and others
+ *   controlling peripherals like a buzzer via UART output.
+ */
+
 // event_handler.c
 #include "events_handler.h"
 #include "timer.h"

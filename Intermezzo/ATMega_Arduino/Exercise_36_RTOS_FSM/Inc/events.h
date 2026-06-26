@@ -1,14 +1,13 @@
 /*
- * File:    task.h
+ * File:    events.h
  * Author:  Alexander130892
- * Date:    8-6-2026
+ * Date:    26-6-2026
  *
  * Description:
- *   This header file defines a task scheduling system with structures
- *   and function pointers for managing periodic tasks, while also
- *   declaring task functions for controlling LEDs (red, green, blue),
- *   a buzzer, buttons, and a system tick, along with a volatile flag
- *   for button state.
+ *   This header file defines an event queue system for a washing
+ *   machine controller, declaring event types (button presses,
+ *   door/water/motor states), a fixed-size queue, and functions to
+ *   post, retrieve, and log events.
  */
 #ifndef EVENTS_H
 #define EVENTS_H

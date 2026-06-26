@@ -1,4 +1,2 @@
-Phase_2/week27/kernel_module/chardev/chardev.c
-Phase_2/week27/kernel_module/chardev/chardev.mod.c
-Phase_2/week27/kernel_module/hello/hello.c
-Phase_2/week27/kernel_module/hello/hello.mod.c
+Intermezzo/ATMega_Arduino/Exercise_36_RTOS_FSM/Inc/events.h
+Intermezzo/ATMega_Arduino/Exercise_36_RTOS_FSM/Src/events_handler.c
