@@ -21,6 +21,14 @@ Release/
 *.hex
 *.lst
 
+# Kernel module build artifacts
+*.ko
+*.mod
+*.mod.c
+*.order
+*.symvers
+.*.cmd
+
 # CubeIDE workspace metadata
 .metadata/
 .settings/
