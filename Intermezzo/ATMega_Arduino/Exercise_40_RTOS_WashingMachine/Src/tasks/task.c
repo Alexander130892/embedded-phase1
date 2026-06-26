@@ -78,6 +78,13 @@ static void taskDoor(void) {
     }
     prev = current;
 }
+
+/* FEEDBACK:
+Met betrekking tot het vullen zou ik, denk ik, eerder  ' if(wm_fsm_get_state() == WM_FILLING)  ' overwegen in plaats van ...  
+if(current_level_ok && !prev_level_ok)
+... dan:
+postEvent(EV_WATER_LEVEL_OK);
+*/
 static void taskWater(void) {
     static bool prev_level_ok = false;
     bool current_level_ok = (adc_read(WATER_LEVEL_CH) >= WATER_LEVEL_THRESH);

@@ -268,8 +268,8 @@
 - [x] Understand the difference between built-in and loadable modules (`.ko`)
 - [x] Exercise: write a minimal "Hello, kernel" loadable module — verify with `dmesg`
 - [x] Exercise: add a module parameter (`module_param()`) — pass a string at `insmod` time, print it with `printk()`
-- [ ] Exercise: write a character device module with `open()`, `read()`, `write()` file operations — expose a counter via `/dev/mydev`
-- [ ] Commit to `week27/kernel_module/`
+- [x] Exercise: write a character device module with `open()`, `read()`, `write()` file operations — expose a counter via `/dev/mydev`
+- [x] Commit to `week27/kernel_module/`
 
 ---
 
@@ -277,8 +277,8 @@
 > ~10 hrs | Polish, cross-compile pipeline, documentation
 
 - [x] Cross-compile your kernel module on the host for Pi target — verify it loads on Pi without recompiling on device
-- [ ] Exercise: build a small C application on the host that opens `/dev/mydev`, reads the counter, prints it — link the full pipeline
-- [ ] Exercise: write a simple init script (systemd `.service` unit) that `insmod`s your module at boot and starts your userspace app
+- [x] Exercise: build a small C application on the host that opens `/dev/mydev`, reads the counter, prints it — link the full pipeline
+- [x] Exercise: write a simple init script (systemd `.service` unit) that `insmod`s your module at boot and starts your userspace app
 - [ ] Write `README.md` for the Linux block covering:
   - [ ] Cross-compile setup (host toolchain, target sysroot)
   - [ ] Module build and load instructions
