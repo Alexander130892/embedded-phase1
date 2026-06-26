@@ -1,3 +1,14 @@
+/*
+ * File:    chardev.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This is a Linux kernel character device driver that implements a
+ *   simple counter device; reading from it returns the current counter
+ *   value, while writing to it increments the counter.
+ */
+
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/fs.h>

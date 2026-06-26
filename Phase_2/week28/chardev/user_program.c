@@ -1,3 +1,16 @@
+/*
+ * File:    user_program.c
+ * Author:  Alexander130892
+ * Date:    26-6-2026
+ *
+ * Description:
+ *   This program opens a character device file at `/dev/mydev` in
+ *   read-only mode, repeatedly reads data from it in 64-byte chunks,
+ *   and prints the contents to standard output until EOF is reached.
+ *   It includes error handling for file operations and properly closes
+ *   the device when finished.
+ */
+
 #include <stdint.h>
 #include <stdio.h>
 #include <fcntl.h>
