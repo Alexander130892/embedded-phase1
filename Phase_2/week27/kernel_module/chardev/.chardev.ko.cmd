@@ -1,0 +1,1 @@
+savedcmd_chardev.ko := aarch64-linux-gnu-ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.18.34+rpt-rpi-v8/arch/arm64/module.lds -o chardev.ko chardev.o chardev.mod.o .module-common.o
