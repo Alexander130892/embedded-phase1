@@ -279,16 +279,16 @@
 - [x] Cross-compile your kernel module on the host for Pi target — verify it loads on Pi without recompiling on device
 - [x] Exercise: build a small C application on the host that opens `/dev/mydev`, reads the counter, prints it — link the full pipeline
 - [x] Exercise: write a simple init script (systemd `.service` unit) that `insmod`s your module at boot and starts your userspace app
-- [ ] Write `README.md` for the Linux block covering:
-  - [ ] Cross-compile setup (host toolchain, target sysroot)
-  - [ ] Module build and load instructions
-  - [ ] Device Tree overlay used (if any)
-  - [ ] Comparison table: bare-metal STM32 vs Linux userspace vs kernel driver — when to use each
-- [ ] Tag the repo: `git tag v1.0-phase2-linux`
-- [ ] Write a short Phase 2 retrospective in `NOTES.md`:
-  - [ ] What clicked, what was harder than expected
-  - [ ] How FreeRTOS changed how you think about sequencing work
-  - [ ] First impressions of Linux kernel space vs userspace vs bare-metal
+- [x] Write `README.md` for the Linux block covering:
+  - [x] Cross-compile setup (host toolchain, target sysroot)
+  - [x] Module build and load instructions
+  - [x] Device Tree overlay used (if any)
+  - [x] Comparison table: bare-metal STM32 vs Linux userspace vs kernel driver — when to use each
+- [x] Tag the repo: `git tag v1.0-phase2-linux`
+- [x] Write a short Phase 2 retrospective in `NOTES.md`:
+  - [x] What clicked, what was harder than expected
+  - [x] How FreeRTOS changed how you think about sequencing work
+  - [x] First impressions of Linux kernel space vs userspace vs bare-metal
 
 > 🏁 **M15 checkpoint:** Cross-compiled kernel module loading on Pi. Phase 2 complete. ✅
 
@@ -312,8 +312,8 @@
 | 24 | FreeRTOS Deliverable + Docs | ✅ Done |
 | 25 | Linux Basics + Raspberry Pi Setup | ✅ Done|
 | 26 | Linux GPIO/I2C/SPI from Userspace | ✅ Done |
-| 27 | Device Tree + Kernel Module | 🟡 In progress|
-| 28 | Linux Integration + Phase 2 Deliverable | 🔲 Not started |
+| 27 | Device Tree + Kernel Module | ✅ Done |
+| 28 | Linux Integration + Phase 2 Deliverable | ✅ Done|
 
 > Update statuses to: `🟡 In progress` → `✅ Done`
 
