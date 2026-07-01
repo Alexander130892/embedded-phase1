@@ -20,21 +20,21 @@
 > ~10 hrs | Mastering Embedded Linux Programming Ch. 6 (Simmonds) + Yocto Project docs
 
 **Study tasks**
-- [ ] Understand the Yocto Project vs OpenEmbedded distinction — Yocto is the umbrella, `bitbake` is the build engine, `poky` is the reference distribution
-- [ ] Understand the four key concepts: layers, recipes (`.bb`), machine configurations, and image targets
-- [ ] Read the Yocto Project Quick Build guide: [docs.yoctoproject.org/brief-yoctoprojectqs](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
-- [ ] Simmonds Ch.6 — Selecting a Build System: read the Yocto section; understand why Yocto is the industry standard despite its complexity
-- [ ] Understand `bitbake` workflow: `MACHINE`, `DISTRO`, `IMAGE_INSTALL`, `local.conf`, `bblayers.conf`
-- [ ] Set up build host: Ubuntu 22.04 VM on your Proxmox (or your existing Ubuntu 24.04 VM) with Yocto dependencies installed
-- [ ] Clone `poky` (Yocto reference distribution) and `meta-raspberrypi` layer
-- [ ] Configure `local.conf` for `MACHINE = "raspberrypi4-64"` and `DISTRO = "poky"`
-- [ ] Run `bitbake core-image-minimal` — expect a long first build (2–4 hrs), use the time to read
+- [x] Understand the Yocto Project vs OpenEmbedded distinction — Yocto is the umbrella, `bitbake` is the build engine, `poky` is the reference distribution
+- [x] Understand the four key concepts: layers, recipes (`.bb`), machine configurations, and image targets
+- [x] Read the Yocto Project Quick Build guide: [docs.yoctoproject.org/brief-yoctoprojectqs](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
+- [x] Simmonds Ch.6 — Selecting a Build System: read the Yocto section; understand why Yocto is the industry standard despite its complexity
+- [x] Understand `bitbake` workflow: `MACHINE`, `DISTRO`, `IMAGE_INSTALL`, `local.conf`, `bblayers.conf`
+- [x] Set up build host: Ubuntu 22.04 VM on your Proxmox (or your existing Ubuntu 24.04 VM) with Yocto dependencies installed
+- [x] Clone `poky` (Yocto reference distribution) and `meta-raspberrypi` layer
+- [x] Configure `local.conf` for `MACHINE = "raspberrypi4-64"` and `DISTRO = "poky"`
+- [x] Run `bitbake core-image-minimal` — expect a long first build (2–4 hrs), use the time to read
 
 **Exercises**
-- [ ] Flash the resulting `.wic` image to SD card; boot Pi and confirm SSH login
-- [ ] Identify the four build artefacts in `tmp/deploy/images/`: kernel, DTB, rootfs, bootloader
-- [ ] Explore the `tmp/work/` tree — understand where recipes unpack, patch, compile, and stage
-- [ ] Commit notes and `local.conf` / `bblayers.conf` to `week29/yocto_first_build/`
+- [x] Flash the resulting `.wic` image to SD card; boot Pi and confirm SSH login
+- [x] Identify the four build artefacts in `tmp/deploy/images/`: kernel, DTB, rootfs, bootloader
+- [x] Explore the `tmp/work/` tree — understand where recipes unpack, patch, compile, and stage
+- [x] Commit notes and `local.conf` / `bblayers.conf` to `week29/yocto_first_build/`
 
 > 🏁 **M16 checkpoint:** Yocto `core-image-minimal` boots on Pi 4B over SSH.
 
