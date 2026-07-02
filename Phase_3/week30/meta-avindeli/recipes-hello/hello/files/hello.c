@@ -1,12 +1,13 @@
 /*
  * File:    hello.c
  * Author:  Alexander130892
- * Date:    13-6-2026
+ * Date:    2-7-2026
  *
  * Description:
  *   This program prints a greeting message to standard output and
- *   exits successfully, and is intended to be compiled for the ARM
- *   64-bit (aarch64) architecture.
+ *   exits successfully. It is a simple test program designed to verify
+ *   that cross-compilation for the ARM 64-bit (aarch64) architecture
+ *   is working correctly.
  */
 #include <stdio.h>
 

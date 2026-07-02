@@ -1,2 +1,1 @@
-Intermezzo/ATMega_Arduino/Exercise_40_RTOS_WashingMachine/Src/tasks/task.c
-Phase_3/Cpp_In_Embedded_Systems/Chapter_1/ring_buffer.c
+Phase_3/week30/meta-avindeli/recipes-hello/hello/files/hello.c
