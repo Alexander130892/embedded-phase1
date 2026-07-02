@@ -43,16 +43,16 @@
 #### Week 30 — Layers, Recipes + Custom Image
 > ~10 hrs | Yocto Project docs + Simmonds Ch. 6–7
 
-- [ ] Understand the layer priority system — how `BBFILE_PRIORITY` and `LAYERVERSION` interact
-- [ ] Study a real recipe: pick `meta/recipes-core/busybox/busybox_*.bb` and trace the `do_fetch`, `do_configure`, `do_compile`, `do_install` task chain
-- [ ] Understand `DEPENDS` vs `RDEPENDS` — build-time vs runtime dependencies
-- [ ] Understand `inherit` directives: `cmake`, `autotools`, `pkgconfig` — know when each is used
-- [ ] Understand `IMAGE_INSTALL`, `CORE_IMAGE_EXTRA_INSTALL`, and how to extend a base image
-- [ ] Create your own layer: `meta-avindeli` — correct directory structure (`conf/layer.conf`, `recipes-*/`)
-- [ ] Write a recipe for a simple C program (use your Phase 2 cross-compile Hello World as the source)
-- [ ] Add the recipe to a custom image (`core-image-avindeli.bb`) and build it
-- [ ] Verify your program runs on the Pi after flashing
-- [ ] Commit to `week30/meta-avindeli/`
+- [x] Understand the layer priority system — how `BBFILE_PRIORITY` and `LAYERVERSION` interact
+- [x] Study a real recipe: pick `meta/recipes-core/busybox/busybox_*.bb` and trace the `do_fetch`, `do_configure`, `do_compile`, `do_install` task chain
+- [x] Understand `DEPENDS` vs `RDEPENDS` — build-time vs runtime dependencies
+- [x] Understand `inherit` directives: `cmake`, `autotools`, `pkgconfig` — know when each is used
+- [x] Understand `IMAGE_INSTALL`, `CORE_IMAGE_EXTRA_INSTALL`, and how to extend a base image
+- [x] Create your own layer: `meta-avindeli` — correct directory structure (`conf/layer.conf`, `recipes-*/`)
+- [x] Write a recipe for a simple C program (use your Phase 2 cross-compile Hello World as the source)
+- [x] Add the recipe to a custom image (`core-image-avindeli.bb`) and build it
+- [x] Verify your program runs on the Pi after flashing
+- [x] Commit to `week30/meta-avindeli/`
 
 ---
 
@@ -378,8 +378,8 @@
 
 | Week | Topic | Status |
 |------|-------|--------|
-| 29 | Yocto Concepts + First Build | ⬜ Not started |
-| 30 | Layers, Recipes + Custom Image | ⬜ Not started |
+| 29 | Yocto Concepts + First Build | ✅ Done` |
+| 30 | Layers, Recipes + Custom Image | ✅ Done`|
 | 31 | Kernel Module Recipe + DT Overlay | ⬜ Not started |
 | 32 | Yocto Deliverable + SDK | ⬜ Not started |
 | 33 | C++ Introduction + Dev Environment | ⬜ Not started |
