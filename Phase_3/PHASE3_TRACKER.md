@@ -59,9 +59,9 @@
 #### Week 31 — Kernel Module Recipe + Device Tree Overlay
 > ~10 hrs | Simmonds Ch. 11 (kernel modules in Yocto) + Yocto kernel docs
 
-- [ ] Understand `linux-yocto` vs `linux-raspberrypi` kernel recipe — which one `meta-raspberrypi` uses
-- [ ] Study `inherit kernel-module` and what `KERNEL_MODULE_AUTOLOAD` does
-- [ ] Understand how out-of-tree kernel module recipes work: `module_do_compile`, `module_do_install`
+- [x] Understand `linux-yocto` vs `linux-raspberrypi` kernel recipe — which one `meta-raspberrypi` uses
+- [x] Study `inherit kernel-module` and what `KERNEL_MODULE_AUTOLOAD` does
+- [x] Understand how out-of-tree kernel module recipes work: `module_do_compile`, `module_do_install`
 - [ ] Write a Yocto recipe for your Week 27 kernel module (`mydev` character device)
 - [ ] Verify the module loads automatically at boot via `KERNEL_MODULE_AUTOLOAD`
 - [ ] Understand Device Tree overlays in Yocto: `.bbappend` files on the kernel recipe, `RPI_KERNEL_DEVICETREE_OVERLAYS`
