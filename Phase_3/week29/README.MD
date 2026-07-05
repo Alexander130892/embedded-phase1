@@ -157,7 +157,6 @@ in Phase 2, now orchestrated automatically by bitbake across all 961 recipes.
 | AppArmor blocking user namespaces | `ERROR: User namespaces are not usable by BitBake` | `sysctl kernel.apparmor_restrict_unprivileged_userns=0` |
 | No SSH server in `core-image-minimal` | SSH hangs, nothing in manifest | `IMAGE_INSTALL:append = " dropbear"` in `local.conf` |
 | No UART console output | Serial adapter connected but silent | Add `console=serial0,115200` to `cmdline.txt`, `enable_uart=1` to `config.txt` |
-| `vc4-kms-v3d` overlay causing boot stall | Green light then stable red | Comment out `dtoverlay=vc4-kms-v3d` in `config.txt`, add `arm_64bit=1` |
 | No IP address after late cable plug-in | `udhcpc` gave up before cable connected | Run `udhcpc -i eth0` manually to renew lease |
 
 ## Lessons Learned
@@ -185,8 +184,4 @@ in Phase 2, now orchestrated automatically by bitbake across all 961 recipes.
   would require `IMAGE_INSTALL:append` additions and a rebuild for wireless connectivity.
 - Root password not set — production images should configure this via `extrausers` or a
   custom `passwd` file in a `meta-mycompany` layer.
-- `vc4-kms-v3d` overlay disabled manually on SD card — should be disabled in a proper
-  `local.conf` or machine config override for reproducibility.
-- `udhcpc` DHCP persistence — lease is not retained across reboots without a persistent
-  network config; investigate `systemd-networkd` or a static IP recipe for Week 30+.
 - Weeks 30–32: custom layers, custom recipes, `devtool`, kernel configuration with `menuconfig`
