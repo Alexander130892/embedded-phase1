@@ -1,3 +1,5 @@
+
+
 SUMMARY = "Hello World!, first yocto app"
 
 LICENSE = "CLOSED"
@@ -13,3 +15,4 @@ do_install () {
     install -d ${D}${bindir}
     install -m 0755 ${S}/hello ${D}${bindir}
 }
+
