@@ -1,15 +1,3 @@
-/*
- * File:    chardev.c
- * Author:  Alexander130892
- * Date:    12-7-2026
- *
- * Description:
- *   This is a Linux kernel character device driver that implements a
- *   simple counter device, allowing userspace to read the current
- *   counter value and increment it via write operations.
- */
-
-
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * File:    chardev.c

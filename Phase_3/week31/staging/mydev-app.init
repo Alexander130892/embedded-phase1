@@ -1,0 +1,26 @@
+SUMMARY = "Autoload user_program"
+
+LICENSE = "GPL-2.0-only"
+LIC_FILES_CHKSUM = "file://user_program.c;beginline=1;endline=1;md5=fcab174c20ea2e2bc0be64b493708266"
+
+SRC_URI = "file://user_program.c \
+           file://mydev-app.init \
+          "
+S = "${WORKDIR}"
+
+inherit update-rc.d
+
+INITSCRIPT_NAME = "mydev-app"
+INITSCRIPT_PARAMS = "defaults 99"
+
+do_compile () {
+    ${CC} ${CFLAGS} ${LDFLAGS} -o user_program user_program.c
+}
+
+do_install () {
+    install -d ${D}${bindir}
+    install -m 0755 ${WORKDIR}/user_program ${D}${bindir}
+
+    install -d ${D}${sysconfdir}/init.d
+    install -m 0755 ${WORKDIR}/mydev-app.init ${D}${sysconfdir}/init.d/mydev-app
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Create /dev/mydev character device node
+After=systemd-modules-load.service
+Before=mydev-app.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'mknod /dev/mydev c $(grep mydev /proc/devices | awk "{print \$1}") 0'
+ExecStartPost=/bin/chmod 666 /dev/mydev
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

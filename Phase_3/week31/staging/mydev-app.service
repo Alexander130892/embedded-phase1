@@ -1,0 +1,12 @@
+[Unit]
+Description=Run mydev userspace reader
+After=mydev-mknod.service
+Requires=mydev-mknod.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/user_program
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -62,12 +62,12 @@
 - [x] Understand `linux-yocto` vs `linux-raspberrypi` kernel recipe — which one `meta-raspberrypi` uses
 - [x] Study `inherit kernel-module` and what `KERNEL_MODULE_AUTOLOAD` does
 - [x] Understand how out-of-tree kernel module recipes work: `module_do_compile`, `module_do_install`
-- [ ] Write a Yocto recipe for your Week 27 kernel module (`mydev` character device)
-- [ ] Verify the module loads automatically at boot via `KERNEL_MODULE_AUTOLOAD`
-- [ ] Understand Device Tree overlays in Yocto: `.bbappend` files on the kernel recipe, `RPI_KERNEL_DEVICETREE_OVERLAYS`
-- [ ] Write a minimal DT overlay recipe that configures a GPIO pin — add it to your image
-- [ ] Write a systemd service recipe that starts your Week 28 userspace app at boot
-- [ ] Verify the full pipeline: boot → module auto-loads → service starts → `/dev/mydev` readable
+- [x] Write a Yocto recipe for your Week 27 kernel module (`mydev` character device)
+- [x] Verify the module loads automatically at boot via `KERNEL_MODULE_AUTOLOAD`
+- [x] Understand Device Tree overlays in Yocto: `.bbappend` files on the kernel recipe, `RPI_KERNEL_DEVICETREE_OVERLAYS`
+- [x] Write a minimal DT overlay recipe that configures a GPIO pin — add it to your image
+- [x] Write a systemd service recipe that starts your Week 28 userspace app at boot
+- [x] Verify the full pipeline: boot → module auto-loads → service starts → `/dev/mydev` readable
 - [ ] Commit to `week31/kernel_module_recipe/`
 
 > 🏁 **M17 checkpoint:** Custom Yocto image boots with your own kernel module and systemd service baked in.
