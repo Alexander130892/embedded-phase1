@@ -1,3 +1,14 @@
+/*
+ * File:    chardev.c
+ * Author:  Alexander130892
+ * Date:    15-7-2026
+ *
+ * Description:
+ *   This is a simple Linux kernel character device driver that
+ *   maintains a counter variable; reading from the device returns the
+ *   current counter value, and writing to it increments the counter.
+ */
+
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * File:    chardev.c

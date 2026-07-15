@@ -1,3 +1,16 @@
+/*
+ * File:    user_program.c
+ * Author:  Alexander130892
+ * Date:    15-7-2026
+ *
+ * Description:
+ *   This program opens a character device file at `/dev/mydev` in
+ *   read-only mode, repeatedly reads data from it in 64-byte chunks,
+ *   and prints the contents to standard output until EOF is reached.
+ *   It includes error handling for file open, read, and close
+ *   operations.
+ */
+
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * File:    user_program.c
