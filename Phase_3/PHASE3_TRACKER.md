@@ -68,7 +68,7 @@
 - [x] Write a minimal DT overlay recipe that configures a GPIO pin — add it to your image
 - [x] Write a systemd service recipe that starts your Week 28 userspace app at boot
 - [x] Verify the full pipeline: boot → module auto-loads → service starts → `/dev/mydev` readable
-- [ ] Commit to `week31/kernel_module_recipe/`
+- [x] Commit to `week31/kernel_module_recipe/`
 
 > 🏁 **M17 checkpoint:** Custom Yocto image boots with your own kernel module and systemd service baked in.
 
