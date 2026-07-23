@@ -81,16 +81,16 @@
 - [x] Install the generated SDK and verify cross-compilation of a C program against the target sysroot
 - [x] Understand `devtool`: `devtool add`, `devtool modify`, `devtool build` — the recommended workflow for recipe development
 - [x] Use `devtool` to modify your Hello World recipe and iterate without a full rebuild
-- [ ] Add `openssh-sftp-server` and `strace` to your image for debugging convenience
-- [ ] Enable `IMAGE_FEATURES += "debug-tweaks"` for development builds; understand why this must not go to production
-- [ ] Write `README.md` for the Yocto block covering:
-  - [ ] Host setup (distro, packages, poky version)
-  - [ ] Layer structure and what `meta-avindeli` contains
-  - [ ] Build instructions (`bitbake core-image-avindeli`)
-  - [ ] SDK generation and usage
-  - [ ] Comparison: manual cross-compile (Week 25) vs Yocto SDK vs Yocto image
-- [ ] Tag the repo: `git tag v1.0-phase3-yocto`
-- [ ] Write a short Yocto retrospective in `NOTES.md`
+- [x] Add `openssh-sftp-server` and `strace` to your image for debugging convenience
+- [x] Enable `IMAGE_FEATURES += "debug-tweaks"` for development builds; understand why this must not go to production
+- [x] Write `README.md` for the Yocto block covering:
+  - [x] Host setup (distro, packages, poky version)
+  - [x] Layer structure and what `meta-avindeli` contains
+  - [x] Build instructions (`bitbake core-image-avindeli`)
+  - [x] SDK generation and usage
+  - [x] Comparison: manual cross-compile (Week 25) vs Yocto SDK vs Yocto image
+- [x] Tag the repo: `git tag v1.0-phase3-yocto`
+- [x] Write a short Yocto retrospective in `NOTES.md`
 
 > 🏁 **M18 checkpoint:** Custom Yocto image + SDK generated. Yocto block complete. ✅
 
