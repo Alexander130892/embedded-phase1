@@ -1,0 +1,30 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          mydev-app
+# Required-Start:    $syslog
+# Required-Stop:     $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Create /dev/mydev and run user_program
+### END INIT INFO
+
+case "$1" in
+  start)
+    echo "Creating /dev/mydev"
+    MAJOR=$(grep mydev /proc/devices | awk '{print $1}')
+    if [ -n "$MAJOR" ] && [ ! -e /dev/mydev ]; then
+        mknod /dev/mydev c "$MAJOR" 0
+        chmod 666 /dev/mydev
+    fi
+    echo "Running user_program"
+    /usr/bin/user_program
+    ;;
+  stop)
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
