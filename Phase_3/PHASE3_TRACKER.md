@@ -77,10 +77,10 @@
 #### Week 32 — Yocto Deliverable + SDK
 > ~10 hrs | Yocto Project docs (SDK chapter) + polish
 
-- [ ] Understand the Yocto extensible SDK (eSDK): `bitbake -c populate_sdk <image>` — what it produces
-- [ ] Install the generated SDK and verify cross-compilation of a C program against the target sysroot
-- [ ] Understand `devtool`: `devtool add`, `devtool modify`, `devtool build` — the recommended workflow for recipe development
-- [ ] Use `devtool` to modify your Hello World recipe and iterate without a full rebuild
+- [x] Understand the Yocto extensible SDK (eSDK): `bitbake -c populate_sdk <image>` — what it produces
+- [x] Install the generated SDK and verify cross-compilation of a C program against the target sysroot
+- [x] Understand `devtool`: `devtool add`, `devtool modify`, `devtool build` — the recommended workflow for recipe development
+- [x] Use `devtool` to modify your Hello World recipe and iterate without a full rebuild
 - [ ] Add `openssh-sftp-server` and `strace` to your image for debugging convenience
 - [ ] Enable `IMAGE_FEATURES += "debug-tweaks"` for development builds; understand why this must not go to production
 - [ ] Write `README.md` for the Yocto block covering:
