@@ -1,0 +1,2 @@
+/opt/homebrew/bin/arm-none-eabi-ar qc libhello.a CMakeFiles/hello.dir/hello.cpp.obj
+/opt/homebrew/bin/arm-none-eabi-ranlib libhello.a

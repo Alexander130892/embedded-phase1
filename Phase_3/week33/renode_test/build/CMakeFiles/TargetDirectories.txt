@@ -1,0 +1,4 @@
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week33/renode_test/build/CMakeFiles/firmware.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week33/renode_test/build/CMakeFiles/flash.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week33/renode_test/build/CMakeFiles/edit_cache.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week33/renode_test/build/CMakeFiles/rebuild_cache.dir
