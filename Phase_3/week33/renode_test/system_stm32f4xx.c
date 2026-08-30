@@ -1,17 +1,17 @@
 /*
  * File:    system_stm32f4xx.c
  * Author:  Alexander130892
- * Date:    16-8-2026
+ * Date:    30-8-2026
  *
  * Description:
- *   This file initializes the STM32F4 microcontroller's clock system
- *   to run at 180 MHz using an external crystal oscillator and PLL,
- *   while also configuring bus prescalers and enabling the
- *   floating-point unit. The function sets flash memory latency before
- *   the clock switch to prevent instruction corruption and ensures
- *   proper timing constraints are met for all peripheral buses.
+ *   This file initializes the STM32F4xx microcontroller's clock system
+ *   to run at 180 MHz using the PLL, configures flash latency and bus
+ *   prescalers, and enables the floating-point unit. Notable behavior
+ *   includes setting flash wait states before increasing the clock
+ *   speed to prevent instruction corruption and configuring separate
+ *   prescalers for AHB, APB1, and APB2 buses to stay within their
+ *   maximum frequency limits.
  */
-
 #include <stdint.h>
 
 #define RCC_BASE        0x40023800UL
