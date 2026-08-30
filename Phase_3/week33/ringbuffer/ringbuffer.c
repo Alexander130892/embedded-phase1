@@ -1,16 +1,14 @@
 /*
  * File:    ringbuffer.c
  * Author:  Alexander130892
- * Date:    16-8-2026
+ * Date:    30-8-2026
  *
  * Description:
- *   This file implements a fixed-size circular buffer (ringbuffer)
- *   that stores 16 uint32_t values, with push/pop operations for
- *   adding and removing elements. When the buffer is full, new pushes
- *   overwrite the oldest data while maintaining a count of stored
- *   elements.
+ *   This file implements a fixed-size circular buffer that stores 16
+ *   uint32_t values, automatically overwriting the oldest data when
+ *   full. It provides push/pop operations, capacity checks, and
+ *   maintains read/write indices to manage the ring structure.
  */
-
 #include <stdint.h>
 #include <stdbool.h>
 
