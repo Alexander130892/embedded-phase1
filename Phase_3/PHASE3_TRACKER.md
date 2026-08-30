@@ -108,34 +108,34 @@
 > ~10 hrs | Book Ch. 1–4 (Part I)
 
 **Study tasks**
-- [ ] Ch.1 — Debunking myths: understand zero-cost abstractions; compare ring buffer in C vs C++ (the book's worked example); study `constexpr` basics
-- [ ] Ch.1 — Understand what bloat actually comes from: RTTI, exceptions, virtual dispatch — and how to measure it with `arm-none-eabi-size`
-- [ ] Ch.2 — Embedded constraints: determinism vs non-determinism, A-B timing measurements, why dynamic memory is problematic in safety-critical systems
-- [ ] Ch.2 — Understand `new`/`delete` in a freestanding environment and how to disable them
-- [ ] Ch.3 — Ecosystem overview: Compiler Explorer (godbolt.org), static analyzers, unit testing frameworks — bookmark these tools
-- [ ] Ch.4 — Set up a CMake-based C++ project for your STM32 target (cross-compiled with `arm-none-eabi-g++`)
-- [ ] Ch.4 — Understand the containerised dev environment approach in the book; decide whether to use Docker or your existing Proxmox Ubuntu VM
-- [ ] Revisit the Renode dev container issue from Phase 2 — the book uses Renode; check if Ch.4's setup resolves the glibc incompatibility
+- [x] Ch.1 — Debunking myths: understand zero-cost abstractions; compare ring buffer in C vs C++ (the book's worked example); study `constexpr` basics
+- [x] Ch.1 — Understand what bloat actually comes from: RTTI, exceptions, virtual dispatch — and how to measure it with `arm-none-eabi-size`
+- [x] Ch.2 — Embedded constraints: determinism vs non-determinism, A-B timing measurements, why dynamic memory is problematic in safety-critical systems
+- [x] Ch.2 — Understand `new`/`delete` in a freestanding environment and how to disable them
+- [x] Ch.3 — Ecosystem overview: Compiler Explorer (godbolt.org), static analyzers, unit testing frameworks — bookmark these tools
+- [x] Ch.4 — Set up a CMake-based C++ project for your STM32 target (cross-compiled with `arm-none-eabi-g++`)
+- [x] Ch.4 — Understand the containerised dev environment approach in the book; decide whether to use Docker or your existing Proxmox Ubuntu VM --> Native cross-compilation from Macbook
+- [x] Revisit the Renode dev container issue from Phase 2 — the book uses Renode; check if Ch.4's setup resolves the glibc incompatibility
 
 **Exercises**
-- [ ] Exercise: port your Phase 1/2 ring buffer from C to C++ — encapsulate in a class, make it a template, verify same `arm-none-eabi-size` output
-- [ ] Exercise: build and run the book's ring buffer example in Renode (or on hardware if Renode still fails)
-- [ ] Commit to `week33/cpp_intro/`
+- [x] Exercise: port your Phase 1/2 ring buffer from C to C++ — encapsulate in a class, make it a template, verify same `arm-none-eabi-size` output
+- [x] Exercise: build and run the book's ring buffer example in Renode (or on hardware if Renode still fails)
+- [x] Commit to `week33/cpp_intro/`
 
 ---
 
 #### Week 34 — C++ Fundamentals: Classes + Error Handling
 > ~10 hrs | Book Ch. 5–7 (Part II)
 
-- [ ] Ch.5 — Classes: encapsulation, constructors with member initializer lists, static members, `explicit` keyword — understand why `explicit` matters for single-argument constructors on embedded targets
-- [ ] Ch.5 — Inheritance and dynamic polymorphism: virtual functions, vtable layout (understand the memory cost), UML class diagrams — you covered this in Phase 2; deepen the model here
-- [ ] Ch.6 — Namespaces, function overloading, C interoperability (`extern "C"`), references vs pointers (revisit with C++ eyes), rvalue references and move semantics — understand why move semantics matter even without heap usage
-- [ ] Ch.6 — `std::array` vs raw arrays, `std::span` for buffer views — embedded-safe standard library
-- [ ] Ch.7 — Error handling without exceptions: error codes, asserts, `std::optional`, `std::expected` — adopt a consistent strategy for your own drivers
-- [ ] Study BARR-C equivalents in C++: when to use `const` vs `constexpr`, `[[nodiscard]]`, `[[maybe_unused]]`
+- [x] Ch.5 — Classes: encapsulation, constructors with member initializer lists, static members, `explicit` keyword — understand why `explicit` matters for single-argument constructors on embedded targets
+- [x] Ch.5 — Inheritance and dynamic polymorphism: virtual functions, vtable layout (understand the memory cost), UML class diagrams — you covered this in Phase 2; deepen the model here
+- [x] Ch.6 — Namespaces, function overloading, C interoperability (`extern "C"`), references vs pointers (revisit with C++ eyes), rvalue references and move semantics — understand why move semantics matter even without heap usage
+- [x] Ch.6 — `std::array` vs raw arrays, `std::span` for buffer views — embedded-safe standard library
+- [x] Ch.7 — Error handling without exceptions: error codes, asserts, `std::optional`, `std::expected` — adopt a consistent strategy for your own drivers
+- [x] Study BARR-C equivalents in C++: when to use `const` vs `constexpr`, `[[nodiscard]]`, `[[maybe_unused]]`
 
 **Exercises**
-- [ ] Exercise: rewrite your Phase 2 `bmp280.c/h` driver pair as a C++ class — `Bmp280` with `init()`, `read_temperature()`, `read_pressure()`; use `std::optional` for error returns
+- [x] Exercise: rewrite your Phase 2 `bmp280.c/h` driver pair as a C++ class — `Bmp280` with `init()`, `read_temperature()`, `read_pressure()`; use `std::optional` for error returns --> MPU6050 used instead
 - [ ] Exercise: write a `UartLogger` class that wraps your UART TX code — demonstrate `extern "C"` linkage for ISR handlers
 - [ ] Exercise: write unit tests for `Bmp280` using fff (fake I2C transport injected via constructor) — run on host, no hardware needed
 - [ ] Commit to `week34/cpp_fundamentals/`
@@ -380,8 +380,8 @@
 |------|-------|--------|
 | 29 | Yocto Concepts + First Build | ✅ Done` |
 | 30 | Layers, Recipes + Custom Image | ✅ Done`|
-| 31 | Kernel Module Recipe + DT Overlay | ⬜ Not started |
-| 32 | Yocto Deliverable + SDK | ⬜ Not started |
+| 31 | Kernel Module Recipe + DT Overlay | ✅ Done |
+| 32 | Yocto Deliverable + SDK | ✅ Done |
 | 33 | C++ Introduction + Dev Environment | ⬜ Not started |
 | 34 | C++ Fundamentals: Classes + Error Handling | ⬜ Not started |
 | 35 | Advanced C++: Templates + Compile-Time | ⬜ Not started |
