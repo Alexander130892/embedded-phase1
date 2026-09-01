@@ -1,4 +1,16 @@
 /*
+ * File:    fff.h
+ * Author:  Alexander130892
+ * Date:    1-9-2026
+ *
+ * Description:
+ *   This is a header file that provides a framework for creating
+ *   fake/mock functions in C for unit testing purposes, allowing tests
+ *   to track function calls, arguments, and return values with
+ *   configurable history limits.
+ */
+
+/*
 LICENSE
 
 The MIT License (MIT)
