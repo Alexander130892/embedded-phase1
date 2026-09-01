@@ -10,6 +10,8 @@ enum class ErrorCode : uint8_t {
     I2C_ARLO,
     I2C_TIMEOUT,
     I2C_AF,
+    UART_RB_FULL,
+    UART_RB_EMPTY,
     UNKNOWN_ERROR
 };
 
