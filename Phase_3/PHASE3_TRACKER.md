@@ -136,27 +136,27 @@
 
 **Exercises**
 - [x] Exercise: rewrite your Phase 2 `bmp280.c/h` driver pair as a C++ class — `Bmp280` with `init()`, `read_temperature()`, `read_pressure()`; use `std::optional` for error returns --> MPU6050 used instead
-- [ ] Exercise: write a `UartLogger` class that wraps your UART TX code — demonstrate `extern "C"` linkage for ISR handlers
-- [ ] Exercise: write unit tests for `Bmp280` using fff (fake I2C transport injected via constructor) — run on host, no hardware needed
-- [ ] Commit to `week34/cpp_fundamentals/`
+- [x] Exercise: write a `UartLogger` class that wraps your UART TX code — demonstrate `extern "C"` linkage for ISR handlers
+- [x] Exercise: write unit tests for `Bmp280` using fff (fake I2C transport injected via constructor) — run on host, no hardware needed
+- [x] Commit to `week34/cpp_fundamentals/`
 
 ---
 
 #### Week 35 — Advanced C++: Templates + Compile-Time
 > ~10 hrs | Book Ch. 8–11 (Part III)
 
-- [ ] Ch.8 — Templates: function templates, class templates, template specialisation, concepts (C++20) — understand what CRTP is and why it replaces virtual dispatch in embedded contexts
-- [ ] Ch.8 — Compile-time polymorphism via CRTP: no vtable, no runtime overhead — this is the embedded C++ pattern
-- [ ] Ch.9 — Type safety: implicit conversions (the dangerous ones), `static_cast` vs `reinterpret_cast`, type punning the correct way, strong types — apply to your sensor reading types (`Celsius`, `Pascal`, `Gauss`)
-- [ ] Ch.10 — Lambdas: capture modes, `std::function` (understand the heap allocation risk), the command pattern for GPIO interrupt managers
-- [ ] Ch.11 — `constexpr` and `consteval`: lookup table generation at compile time, MAC address parser — understand how to push computation to compile time to save Flash and cycles
-- [ ] Study embedded template library (ETL) — the book covers it in Ch.17; read that section now as context for what replaces `std::vector`, `std::string` in embedded C++
+- [x] Ch.8 — Templates: function templates, class templates, template specialisation, concepts (C++20) — understand what CRTP is and why it replaces virtual dispatch in embedded contexts
+- [x] Ch.8 — Compile-time polymorphism via CRTP: no vtable, no runtime overhead — this is the embedded C++ pattern
+- [x] Ch.9 — Type safety: implicit conversions (the dangerous ones), `static_cast` vs `reinterpret_cast`, type punning the correct way, strong types — apply to your sensor reading types (`Celsius`, `Pascal`, `Gauss`)
+- [x] Ch.10 — Lambdas: capture modes, `std::function` (understand the heap allocation risk), the command pattern for GPIO interrupt managers
+- [x] Ch.11 — `constexpr` and `consteval`: lookup table generation at compile time, MAC address parser — understand how to push computation to compile time to save Flash and cycles
+
 
 **Exercises**
-- [ ] Exercise: implement a type-safe `SensorReading<Unit>` template — `SensorReading<Celsius>` and `SensorReading<Pascal>` are distinct types; no accidental mixing
-- [ ] Exercise: generate a sine lookup table at compile time using `constexpr` — verify it lands in Flash (`.rodata`), not RAM, with `arm-none-eabi-objdump`
-- [ ] Exercise: refactor your UART command dispatch (Phase 1 function pointer table) using CRTP or lambdas — compare generated code size
-- [ ] Commit to `week35/cpp_advanced/`
+- [x] Exercise: implement a type-safe `SensorReading<Unit>` template — `SensorReading<Celsius>` and `SensorReading<Pascal>` are distinct types; no accidental mixing
+- [x] Exercise: generate a sine lookup table at compile time using `constexpr` — verify it lands in Flash (`.rodata`), not RAM, with `arm-none-eabi-objdump`
+- [x] Exercise: refactor your UART command dispatch (Phase 1 function pointer table) using CRTP or lambdas — compare generated code size
+- [x] Commit to `week35/cpp_advanced/`
 
 ---
 
@@ -382,8 +382,8 @@
 | 30 | Layers, Recipes + Custom Image | ✅ Done`|
 | 31 | Kernel Module Recipe + DT Overlay | ✅ Done |
 | 32 | Yocto Deliverable + SDK | ✅ Done |
-| 33 | C++ Introduction + Dev Environment | ⬜ Not started |
-| 34 | C++ Fundamentals: Classes + Error Handling | ⬜ Not started |
+| 33 | C++ Introduction + Dev Environment | ✅ Done |
+| 34 | C++ Fundamentals: Classes + Error Handling | ✅ Done |
 | 35 | Advanced C++: Templates + Compile-Time | ⬜ Not started |
 | 36 | Applied C++: HAL, Patterns + FSM | ⬜ Not started |
 | 37 | C++ Deliverable + Integration | ⬜ Not started |
