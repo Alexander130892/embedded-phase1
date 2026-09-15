@@ -166,16 +166,19 @@
 - [ ] Ch.12 — Writing a C++ HAL: memory-mapped peripherals as C++ types, type-safe bitfield access — model your STM32 GPIO registers as C++ structs
 - [ ] Ch.13 — Wrapping C libraries: using your existing C sensor drivers (`bmp280.c`, `mpu6050.c`) safely from C++ code using RAII wrappers; adapter pattern for UART interface
 - [ ] Ch.14 — Sequencer pattern: super-loop enhanced with a task sequencer — understand when this is preferable to FreeRTOS for simpler systems
-- [ ] Ch.15 — Observer pattern: runtime vs compile-time implementations; variadic templates for compile-time observer lists — apply to sensor data publishing
+- [ ] Ch.15 — Observer pattern: **runtime version only** (virtual interface, `Bmp280` holds a list of observer pointers) — apply to sensor data publishing. *Compile-time/variadic-template observer lists deferred* — same tier of template metaprogramming as Week 35's CRTP/constexpr work; revisit as a standalone session later, not bundled into an already-full week
 - [ ] Ch.16 — Finite State Machines in C++: the simple switch-based FSM, then the State pattern, then Boost.SML mention — implement at least the simple and State-pattern versions
-- [ ] Ch.17 — Libraries: ETL fixed-size containers, `etl::delegate` as `std::function` replacement; skim Pigweed for awareness
+- [ ] Ch.17 — Libraries: skim only — ETL fixed-size containers, `etl::delegate` as `std::function` replacement; skim Pigweed for awareness. No deep-dive this week.
 - [ ] Ch.18 — SOLID principles applied to embedded: SRP, OCP, DIP — these are what senior engineers look for in code review
 
 **Exercises**
 - [ ] Exercise: implement a `GpioPin` C++ class that wraps your bare-metal GPIO register code — type-safe, no runtime overhead, verified with `arm-none-eabi-size`
 - [ ] Exercise: implement a BLE connection FSM (from the book's example) — state diagram first, then switch-based, then State pattern; compare code readability and size
-- [ ] Exercise: write an Observer-pattern sensor publisher — `Bmp280` notifies `UartLogger` and a `LedIndicator` without knowing about them
+- [ ] Exercise: write an Observer-pattern sensor publisher (runtime/virtual version) — `Bmp280` notifies `UartLogger` and a `LedIndicator` without knowing about them
 - [ ] Commit to `week36/cpp_applied/`
+
+**Deferred to a later, standalone session**
+- [ ] Compile-time Observer via variadic templates — do this once Week 35's template material has settled, not stacked on top of a HAL-heavy week
 
 ---
 
