@@ -1,3 +1,14 @@
+/*
+ * File:    main.c
+ * Author:  Alexander130892
+ * Date:    27-9-2026
+ *
+ * Description:
+ *   This file configures and controls GPIO pin PA5 on an STM32F446RE
+ *   microcontroller, providing functions to initialize it as a digital
+ *   output and toggle it high or low.
+ */
+
 #include <stdint.h>
 #include "../common/stm32f446re.h"
 
