@@ -172,7 +172,7 @@
 - [x] Ch.18 — SOLID principles applied to embedded: SRP, OCP, DIP — these are what senior engineers look for in code review
 
 **Exercises**
-- [ ] Exercise: implement a `GpioPin` C++ class that wraps your bare-metal GPIO register code — type-safe, no runtime overhead, verified with `arm-none-eabi-size`
+- [x] Exercise: implement a `GpioPin` C++ class that wraps your bare-metal GPIO register code — type-safe, no runtime overhead, verified with `arm-none-eabi-size`
 - [ ] Exercise: implement a BLE connection FSM (from the book's example) — state diagram first, then switch-based, then State pattern; compare code readability and size
 - [ ] Exercise: write an Observer-pattern sensor publisher (runtime/virtual version) — `Bmp280` notifies `UartLogger` and a `LedIndicator` without knowing about them
 - [ ] Commit to `week36/cpp_applied/`
