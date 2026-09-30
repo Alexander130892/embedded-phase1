@@ -49,6 +49,51 @@ Register tags (`ModerTag`, `OtyperTag`, `OspeedrTag`, `PupdrTag`) carry only
 `static constexpr uint32_t width`, keeping the mask formula generic and
 self-consistent — no per-tag hardcoded mask to get out of sync with width.
 
+## Architecture — BLE connection FSM (Ch.16, built and verified this session)
+
+Same transition table implemented two ways:
+
+```
+IDLE          -- StartAdvertising --> ADVERTISING
+ADVERTISING   -- ConnectionReq    --> CONNECTING
+CONNECTING    -- ConnectionAck    --> CONNECTED
+CONNECTING    -- TimeOut          --> DISCONNECTING
+CONNECTED     -- LinkLost         --> DISCONNECTING
+DISCONNECTING -- Disconnect       --> IDLE
+(any other event in a given state: ignored, state unchanged)
+```
+
+**Switch-based** (`fsm_switch/`): one `enum class BleState` member, one
+`handle_event()` with a `switch(state_)` and an `if`/`else if` per valid event
+in that state, unconditional `break` after each case body.
+
+**State pattern** (`fsm_state_pattern/`): abstract `BleState` with a pure-virtual
+`on_event(BleEvent) -> BleState*`; five concrete classes (`Idle`, `Advertising`,
+`Connecting`, `Connected`, `Disconnecting`), each a static global instance;
+`BleConnection` holds `BleState* current_` and does `current_ = current_->on_event(ev)`.
+
+## Architecture — Observer sensor publisher (Ch.15, built and verified this session)
+
+```
+Bmp280
+    │  observers_: std::array<ISensorObserver*, MaxObservers>   (no heap, per Week 33)
+    │  count_: size_t
+    │
+    ├── attach(obs) ──► bounds-checked append, returns false past MaxObservers
+    │
+    └── poll() ───────► update reading, then for i in [0, count_): observers_[i]->on_data(data)
+
+ISensorObserver (abstract)
+    virtual on_data(const Bmp280Data&) = 0
+
+UartLogger : ISensorObserver     LedIndicator : ISensorObserver
+    on_data() -> printf log line     on_data() -> threshold check, LED ON/OFF
+```
+
+`Bmp280` never names `UartLogger` or `LedIndicator` anywhere in its own source —
+verified by running with both attached and confirming each fires independently
+on every `poll()`, from a single shared `Bmp280Data` value.
+
 ## Key design decisions
 
 **Compile-time template parameters over runtime members.** `GpioPin<PortBase, Pin>`
@@ -75,6 +120,25 @@ precisely, this caught the actual gap between `BSRR` (0x18) and `AFRL` (0x20): `
 at 0x1C had been omitted, which would have silently misaligned `AFRL`/`AFRH` by 4 bytes
 with no compiler warning. This is exactly the struct-padding hazard the chapter opens
 with — `offsetof` static_asserts turn a silent runtime corruption into a build failure.
+
+**Switch-based over State pattern for this FSM's error surface.** State pattern
+structurally eliminates cross-case fallthrough (each `on_event()` is its own
+function — nothing to "fall into"), a bug class actually hit and fixed in the
+switch version during this session. Neither design catches "wrote the wrong
+event/target pair by hand" — that error class was hit in the State pattern
+version too, independent of the mechanism. Chose State pattern for this FSM
+specifically because the byte cost (196 → 556 bytes text, +20 bytes data for
+vtable-pointer init) is immaterial at this call frequency (connection-state
+changes, not a hot loop) and it removes a bug class already demonstrated to be
+easy to hit by hand.
+
+**Fixed-capacity `std::array` for the observer list, not `std::vector`.** Consistent
+with Week 33's no-heap discipline — `attach()` bounds-checks against `MaxObservers`
+and returns `false` rather than growing, so there's no allocation anywhere in
+`Bmp280`'s lifetime. `virtual on_data()` dispatch itself is accepted deliberately:
+`poll()` fires at sensor-sample rate, not in a hot loop, so the vtable indirection
+is immaterial versus the decoupling it buys (new observer types addable with zero
+changes to `Bmp280`).
 
 ## Lessons learned
 
@@ -106,18 +170,53 @@ with — `offsetof` static_asserts turn a silent runtime corruption into a build
   and shape as the hand-written C macro baseline. `BSRR`-based `high()`/`low()` are
   additionally *smaller* than the C baseline's `ODR` read-modify-write — 52 bytes total
   vs. 76 for the C baseline (`arm-none-eabi-size`).
+- Switch-based FSM: a `case` body's `if` block with no `break` outside it falls
+  through into the next `case` unconditionally on no-match — hit this with
+  `Idle`'s handler falling through into `Advertising`'s condition check when an
+  invalid event arrived, silently transitioning through two states instead of
+  correctly staying put. Fix: every `case` needs an unconditional `break` reached
+  regardless of whether its `if` matched, not nested inside the `if`.
+- State pattern: transcribed three transitions wrong against my own table on
+  first pass (`Connecting`'s `TimeOut` target, and `Connected`/`Disconnecting`'s
+  trigger events swapped with each other) — all valid `BleEvent` enumerators, so
+  the compiler accepted all of it silently. Confirms the State pattern adds no
+  compile-time exhaustiveness/correctness guarantee over switch — it only
+  removes the fallthrough failure mode specifically, not hand-transcription
+  errors in general.
+- Native `g++` (not `arm-none-eabi-g++`) used to verify FSM logic with real
+  `printf` output, since the FSM touches no hardware registers — cross-compiled
+  separately, `.o`-only (no link step), purely for the `arm-none-eabi-size`
+  comparison between the two designs.
+- Observer: `Bmp280` was initially defined before `ISensorObserver` in the file,
+  even though `Bmp280` references `ISensorObserver*` as a member type — same
+  "must be declared before referenced" constraint as the FSM's state classes,
+  just missed here since there was no circular reference forcing an out-of-line
+  split, only a straight reordering (`ISensorObserver` moved above `Bmp280`).
+- Observer: range-`for` over the full `std::array<ISensorObserver*, MaxObservers>`
+  instead of indexing `0..count_` would visit unused (null) slots and call
+  through a null pointer — caught before running, fixed to an indexed loop
+  bounded by `count_`.
+- Observer: `observer.on_data(&fake_data)` had two separate mistakes at once —
+  `.` instead of `->` on a pointer, and passing `&fake_data` (a pointer) where
+  `on_data(const Bmp280Data&)` expects a reference (no `&` needed at the call
+  site; a reference binds directly to the object).
 
 ## Open items
 
 - Ch.12 exercise (`GpioPin`) complete and verified; `OSPEEDR`/`PUPDR` wrapper methods
   on `GpioPin` follow the same established `RegField` pattern and were left for the
   exercise write-up rather than walked through line-by-line.
-- Ch.13 (RAII wrapper for `bmp280.c`/`mpu6050.c`, SPI adapter), Ch.14 (sequencer), Ch.15
-  (Observer sensor publisher), Ch.16 (BLE FSM, switch-based + State pattern) — theory
-  fully covered Socratically this session; implementation not yet started.
+- Ch.16 exercise (BLE FSM, both switch-based and State pattern) complete and
+  verified — identical behavior confirmed via matching test-sequence output;
+  code-size tradeoff measured and a deliberate choice made (State pattern).
+- Ch.15 exercise (Observer sensor publisher) complete and verified — `UartLogger`
+  and `LedIndicator` both fire independently from `Bmp280::poll()` with neither
+  aware of the other, and `Bmp280` names neither concrete type anywhere.
+- Ch.13 (RAII wrapper for `bmp280.c`/`mpu6050.c`, SPI adapter), Ch.14 (sequencer)
+  — theory fully covered Socratically this session; implementation not yet started.
 - Ch.17 (ETL, `etl::delegate`, Pigweed) — skim-only per plan, no implementation.
 - Compile-time Observer via variadic templates — explicitly deferred to a standalone
   session, not part of Week 36.
 - CMake not yet set up for `week36/cpp_applied/`; built so far via direct
-  `arm-none-eabi-g++` invocations. Decide before commit whether to wire in CMake to
-  match Week 33's toolchain, or keep this block's exercises single-file.
+  `arm-none-eabi-g++`/`g++` invocations. Decide before commit whether to wire in
+  CMake to match Week 33's toolchain, or keep this block's exercises single-file.

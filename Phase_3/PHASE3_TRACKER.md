@@ -173,9 +173,9 @@
 
 **Exercises**
 - [x] Exercise: implement a `GpioPin` C++ class that wraps your bare-metal GPIO register code — type-safe, no runtime overhead, verified with `arm-none-eabi-size`
-- [ ] Exercise: implement a BLE connection FSM (from the book's example) — state diagram first, then switch-based, then State pattern; compare code readability and size
-- [ ] Exercise: write an Observer-pattern sensor publisher (runtime/virtual version) — `Bmp280` notifies `UartLogger` and a `LedIndicator` without knowing about them
-- [ ] Commit to `week36/cpp_applied/`
+- [x] Exercise: implement a BLE connection FSM (from the book's example) — state diagram first, then switch-based, then State pattern; compare code readability and size
+- [x] Exercise: write an Observer-pattern sensor publisher (runtime/virtual version) — `Bmp280` notifies `UartLogger` and a `LedIndicator` without knowing about them
+- [x] Commit to `week36/cpp_applied/`
 
 **Deferred to a later, standalone session**
 - [ ] Compile-time Observer via variadic templates — do this once Week 35's template material has settled, not stacked on top of a HAL-heavy week
@@ -387,9 +387,9 @@
 | 32 | Yocto Deliverable + SDK | ✅ Done |
 | 33 | C++ Introduction + Dev Environment | ✅ Done |
 | 34 | C++ Fundamentals: Classes + Error Handling | ✅ Done |
-| 35 | Advanced C++: Templates + Compile-Time | ⬜ Not started |
-| 36 | Applied C++: HAL, Patterns + FSM | ⬜ Not started |
-| 37 | C++ Deliverable + Integration | ⬜ Not started |
+| 35 | Advanced C++: Templates + Compile-Time | ✅ Done  |
+| 36 | Applied C++: HAL, Patterns + FSM | ✅ Done |
+| 37 | C++ Deliverable + Integration | 🟡 In progress |
 | 38 | Rust Exploration Sprint | ⬜ Not started |
 | 39 | Git for Teams | ⬜ Not started |
 | 40 | CI/CD: GitHub Actions | ⬜ Not started |
