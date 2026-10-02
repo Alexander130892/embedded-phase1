@@ -1,3 +1,16 @@
+/*
+ * File:    unity_internals.h
+ * Author:  Alexander130892
+ * Date:    2-10-2026
+ *
+ * Description:
+ *   This file provides internal infrastructure and compiler
+ *   compatibility definitions for the Unity C testing framework,
+ *   including conditional inclusion of standard headers,
+ *   cross-compiler support for function attributes (particularly
+ *   `noreturn`), and auto-detection of integer type widths.
+ */
+
 /* =========================================================================
     Unity - A Test Framework for C
     ThrowTheSwitch.org

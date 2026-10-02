@@ -1,3 +1,17 @@
+/*
+ * File:    CMakeCCompilerId.c
+ * Author:  Alexander130892
+ * Date:    2-10-2026
+ *
+ * Description:
+ *   This file is a CMake compiler identification header that detects
+ *   and extracts version information from various C compilers by
+ *   examining compiler-specific predefined macros. It serves as part
+ *   of CMake's cross-platform build system to identify which C
+ *   compiler is being used and extract its version details for
+ *   compatibility checking and configuration purposes.
+ */
+
 #ifdef __cplusplus
 # error "A C++ compiler has been selected for C."
 #endif

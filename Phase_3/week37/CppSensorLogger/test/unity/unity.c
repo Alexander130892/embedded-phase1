@@ -1,3 +1,15 @@
+/*
+ * File:    unity.c
+ * Author:  Alexander130892
+ * Date:    2-10-2026
+ *
+ * Description:
+ *   Unity.c is the core implementation file for Unity, a lightweight
+ *   unit testing framework for C that provides assertion functions,
+ *   test result tracking, and formatted output for test execution and
+ *   reporting.
+ */
+
 /* =========================================================================
     Unity - A Test Framework for C
     ThrowTheSwitch.org
