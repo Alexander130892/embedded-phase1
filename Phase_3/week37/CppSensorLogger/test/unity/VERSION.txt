@@ -1,0 +1,4 @@
+Unity — vendored copy of src/unity.c, unity.h, unity_internals.h
+Source: https://github.com/ThrowTheSwitch/Unity
+Commit: 2b80d1a357271b20f15c9f2573ddab164a626132
+Date:   2026-09-10

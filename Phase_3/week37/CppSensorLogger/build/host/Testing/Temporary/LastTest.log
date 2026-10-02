@@ -1,0 +1,36 @@
+Start testing: Oct 02 10:30 CEST
+----------------------------------------------------------
+1/1 Testing: fixed_format_test
+1/1 Test: fixed_format_test
+Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_fixed_format"
+Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
+"fixed_format_test" start time: Oct 02 10:30 CEST
+Output:
+----------------------------------------------------------
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:80:test_zero:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:81:test_positive:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:82:test_no_fraction_digits:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:84:test_negative:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:85:test_negative_with_zero_integer_part:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:86:test_negative_whole:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:88:test_int32_min:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:89:test_int32_max:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:90:test_max_frac_digits:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:92:test_cap_exact_fit:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:93:test_cap_too_small_returns_zero_and_empty_string:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:94:test_cap_zero_writes_nothing:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:95:test_null_buffer_returns_zero:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:97:test_frac_digits_too_large:PASS
+
+-----------------------
+14 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"fixed_format_test" end time: Oct 02 10:30 CEST
+"fixed_format_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 02 10:30 CEST

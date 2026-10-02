@@ -1,0 +1,2 @@
+/opt/homebrew/bin/arm-none-eabi-ar qc libfixed_format.a CMakeFiles/fixed_format.dir/Src/fixed_format.cpp.obj
+/opt/homebrew/bin/arm-none-eabi-ranlib libfixed_format.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfixed_format.a CMakeFiles/fixed_format.dir/Src/fixed_format.cpp.o
+/usr/bin/ranlib libfixed_format.a

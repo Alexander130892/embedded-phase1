@@ -1,0 +1,5 @@
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size/CMakeFiles/fixed_format.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size/CMakeFiles/firmware.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size/CMakeFiles/test.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size/CMakeFiles/edit_cache.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size/CMakeFiles/rebuild_cache.dir
