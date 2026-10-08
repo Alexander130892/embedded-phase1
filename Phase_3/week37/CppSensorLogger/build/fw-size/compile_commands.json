@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-gcc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Os -DNDEBUG -o CMakeFiles/firmware.dir/Startup/startup_stm32f446retx.s.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Startup/startup_stm32f446retx.s",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Startup/startup_stm32f446retx.s",
+  "output": "CMakeFiles/firmware.dir/Startup/startup_stm32f446retx.s.obj"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-gcc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -ffunction-sections -fdata-sections -Os -DNDEBUG -std=gnu11 -o CMakeFiles/firmware.dir/Src/syscalls.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/syscalls.c",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/syscalls.c",
+  "output": "CMakeFiles/firmware.dir/Src/syscalls.c.obj"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-gcc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -ffunction-sections -fdata-sections -Os -DNDEBUG -std=gnu11 -o CMakeFiles/firmware.dir/Src/sysmem.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/sysmem.c",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/sysmem.c",
+  "output": "CMakeFiles/firmware.dir/Src/sysmem.c.obj"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-gcc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -ffunction-sections -fdata-sections -Os -DNDEBUG -std=gnu11 -o CMakeFiles/firmware.dir/Src/systick.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/systick.c",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/systick.c",
+  "output": "CMakeFiles/firmware.dir/Src/systick.c.obj"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-g++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-threadsafe-statics -Os -DNDEBUG -std=c++20 -o CMakeFiles/firmware.dir/Src/uart.cpp.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp",
+  "output": "CMakeFiles/firmware.dir/Src/uart.cpp.obj"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw-size",
+  "command": "/opt/homebrew/bin/arm-none-eabi-g++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-threadsafe-statics -Os -DNDEBUG -std=c++20 -o CMakeFiles/firmware.dir/Src/main.cpp.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp",
+  "output": "CMakeFiles/firmware.dir/Src/main.cpp.obj"
+}
+]

@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity
 
-C_FLAGSarm64 = -g -arch arm64
+C_FLAGSarm64 = -g -std=gnu11 -arch arm64
 
-C_FLAGS = -g -arch arm64
+C_FLAGS = -g -std=gnu11 -arch arm64
 

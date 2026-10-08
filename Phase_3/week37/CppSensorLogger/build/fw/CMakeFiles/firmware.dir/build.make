@@ -127,10 +127,24 @@ CMakeFiles/firmware.dir/Src/systick.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/Src/systick.c.s"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/systick.c -o CMakeFiles/firmware.dir/Src/systick.c.s
 
+CMakeFiles/firmware.dir/Src/uart.cpp.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/Src/uart.cpp.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp
+CMakeFiles/firmware.dir/Src/uart.cpp.obj: CMakeFiles/firmware.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/firmware.dir/Src/uart.cpp.obj"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/uart.cpp.obj -MF CMakeFiles/firmware.dir/Src/uart.cpp.obj.d -o CMakeFiles/firmware.dir/Src/uart.cpp.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp
+
+CMakeFiles/firmware.dir/Src/uart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/firmware.dir/Src/uart.cpp.i"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp > CMakeFiles/firmware.dir/Src/uart.cpp.i
+
+CMakeFiles/firmware.dir/Src/uart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/firmware.dir/Src/uart.cpp.s"
+	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/uart.cpp -o CMakeFiles/firmware.dir/Src/uart.cpp.s
+
 CMakeFiles/firmware.dir/Src/main.cpp.obj: CMakeFiles/firmware.dir/flags.make
 CMakeFiles/firmware.dir/Src/main.cpp.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp
 CMakeFiles/firmware.dir/Src/main.cpp.obj: CMakeFiles/firmware.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/firmware.dir/Src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/firmware.dir/Src/main.cpp.obj"
 	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/main.cpp.obj -MF CMakeFiles/firmware.dir/Src/main.cpp.obj.d -o CMakeFiles/firmware.dir/Src/main.cpp.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp
 
 CMakeFiles/firmware.dir/Src/main.cpp.i: cmake_force
@@ -147,6 +161,7 @@ firmware_OBJECTS = \
 "CMakeFiles/firmware.dir/Src/syscalls.c.obj" \
 "CMakeFiles/firmware.dir/Src/sysmem.c.obj" \
 "CMakeFiles/firmware.dir/Src/systick.c.obj" \
+"CMakeFiles/firmware.dir/Src/uart.cpp.obj" \
 "CMakeFiles/firmware.dir/Src/main.cpp.obj"
 
 # External object files for target firmware
@@ -156,11 +171,12 @@ firmware.elf: CMakeFiles/firmware.dir/Startup/startup_stm32f446retx.s.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/syscalls.c.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/sysmem.c.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/systick.c.obj
+firmware.elf: CMakeFiles/firmware.dir/Src/uart.cpp.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/main.cpp.obj
 firmware.elf: CMakeFiles/firmware.dir/build.make
 firmware.elf: libfixed_format.a
 firmware.elf: CMakeFiles/firmware.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable firmware.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable firmware.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/firmware.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

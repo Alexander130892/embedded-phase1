@@ -1,10 +1,10 @@
-Start testing: Oct 02 10:30 CEST
+Start testing: Oct 02 14:26 CEST
 ----------------------------------------------------------
-1/1 Testing: fixed_format_test
-1/1 Test: fixed_format_test
+1/2 Testing: fixed_format_test
+1/2 Test: fixed_format_test
 Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_fixed_format"
 Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
-"fixed_format_test" start time: Oct 02 10:30 CEST
+"fixed_format_test" start time: Oct 02 14:26 CEST
 Output:
 ----------------------------------------------------------
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:80:test_zero:PASS
@@ -29,8 +29,39 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"fixed_format_test" end time: Oct 02 10:30 CEST
+"fixed_format_test" end time: Oct 02 14:26 CEST
 "fixed_format_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 02 10:30 CEST
+2/2 Testing: ring_buffer_test
+2/2 Test: ring_buffer_test
+Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_ring_buffer"
+Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
+"ring_buffer_test" start time: Oct 02 14:26 CEST
+Output:
+----------------------------------------------------------
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:152:test_new_buffer_is_empty:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:153:test_pop_on_empty_returns_false_and_leaves_out_untouched:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:155:test_push_then_pop_returns_same_value:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:156:test_fifo_order:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:158:test_capacity_is_n_minus_one:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:159:test_full_buffer_is_not_seen_as_empty:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:160:test_full_buffer_keeps_oldest_and_drops_newest:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:161:test_push_succeeds_again_after_pop_from_full:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:163:test_wraparound_preserves_order_and_count:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:164:test_count_when_head_wrapped_below_tail:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:166:test_works_with_struct_elements:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:167:test_constinit_global_starts_empty:PASS
+
+-----------------------
+12 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ring_buffer_test" end time: Oct 02 14:26 CEST
+"ring_buffer_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 02 14:26 CEST

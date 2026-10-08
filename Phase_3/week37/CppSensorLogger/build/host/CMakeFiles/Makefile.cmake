@@ -68,4 +68,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/fixed_format.dir/DependInfo.cmake"
   "CMakeFiles/unity.dir/DependInfo.cmake"
   "CMakeFiles/test_fixed_format.dir/DependInfo.cmake"
+  "CMakeFiles/test_ring_buffer.dir/DependInfo.cmake"
   )
