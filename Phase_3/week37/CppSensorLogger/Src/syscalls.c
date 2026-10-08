@@ -1,16 +1,15 @@
 /*
  * File:    syscalls.c
  * Author:  Alexander130892
- * Date:    22-5-2026
+ * Date:    2-10-2026
  *
  * Description:
- *   This file provides minimal stub implementations of low-level
- *   system calls required by the Newlib C library on an STM32
- *   microcontroller, allowing standard C I/O functions to link and run
- *   in a bare-metal environment. Most syscalls (file operations,
- *   process control, etc.) return errors or do nothing, while `_read`
- *   and `_write` delegate to weak `__io_getchar`/`__io_putchar` hooks
- *   for actual character-level I/O.
+ *   This file provides minimal system call implementations for STM32
+ *   microcontrollers using Newlib libc, enabling basic I/O operations
+ *   (read/write via `__io_getchar`/`__io_putchar`) while stubbing out
+ *   unsupported operations like file system access, process
+ *   management, and threading. Most functions return errors or no-op
+ *   implementations appropriate for a bare-metal embedded environment.
  */
 /**
  ******************************************************************************

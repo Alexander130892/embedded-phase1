@@ -1,3 +1,16 @@
+/*
+ * File:    unity.h
+ * Author:  Alexander130892
+ * Date:    2-10-2026
+ *
+ * Description:
+ *   Unity is a lightweight unit testing framework for C that provides
+ *   test setup/teardown hooks, assertion macros, and configurable
+ *   support for various data types and output formats. It is designed
+ *   to be embedded in C projects and supports both direct usage and
+ *   integration with test runner generators like Ceedling.
+ */
+
 /* =========================================================================
     Unity - A Test Framework for C
     ThrowTheSwitch.org
