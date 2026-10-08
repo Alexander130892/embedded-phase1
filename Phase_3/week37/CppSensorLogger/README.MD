@@ -4,123 +4,198 @@
 
 Rewrite the Phase 2 Week 17 STM32F446RE sensor logger (BMP280 over SPI, MPU-6050 over I2C, CSV over UART) in embedded C++. The C++ version has no heap, no exceptions and no RTTI, runs as a pure super-loop with no FreeRTOS, and is built with CMake instead of STM32CubeIDE.
 
-This session laid the foundation: an IDE-independent CMake build that produces a linking `firmware.elf` with a verified baseline size. The C++ driver classes, `SensorFsm`, the observer wiring, static analysis and the `v1.0-phase3-cpp` tag are still to do.
+Done so far:
+- An IDE-independent CMake build with three presets: firmware Debug, firmware size-optimized, and host tests.
+- Pinned language standards (C++20 / gnu11).
+- `format_fixed`, which replaces `printf("%f")`.
+- An interrupt-safe SPSC `ring_buffer`.
+- The `Uart` driver class (`init`, polled TX, interrupt-driven RX, line assembly), which fixes three Week 17 UART bugs.
+- 26 host unit tests (Unity + CTest).
+- Measured flash and RAM costs for every new component.
 
-> 🏁 **M19 checkpoint:** C++ sensor logger running on STM32. CMake build. Static analysis clean. ⏳ *In progress (build system done)*
+Still to do: `bsp_init()` (GPIO pin mux), flashing and verifying the UART on hardware, the sensor driver classes, `SensorFsm`, the observer wiring, static analysis, and the `v1.0-phase3-cpp` tag.
+
+> 🏁 **M19 checkpoint:** C++ sensor logger running on STM32. CMake build. Static analysis clean. ⏳ *In progress (build, test infrastructure, formatting and UART driver done; not yet on hardware)*
 
 ## Scope
 
-- CMake cross-compilation: a toolchain file, `CMAKE_SYSTEM_NAME Generic`, and `CMAKE_CROSSCOMPILING`
-- GCC target triples (`arm-none-eabi`) and the gcc driver as the front end for C, C++ and ASM
-- Multilib selection (`-print-multi-lib`) and why CPU flags must reach the linker
-- Embedded C++ compiler flags: `-fno-exceptions`, `-fno-rtti`, `-fno-threadsafe-statics`
-- Section garbage collection: `-ffunction-sections -fdata-sections` with `-Wl,--gc-sections`
-- Linker scripts, map files, the vector table, and the startup sequence (`Reset_Handler` → `__libc_init_array` → `main`)
-- Fixed-point output formatting and the C semantics of negative integer division
-- Host-based versus on-target testing; portability differences between x86/arm64 hosts and Cortex-M
+- CMake cross-compilation: toolchain file, `CMAKE_SYSTEM_NAME Generic`, `CMAKE_CROSSCOMPILING`, presets, `CMAKE_CXX_STANDARD` / `CMAKE_C_STANDARD`, `compile_commands.json`
+- Target scope: `PRIVATE`, `PUBLIC`, and `INTERFACE` (for header-only libraries)
+- Multilib selection, CPU flags on the link line, embedded C++ flags (`-fno-exceptions -fno-rtti -fno-threadsafe-statics`)
+- Section GC, linker scripts, map files, vector table, startup sequence, `.data` vs `.bss` vs `.init_array`
+- Constant initialization: `constexpr` constructors, `constinit`, and why `reinterpret_cast` can't be a constant expression
+- ISR ↔ `main` sharing: lost updates, the single-writer SPSC design, `volatile`, compiler reordering, `std::atomic_signal_fence`
+- `extern "C"` linkage, `friend` access for an ISR, deleted copy operations
+- Register-level driver design: register struct + `static_assert`, "construct cheaply, initialize explicitly"
+- Fixed-point formatting, `char` signedness, casting through `uint8_t`
+- Host unit testing with a vendored Unity, registered in CTest
+- Measuring cost: `size`, `nm -S`, map files, static-archive linking semantics
 
 ## Architecture
 
-### Build system
+### Project layout
 
 ```
 CppSensorLogger/
-├── CMakeLists.txt              ← what to build (targets, sources, linker script, map)
-├── STM32F446RETX_FLASH.ld      ← memory layout (from Week 17)
-├── cmake/
-│   └── arm-none-eabi.cmake     ← which compiler + CPU (toolchain file)
-├── Inc/   systick.h
-├── Src/   main.cpp  systick.c  syscalls.c  sysmem.c
-└── Startup/ startup_stm32f446retx.s
-
-            ┌──────────────── one source tree ────────────────┐
-            │                                                 │
- cmake -B build/fw                                   cmake -B build/host
- -DCMAKE_TOOLCHAIN_FILE=cmake/arm-none-eabi.cmake    (native compiler)
-            │                                                 │
- CMAKE_CROSSCOMPILING = TRUE                         CMAKE_CROSSCOMPILING = FALSE
-            │                                                 │
-            ▼                                                 ▼
-   firmware.elf + firmware.map                       test_fixed_format (Unity)
-   (arm-none-eabi-g++, thumb/v7e-m+fp/hard)          (planned)
+├── CMakeLists.txt              ← targets, sources, linker script, map, tests, C++20/gnu11
+├── CMakePresets.json           ← fw / fw-size / host
+├── STM32F446RETX_FLASH.ld
+├── cmake/arm-none-eabi.cmake   ← toolchain file: compiler + CPU flags
+├── Inc/   fixed_format.hpp  ring_buffer.hpp  uart.hpp  systick.h
+├── Src/   fixed_format.cpp  uart.cpp  main.cpp  systick.c  syscalls.c  sysmem.c
+├── Startup/ startup_stm32f446retx.s
+└── test/
+    ├── test_fixed_format.cpp   ← 14 Unity tests
+    ├── test_ring_buffer.cpp    ← 12 Unity tests
+    └── unity/                  ← vendored: unity.c/.h, unity_internals.h, LICENSE.txt, VERSION.txt
 ```
 
-### Boot path (verified in the map file)
+### Build targets
 
 ```
-Reset ─► Reset_Handler (startup .s, 80 B)
-           ├─ set SP = _estack
-           ├─ bl SystemInit          (.weak, undefined → linker turns bl into NOP)
-           ├─ copy .data, zero .bss
-           ├─ bl __libc_init_array   (libg_nano.a, 72 B) ← C++ global constructors run here
-           └─ bl main                (main.cpp, 6 B: for(;;);)
+ cmake --preset fw / fw-size  (ARM GCC 15.3.1)        cmake --preset host  (AppleClang 21)
+             │                                                    │
+ ┌───────────┴───────────┐                       ┌────────────────┴───────────────┐
+ │ firmware.elf + .map   │                       │ test_fixed_format  test_ring_buffer │
+ └───┬────────┬──────────┘                       └──────┬─────────────────┬─────────┘
+     │ links  │ links                          links │                 │ links
+     ▼        ▼                                       ▼                 ▼
+ fixed_format  ring_buffer  ◄───────────────── fixed_format    ring_buffer (+ unity)
+ (static lib)  (INTERFACE,                           (same sources, compiled twice)
+               header-only)
+```
 
-Unhandled IRQs / HardFault ─► Default_Handler @ 0x080002A0 (infinite loop)
-SysTick ─► SysTick_Handler (systick.c) ─► tick_ms++
+`uart.cpp` is compiled into the firmware only. It touches hardware registers, so it has no host build.
+
+### UART data flow
+
+```
+ USART2 RX pin ──► DR ──► USART2_IRQHandler (extern "C", vector table)
+                              │  friend of Uart
+                              ▼
+                        Uart::on_irq()          ISR context — producer
+                          read DR once (clears RXNE)
+                          rx_.push(byte) ──fail──► dropped_ = dropped_ + 1
+                              │
+                    ring_buffer<char, 64>       head: written by ISR only
+                              │                 tail: written by main only
+                              ▼
+ main loop ──► Uart::receive_line(out, cap)     main context — consumer
+                  drain rx_ → line_[] (object owns partial line)
+                  on '\r'/'\n': empty → skip | too long / > cap → discard | else copy → true
+
+ main loop ──► Uart::send_string() ──► send_char(): poll SR.TXE (timeout) → DR
+```
+
+### Object lifecycle
+
+```
+ constinit Uart g_uart2{0x4000'4400u};   compile time: constexpr ctor stores address only
+                                         → object image in .data, no .init_array entry
+ Reset_Handler: copy .data → RAM         g_uart2 valid before main, no code ran
+ main: clock_init() → bsp_init() → g_uart2.init()   hardware touched only here
 ```
 
 ## Key design decisions
 
-**CMake instead of STM32CubeIDE.** Week 17 was built entirely in the IDE's managed build. For this project the build system is part of the deliverable. The `-fno-exceptions -fno-rtti` rules should be visible as lines in a reviewed file, not hidden in `.cproject` XML. `clang-tidy` needs the `compile_commands.json` that CMake generates. The Weeks 39–44 GitHub Actions CI needs a headless build. CubeIDE can still serve as a GDB front end for the CMake-built ELF.
+**CMake instead of STM32CubeIDE; toolchain file vs `CMakeLists.txt`.** The build system is part of the deliverable. CPU and compiler facts go in `cmake/arm-none-eabi.cmake`, and project policy goes in `CMakeLists.txt`: the linker script, nano.specs, the map file, warnings, and the language standards. The optimization level comes from `CMAKE_BUILD_TYPE` in the presets. See the commit history for the step-by-step reasoning (`Generic`, gcc as the ASM driver, `STATIC_LIBRARY` try-compile, `MCU_FLAGS` on the link line).
 
-**Toolchain file versus `CMakeLists.txt`.** The rule: settings about the CPU or compiler go in `cmake/arm-none-eabi.cmake`, and settings about this firmware go in `CMakeLists.txt`. The CPU flags and C++ language flags went in the toolchain file. The linker script, the map file and `--specs=nano.specs` went in `CMakeLists.txt` (nano.specs is a judgment call, since a different project on the same chip could want full newlib). I put section GC in the toolchain file because every Cortex-M build here wants it. The optimization level goes in neither file and comes from `CMAKE_BUILD_TYPE`.
+**Pinned language standards for both languages.** `CMAKE_CXX_STANDARD 20` (extensions off) and `CMAKE_C_STANDARD 11` (extensions on, matching Week 17's `gnu11`) are set right after `project()`. Without them, each compiler uses its own default: ARM GCC 15 defaults to `gnu23` for C, while AppleClang uses `gnu17`. That would compile the same C files under different standards on the target and the host. `compile_commands.json` confirms `-std=c++20` and `-std=gnu11` in both build trees.
 
-**`arm-none-eabi-gcc` as the ASM compiler, not `arm-none-eabi-as`.** The gcc driver accepts the same flag set as C and C++, so it accepts `-ffunction-sections`, `-D` and `-I` without errors. It also forwards the matching CPU and FPU flags to `as`, so the startup object's ABI attributes match the C++ objects and the link doesn't fail with "uses VFP register arguments". And it runs the preprocessor on `.S` files if the startup file ever needs to share constants with headers.
+**Fixed-point `format_fixed` instead of `printf("%f")`.** It avoids newlib's float printf (a likely `malloc` path) and fixes the Week 17 negative-number bug. It handles the sign once on a `uint32_t` magnitude, so `INT32_MIN` causes no UB. It has a `snprintf`-style contract (null-terminated output, returns the length, writes `'\0'` on failure) and costs **206 B** of flash at `-Os`.
 
-**`CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY`.** CMake's compiler check links a test program. On bare metal that link fails because there's no linker script, no startup code and no syscall stubs. Building a static library instead tests only the compiler, and link problems show up in the real `firmware.elf` build, where the project supplies all three.
+**`ring_buffer`: single-producer/single-consumer instead of a locked buffer with `count`.** The Week 33 C++ port had a `count` written by both `push` (in the ISR) and `pop` (in `main`), which is a lost-update race (`main` loads `count`, the ISR increments it, `main` stores a stale value). It also wrote `read_idx` from `push` when full. Instead of adding a critical section (option A: PRIMASK, blocking IRQs on every `pop`), I went back to Week 17's design (option B): no `count`, `head` written only by the ISR, `tail` only by `main`. Fullness uses the one-empty-slot rule `(head + 1) % N == tail`, so capacity is `N - 1`. When full, `push` **drops the new element** and returns `false`. This fixes the Week 17 bug where 64 unread bytes wrapped `head` onto `tail` and the full buffer looked empty.
 
-**`-fno-threadsafe-statics`.** C++11 guarantees that a function-local static is initialized exactly once across threads, and the compiler implements it with `__cxa_guard_acquire` and `__cxa_guard_release`. On a single-core super-loop that locking does nothing and adds libsupc++ code, and it doesn't protect against the real hazard, an ISR interrupting a construction in progress. The rule I follow instead: construct everything from `main` before enabling interrupts, and never let an ISR be the first caller of a function with a local static.
+**`volatile` indices plus `atomic_signal_fence` instead of `std::atomic`.** `volatile` stops the compiler from caching `head` in a polling loop. It doesn't order the *non-volatile* `arr` accesses around the indices, so `pop` could read a stale slot or read after handing the slot back. `std::atomic_signal_fence` (acquire/release) is a compiler-only barrier for an ISR on the same core, and it emits **no instructions**. `std::atomic` with acquire/release would emit `DMB`, which a single-core Cortex-M4 doesn't need. Indices are `uint32_t`: there's no 256-element limit, they're native register width, and an aligned 32-bit access is single-copy atomic on ARMv7-M. `static_assert(N >= 2)` blocks the degenerate sizes. `kN` converts `size_t` `N` once, because `size_t` is 64-bit on the host.
 
-**Fixed-point instead of `printf("%f")`.** Week 17 linked `-u _printf_float`. Newlib-nano's float formatting is a likely path into `malloc`, which conflicts with the no-heap rule. Sensor values will be fixed-point integers, for example milli-g, formatted by a free function `format_fixed(char* out, size_t cap, int32_t value, uint8_t frac_digits)` in its own unit, which has no hardware dependencies.
+**Global `constinit Uart g_uart2` with a `constexpr` constructor.** The vector table can only call a plain function, so the ISR needs a fixed object. With a `constexpr` constructor and `constinit`, the object is **constant-initialized**: the compiler computes its bytes, it gets no `.init_array` entry, and it's valid before `main`. `constinit` makes that a compile error if it ever regresses. Because `reinterpret_cast` isn't allowed in a constant expression, the constructor stores the address as `std::uintptr_t`, and `regs()` converts it at use time.
 
-**Host tests with Unity for pure logic.** `format_fixed` will be tested natively with Unity as a separate CMake target. It runs in milliseconds, needs no board, works on any CI runner, and can use sanitizers. On-target and Renode testing stay as options for hardware-dependent code. The host build should use `-funsigned-char -Wall -Wextra -Wformat=2 -Wconversion` to remove host/target differences I already know about.
+**Construct cheaply, initialize explicitly.** The constructor runs at compile time, so it can't touch registers (it would also run before the clocks are configured). Hardware setup is in `Uart::init()`, which `main` calls after `clock_init()` and `bsp_init()`. GPIO pin muxing stays **out** of `Uart`, because which pins USART2 uses (PA2/PA3 or PD5/PD6) is a board decision.
 
-**Output named `firmware.elf` through a property.** `set_target_properties(firmware PROPERTIES SUFFIX ".elf")` keeps the CMake target name `firmware` separate from the file name.
+**`friend` for the ISR instead of a public `on_irq()`.** `protected` would only open the member to derived classes, and a free function isn't one. `friend void ::USART2_IRQHandler(void);`, preceded by an `extern "C"` declaration, lets only the ISR call `on_irq()`. I verified that a call from `main` fails to compile (`'void Uart::on_irq()' is private`). That makes the single-producer rule compiler-enforced. The trade-off is that the class names its handler, so a second UART needs another `friend` line.
 
-## Baseline measurement
+**`Uart` owns the partial line; oversized lines are discarded (option B).** Week 17's `uart_receive_string` assembled lines in the **caller's** buffer with a `static index` and checked `UART_MAX_LENGTH - 1` (63) instead of `maxlen` (50), so a long line overflowed `main`'s `input_str` on the stack. Now `line_`, `line_len_` and `line_overflow_` are members. `receive_line(out, cap)` drains `rx_`, copies only complete lines, bounded by `cap`, and throws away lines that are too long or don't fit instead of returning them truncated. A truncated command is a string the user never sent, and with arguments it could become a valid command with the wrong value. Empty lines (the `'\n'` of `"\r\n"`) are skipped, and the function returns one line per call.
 
-First successful build: an empty `for(;;);` main, GCC 15.3.1, Debug.
+**Register struct with `static_assert`.** `UsartRegs` replaces Week 17's `*((volatile uint32_t*)(BASE + OFFSET))`. `static_assert(sizeof(UsartRegs) == 0x1C)` catches a missing or extra field before it can shift every register. The members are `volatile` because the hardware changes `SR`/`DR`, and reading `DR` clears `RXNE`. The *address* is fixed, but the *value* isn't, so `constexpr` would be wrong.
 
-| | text | data | bss |
-|---|---|---|---|
-| `firmware.elf` | 816 | 0 | 1568 |
+**Kept the runtime `base_` member instead of a template address (measured, decided not to change).** Because `base_ = 0x40004400` is non-zero, all of `g_uart2` (152 B) goes in **`.data`**, which costs 152 B of RAM **and** 152 B of flash for its initial image, 148 bytes of which are zeros. With an all-zero object it would be in **`.bss`**: 152 B of RAM and **0 B** of flash. The idiomatic fix is `template <std::uintptr_t Base> class Uart`, which moves the address into the type (`Uart<0x4000'4400u>`). The compiler then encodes it as an immediate constant, so there's no flash image, no load of `base_`, and slightly smaller code. The costs: the whole class moves to the header, there's one code copy per instantiated peripheral, and the type names get more verbose. Setting `base_` in `init()` instead would reintroduce an invalid-until-initialized object. **I'm keeping the simpler design**: 148 B is 0.03% of the F446's 512 KB of flash. On a 16–32 KB part, or with many peripheral instances, the template version would be the right choice. That's why libraries like modm and Kvasir pass addresses as template parameters.
 
-- **text 816** = vector table 452 (0x1C4, 16 core + 97 STM32F446 entries) + crtbegin.o 140 + `Reset_Handler` 80 + `__libc_init_array` 72 + `SysTick_Handler` 28 + `main` 6 + `Default_Handler`, padding and crti/crtn stubs
-- **bss 1568** = `._user_heap_stack` 1536 (heap 0x200 + stack 0x400) + `.bss` 32 (crtbegin.o `object.0` 24 + `completed.1` 1 + padding 3, `tick_ms` 4)
-- The map file confirms the libraries come from `thumb/v7e-m+fp/hard/` (multilib correct), `libg_nano.a` (nano specs active), and that `.eh_frame` is 0 bytes (`-fno-exceptions` effective)
+**Non-copyable `Uart`.** `Uart(const Uart&) = delete; operator=(const Uart&) = delete;`. A copy would be a second object driving the same hardware with its own RX buffer. Deleting the copy operations also suppresses the implicit move operations. Only the copy operations are deleted; the address constructor is unaffected.
+
+**Host tests with a vendored Unity.** Pure logic (`format_fixed`, `ring_buffer`, and the `receive_line` algorithm) is tested natively with sanitizers. The repo builds offline, `VERSION.txt` records upstream commit `2b80d1a`, `add_test(NAME … COMMAND <target>)` lets CMake substitute the real executable path, and `ring_buffer` is an `INTERFACE` target because it has no `.cpp`.
+
+## Measurements
+
+All `-Os` (`fw-size`) unless noted, GCC 15.3.1.
+
+| Build | text | data | bss | Δ |
+|---|---|---|---|---|
+| Baseline: empty `for(;;)` main (Debug) | 816 | 0 | 1568 | |
+| + `format_fixed` called from `main` | 1032 | 0 | 1576 | `format_fixed` = **206 B** (`nm -S`), helpers inlined; bss +8 = `volatile g_sink` + `ALIGN(8)` pad |
+| + `Uart g_uart2` (`constinit`) + `uart.cpp` | 1092 | 152 | 1576 | text **+60** (ISR path only), data **+152** (the object) |
+
+**`g_uart2` = 152 B** on the 32-bit target: `base_` 4 + `rx_` 72 (64 + head 4 + tail 4) + `line_` 64 + `line_len_` 4 + `line_overflow_` 1 (+3 padding) + `dropped_` 4. It's in `.data` because `base_` is non-zero (see the design decision above). There's no `.init_array` growth.
+
+**text +60** is only `USART2_IRQHandler` → `on_irq()` → `rx_.push()`, all inlined together. That code is kept because the vector table references the handler. `init`, `send_*` and `receive_line` aren't called yet, so `--gc-sections` removed them.
+
+**Baseline breakdown:** text 816 = vector table 452 + crtbegin 140 + `Reset_Handler` 80 + `__libc_init_array` 72 + `SysTick_Handler` 28 + `main` 6 + rest. bss 1568 = heap 512 + stack 1024 + `.bss` 32.
 
 ## Lessons Learned
 
-- **Plain `gcc` is the host compiler.** On my Mac, `gcc -dumpmachine` prints `arm64-apple-darwin25.5.0`. It contains "arm", but it targets AArch64 with a Darwin OS. The triple has three parts (arch-vendor-os), and the STM32 target is `arm-none-eabi`, where plain `arm` already means 32-bit. The compiler executable is the triple plus a tool name: `arm-none-eabi-gcc`, not `arm-none-eabi`.
-- **Compiler flags need their leading `-`.** I first wrote `mcpu=cortex-m4 ...`, without the dash. gcc would treat that as an input file name. I also pulled in `-o` from the CubeIDE line by mistake. It's the output-file option, not a CPU flag.
-- **Negative forms of `-f` flags are `-fno-<name>`, with a hyphen**: `-fno-exceptions`, not `-fnoexceptions`.
-- **The linker picks the C library at link time from the flags it receives.** Without `MCU_FLAGS` on the link line, the driver falls back to the default multilib (`.`), which is ARM-state and soft-float. Best case is a VFP-ABI link error; worst case is ARM instructions in the image that HardFault the first time a Thumb-only Cortex-M4 executes them. The `-print-multi-lib` row that matches my flags is `thumb/v7e-m+fp/hard`.
-- **`--gc-sections` alone does almost nothing.** The linker can only discard whole sections, and by default one file's functions share one `.text`. `-ffunction-sections` makes the pieces small enough to discard. The vector table survives only because the linker script marks it with `KEEP()`.
-- **CMake's language name for C++ is `CXX`, not `CPP`.** It's the same name used in `CMAKE_CXX_COMPILER`.
-- **`${PWD}` in CMake is an empty CMake variable, not the shell's working directory.** The link runs in the build directory, so a relative linker script path breaks. Use `${CMAKE_SOURCE_DIR}`. A relative map-file path is fine because generated output belongs in the build directory, or use `${CMAKE_BINARY_DIR}` to be explicit.
-- **`-T` passes a linker script; `-L` adds a library search path. `-Map` is an `ld` option and needs `-Wl,`**, while `--specs` goes to the gcc driver itself.
-- **`CMakeLists.txt` must sit in the source directory given to `-S`.** CMake doesn't search subfolders such as `cmake/`.
-- **An unused `#include` still has to resolve.** `systick.h` included `status.h` but used nothing from it. Rather than copying the file, I removed the include.
-- **`main` must never return on bare metal.** With no OS to return to, control would fall into `LoopForever` in the startup file.
-- **"Unknown destination type (ARM/Thumb)" and "dangerous relocation" were knock-on errors** from `undefined reference to 'main'`. A Thumb `bl` can't be resolved to a symbol that doesn't exist.
-- **The Week 17 `"%ld.%02ld", v/100, v%100` formatting is wrong for negatives.** I verified on the host: `-150` prints as `-1.-50` and `-5` as `0.-5`. In C99, division truncates toward zero and `%` takes the sign of the dividend. Wrapping the fraction in `abs()` still loses the sign for `-5`. The fix is to emit the sign once and format the magnitude, using `uint32_t m = 0u - (uint32_t)v` so that `INT32_MIN` is handled without signed-overflow UB.
-- **Host and target types differ.** Plain `char` is signed on x86 and unsigned on ARM (AAPCS). `long` is 64-bit on x86-64 Linux and 32-bit on Cortex-M. In newlib for ARM, `int32_t` is `long`, so Week 17's `%ld` is correct on the STM32 and undefined behaviour on the host. Use `PRId32` and fixed-width types in interfaces.
-- **Some C++ costs come from the toolchain, not my code.** `crtbegin.o` adds about 140 B of text and 28 B of bss for destructor-at-exit and unwind-registration support, even with `-fno-exceptions` and a `main` that never returns.
-- **Linking switched from `C` to `CXX`** as soon as the first `.cpp` was added. CMake chooses the linker language from the sources, so the C++ runtime support libraries now take part in the link.
+### Toolchain and CMake
+- `gcc` on macOS is AppleClang targeting `arm64-apple-darwin`. The target triple is `arm-none-eabi`, and the executable is triple + tool.
+- Flags need their leading `-`. Negative `-f` options are `-fno-<name>`. CPU flags must reach the **linker** too, or the driver links the default multilib (ARM state, soft-float).
+- `--gc-sections` needs `-ffunction-sections` to discard anything useful. The vector table survives only because of `KEEP()`.
+- `CXX` is CMake's name for C++. `${PWD}` is an empty CMake variable. `-T` passes a linker script, `-L` adds a library path, and `-Map` needs `-Wl,`.
+- Use one build tree per compiler (the compiler is cached in `CMakeCache.txt`). A target defined in one `if` branch doesn't exist in the other: linking `unity` into `firmware` would have become `-lunity`.
+- `CMAKE_CXX_STANDARD` and friends only apply to targets created **after** they're set, so put them right after `project()`. **Without `CMAKE_C_STANDARD`, the C files had no `-std` at all**, so GCC 15 and Clang compiled them as different C standards. I expected `compile_commands.json` to show a C `-std` flag, and it showed none.
+
+### C / C++ language
+- The Week 17 `"%ld.%02ld"` formatting breaks for negatives (`-150` → `-1.-50`, `-5` → `0.-5`). Negating `INT32_MIN` as a signed value is UB, so go through `uint32_t`. A `while` digit counter returns 0 for zero, so use `do`/`while`.
+- `std::size_t` comes from `<cstddef>`, not `<cstdint>`. A transitive include may hide that on one compiler and not the other.
+- **A `constexpr` constructor runs at compile time**, so it can't write hardware registers (`volatile` accesses aren't constant expressions). And **`reinterpret_cast` isn't allowed in a constant expression**: `constinit Uart g{reinterpret_cast<UsartRegs*>(addr)}` doesn't compile, so store `uintptr_t` and convert at use.
+- **Without `extern "C"`, the C++ compiler mangles `USART2_IRQHandler`**, the `.weak` symbol in the startup file is never overridden, and the interrupt silently goes to `Default_Handler`.
+- **`protected` grants access to derived classes, not to free functions.** `friend` is the tool for "this one outside function". The `extern "C"` declaration has to come before the class, or the `friend` line declares a new mangled function.
+- **`volatile` is about the value, not the address.** Register members are `volatile` because the hardware changes them and reads have side effects. Without it, a `TXE` poll gets hoisted into an infinite loop, back-to-back `DR` writes get merged, and an unused `DR` read gets removed, leaving `RXNE` set.
+- **`volatile` only orders volatile accesses relative to each other.** An ordinary `arr[tail]` load can move across a volatile `head`/`tail` access. On the ISR side this is harmless (an ISR runs to completion before `main` resumes). On the `main` side it can return a stale byte, so it needs fences.
+- **`dropped_++` on a `volatile` is deprecated in C++20** (`-Wvolatile`); write `dropped_ = dropped_ + 1`. Bitwise compound assignment (`|=`, `&=`) was un-deprecated, and GCC doesn't warn on `regs().CR1 |= …`.
+- **Templates defined in a header are fine; globals and non-inline functions aren't.** The Week 33 `rb`/`kick()` measurement harness in `ring_buffer.hpp` would have caused `multiple definition` errors as soon as two `.cpp` files included it.
+- **`uint8_t` indices silently wrap at 256**, which corrupts a `ring_buffer<char, 300>`. And `std::size_t` is 64-bit on the host: `(head + N - tail) % N` narrowed to `uint32_t` only produced `-Wconversion` warnings there.
+- **`{}` means value-initialization** (zero for scalars). Use it on every member the constructor doesn't set, and on locals such as `char c{}`, so nothing is ever read uninitialized. `base_` has none because the constructor always sets it.
+- **Copy constructor vs copy assignment:** `Uart u2 = g;` and pass-by-value use the copy constructor, while `u2 = g;` uses copy assignment. Deleting both makes `Uart` reference-only.
+- **`kName` and the trailing `_`** are Google-style conventions (constants that can't collide with `ALL_CAPS` macros, and private members). They aren't language rules.
+- **Digit separators** (`0x4002'3800u`, `100'000`) are C++14 and ignored by the compiler. They aren't available in the `gnu11` C files.
+
+### Driver code
+- **`reg(addr)` vs `regs()`:** `reg` takes an address and returns one register. `regs()` takes nothing and returns the `UsartRegs` struct, so you access fields as `regs().CR1`. Writing `regs(BRR)` and `g_uart2.BRR` were both wrong. Inside a member function, use *this* object's `regs()`, never the global, or a second instance would reconfigure USART2.
+- **`UE` last isn't required on the F4.** RM0390 §25.3.2 (as far as I recall; check it) sets `UE` first and writes the configuration bits afterwards. "Configure, then enable" is still a portable habit, because newer families (F7, L4, G0, H7) write-protect `M`/`OVER8` while `UE = 1`. An early RX interrupt can't happen anyway, since `RXNE` needs both `RE` and `UE` and an incoming byte.
+- **`char` → register: cast through `uint8_t`.** `char` is unsigned on ARM and signed on the Mac host, so `'é'` (0xE9) widens to `0xFFFFFFE9` on the host. `static_cast<std::uint8_t>(c)` pins the raw byte on both. On RX, the mirror: `static_cast<std::uint8_t>(regs().DR)`, then `static_cast<char>`. Reading `DR` into a `const` local makes the single read (which clears `RXNE`) visible.
+- **`s` vs `*s`:** `while (s != '\0')` compares the pointer (GCC warns), and `send_char(s++)` passes the pointer. The idiom is `send_char(*s++)`, and you must check and propagate its return value.
+- **`out = line_;` copies nothing.** `out` is a local copy of the caller's pointer. You have to write *through* it (`memcpy(out, …)`, then `out[len] = '\0'`).
+- **Reset state unconditionally at every line end.** The first `receive_line` cleared `line_overflow_` but not `line_len_`, so a rejected line's characters would have prefixed the next one. The cleaned-up version reads `discard`/`len` into `const` locals, resets once, then acts, and uses an early `continue` for ordinary characters instead of an `if / else if` chain.
+
+### Testing and measuring
+- On macOS's case-insensitive filesystem, `test/unity/VERSION` shadowed the standard header `<version>` through `-I`. Don't put extensionless files in include directories.
+- Make a new test fail on purpose first. `UNITY_END()` returns the failure count, and that exit code is what CTest and CI read. CTest counts **executables**, not Unity tests (use `-V`). `ctest` doesn't build, so always run `cmake --build … && ctest …`.
+- **The compile succeeded but the link failed with `_main` undefined**: the test file on disk was truncated. An empty `.cpp` compiles without errors. Then `no member named 'capacity'` meant the test was compiling against the old header.
+- Linking a static archive adds nothing until something references a member. Use a `volatile` sink to keep a measured call alive under LTO. Debug sizes aren't costs. Measure single functions with `nm -S --size-sort -C`.
+- **`.data` costs RAM *and* flash; `.bss` costs RAM only.** One non-zero member puts a whole object, zeros included, into `.data`.
 
 ## Open Items
 
-- [ ] `CMakePresets.json` with `fw` and `host` presets
-- [ ] Host test target: `format_fixed` and Unity, run with `ctest`. The test-case table (0, ±150, −5, −100, `INT32_MIN`, `INT32_MAX`, `frac_digits = 0`, `cap` too small) still needs hand-computed expected values
-- [ ] Remove `sysmem.c` and rebuild to see whether anything references `_sbrk`. Repeat after dropping `-u _printf_float`
-- [ ] Move the FPU enable (CPACR write) before `__libc_init_array`, into `SystemInit` or `Reset_Handler`, so global constructors can use floats safely
-- [ ] Find out what the ARM linker does with a `bl` to the undefined weak `SystemInit`
-- [ ] Port the drivers to C++ classes: `Bmp280`, `Mpu6050`, and `UartLogger` with an `etl::delegate` callback
-- [ ] Decide on the observer mechanism (`etl::delegate` list inside each sensor, or something separate) and the events `SensorFsm` handles, such as sensor errors from the `status_t` returns that Week 17 ignores
-- [ ] Settle the sequencer question: is it needed with a single 1 Hz rate?
-- [ ] Choose the scale and type for the fixed-point values (milli-g and milli-deg/s with overflow checks; a bare `int32_t` or a unit-carrying type)
-- [ ] Use the same compiler for the C-vs-C++ comparison: CubeIDE used GNU Tools for STM32 14.3, the CMake build uses Arm GNU 15.3.1. Report the fixed-point/printf change in a separate row from the C++ change
-- [ ] Decide whether to keep the 512 B heap reservation in the linker script, given the no-heap design
-- [ ] Write a `.clang-tidy` config, then run `cppcheck` and `clang-tidy`; document suppressions in `NOTES.md`
-- [ ] Flash with `openocd` and document it in the build instructions
-- [ ] Final README sections: class diagram, C vs C++ comparison table. Then `git tag v1.0-phase3-cpp` and the `NOTES.md` retrospective
+- [ ] `bsp_init()`: GPIO PA2/PA3 alternate function AF7 (port Week 17's `uart_gpio_init`)
+- [ ] Call `g_uart2.init()` from `main`, echo `receive_line()` back over `send_string()`, and flash with `openocd` (first hardware test of the C++ UART)
+- [ ] Measure the full UART cost once `init`/`send_*`/`receive_line` are called (they're currently GC'd)
+- [ ] Host test for `receive_line()`: the algorithm is hardware-free, but `rx_` is private. Decide how to feed it (a test seam, or splitting line assembly into its own class)
+- [ ] Read RM0390 §25.3.2 to confirm the USART enable sequence, and update the `init()` comment
+- [ ] Optional: a `nullptr` guard in `send_string()`
+- [ ] Remove the `volatile g_sink` harness from `main.cpp` once the UART consumes `format_fixed` output
+- [ ] Port the sensor drivers to classes (`Bmp280`, `Mpu6050`); `UartLogger` with an `etl::delegate` callback; observer mechanism; `SensorFsm` events (including sensor errors from the `status_t` returns that Week 17 ignored); decide whether a sequencer is needed
+- [ ] Choose the fixed-point scales and types for accel and gyro (milli-g, milli-deg/s)
+- [ ] Remove `sysmem.c` and rebuild to see who references `_sbrk`; decide on the 512 B heap reservation
+- [ ] Move the FPU enable (CPACR) before `__libc_init_array`; find out how the linker resolves the `bl` to the undefined weak `SystemInit`
+- [ ] C-vs-C++ size comparison on the same compiler (CubeIDE 14.3 vs Arm GNU 15.3.1); Week 17 `snprintf` + `-u _printf_float` vs the 206 B `format_fixed`
+- [ ] Warnings on `firmware`'s own sources; host-test flags (`-funsigned-char`, sanitizers in the `host` preset)
+- [ ] Optional: `"inherits"` in presets; `testPresets` so `ctest --preset host` works
+- [ ] `.clang-tidy` config, then `cppcheck` + `clang-tidy`; document suppressions in `NOTES.md`
+- [ ] Final README: class diagram, C vs C++ comparison table, `git tag v1.0-phase3-cpp`, `NOTES.md` retrospective
