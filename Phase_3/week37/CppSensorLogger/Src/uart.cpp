@@ -36,6 +36,7 @@ void Uart::init()
     reg(kRccApb1enr) |= kRccApb1enrUsart2En;
     // Set the baud rate (BRR)
     regs().BRR     = kBrr115200;
+    [[maybe_unused]] const std::uint32_t rb = regs().BRR;   // read-back: completes the write
     // Eenable transmitter, receiver and RXNE interrupt (CR1)
     regs().CR1     |= (kCr1Re | kCr1Te | kCr1Rxneie);
     // TEnable USART2 in the NVIC (ISER1)
