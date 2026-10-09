@@ -1,13 +1,12 @@
 /*
  * File:    status.h
  * Author:  Alexander130892
- * Date:    22-5-2026
+ * Date:    9-10-2026
  *
  * Description:
- *   Defines a `status_t` enumeration of return codes for peripheral
- *   communication errors (SPI, I2C, and UART timeouts and faults)
- *   along with a maximum timeout constant, intended for use as a
- *   shared status/error type across the codebase.
+ *   This header file defines status codes and a maximum timeout
+ *   constant for error handling and communication protocol states
+ *   across SPI, I2C, and UART interfaces.
  */
 #ifndef STATUS_H_
 #define STATUS_H_
