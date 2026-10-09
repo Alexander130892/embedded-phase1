@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/firmware.dir/Src/bsp.cpp.obj"
   "CMakeFiles/firmware.dir/Src/bsp.cpp.obj.d"
+  "CMakeFiles/firmware.dir/Src/i2c.c.obj"
+  "CMakeFiles/firmware.dir/Src/i2c.c.obj.d"
   "CMakeFiles/firmware.dir/Src/main.cpp.obj"
   "CMakeFiles/firmware.dir/Src/main.cpp.obj.d"
   "CMakeFiles/firmware.dir/Src/syscalls.c.obj"

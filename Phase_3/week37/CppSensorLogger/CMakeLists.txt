@@ -33,6 +33,7 @@ if(CMAKE_CROSSCOMPILING)
         Src/systick.c
         Src/uart.cpp
         Src/bsp.cpp
+        Src/i2c.c
         Src/main.cpp
     )
     target_include_directories(firmware PRIVATE

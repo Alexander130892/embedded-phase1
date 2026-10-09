@@ -17,6 +17,19 @@ CMakeFiles/firmware.dir/Src/bsp.cpp.obj
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/15.3.1/include/stdint.h
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/bsp.hpp
 
+CMakeFiles/firmware.dir/Src/i2c.c.obj
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/i2c.c
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/machine/_default_types.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/stdint.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/15.3.1/include/stdint.h
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c.h
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/status.h
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/stm32f446re.h
+
 CMakeFiles/firmware.dir/Src/main.cpp.obj
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h
@@ -69,7 +82,11 @@ CMakeFiles/firmware.dir/Src/main.cpp.obj
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/15.3.1/include/stdint.h
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/bsp.hpp
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/fixed_format.hpp
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c.h
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c_bus.hpp
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/ring_buffer.hpp
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/status.h
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/stm32f446re.h
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/uart.hpp
 
 CMakeFiles/firmware.dir/Src/syscalls.c.obj
