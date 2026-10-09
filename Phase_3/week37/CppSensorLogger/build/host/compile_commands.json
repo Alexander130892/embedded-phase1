@@ -16,5 +16,11 @@
   "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=c++20 -arch arm64 -o CMakeFiles/test_ring_buffer.dir/test/test_ring_buffer.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp",
   "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp",
   "output": "CMakeFiles/test_ring_buffer.dir/test/test_ring_buffer.cpp.o"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
+  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=c++20 -arch arm64 -o CMakeFiles/test_mpu6050.dir/test/test_mpu6050.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp",
+  "output": "CMakeFiles/test_mpu6050.dir/test/test_mpu6050.cpp.o"
 }
 ]

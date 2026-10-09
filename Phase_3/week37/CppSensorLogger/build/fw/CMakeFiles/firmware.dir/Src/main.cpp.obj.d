@@ -12,19 +12,33 @@ CMakeFiles/firmware.dir/Src/main.cpp.obj: \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/cstring \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/version.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/string.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/_ansi.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/newlib.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/config.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/_ansi.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/15.3.1/include/stddef.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/sys/string.h \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/bsp.hpp \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/fixed_format.hpp \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/cstddef \
- /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/15.3.1/include/stddef.h \
- /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/version.h \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c.h \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/stm32f446re.h \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/status.h \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c_bus.hpp \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c.h \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/bus.hpp \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/concepts \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/type_traits \
- /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/i2c.h \
- /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/uart.hpp \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/array \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/compare \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/initializer_list \
@@ -52,6 +66,7 @@ CMakeFiles/firmware.dir/Src/main.cpp.obj: \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/predefined_ops.h \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bit \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/range_access.h \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/uart.hpp \
  /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/ring_buffer.hpp \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/atomic \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/atomic_base.h \

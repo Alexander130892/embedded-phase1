@@ -22,6 +22,9 @@ target_compile_options(fixed_format PRIVATE
 add_library(ring_buffer INTERFACE)
 target_include_directories(ring_buffer INTERFACE Inc)
 
+add_library(mpu6050 INTERFACE)
+target_include_directories(mpu6050 INTERFACE Inc)
+
 if(CMAKE_CROSSCOMPILING)
     add_executable(firmware)
     set_target_properties(firmware PROPERTIES SUFFIX ".elf")
@@ -66,5 +69,11 @@ else()
     target_link_libraries(test_ring_buffer PRIVATE ring_buffer unity)
     add_test(NAME ring_buffer_test COMMAND test_ring_buffer)
 
+    # Host unit tests for test_mpu6050
+    add_executable(test_mpu6050
+        test/test_mpu6050.cpp
+    )
+    target_link_libraries(test_mpu6050 PRIVATE mpu6050 unity)
+    add_test(NAME mpu6050_test COMMAND test_mpu6050)
 
 endif()
