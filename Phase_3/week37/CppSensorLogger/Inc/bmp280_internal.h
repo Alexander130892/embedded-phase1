@@ -4,11 +4,11 @@
  * Date:    10-10-2026
  *
  * Description:
- *   This header file defines register addresses, SPI communication
- *   constants, and compensation parameter structures for interfacing
- *   with a BMP280 barometric pressure and temperature sensor. It
- *   declares functions for temperature and pressure compensation using
- *   calibration data stored on the device.
+ *   This header file defines internal constants, data structures, and
+ *   function declarations for interfacing with a BMP280 barometric
+ *   pressure and temperature sensor, including register addresses,
+ *   calibration parameters, and compensation functions for raw sensor
+ *   readings.
  */
 #ifndef BMP280_BMP280_INTERNAL_H_
 #define BMP280_BMP280_INTERNAL_H_

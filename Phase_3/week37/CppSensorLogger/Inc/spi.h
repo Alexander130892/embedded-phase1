@@ -4,12 +4,12 @@
  * Date:    10-10-2026
  *
  * Description:
- *   This header file defines the SPI interface for an STM32F446RE
- *   microcontroller, providing initialization and communication
- *   functions for SPI1 peripheral with pins mapped to PA5-PA7
- *   (SCK/MISO/MOSI) and PB6 (CS). It includes function declarations
- *   for SPI setup, GPIO configuration, single-byte transfers, and
- *   burst reads from specified addresses.
+ *   This header file defines the SPI (Serial Peripheral Interface)
+ *   communication interface for an STM32F446RE microcontroller,
+ *   declaring functions to initialize SPI peripherals and perform data
+ *   transfers over the configured pins (SCK, MISO, MOSI, and CS). It
+ *   provides both single-byte and burst read operations with standard
+ *   status return codes.
  */
 #ifndef SPI_H_
 #define SPI_H_
