@@ -7,6 +7,8 @@
 #include "i2c_bus.hpp"     // I2c1Bus adapter
 #include "mpu6050.hpp"
 #include "uart.hpp"
+#include "bmp280.h"
+#include "spi.h"
 
 constinit Uart g_uart2{0x4000'4400u};   // USART2
 
@@ -24,13 +26,19 @@ const char* to_string(BusStatus s)
     return "?";
 }
 
-// Prints a milli-unit value as units with 3 decimals: -981 → "-0.981"
-void print_milli(const char* label, std::int32_t milli)
+// Prints a fixed-point value with `frac_digits` decimals: (2150, 2) → "21.50"
+void print_fixed(const char* label, std::int32_t value, std::uint8_t frac_digits)
 {
-    char num[16];
-    format_fixed(num, sizeof num, milli, 3);
+    char num[16];                                   // "-2147483648" + '.' + '\0' fits
+    format_fixed(num, sizeof num, value, frac_digits);
     g_uart2.send_string(label);
     g_uart2.send_string(num);
+}
+
+// milli-units → 3 decimals: -981 → "-0.981"
+void print_milli(const char* label, std::int32_t milli)
+{
+    print_fixed(label, milli, 3);
 }
 
 void print_sample(const ImuSample& s)
@@ -55,6 +63,11 @@ int main()
     (void)i2c_init_gpio();                    // Week 17 C driver: I2C1 pins + clock
     (void)i2c_init();                         // I2C1 100 kHz
 
+    (void)spi_gpio_init();          // SPI1 pins on GPIOA
+    (void)bmp280_spi_gpio_init();   // CS = PB6, idle high
+    (void)spi_init();
+    const status_t bst = bmp280_spi_init();   // ctrl_meas + calibration readout
+
     I2c1Bus bus;
     Mpu6050<I2c1Bus> imu{bus, Mpu6050<I2c1Bus>::kAddrAd0Low};
 
@@ -78,7 +91,16 @@ int main()
                 g_uart2.send_string(to_string(rs));
                 g_uart2.send_string("\r\n");
             }
-        } else {
+        }else if (std::strcmp(line, "bmp") == 0) {
+            std::int32_t t = 0, p = 0;
+            if (bmp280_spi_read_temp(&t) == STATUS_OK && bmp280_spi_read_pressure(&p) == STATUS_OK) {
+                print_fixed("T[C]=", t, 2);      // t in 0.01 °C
+                print_fixed(" P[hPa]=", p, 2);   // p in Pa → /100 = hPa
+                g_uart2.send_string("\r\n");
+            } else {
+                g_uart2.send_string("bmp read failed\r\n");
+            }
+        }else {
             g_uart2.send_string("> ");
             g_uart2.send_string(line);
             g_uart2.send_string("\r\n");

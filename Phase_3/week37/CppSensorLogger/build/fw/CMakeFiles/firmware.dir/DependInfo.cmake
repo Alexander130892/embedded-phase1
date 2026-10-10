@@ -19,7 +19,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c" "CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj.d"
+  "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp_core.c" "CMakeFiles/firmware.dir/Src/bmp_core.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/bmp_core.c.obj.d"
   "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/i2c.c" "CMakeFiles/firmware.dir/Src/i2c.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/i2c.c.obj.d"
+  "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/spi.c" "CMakeFiles/firmware.dir/Src/spi.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/spi.c.obj.d"
   "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/syscalls.c" "CMakeFiles/firmware.dir/Src/syscalls.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/syscalls.c.obj.d"
   "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/sysmem.c" "CMakeFiles/firmware.dir/Src/sysmem.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/sysmem.c.obj.d"
   "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/systick.c" "CMakeFiles/firmware.dir/Src/systick.c.obj" "gcc" "CMakeFiles/firmware.dir/Src/systick.c.obj.d"

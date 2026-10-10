@@ -71,4 +71,6 @@ CMakeFiles/firmware.dir/Src/main.cpp.obj: \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/atomic \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/atomic_base.h \
  /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/atomic_lockfree_defines.h \
- /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/atomic_wait.h
+ /Applications/ArmGNUToolchain/15.3.rel1/arm-none-eabi/arm-none-eabi/include/c++/15.3.1/bits/atomic_wait.h \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/bmp280.h \
+ /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/spi.h

@@ -12,6 +12,9 @@
 #ifndef SPI_H_
 #define SPI_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 // SPI1_SCK 	--> PA5 -- D13
 // SPI1_MISO 	-->	PA6	-- D12
 // SPI1_MOSI	--> PA7 -- D11
@@ -25,5 +28,9 @@ status_t spi_init(void);
 status_t spi_gpio_init(void);
 status_t spi_transfer(uint8_t tx_data, uint8_t *rx_data);
 status_t spi_read_burst(uint8_t addr, uint8_t *rx_data, uint8_t len);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SPI_H_ */

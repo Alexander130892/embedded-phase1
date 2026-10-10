@@ -169,10 +169,52 @@ CMakeFiles/firmware.dir/Src/i2c.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/Src/i2c.c.s"
 	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/i2c.c -o CMakeFiles/firmware.dir/Src/i2c.c.s
 
+CMakeFiles/firmware.dir/Src/spi.c.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/Src/spi.c.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/spi.c
+CMakeFiles/firmware.dir/Src/spi.c.obj: CMakeFiles/firmware.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/firmware.dir/Src/spi.c.obj"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/spi.c.obj -MF CMakeFiles/firmware.dir/Src/spi.c.obj.d -o CMakeFiles/firmware.dir/Src/spi.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/spi.c
+
+CMakeFiles/firmware.dir/Src/spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.dir/Src/spi.c.i"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/spi.c > CMakeFiles/firmware.dir/Src/spi.c.i
+
+CMakeFiles/firmware.dir/Src/spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/Src/spi.c.s"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/spi.c -o CMakeFiles/firmware.dir/Src/spi.c.s
+
+CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c
+CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj: CMakeFiles/firmware.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj -MF CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj.d -o CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c
+
+CMakeFiles/firmware.dir/Src/bmp280_spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.dir/Src/bmp280_spi.c.i"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c > CMakeFiles/firmware.dir/Src/bmp280_spi.c.i
+
+CMakeFiles/firmware.dir/Src/bmp280_spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/Src/bmp280_spi.c.s"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c -o CMakeFiles/firmware.dir/Src/bmp280_spi.c.s
+
+CMakeFiles/firmware.dir/Src/bmp_core.c.obj: CMakeFiles/firmware.dir/flags.make
+CMakeFiles/firmware.dir/Src/bmp_core.c.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp_core.c
+CMakeFiles/firmware.dir/Src/bmp_core.c.obj: CMakeFiles/firmware.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/firmware.dir/Src/bmp_core.c.obj"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/bmp_core.c.obj -MF CMakeFiles/firmware.dir/Src/bmp_core.c.obj.d -o CMakeFiles/firmware.dir/Src/bmp_core.c.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp_core.c
+
+CMakeFiles/firmware.dir/Src/bmp_core.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.dir/Src/bmp_core.c.i"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp_core.c > CMakeFiles/firmware.dir/Src/bmp_core.c.i
+
+CMakeFiles/firmware.dir/Src/bmp_core.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.dir/Src/bmp_core.c.s"
+	/opt/homebrew/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/bmp_core.c -o CMakeFiles/firmware.dir/Src/bmp_core.c.s
+
 CMakeFiles/firmware.dir/Src/main.cpp.obj: CMakeFiles/firmware.dir/flags.make
 CMakeFiles/firmware.dir/Src/main.cpp.obj: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp
 CMakeFiles/firmware.dir/Src/main.cpp.obj: CMakeFiles/firmware.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/firmware.dir/Src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/firmware.dir/Src/main.cpp.obj"
 	/opt/homebrew/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/firmware.dir/Src/main.cpp.obj -MF CMakeFiles/firmware.dir/Src/main.cpp.obj.d -o CMakeFiles/firmware.dir/Src/main.cpp.obj -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/main.cpp
 
 CMakeFiles/firmware.dir/Src/main.cpp.i: cmake_force
@@ -192,6 +234,9 @@ firmware_OBJECTS = \
 "CMakeFiles/firmware.dir/Src/uart.cpp.obj" \
 "CMakeFiles/firmware.dir/Src/bsp.cpp.obj" \
 "CMakeFiles/firmware.dir/Src/i2c.c.obj" \
+"CMakeFiles/firmware.dir/Src/spi.c.obj" \
+"CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj" \
+"CMakeFiles/firmware.dir/Src/bmp_core.c.obj" \
 "CMakeFiles/firmware.dir/Src/main.cpp.obj"
 
 # External object files for target firmware
@@ -204,11 +249,14 @@ firmware.elf: CMakeFiles/firmware.dir/Src/systick.c.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/uart.cpp.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/bsp.cpp.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/i2c.c.obj
+firmware.elf: CMakeFiles/firmware.dir/Src/spi.c.obj
+firmware.elf: CMakeFiles/firmware.dir/Src/bmp280_spi.c.obj
+firmware.elf: CMakeFiles/firmware.dir/Src/bmp_core.c.obj
 firmware.elf: CMakeFiles/firmware.dir/Src/main.cpp.obj
 firmware.elf: CMakeFiles/firmware.dir/build.make
 firmware.elf: libfixed_format.a
 firmware.elf: CMakeFiles/firmware.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable firmware.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/fw/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable firmware.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/firmware.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
