@@ -4,10 +4,10 @@
  * Date:    10-10-2026
  *
  * Description:
- *   This file implements SPI communication drivers for the BMP280
+ *   This file implements SPI communication drivers for a BMP280
  *   barometric pressure sensor on an STM32F446RE microcontroller,
  *   providing functions to initialize the sensor, read/write
- *   registers, and retrieve temperature and pressure measurements over
+ *   registers, and acquire temperature and pressure measurements over
  *   SPI.
  */
 #include "stm32f446re.h"

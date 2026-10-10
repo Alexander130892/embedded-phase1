@@ -8,7 +8,7 @@
  *   algorithms for a BMP280 barometric pressure sensor on an
  *   STM32F446RE microcontroller, converting raw ADC readings into
  *   calibrated temperature and pressure values using device-specific
- *   compensation parameters.
+ *   calibration parameters.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"
