@@ -1,5 +1,6 @@
-Phase_3/week37/CppSensorLogger/Inc/i2c.h
+Phase_3/week37/CppSensorLogger/Inc/bmp280.h
+Phase_3/week37/CppSensorLogger/Inc/bmp280_internal.h
 Phase_3/week37/CppSensorLogger/Inc/spi.h
-Phase_3/week37/CppSensorLogger/Inc/status.h
-Phase_3/week37/CppSensorLogger/Inc/stm32f446re.h
-Phase_3/week37/CppSensorLogger/Src/i2c.c
+Phase_3/week37/CppSensorLogger/Src/bmp280_spi.c
+Phase_3/week37/CppSensorLogger/Src/bmp_core.c
+Phase_3/week37/CppSensorLogger/Src/spi.c

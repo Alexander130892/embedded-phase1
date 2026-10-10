@@ -1,16 +1,14 @@
 /*
  * File:    bmp_core.c
  * Author:  Alexander130892
- * Date:    22-5-2026
+ * Date:    10-10-2026
  *
  * Description:
- *   This file implements the BMP280 sensor's temperature and pressure
- *   compensation algorithms, applying the manufacturer-specified
- *   fixed-point formulas using factory-calibrated trimming parameters
- *   to convert raw ADC readings into physical values. It maintains a
- *   static `t_fine` intermediate temperature value shared between both
- *   compensation functions, ensuring pressure compensation always has
- *   an up-to-date temperature reference.
+ *   This file implements temperature and pressure compensation
+ *   algorithms for a BMP280 barometric pressure sensor on an
+ *   STM32F446RE microcontroller, converting raw ADC readings into
+ *   calibrated temperature and pressure values using device-specific
+ *   compensation parameters.
  */
 #include "stm32f446re.h"
 #include "bmp280.h"
