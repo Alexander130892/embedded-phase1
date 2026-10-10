@@ -1,5 +1,6 @@
-fixed_format_test 17 0.000134343
-ring_buffer_test 7 0.00032744
-mpu6050_test 5 0.00045405
-subject_test 2 0.0013521
+fixed_format_test 19 0.000125691
+ring_buffer_test 9 0.000276356
+mpu6050_test 7 0.000286381
+subject_test 4 0.000488042
+csv_format_test 2 0.000951083
 ---

@@ -36,6 +36,10 @@ status_t bmp280_i2c_read_who_am_i(uint8_t* data);
 status_t bmp280_i2c_init(uint8_t addr);
 status_t bmp280_i2c_read_temp(uint8_t addr, int32_t *temp);
 status_t bmp280_i2c_read_pressure(uint8_t addr, int32_t *pressure);
+struct EnvSample {
+    std::int32_t temp_centi_c;   // 0.01 °C  (Bosch compensation output)
+    std::int32_t press_pa;       // Pa
+};
 
 #ifdef __cplusplus
 }

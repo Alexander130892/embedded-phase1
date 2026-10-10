@@ -1,10 +1,10 @@
-Start testing: Oct 10 15:32 CEST
+Start testing: Oct 10 18:11 CEST
 ----------------------------------------------------------
-1/4 Testing: fixed_format_test
-1/4 Test: fixed_format_test
+1/5 Testing: fixed_format_test
+1/5 Test: fixed_format_test
 Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_fixed_format"
 Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
-"fixed_format_test" start time: Oct 10 15:32 CEST
+"fixed_format_test" start time: Oct 10 18:11 CEST
 Output:
 ----------------------------------------------------------
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:80:test_zero:PASS
@@ -29,15 +29,15 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"fixed_format_test" end time: Oct 10 15:32 CEST
+"fixed_format_test" end time: Oct 10 18:11 CEST
 "fixed_format_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/4 Testing: ring_buffer_test
-2/4 Test: ring_buffer_test
+2/5 Testing: ring_buffer_test
+2/5 Test: ring_buffer_test
 Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_ring_buffer"
 Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
-"ring_buffer_test" start time: Oct 10 15:32 CEST
+"ring_buffer_test" start time: Oct 10 18:11 CEST
 Output:
 ----------------------------------------------------------
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:152:test_new_buffer_is_empty:PASS
@@ -60,15 +60,15 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ring_buffer_test" end time: Oct 10 15:32 CEST
+"ring_buffer_test" end time: Oct 10 18:11 CEST
 "ring_buffer_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/4 Testing: mpu6050_test
-3/4 Test: mpu6050_test
+3/5 Testing: mpu6050_test
+3/5 Test: mpu6050_test
 Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_mpu6050"
 Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
-"mpu6050_test" start time: Oct 10 15:32 CEST
+"mpu6050_test" start time: Oct 10 18:11 CEST
 Output:
 ----------------------------------------------------------
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:172:test_init_writes_sequence_in_order:PASS
@@ -86,15 +86,15 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"mpu6050_test" end time: Oct 10 15:32 CEST
+"mpu6050_test" end time: Oct 10 18:11 CEST
 "mpu6050_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/4 Testing: subject_test
-4/4 Test: subject_test
+4/5 Testing: subject_test
+4/5 Test: subject_test
 Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_subject"
 Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
-"subject_test" start time: Oct 10 15:32 CEST
+"subject_test" start time: Oct 10 18:11 CEST
 Output:
 ----------------------------------------------------------
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:194:test_starts_empty:PASS
@@ -117,8 +117,41 @@ OK
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"subject_test" end time: Oct 10 15:32 CEST
+"subject_test" end time: Oct 10 18:11 CEST
 "subject_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 10 15:32 CEST
+5/5 Testing: csv_format_test
+5/5 Test: csv_format_test
+Command: "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/test_csv_format"
+Directory: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host
+"csv_format_test" start time: Oct 10 18:11 CEST
+Output:
+----------------------------------------------------------
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:177:test_full_record:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:178:test_negative_temperature_and_small_magnitudes:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:179:test_env_invalid_leaves_two_empty_fields:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:180:test_imu_invalid_leaves_six_empty_fields:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:181:test_both_invalid_keeps_column_count:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:182:test_column_count_matches_header:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:183:test_timestamp_beyond_int32:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:184:test_timestamp_zero:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:185:test_worst_case_fits_in_kCsvLineMax:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:186:test_exact_fit_succeeds:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:187:test_one_byte_short_writes_nothing:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:188:test_too_small_in_the_middle_writes_nothing:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:189:test_cap_one_writes_empty_string:PASS
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:190:test_null_or_zero_cap_is_harmless:PASS
+
+-----------------------
+14 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"csv_format_test" end time: Oct 10 18:11 CEST
+"csv_format_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 18:11 CEST

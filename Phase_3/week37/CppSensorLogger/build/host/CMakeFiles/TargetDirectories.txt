@@ -1,9 +1,11 @@
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/fixed_format.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/csv_format.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/unity.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test_fixed_format.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test_ring_buffer.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test_mpu6050.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test_subject.dir
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test_csv_format.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/test.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/edit_cache.dir
 /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles/rebuild_cache.dir

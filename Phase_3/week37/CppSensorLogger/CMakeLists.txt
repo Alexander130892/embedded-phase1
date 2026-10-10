@@ -32,6 +32,11 @@ add_library(subject INTERFACE)
 target_include_directories(subject INTERFACE Inc)
 target_link_libraries(subject INTERFACE etl)
 
+add_library(csv_format Src/csv_format.cpp)
+target_include_directories(csv_format PUBLIC Inc)
+target_compile_options(csv_format PRIVATE -Wall -Wextra -Wconversion)
+target_link_libraries(csv_format PRIVATE fixed_format)
+
 if(CMAKE_CROSSCOMPILING)
     add_executable(firmware)
     set_target_properties(firmware PROPERTIES SUFFIX ".elf")
@@ -47,8 +52,6 @@ if(CMAKE_CROSSCOMPILING)
         Src/spi.c
         Src/bmp280_spi.c
         Src/bmp_core.c
-        Src/main.cpp
-
     )
     target_include_directories(firmware PRIVATE
         Inc/
@@ -90,5 +93,11 @@ else()
     )
     target_link_libraries(test_subject PRIVATE subject unity)
     add_test(NAME subject_test COMMAND test_subject)
+    # Host unit tests for test_csv
+    add_executable(test_csv_format 
+    test/test_csv_format.cpp
+    )
+    target_link_libraries(test_csv_format PRIVATE csv_format unity)
+    add_test(NAME csv_format_test COMMAND test_csv_format)
 
 endif()
