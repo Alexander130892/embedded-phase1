@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c" "CMakeFiles/unity.dir/test/unity/unity.c.o" "gcc" "CMakeFiles/unity.dir/test/unity/unity.c.o.d"
+  "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c" "CMakeFiles/unity.dir/third_party/unity/src/unity.c.o" "gcc" "CMakeFiles/unity.dir/third_party/unity/src/unity.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

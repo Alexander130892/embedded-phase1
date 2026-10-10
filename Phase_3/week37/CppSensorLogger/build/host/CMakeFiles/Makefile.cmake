@@ -70,4 +70,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_fixed_format.dir/DependInfo.cmake"
   "CMakeFiles/test_ring_buffer.dir/DependInfo.cmake"
   "CMakeFiles/test_mpu6050.dir/DependInfo.cmake"
+  "CMakeFiles/test_subject.dir/DependInfo.cmake"
   )

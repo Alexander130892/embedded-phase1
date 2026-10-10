@@ -1,0 +1,4 @@
+ETL 20.49.0
+https://github.com/ETLCPP/etl/releases/tag/20.49.0
+commit 7d604f2, 2026-09-08
+vendored: include/etl/ + LICENSE (MIT)

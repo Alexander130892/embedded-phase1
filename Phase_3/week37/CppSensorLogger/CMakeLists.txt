@@ -25,6 +25,13 @@ target_include_directories(ring_buffer INTERFACE Inc)
 add_library(mpu6050 INTERFACE)
 target_include_directories(mpu6050 INTERFACE Inc)
 
+add_library(etl INTERFACE)
+target_include_directories(etl SYSTEM INTERFACE third_party/etl/include)
+
+add_library(subject INTERFACE)
+target_include_directories(subject INTERFACE Inc)
+target_link_libraries(subject INTERFACE etl)
+
 if(CMAKE_CROSSCOMPILING)
     add_executable(firmware)
     set_target_properties(firmware PROPERTIES SUFFIX ".elf")
@@ -51,13 +58,11 @@ if(CMAKE_CROSSCOMPILING)
         --specs=nano.specs
         -Wl,-Map=${CMAKE_BINARY_DIR}/firmware.map
     )
-    target_link_libraries(firmware PRIVATE fixed_format) 
+    target_link_libraries(firmware PRIVATE fixed_format etl) 
 else()
     # Unity test framework (vendored, C)
-    add_library(unity
-        test/unity/unity.c
-    )
-    target_include_directories(unity PUBLIC test/unity)
+    add_library(unity third_party/unity/src/unity.c)
+    target_include_directories(unity PUBLIC third_party/unity/src)
 
     # Host unit tests for fixed_format
     add_executable(test_fixed_format
@@ -77,7 +82,13 @@ else()
     add_executable(test_mpu6050
         test/test_mpu6050.cpp
     )
-    target_link_libraries(test_mpu6050 PRIVATE mpu6050 unity)
+    target_link_libraries(test_mpu6050 PRIVATE mpu6050 unity )
     add_test(NAME mpu6050_test COMMAND test_mpu6050)
+    # Host unit tests for test_subject
+    add_executable(test_subject 
+    test/test_subject.cpp
+    )
+    target_link_libraries(test_subject PRIVATE subject unity)
+    add_test(NAME subject_test COMMAND test_subject)
 
 endif()

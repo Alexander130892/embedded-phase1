@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/unity.dir/test/unity/unity.c.o"
-  "CMakeFiles/unity.dir/test/unity/unity.c.o.d"
+  "CMakeFiles/unity.dir/third_party/unity/src/unity.c.o"
+  "CMakeFiles/unity.dir/third_party/unity/src/unity.c.o.d"
   "libunity.a"
   "libunity.pdb"
 )

@@ -9,6 +9,7 @@
 #include "uart.hpp"
 #include "bmp280.h"
 #include "spi.h"
+#include "subject.hpp"
 
 constinit Uart g_uart2{0x4000'4400u};   // USART2
 

@@ -1,26 +1,32 @@
 [
 {
   "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
-  "command": "/usr/bin/cc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=gnu11 -arch arm64 -o CMakeFiles/unity.dir/test/unity/unity.c.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c",
-  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c",
-  "output": "CMakeFiles/unity.dir/test/unity/unity.c.o"
+  "command": "/usr/bin/cc  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src -g -std=gnu11 -arch arm64 -o CMakeFiles/unity.dir/third_party/unity/src/unity.c.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c",
+  "output": "CMakeFiles/unity.dir/third_party/unity/src/unity.c.o"
 },
 {
   "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
-  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=c++20 -arch arm64 -o CMakeFiles/test_fixed_format.dir/test/test_fixed_format.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp",
+  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src -g -std=c++20 -arch arm64 -o CMakeFiles/test_fixed_format.dir/test/test_fixed_format.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp",
   "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp",
   "output": "CMakeFiles/test_fixed_format.dir/test/test_fixed_format.cpp.o"
 },
 {
   "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
-  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=c++20 -arch arm64 -o CMakeFiles/test_ring_buffer.dir/test/test_ring_buffer.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp",
+  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src -g -std=c++20 -arch arm64 -o CMakeFiles/test_ring_buffer.dir/test/test_ring_buffer.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp",
   "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp",
   "output": "CMakeFiles/test_ring_buffer.dir/test/test_ring_buffer.cpp.o"
 },
 {
   "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
-  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity -g -std=c++20 -arch arm64 -o CMakeFiles/test_mpu6050.dir/test/test_mpu6050.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp",
+  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src -g -std=c++20 -arch arm64 -o CMakeFiles/test_mpu6050.dir/test/test_mpu6050.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp",
   "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp",
   "output": "CMakeFiles/test_mpu6050.dir/test/test_mpu6050.cpp.o"
+},
+{
+  "directory": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host",
+  "command": "/usr/bin/c++  -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc -I/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src -isystem /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/etl/include -g -std=c++20 -arch arm64 -o CMakeFiles/test_subject.dir/test/test_subject.cpp.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp",
+  "file": "/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp",
+  "output": "CMakeFiles/test_subject.dir/test/test_subject.cpp.o"
 }
 ]

@@ -72,28 +72,28 @@ include CMakeFiles/unity.dir/flags.make
 CMakeFiles/unity.dir/codegen:
 .PHONY : CMakeFiles/unity.dir/codegen
 
-CMakeFiles/unity.dir/test/unity/unity.c.o: CMakeFiles/unity.dir/flags.make
-CMakeFiles/unity.dir/test/unity/unity.c.o: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c
-CMakeFiles/unity.dir/test/unity/unity.c.o: CMakeFiles/unity.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unity.dir/test/unity/unity.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/unity.dir/test/unity/unity.c.o -MF CMakeFiles/unity.dir/test/unity/unity.c.o.d -o CMakeFiles/unity.dir/test/unity/unity.c.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c
+CMakeFiles/unity.dir/third_party/unity/src/unity.c.o: CMakeFiles/unity.dir/flags.make
+CMakeFiles/unity.dir/third_party/unity/src/unity.c.o: /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c
+CMakeFiles/unity.dir/third_party/unity/src/unity.c.o: CMakeFiles/unity.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/unity.dir/third_party/unity/src/unity.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/unity.dir/third_party/unity/src/unity.c.o -MF CMakeFiles/unity.dir/third_party/unity/src/unity.c.o.d -o CMakeFiles/unity.dir/third_party/unity/src/unity.c.o -c /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c
 
-CMakeFiles/unity.dir/test/unity/unity.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/unity.dir/test/unity/unity.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c > CMakeFiles/unity.dir/test/unity/unity.c.i
+CMakeFiles/unity.dir/third_party/unity/src/unity.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/unity.dir/third_party/unity/src/unity.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c > CMakeFiles/unity.dir/third_party/unity/src/unity.c.i
 
-CMakeFiles/unity.dir/test/unity/unity.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/unity.dir/test/unity/unity.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/unity/unity.c -o CMakeFiles/unity.dir/test/unity/unity.c.s
+CMakeFiles/unity.dir/third_party/unity/src/unity.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/unity.dir/third_party/unity/src/unity.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.c -o CMakeFiles/unity.dir/third_party/unity/src/unity.c.s
 
 # Object files for target unity
 unity_OBJECTS = \
-"CMakeFiles/unity.dir/test/unity/unity.c.o"
+"CMakeFiles/unity.dir/third_party/unity/src/unity.c.o"
 
 # External object files for target unity
 unity_EXTERNAL_OBJECTS =
 
-libunity.a: CMakeFiles/unity.dir/test/unity/unity.c.o
+libunity.a: CMakeFiles/unity.dir/third_party/unity/src/unity.c.o
 libunity.a: CMakeFiles/unity.dir/build.make
 libunity.a: CMakeFiles/unity.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/build/host/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libunity.a"
