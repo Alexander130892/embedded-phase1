@@ -1,16 +1,14 @@
 /*
  * File:    bmp280_internal.h
  * Author:  Alexander130892
- * Date:    22-5-2026
+ * Date:    10-10-2026
  *
  * Description:
- *   This internal header file defines register addresses, SPI
- *   read/write masks, and configuration constants for the BMP280
- *   barometric pressure/temperature sensor, along with a packed struct
- *   for storing factory calibration (compensation) parameters. It also
- *   declares the external compensation parameter variable and
- *   prototypes for the temperature and pressure compensation
- *   calculation functions.
+ *   This header file defines register addresses, SPI communication
+ *   constants, and compensation parameter structures for interfacing
+ *   with a BMP280 barometric pressure and temperature sensor. It
+ *   declares functions for temperature and pressure compensation using
+ *   calibration data stored on the device.
  */
 #ifndef BMP280_BMP280_INTERNAL_H_
 #define BMP280_BMP280_INTERNAL_H_

@@ -1,15 +1,13 @@
 /*
  * File:    spi.c
  * Author:  Alexander130892
- * Date:    22-5-2026
+ * Date:    10-10-2026
  *
  * Description:
- *   This file initializes and drives STM32's SPI1 peripheral in
- *   full-duplex master mode at 250 kHz using software slave
- *   management, with PA5/PA6/PA7 configured as alternate-function SPI
- *   pins. It provides a polled single-byte transfer function and a
- *   burst-read helper that sends an address byte followed by dummy
- *   bytes to clock in multiple response bytes.
+ *   This file implements SPI (Serial Peripheral Interface)
+ *   communication for an STM32 microcontroller, providing functions to
+ *   initialize SPI1 and GPIO pins, perform single-byte transfers, and
+ *   read multiple bytes in burst mode with timeout protection.
  */
 #include "spi.h"
 

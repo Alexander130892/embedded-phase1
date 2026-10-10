@@ -1,13 +1,15 @@
 /*
  * File:    spi.h
  * Author:  Alexander130892
- * Date:    9-10-2026
+ * Date:    10-10-2026
  *
  * Description:
- *   This header file defines the SPI (Serial Peripheral Interface)
- *   interface for an STM32F446RE microcontroller, mapping SPI1 pins to
- *   Arduino-compatible pins and providing functions for SPI
- *   initialization, GPIO setup, and data transfer operations.
+ *   This header file defines the SPI interface for an STM32F446RE
+ *   microcontroller, providing initialization and communication
+ *   functions for SPI1 peripheral with pins mapped to PA5-PA7
+ *   (SCK/MISO/MOSI) and PB6 (CS). It includes function declarations
+ *   for SPI setup, GPIO configuration, single-byte transfers, and
+ *   burst reads from specified addresses.
  */
 #ifndef SPI_H_
 #define SPI_H_
