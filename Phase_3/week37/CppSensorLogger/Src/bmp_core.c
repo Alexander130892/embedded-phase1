@@ -6,8 +6,8 @@
  * Description:
  *   This file implements temperature and pressure compensation
  *   algorithms for a BMP280 barometric pressure sensor on an
- *   STM32F446RE microcontroller, converting raw ADC readings into
- *   calibrated temperature and pressure values using device-specific
+ *   STM32F446RE microcontroller, converting raw ADC values into
+ *   calibrated temperature and pressure readings using device-specific
  *   calibration parameters.
  */
 #include "stm32f446re.h"
