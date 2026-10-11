@@ -101,7 +101,9 @@ int main()
             } else {
                 g_uart2.send_string("bmp read failed\r\n");
             }
-        }else {
+        } else if (std::strcmp(line, "i2creset") == 0) {
+            g_uart2.send_string(i2c_bus_reset() == STATUS_OK ? "reset Ok\r\n" : "reset failed\r\n");
+        } else {
             g_uart2.send_string("> ");
             g_uart2.send_string(line);
             g_uart2.send_string("\r\n");

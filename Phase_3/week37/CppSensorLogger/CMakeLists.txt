@@ -52,6 +52,7 @@ if(CMAKE_CROSSCOMPILING)
         Src/spi.c
         Src/bmp280_spi.c
         Src/bmp_core.c
+        Src/main.cpp
     )
     target_include_directories(firmware PRIVATE
         Inc/

@@ -12,6 +12,8 @@
  */
 #include "i2c.h"
 
+#define I2C_SCL_PIN  8u   // PB8 = I2C1_SCL
+#define I2C_SDA_PIN  9u   // PB9 = I2C1_SDA
 
 status_t i2c_init_gpio(void){
 	// Enable clock
@@ -322,33 +324,48 @@ status_t i2c_read_burst(uint8_t addr, uint8_t reg, uint8_t *buf, uint8_t len){
 		}
 	}
 }
+
+static void i2c_recovery_delay(void){
+	for(volatile uint32_t d = 0; d < I2C_BUS_RECOVERY_DELAY; d++);
+}
+
 status_t i2c_bus_reset(void){
-//	SWRST — reset the peripheral
-	I2C1_CR1 |= I2C_CR1_SWRST;
+	volatile uint32_t * const moder = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_MODER_OFFSET);
+	volatile uint32_t * const odr   = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET);
+	volatile uint32_t * const idr   = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_IDR_OFFSET);
+	const uint32_t scl = 1u << I2C_SCL_PIN;
+	const uint32_t sda = 1u << I2C_SDA_PIN;
+
+	// 1. Disable and reset the peripheral so it lets go of the lines
+	I2C1_CR1 &= ~I2C_CR1_PE;
+	I2C1_CR1 |=  I2C_CR1_SWRST;
 	I2C1_CR1 &= ~I2C_CR1_SWRST;
-//	Reconfigure SCL/SDA as GPIO output temporarily
-	*((volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_MODER_OFFSET)) 	&= 	~(
-																			 	(3u << 2*8)		// AF for PB8
-																			|	(3u << 2*9)		// AF for PB9
-																			);
-	*((volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_MODER_OFFSET)) 	|= 	(
-																				 	(1u << 2*8)		// 01 output for PB8
-																				|	(1u << 2*9)		// output for PB9
-																				);
-//	Toggle SCL up to 9 times until SDA goes high
-	uint8_t count=0;
-	while(!(*(volatile uint32_t *)(GPIOB_BASE_ADDR+GPIOx_IDR_OFFSET) & (1u<<8))){
-		if(count == I2C_BUS_RECOVERY_CLOCKS){
-			return i2c_init();
-		}
-		*(volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET) &= ~(1u<<9);
-		for(volatile uint32_t delay = 0 ; delay < I2C_BUS_RECOVERY_DELAY ; delay++); // small delay
-		*(volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET) |= (1u<<9);
-		count ++;
+
+	// 2. Release both lines (ODR = 1, open-drain = floating high) BEFORE switching to output
+	*odr |= (scl | sda);
+	*moder = (*moder & ~((3u << 2*I2C_SCL_PIN) | (3u << 2*I2C_SDA_PIN)))
+	       |           ((1u << 2*I2C_SCL_PIN) | (1u << 2*I2C_SDA_PIN));     // 01 = GP output
+	i2c_recovery_delay();
+
+	// 3. Clock SCL until the slave releases SDA (at most 9 clocks)
+	for(uint8_t count = 0; count < I2C_BUS_RECOVERY_CLOCKS && !(*idr & sda); count++){
+		*odr &= ~scl;  i2c_recovery_delay();
+		*odr |=  scl;  i2c_recovery_delay();
 	}
-//	Generate a STOP condition manually
-	*(volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET) |= (1u<<9);	//SCL high first
-	*(volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET) |= (1u<<8); // SDA after --> Manual STOP condition
-//	Re-initialise the peripheral
-	return i2c_init();
+
+	// 4. Manual STOP: SDA low while SCL low, SCL high, then SDA rises while SCL high
+	*odr &= ~scl;  i2c_recovery_delay();
+	*odr &= ~sda;  i2c_recovery_delay();
+	*odr |=  scl;  i2c_recovery_delay();
+	*odr |=  sda;  i2c_recovery_delay();
+
+	const int bus_free = ((*idr & scl) != 0u) && ((*idr & sda) != 0u);
+
+	// 5. Hand the pins back to I2C1 (AF4) and reinitialise the peripheral
+	(void)i2c_init_gpio();
+	const status_t status = i2c_init();
+	if(status){
+		return status;
+	}
+	return bus_free ? STATUS_OK : I2C_TIMEOUT;
 }
