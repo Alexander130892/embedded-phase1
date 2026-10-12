@@ -1,14 +1,13 @@
 /*
  * File:    spi.c
  * Author:  Alexander130892
- * Date:    11-10-2026
+ * Date:    12-10-2026
  *
  * Description:
  *   This file implements SPI (Serial Peripheral Interface) driver
- *   functions for an STM32 microcontroller, including peripheral
- *   initialization, GPIO pin configuration for SPI communication, and
- *   blocking single-byte and burst data transfer operations with
- *   timeout protection.
+ *   functions for an STM32 microcontroller, including initialization
+ *   of the SPI peripheral and GPIO pins, basic byte transfer, and
+ *   burst read operations with timeout protection.
  */
 #include "spi.h"
 

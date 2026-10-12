@@ -1,7 +1,7 @@
 /*
  * File:    bmp_core.c
  * Author:  Alexander130892
- * Date:    11-10-2026
+ * Date:    12-10-2026
  *
  * Description:
  *   This file implements temperature and pressure compensation
