@@ -368,4 +368,5 @@ status_t i2c_bus_reset(void){
 		return status;
 	}
 	return bus_free ? STATUS_OK : I2C_TIMEOUT;
+	
 }
