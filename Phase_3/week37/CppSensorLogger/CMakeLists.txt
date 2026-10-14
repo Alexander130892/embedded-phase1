@@ -32,6 +32,10 @@ add_library(subject INTERFACE)
 target_include_directories(subject INTERFACE Inc)
 target_link_libraries(subject INTERFACE etl)
 
+add_library(sensor_fsm INTERFACE)
+target_include_directories(sensor_fsm INTERFACE Inc)
+target_link_libraries(sensor_fsm INTERFACE subject)
+
 add_library(csv_format Src/csv_format.cpp)
 target_include_directories(csv_format PUBLIC Inc)
 target_compile_options(csv_format PRIVATE -Wall -Wextra -Wconversion)
@@ -100,5 +104,9 @@ else()
     )
     target_link_libraries(test_csv_format PRIVATE csv_format unity)
     add_test(NAME csv_format_test COMMAND test_csv_format)
+    # Host unit tests for sensor fsm
+    add_executable(test_sensor_fsm test/test_sensor_fsm.cpp)
+    target_link_libraries(test_sensor_fsm PRIVATE sensor_fsm unity)
+    add_test(NAME sensor_fsm_test COMMAND test_sensor_fsm)
 
 endif()

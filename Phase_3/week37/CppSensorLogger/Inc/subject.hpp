@@ -36,7 +36,7 @@ class Subject {
         // Calls every subscriber, in subscription order.
         void publish(const Event& e) const
         {
-            // TODO 4: loop over the *used* slots only and call each callback with e
+            // loop over the *used* slots only and call each callback with e
             for (std::size_t i = 0; i < count_; ++i) {
                 subscribers_[i](e);
             }
