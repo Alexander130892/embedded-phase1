@@ -13,6 +13,9 @@
 #ifndef SYSTICK_H_
 #define SYSTICK_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include <stdint.h>
 
 #define SYSTICK_MS_VALUE	15999		// 16 MHZ / 1000ms -1
@@ -21,5 +24,9 @@
 void systick_init(void);
 void SysTick_Handler(void);
 uint32_t systick_get_ms(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SYSTICK_H_ */

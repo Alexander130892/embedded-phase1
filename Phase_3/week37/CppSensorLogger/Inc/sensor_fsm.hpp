@@ -114,9 +114,9 @@ private:
         switch (e) {
             case Event::LogOff:{ // row 7
                 return State::Idle; 
-            }case Event::LogOn:{  // TODO: already "logging" (just degraded) -> ?
+            }case Event::LogOn:{  // already "logging" --> Keep recovering
                 return State::Recovering; 
-            }case Event::Tick: {  // TODO rows 6/6b:
+            }case Event::Tick: {  
                 LogRecord r = begin_record();
                 r.imu_valid = false;
                 bool ok = (hw_.bus_reset() == BusStatus::Ok && hw_.imu_init() == BusStatus::Ok);

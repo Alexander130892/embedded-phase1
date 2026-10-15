@@ -66,7 +66,7 @@ if(CMAKE_CROSSCOMPILING)
         --specs=nano.specs
         -Wl,-Map=${CMAKE_BINARY_DIR}/firmware.map
     )
-    target_link_libraries(firmware PRIVATE fixed_format etl) 
+    target_link_libraries(firmware PRIVATE fixed_format ring_buffer csv_format sensor_fsm etl)
 else()
     # Unity test framework (vendored, C)
     add_library(unity third_party/unity/src/unity.c)

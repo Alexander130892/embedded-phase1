@@ -1,112 +1,160 @@
+// Src/main.cpp — wiring: drivers -> BoardHw -> SensorFsm -> Subject -> UartLogger -> USART2
+//
+//   systick (1 s) Tick
+//   UART "log on/off" > SensorFsm<BoardHw> -- publish(LogRecord)> Subject > UartLogger > USART2
+//                         │          │
+//                         │           BoardHw: Mpu6050<I2c1Bus> (C++), BMP280 + I2C/SPI/systick (Week 17 C)
+#include <cstddef>
 #include <cstdint>
 #include <cstring>
 
+#include "bmp280.h"        // Week 17 C driver (extern "C")
 #include "bsp.hpp"
-#include "fixed_format.hpp"
-#include "i2c.h"            // C API: i2c_init_gpio(), i2c_init()
+#include "i2c.h"           // Week 17 C driver (extern "C")
 #include "i2c_bus.hpp"     // I2c1Bus adapter
+#include "log_record.hpp"
 #include "mpu6050.hpp"
-#include "uart.hpp"
-#include "bmp280.h"
-#include "spi.h"
+#include "sensor_fsm.hpp"
+#include "sensor_hw.hpp"
+#include "spi.h"           // Week 17 C driver (extern "C")
 #include "subject.hpp"
+#include "systick.h"       // Week 17 C driver — needs extern "C" guards, see note
+#include "uart.hpp"
+#include "uart_logger.hpp"
 
-constinit Uart g_uart2{0x4000'4400u};   // USART2
+constinit Uart g_uart2{0x4000'4400u};   // USART2 — file scope, external linkage (the ISR uses it)
 
 namespace {
 
-const char* to_string(BusStatus s)
+constexpr std::uint32_t kTickPeriodMs = 1000;   // one LogRecord per second, as in Week 17
+constexpr std::size_t   kMaxObservers = 2;      // UartLogger + one spare
+
+// ---------------------------------------------------------------------------
+// BoardHw: the real implementation of the SensorHw port.
+// The only place where the FSM's world meets the actual drivers.
+// ---------------------------------------------------------------------------
+struct BoardHw {
+    Mpu6050<I2c1Bus>& imu;
+
+    BusStatus imu_init()
+    {
+        // forward to the Mpu6050
+        return imu.init();
+    }
+
+    BusStatus imu_read(ImuSample& s)
+    {
+        // Forward to the Mpu6050
+        return imu.read(s);;
+    }
+
+    bool env_read(EnvSample& e)
+    {
+        // Both Week 17 C calls must return STATUS_OK
+        return(bmp280_spi_read_temp(&e.temp_centi_c) == STATUS_OK && bmp280_spi_read_pressure(&e.press_pa) == STATUS_OK);
+    }
+    BusStatus bus_reset()
+    {
+        return (i2c_bus_reset() == STATUS_OK) ? BusStatus::Ok : BusStatus::Timeout;
+    }
+
+    std::uint32_t now_ms()
+    {
+        // Week 17 systick
+        return systick_get_ms();
+    }
+};
+static_assert(SensorHw<BoardHw>, "BoardHw must satisfy the SensorHw port");
+
+using Records = Subject<LogRecord, kMaxObservers>;
+using Fsm     = SensorFsm<BoardHw, kMaxObservers>;
+
+const char* to_string(State s)
 {
     switch (s) {
-        case BusStatus::Ok:              return "Ok";
-        case BusStatus::Timeout:         return "Timeout";
-        case BusStatus::Nack:            return "Nack";
-        case BusStatus::ArbitrationLost: return "ArbitrationLost";
-        case BusStatus::Unknown:         return "Unknown";
+        case State::Init:       return "Init";
+        case State::Logging:    return "Logging";
+        case State::Idle:       return "Idle";
+        case State::Recovering: return "Recovering";
     }
     return "?";
 }
 
-// Prints a fixed-point value with `frac_digits` decimals: (2150, 2) → "21.50"
-void print_fixed(const char* label, std::int32_t value, std::uint8_t frac_digits)
+// Non-CSV lines start with '#'
+void info(const char* a, const char* b = "")
 {
-    char num[16];                                   // "-2147483648" + '.' + '\0' fits
-    format_fixed(num, sizeof num, value, frac_digits);
-    g_uart2.send_string(label);
-    g_uart2.send_string(num);
+    (void)g_uart2.send_string("# ");
+    (void)g_uart2.send_string(a);
+    (void)g_uart2.send_string(b);
+    (void)g_uart2.send_string("\r\n");
 }
 
-// milli-units → 3 decimals: -981 → "-0.981"
-void print_milli(const char* label, std::int32_t milli)
+void handle_command(const char* line, Fsm& fsm)
 {
-    print_fixed(label, milli, 3);
-}
-
-void print_sample(const ImuSample& s)
-{
-    print_milli("accel[g] x=",   s.accel_x_mg);
-    print_milli(" y=",           s.accel_y_mg);
-    print_milli(" z=",           s.accel_z_mg);
-    print_milli("\tgyro[dps] x=", s.gyro_x_mdps);
-    print_milli(" y=",           s.gyro_y_mdps);
-    print_milli(" z=",           s.gyro_z_mdps);
-    g_uart2.send_string("\r\n");
+    if (std::strcmp(line, "log on") == 0) {
+        fsm.handle(Event::LogOn);
+    } else if (std::strcmp(line, "log off") == 0) {
+        fsm.handle(Event::LogOff);
+    } else if (std::strcmp(line, "status") == 0) {
+        // falls through to the state report below
+    } else {
+        info("unknown command: ", line);
+        return;
+    }
+    info("state: ", to_string(fsm.state()));
 }
 
 } // namespace
 
 int main()
 {
-    bsp_init();          // PA2/PA3 → AF7 (USART2)
-    g_uart2.init();      // clock, 115200 8N1, RXNE IRQ
-    g_uart2.send_string("CppSensorLogger up\r\n");
+    // --- hardware bring-up (order as in Week 17) ---------------------------
+    bsp_init();                     // PA2/PA3 -> USART2
+    g_uart2.init();
+    systick_init();                 // 1 ms tick
 
-    (void)i2c_init_gpio();                    // Week 17 C driver: I2C1 pins + clock
-    (void)i2c_init();                         // I2C1 100 kHz
-
-    (void)spi_gpio_init();          // SPI1 pins on GPIOA
-    (void)bmp280_spi_gpio_init();   // CS = PB6, idle high
+    (void)spi_gpio_init();          // SPI1 + BMP280 (C driver)
+    (void)bmp280_spi_gpio_init();
     (void)spi_init();
-    const status_t bst = bmp280_spi_init();   // ctrl_meas + calibration readout
+    const status_t bmp_st = bmp280_spi_init();
 
-    I2c1Bus bus;
+    (void)i2c_init_gpio();          // I2C1 (C driver); the MPU-6050 itself is started by the FSM
+    (void)i2c_init();
+
+    // --- objects (locals of main: main never returns, so they live forever) ---
+    I2c1Bus          bus;
     Mpu6050<I2c1Bus> imu{bus, Mpu6050<I2c1Bus>::kAddrAd0Low};
+    BoardHw          hw{imu};
 
-    const BusStatus st = imu.init();
-    g_uart2.send_string("MPU-6050 init: ");
-    g_uart2.send_string(to_string(st));
-    g_uart2.send_string("\r\nType 'imu' for a sample\r\n");
+    Records    records;
+    UartLogger logger{g_uart2};
+    Fsm        fsm{hw, records};
 
+    // --- wiring ---------------------------------------------------------------
+    info("CppSensorLogger v1.0 - commands: log on | log off | status");
+    if (bmp_st != STATUS_OK) {
+        info("BMP280 init failed - env columns will be empty");
+    }
+    if (!records.subscribe(Records::Callback::create<UartLogger, &UartLogger::on_record>(logger))) {
+        info("subscribe failed: increase kMaxObservers");
+    }
+
+    logger.print_header();
+    fsm.start();                    // MPU init: Logging, or Recovering if the sensor is absent
+    info("state: ", to_string(fsm.state()));
+
+    // --- super-loop -------------------------------------------------------------
+    std::uint32_t last_tick = systick_get_ms();
     char line[Uart::kMaxLineLen + 1];
+
     for (;;) {
-        if (!g_uart2.receive_line(line, sizeof line)) {
-            continue;
+        // Unsigned subtraction: still correct when the ms counter wraps after ~49.7 days.
+        if (systick_get_ms() - last_tick >= kTickPeriodMs) {
+            last_tick += kTickPeriodMs;   // += (not = now): no drift, ticks stay on a 1 s grid
+            fsm.handle(Event::Tick);
         }
-        if (std::strcmp(line, "imu") == 0) {
-            ImuSample s{};
-            const BusStatus rs = imu.read(s);
-            if (rs == BusStatus::Ok) {
-                print_sample(s);
-            } else {
-                g_uart2.send_string("read failed: ");
-                g_uart2.send_string(to_string(rs));
-                g_uart2.send_string("\r\n");
-            }
-        }else if (std::strcmp(line, "bmp") == 0) {
-            std::int32_t t = 0, p = 0;
-            if (bmp280_spi_read_temp(&t) == STATUS_OK && bmp280_spi_read_pressure(&p) == STATUS_OK) {
-                print_fixed("T[C]=", t, 2);      // t in 0.01 °C
-                print_fixed(" P[hPa]=", p, 2);   // p in Pa → /100 = hPa
-                g_uart2.send_string("\r\n");
-            } else {
-                g_uart2.send_string("bmp read failed\r\n");
-            }
-        } else if (std::strcmp(line, "i2creset") == 0) {
-            g_uart2.send_string(i2c_bus_reset() == STATUS_OK ? "reset Ok\r\n" : "reset failed\r\n");
-        } else {
-            g_uart2.send_string("> ");
-            g_uart2.send_string(line);
-            g_uart2.send_string("\r\n");
+        if (g_uart2.receive_line(line, sizeof line)) {
+            handle_command(line, fsm);
         }
     }
 }
