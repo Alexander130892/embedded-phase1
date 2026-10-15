@@ -113,15 +113,15 @@ private:
     {
         switch (e) {
             case Event::LogOff:{ // row 7
-            
+                return State::Idle; 
             }case Event::LogOn:{  // TODO: already "logging" (just degraded) -> ?
-            
-            }case Event::Tick:   // TODO rows 6/6b:
-                                //   r = begin_record(); r.imu_valid = false
-                                //   ok = bus_reset() == Ok && imu_init() == Ok
-                                //        (&& short-circuits: no imu_init when the reset failed)
-                                //   publish r
-                                //   ok ? Logging : Recovering
+                return State::Recovering; 
+            }case Event::Tick: {  // TODO rows 6/6b:
+                LogRecord r = begin_record();
+                r.imu_valid = false;
+                bool ok = (hw_.bus_reset() == BusStatus::Ok && hw_.imu_init() == BusStatus::Ok);
+                out_.publish(r);
+                return (ok ? State::Logging : State::Recovering);
             }
         }
         return State::Recovering;
