@@ -28,6 +28,7 @@ enum class Event : std::uint8_t { Tick, LogOn, LogOff };
 template <SensorHw Hw, std::size_t N>
 class SensorFsm {
 public:
+    ~SensorFsm() = default;
     SensorFsm(Hw& hw, Subject<LogRecord, N>& out) : hw_{hw}, out_{out} {}
 
     SensorFsm(const SensorFsm&)            = delete;
@@ -59,7 +60,7 @@ public:
         }
     }
 
-    State state() const { return state_; }
+    [[nodiscard]] State state() const { return state_; }
 
 private:
     // Rows 3, 4, 5
@@ -73,11 +74,7 @@ private:
                 r = begin_record();
                 const BusStatus bus_s = hw_.imu_read(r.imu);
                 // imu_valid
-                if(bus_s == BusStatus::Ok){
-                    r.imu_valid = true;
-                } else {
-                    r.imu_valid = false;
-                }
+                r.imu_valid = (bus_s == BusStatus::Ok);
                 //publish r
                 out_.publish(r);
                 //update state

@@ -2,7 +2,6 @@
 
 #include <cstdint>
 #include <concepts>
-#include "i2c.h"
 
 enum class [[nodiscard]] BusStatus : std::uint8_t {
     Ok,

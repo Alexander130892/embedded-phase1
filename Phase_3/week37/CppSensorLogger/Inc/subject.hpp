@@ -9,6 +9,7 @@
 template <class Event, std::size_t N>
 class Subject {
     public:
+        ~Subject() = default;
         using Callback = etl::delegate<void(const Event&)>;
 
         static_assert(N >= 1, "a subject without subscriber slots is useless");
@@ -22,15 +23,12 @@ class Subject {
         [[nodiscard]] bool subscribe(Callback cb)
         {
            
-            if(!cb.is_valid()){   // Reject an empty delegate
+            if(!cb.is_valid() || (count_ >= N)){         // Reject when full
                 return false;
-            }else if(count_ >= N){         // Reject when full
-                return false;
-            }else{              // Store cb, bump the count, return true
-                subscribers_[count_]=cb;
-                count_++;
-                return true;
-            } 
+            }              // Store cb, bump the count, return true
+            subscribers_[count_]=cb;
+            count_++;
+            return true; 
         }
 
         // Calls every subscriber, in subscription order.
@@ -42,7 +40,7 @@ class Subject {
             }
         }
 
-        std::size_t subscriber_count() const { 
+        [[nodiscard]] std::size_t subscriber_count() const { 
             return count_; 
         }
         static constexpr std::size_t capacity() { 

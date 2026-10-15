@@ -1,0 +1,1314 @@
+Running clang-tidy in 8 threads for 7 files out of 8 in compilation database ...
+[1/7][0.4s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:13:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   13 |     std::memset(buf, 'X', sizeof buf);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:14:40: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   14 |     const std::size_t n = format_fixed(buf, sizeof buf, value, frac);
+      |                                        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:20:23: warning: redundant void argument list [modernize-redundant-void-arg]
+   20 | static void test_zero(void)                 { check(0,    2, "0.00");  }
+      |                       ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:21:27: warning: redundant void argument list [modernize-redundant-void-arg]
+   21 | static void test_positive(void)             { check(150,  2, "1.50");  }
+      |                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:22:37: warning: redundant void argument list [modernize-redundant-void-arg]
+   22 | static void test_no_fraction_digits(void)   { check(7,    0, "7");     }
+      |                                     ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:25:27: warning: redundant void argument list [modernize-redundant-void-arg]
+   25 | static void test_negative(void)                        { check(-150, 2, "-1.50"); } // was "-1.-50"
+      |                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:26:50: warning: redundant void argument list [modernize-redundant-void-arg]
+   26 | static void test_negative_with_zero_integer_part(void) { check(-5,   2, "-0.05"); } // was "0.-5"
+      |                                                  ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:27:33: warning: redundant void argument list [modernize-redundant-void-arg]
+   27 | static void test_negative_whole(void)                  { check(-100, 2, "-1.00"); }
+      |                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:30:28: warning: redundant void argument list [modernize-redundant-void-arg]
+   30 | static void test_int32_min(void)      { check(INT32_MIN, 2, "-21474836.48"); } // -INT32_MIN would be UB
+      |                            ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:31:28: warning: redundant void argument list [modernize-redundant-void-arg]
+   31 | static void test_int32_max(void)      { check(INT32_MAX, 2, "21474836.47");  }
+      |                            ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:32:34: warning: redundant void argument list [modernize-redundant-void-arg]
+   32 | static void test_max_frac_digits(void){ check(INT32_MIN, 9, "-2.147483648"); } // 10^9 still fits uint32_t
+      |                                  ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:35:32: warning: redundant void argument list [modernize-redundant-void-arg]
+   35 | static void test_cap_exact_fit(void)
+      |                                ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:38:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   38 |     std::memset(buf, 'X', sizeof buf);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:40:44: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   40 |     TEST_ASSERT_EQUAL_UINT(5, format_fixed(buf, 6, -150, 2));
+      |                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:45:62: warning: redundant void argument list [modernize-redundant-void-arg]
+   45 | static void test_cap_too_small_returns_zero_and_empty_string(void)
+      |                                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:48:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   48 |     std::memset(buf, 'X', sizeof buf);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:49:44: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   49 |     TEST_ASSERT_EQUAL_UINT(0, format_fixed(buf, 5, -150, 2));
+      |                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:54:42: warning: redundant void argument list [modernize-redundant-void-arg]
+   54 | static void test_cap_zero_writes_nothing(void)
+      |                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:57:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   57 |     std::memset(buf, 'X', sizeof buf);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:58:44: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   58 |     TEST_ASSERT_EQUAL_UINT(0, format_fixed(buf, 0, 1, 0));
+      |                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:62:43: warning: redundant void argument list [modernize-redundant-void-arg]
+   62 | static void test_null_buffer_returns_zero(void)
+      |                                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:68:40: warning: redundant void argument list [modernize-redundant-void-arg]
+   68 | static void test_frac_digits_too_large(void)
+      |                                        ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:71:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   71 |     std::memset(buf, 'X', sizeof buf);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:72:44: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   72 |     TEST_ASSERT_EQUAL_UINT(0, format_fixed(buf, sizeof buf, 1, 10)); // 10^10 overflows uint32_t
+      |                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_fixed_format.cpp:76:10: warning: redundant void argument list [modernize-redundant-void-arg]
+   76 | int main(void)
+      |          ^~~~
+
+[2/7][1.0s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:16:19: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   16 |             put(*s++);
+      |                   ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:26:49: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   26 |         const std::size_t n = format_fixed(out_ + len_, cap_ - len_, value, frac_digits);
+      |                                                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:38:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   38 |         do {
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:51:13: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   51 |             out_[len_] = '\0';
+      |             ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:55:13: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   55 |             out_[0] = '\0';
+      |             ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Src/csv_format.cpp:67:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   67 |         out_[len_++] = c;
+      |         ^
+
+[3/7][1.0s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:28:66: warning: use designated initializer list to initialize 'Write' [modernize-use-designated-initializers]
+   28 |         if (write_count < writes.size()) { writes[write_count] = {dev, reg, val}; }
+      |                                                                  ^~~~~~~~~~~~~~~
+      |                                                                   .dev=.reg=.val=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:12:5: note: aggregate type is defined here
+   12 |     struct Write { std::uint8_t dev, reg, val; };
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:38:74: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   38 |         for (std::uint8_t i = 0; i < len && i < read_data.size(); ++i) { buf[i] = read_data[i]; }
+      |                                                                          ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:50:48: warning: redundant void argument list [modernize-redundant-void-arg]
+   50 | static void test_init_writes_sequence_in_order(void)
+      |                                                ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:55:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   55 |     TEST_ASSERT_TRUE(imu.init() == BusStatus::Ok);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:59:9: warning: use designated initializer list to initialize 'const FakeBus::Write' [modernize-use-designated-initializers]
+   59 |         {kAddr, 0x6B, 0x00},   // PWR_MGMT_1: wake
+      |         ^~~~~~~~~~~~~~~~~~~
+      |          .dev=  .reg= .val=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:12:5: note: aggregate type is defined here
+   12 |     struct Write { std::uint8_t dev, reg, val; };
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:60:9: warning: use designated initializer list to initialize 'const FakeBus::Write' [modernize-use-designated-initializers]
+   60 |         {kAddr, 0x19, 0x07},   // SMPLRT_DIV
+      |         ^~~~~~~~~~~~~~~~~~~
+      |          .dev=  .reg= .val=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:12:5: note: aggregate type is defined here
+   12 |     struct Write { std::uint8_t dev, reg, val; };
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:61:9: warning: use designated initializer list to initialize 'const FakeBus::Write' [modernize-use-designated-initializers]
+   61 |         {kAddr, 0x1B, 0x00},   // GYRO_CONFIG: ±250 °/s
+      |         ^~~~~~~~~~~~~~~~~~~
+      |          .dev=  .reg= .val=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:12:5: note: aggregate type is defined here
+   12 |     struct Write { std::uint8_t dev, reg, val; };
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:62:9: warning: use designated initializer list to initialize 'const FakeBus::Write' [modernize-use-designated-initializers]
+   62 |         {kAddr, 0x1C, 0x00},   // ACCEL_CONFIG: ±2 g
+      |         ^~~~~~~~~~~~~~~~~~~
+      |          .dev=  .reg= .val=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:12:5: note: aggregate type is defined here
+   12 |     struct Write { std::uint8_t dev, reg, val; };
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:71:61: warning: redundant void argument list [modernize-redundant-void-arg]
+   71 | static void test_init_stops_at_first_failure_and_returns_it(void)
+      |                                                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:78:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   78 |     TEST_ASSERT_TRUE(imu.init() == BusStatus::Timeout);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:84:47: warning: redundant void argument list [modernize-redundant-void-arg]
+   84 | static void test_who_am_i_reads_register_0x75(void)
+      |                                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:91:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   91 |     TEST_ASSERT_TRUE(imu.who_am_i(id) == BusStatus::Ok);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:99:62: warning: redundant void argument list [modernize-redundant-void-arg]
+   99 | static void test_read_is_one_14_byte_burst_from_accel_xout_h(void)
+      |                                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:105:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  105 |     TEST_ASSERT_TRUE(imu.read(s) == BusStatus::Ok);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:113:51: warning: redundant void argument list [modernize-redundant-void-arg]
+  113 | static void test_read_decodes_and_scales_all_axes(void)
+      |                                                   ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:128:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  128 |     TEST_ASSERT_TRUE(imu.read(s) == BusStatus::Ok);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:137:38: warning: redundant void argument list [modernize-redundant-void-arg]
+  137 | static void test_read_accel_extremes(void)
+      |                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:144:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  144 |     TEST_ASSERT_TRUE(imu.read(s) == BusStatus::Ok);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:151:72: warning: redundant void argument list [modernize-redundant-void-arg]
+  151 | static void test_read_error_returns_status_and_leaves_sample_untouched(void)
+      |                                                                        ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:157:16: warning: use designated initializer list to initialize 'ImuSample' [modernize-use-designated-initializers]
+  157 |     ImuSample s{11, 22, 33, 44, 55, 66};
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                 .accel_x_mg= .accel_y_mg= .accel_z_mg= .gyro_x_mdps= .gyro_y_mdps= .gyro_z_mdps=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp:9:1: note: aggregate type is defined here
+    9 | struct ImuSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:159:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  159 |     TEST_ASSERT_TRUE(imu.read(s) == BusStatus::Nack);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_mpu6050.cpp:168:10: warning: redundant void argument list [modernize-redundant-void-arg]
+  168 | int main(void)
+      |          ^~~~
+
+[4/7][1.0s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:10:38: warning: redundant void argument list [modernize-redundant-void-arg]
+   10 | static void test_new_buffer_is_empty(void)
+      |                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:13:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   13 |     TEST_ASSERT_TRUE(rb.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:17:70: warning: redundant void argument list [modernize-redundant-void-arg]
+   17 | static void test_pop_on_empty_returns_false_and_leaves_out_untouched(void)
+      |                                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:21:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   21 |     TEST_ASSERT_FALSE(rb.pop(&out));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:26:51: warning: redundant void argument list [modernize-redundant-void-arg]
+   26 | static void test_push_then_pop_returns_same_value(void)
+      |                                                   ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:30:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   30 |     TEST_ASSERT_TRUE(rb.push(42));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:31:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   31 |     TEST_ASSERT_FALSE(rb.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:32:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   32 |     TEST_ASSERT_TRUE(rb.pop(&out));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:34:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   34 |     TEST_ASSERT_TRUE(rb.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:37:29: warning: redundant void argument list [modernize-redundant-void-arg]
+   37 | static void test_fifo_order(void)
+      |                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:43:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   43 |         TEST_ASSERT_TRUE(rb.pop(&out));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:46:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   46 |     TEST_ASSERT_TRUE(rb.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:50:42: warning: redundant void argument list [modernize-redundant-void-arg]
+   50 | static void test_capacity_is_n_minus_one(void)
+      |                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:55:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   55 |         TEST_ASSERT_TRUE(rb.push(i));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:58:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   58 |     TEST_ASSERT_FALSE(rb.push(99));                 // 8th push rejected
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:64:51: warning: redundant void argument list [modernize-redundant-void-arg]
+   64 | static void test_full_buffer_is_not_seen_as_empty(void)
+      |                                                   ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:68:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   68 |     TEST_ASSERT_FALSE(rb.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:73:60: warning: redundant void argument list [modernize-redundant-void-arg]
+   73 | static void test_full_buffer_keeps_oldest_and_drops_newest(void)
+      |                                                            ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:77:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   77 |     TEST_ASSERT_FALSE(rb.push(4));                  // dropped
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:82:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   82 |     TEST_ASSERT_FALSE(rb.pop(&out));                // 4 never appears
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:86:58: warning: redundant void argument list [modernize-redundant-void-arg]
+   86 | static void test_push_succeeds_again_after_pop_from_full(void)
+      |                                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:92:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   92 |     TEST_ASSERT_TRUE(rb.push(4));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:100:13: warning: function 'test_wraparound_preserves_order_and_count' has cognitive complexity of 31 (threshold 25) [readability-function-cognitive-complexity]
+  100 | static void test_wraparound_preserves_order_and_count(void)
+      |             ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:104:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  104 |     for (int round = 0; round < 50; ++round) {
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:105:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  105 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:105:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  105 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:103: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:105:9: note: +1, nesting level increased to 3
+  105 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:135: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:106:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  106 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:106:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  106 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:103: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:106:9: note: +1, nesting level increased to 3
+  106 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:135: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:109:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  109 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:109:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  109 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:103: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:109:9: note: +1, nesting level increased to 3
+  109 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:135: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:110:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  110 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:110:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  110 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:103: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:110:9: note: +1, nesting level increased to 3
+  110 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:135: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:111:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  111 |         TEST_ASSERT_TRUE(rb.is_empty());
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:111:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  111 |         TEST_ASSERT_TRUE(rb.is_empty());
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:103: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:111:9: note: +1, nesting level increased to 3
+  111 |         TEST_ASSERT_TRUE(rb.is_empty());
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:135: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                                                       ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:100:55: warning: redundant void argument list [modernize-redundant-void-arg]
+  100 | static void test_wraparound_preserves_order_and_count(void)
+      |                                                       ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:103:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  103 |     uint8_t next_in = 0, next_out = 0;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:105:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  105 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:106:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  106 |         TEST_ASSERT_TRUE(rb.push(next_in++));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:109:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  109 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:110:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  110 |         TEST_ASSERT_TRUE(rb.pop(&out)); TEST_ASSERT_EQUAL_UINT8(next_out++, out);
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:111:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  111 |         TEST_ASSERT_TRUE(rb.is_empty());
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:116:53: warning: redundant void argument list [modernize-redundant-void-arg]
+  116 | static void test_count_when_head_wrapped_below_tail(void)
+      |                                                     ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:129:45: warning: redundant void argument list [modernize-redundant-void-arg]
+  129 | static void test_works_with_struct_elements(void)
+      |                                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:132:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  132 |     TEST_ASSERT_TRUE(rb.push(Sample{1, -2, 3}));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:134:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  134 |     TEST_ASSERT_TRUE(rb.pop(&s));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:141:33: warning: variable 'g_rx' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  141 | constinit ring_buffer<char, 64> g_rx;   // fails to compile if not constant-initialised
+      |                                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:143:48: warning: redundant void argument list [modernize-redundant-void-arg]
+  143 | static void test_constinit_global_starts_empty(void)
+      |                                                ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:145:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  145 |     TEST_ASSERT_TRUE(g_rx.is_empty());
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_ring_buffer.cpp:148:10: warning: redundant void argument list [modernize-redundant-void-arg]
+  148 | int main(void)
+      |          ^~~~
+
+[5/7][1.0s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:13:22: warning: use designated initializer list to initialize 'EnvSample' [modernize-use-designated-initializers]
+   13 |     r.env = EnvSample{1971, 101140};               // 19.71 °C, 1011.40 hPa
+      |                      ^~~~~~~~~~~~~~
+      |                       .temp_centi_c= .press_pa=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/log_record.hpp:6:1: note: aggregate type is defined here
+    6 | struct EnvSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:14:22: warning: use designated initializer list to initialize 'ImuSample' [modernize-use-designated-initializers]
+   14 |     r.imu = ImuSample{-157, 881, -392, 687, 877, 1534};
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       .accel_x_mg= .accel_y_mg= .accel_z_mg= .gyro_x_mdps= .gyro_y_mdps= .gyro_z_mdps=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp:9:1: note: aggregate type is defined here
+    9 | struct ImuSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:20:6: warning: variable 'buf' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+   20 | char buf[kCsvLineMax];
+      |      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:24:32: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   24 | void setUp(void) { std::memset(buf, 'X', sizeof buf); }
+      |                                ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:29:30: warning: redundant void argument list [modernize-redundant-void-arg]
+   29 | static void test_full_record(void)
+      |                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:32:38: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   32 |     const std::size_t n = format_csv(buf, sizeof buf, r);
+      |                                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:35:40: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   35 |     TEST_ASSERT_EQUAL_UINT(std::strlen(buf), n);
+      |                                        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:38:60: warning: redundant void argument list [modernize-redundant-void-arg]
+   38 | static void test_negative_temperature_and_small_magnitudes(void)
+      |                                                            ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:43:22: warning: use designated initializer list to initialize 'ImuSample' [modernize-use-designated-initializers]
+   43 |     r.imu = ImuSample{-5, 0, 1000, -1, 0, 1};
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+      |                       .accel_x_mg= .accel_y_mg= .accel_z_mg= .gyro_x_mdps= .gyro_y_mdps= .gyro_z_mdps=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp:9:1: note: aggregate type is defined here
+    9 | struct ImuSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:44:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   44 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:49:54: warning: redundant void argument list [modernize-redundant-void-arg]
+   49 | static void test_env_invalid_leaves_two_empty_fields(void)
+      |                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:53:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   53 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:58:54: warning: redundant void argument list [modernize-redundant-void-arg]
+   58 | static void test_imu_invalid_leaves_six_empty_fields(void)
+      |                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:62:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   62 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:66:50: warning: redundant void argument list [modernize-redundant-void-arg]
+   66 | static void test_both_invalid_keeps_column_count(void)
+      |                                                  ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:71:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   71 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:75:46: warning: redundant void argument list [modernize-redundant-void-arg]
+   75 | static void test_column_count_matches_header(void)
+      |                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:80:28: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   80 |         for (; *s != '\0'; ++s) c += (*s == ',');
+      |                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:80:32: warning: statement should be inside braces [readability-braces-around-statements]
+   80 |         for (; *s != '\0'; ++s) c += (*s == ',');
+      |                                ^                 
+      |                                 {
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:87:24: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+   87 |         r.env_valid = (mask & 1) != 0;
+      |                        ^~~~ ~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:88:24: warning: use of a signed integer operand with a binary bitwise operator [bugprone-signed-bitwise]
+   88 |         r.imu_valid = (mask & 2) != 0;
+      |                        ^~~~ ~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:89:9: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   89 |         TEST_ASSERT_NOT_EQUAL(0, format_csv(buf, sizeof buf, r));
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:413:100: note: expanded from macro 'TEST_ASSERT_NOT_EQUAL'
+  413 | #define TEST_ASSERT_NOT_EQUAL(expected, actual)                                                    UNITY_TEST_ASSERT(((expected) != (actual)), __LINE__, " Expected Not-Equal")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:89:45: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   89 |         TEST_ASSERT_NOT_EQUAL(0, format_csv(buf, sizeof buf, r));
+      |                                             ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:90:54: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   90 |         TEST_ASSERT_EQUAL_UINT(header_commas, commas(buf));
+      |                                                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:94:41: warning: redundant void argument list [modernize-redundant-void-arg]
+   94 | static void test_timestamp_beyond_int32(void)
+      |                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:98:22: warning: integer literal has suffix 'u', which is not uppercase [readability-uppercase-literal-suffix]
+   98 |     r.timestamp_ms = 4294967295u;
+      |                      ^         ~
+      |                                U
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:101:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  101 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:105:33: warning: redundant void argument list [modernize-redundant-void-arg]
+  105 | static void test_timestamp_zero(void)
+      |                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:111:22: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  111 |     (void)format_csv(buf, sizeof buf, r);
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:117:49: warning: redundant void argument list [modernize-redundant-void-arg]
+  117 | static void test_worst_case_fits_in_kCsvLineMax(void)
+      |                                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:120:22: warning: integer literal has suffix 'u', which is not uppercase [readability-uppercase-literal-suffix]
+  120 |     r.timestamp_ms = 4294967295u;
+      |                      ^         ~
+      |                                U
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:121:22: warning: use designated initializer list to initialize 'EnvSample' [modernize-use-designated-initializers]
+  121 |     r.env = EnvSample{INT32_MIN, INT32_MIN};
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+      |                       .temp_centi_c= .press_pa=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/log_record.hpp:6:1: note: aggregate type is defined here
+    6 | struct EnvSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:122:22: warning: use designated initializer list to initialize 'ImuSample' [modernize-use-designated-initializers]
+  122 |     r.imu = ImuSample{INT32_MIN, INT32_MIN, INT32_MIN, INT32_MIN, INT32_MIN, INT32_MIN};
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       .accel_x_mg= .accel_y_mg= .accel_z_mg= .gyro_x_mdps= .gyro_y_mdps= .gyro_z_mdps=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp:9:1: note: aggregate type is defined here
+    9 | struct ImuSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:125:38: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  125 |     const std::size_t n = format_csv(buf, sizeof buf, r);
+      |                                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:126:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  126 |     TEST_ASSERT_NOT_EQUAL(0, n);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:413:100: note: expanded from macro 'TEST_ASSERT_NOT_EQUAL'
+  413 | #define TEST_ASSERT_NOT_EQUAL(expected, actual)                                                    UNITY_TEST_ASSERT(((expected) != (actual)), __LINE__, " Expected Not-Equal")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:130:37: warning: redundant void argument list [modernize-redundant-void-arg]
+  130 | static void test_exact_fit_succeeds(void)
+      |                                     ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:133:40: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  133 |     const std::size_t len = format_csv(buf, sizeof buf, r);
+      |                                        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:135:44: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  135 |     TEST_ASSERT_EQUAL_UINT(len, format_csv(small, len + 1, r));   // len chars + '\0'
+      |                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:139:48: warning: redundant void argument list [modernize-redundant-void-arg]
+  139 | static void test_one_byte_short_writes_nothing(void)
+      |                                                ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:142:40: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  142 |     const std::size_t len = format_csv(buf, sizeof buf, r);
+      |                                        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:144:17: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  144 |     std::memset(small, 'X', sizeof small);
+      |                 ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:145:42: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  145 |     TEST_ASSERT_EQUAL_UINT(0, format_csv(small, len, r));         // no room for '\0'
+      |                                          ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:149:57: warning: redundant void argument list [modernize-redundant-void-arg]
+  149 | static void test_too_small_in_the_middle_writes_nothing(void)
+      |                                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:154:42: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  154 |     TEST_ASSERT_EQUAL_UINT(0, format_csv(small, sizeof small, r));
+      |                                          ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:158:46: warning: redundant void argument list [modernize-redundant-void-arg]
+  158 | static void test_cap_one_writes_empty_string(void)
+      |                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:162:42: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  162 |     TEST_ASSERT_EQUAL_UINT(0, format_csv(one, 1, r));
+      |                                          ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:166:47: warning: redundant void argument list [modernize-redundant-void-arg]
+  166 | static void test_null_or_zero_cap_is_harmless(void)
+      |                                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:170:42: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  170 |     TEST_ASSERT_EQUAL_UINT(0, format_csv(buf, 0, r));
+      |                                          ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_csv_format.cpp:174:10: warning: redundant void argument list [modernize-redundant-void-arg]
+  174 | int main(void)
+      |          ^~~~
+
+[6/7][1.4s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:29:20: warning: variable 'g_order' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+   29 | std::array<int, 8> g_order{};
+      |                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:30:20: warning: variable 'g_order_len' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+   30 | std::size_t        g_order_len = 0;
+      |                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:34:10: warning: method 'on_event' can be made const [readability-make-member-function-const]
+   34 |     void on_event(const TestEvent&)
+      |          ^                         
+      |                                     const
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:34:35: warning: all parameters should be named in a function [readability-named-parameter]
+   34 |     void on_event(const TestEvent&)
+      |                                   ^
+      |                                    /*unused*/
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:43:5: warning: variable 'g_free_calls' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+   43 | int g_free_calls = 0;
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:44:36: warning: all parameters should be named in a function [readability-named-parameter]
+   44 | void free_observer(const TestEvent&) { ++g_free_calls; }
+      |                                    ^
+      |                                     /*unused*/
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:65:31: warning: redundant void argument list [modernize-redundant-void-arg]
+   65 | static void test_starts_empty(void)
+      |                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:72:47: warning: redundant void argument list [modernize-redundant-void-arg]
+   72 | static void test_subscribe_valid_returns_true(void)
+      |                                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:76:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   76 |     TEST_ASSERT_TRUE(s.subscribe(bind(r)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:80:52: warning: redundant void argument list [modernize-redundant-void-arg]
+   80 | static void test_subscribe_empty_delegate_rejected(void)
+      |                                                    ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:84:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   84 |     TEST_ASSERT_FALSE(s.subscribe(empty));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:88:47: warning: redundant void argument list [modernize-redundant-void-arg]
+   88 | static void test_subscribe_when_full_rejected(void)
+      |                                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:91:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+   91 |     Recorder a, b, c, d;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:92:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   92 |     TEST_ASSERT_TRUE(s.subscribe(bind(a)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:93:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   93 |     TEST_ASSERT_TRUE(s.subscribe(bind(b)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:94:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   94 |     TEST_ASSERT_TRUE(s.subscribe(bind(c)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:95:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+   95 |     TEST_ASSERT_FALSE(s.subscribe(bind(d)));    // 4th into 3 slots
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:104:58: warning: redundant void argument list [modernize-redundant-void-arg]
+  104 | static void test_publish_without_subscribers_is_harmless(void)
+      |                                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:108:5: warning: do not call 'longjmp'; consider using exception handling instead [modernize-avoid-setjmp-longjmp]
+  108 |     TEST_PASS();
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:127:100: note: expanded from macro 'TEST_PASS'
+  127 | #define TEST_PASS()                                                                                TEST_ABORT()
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:956:22: note: expanded from macro 'TEST_ABORT'
+  956 | #define TEST_ABORT() longjmp(Unity.AbortFrame, 1)
+      |                      ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:108:5: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+  108 |     TEST_PASS();
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:127:100: note: expanded from macro 'TEST_PASS'
+  127 | #define TEST_PASS()                                                                                TEST_ABORT()
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:956:30: note: expanded from macro 'TEST_ABORT'
+  956 | #define TEST_ABORT() longjmp(Unity.AbortFrame, 1)
+      |                              ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:111:61: warning: redundant void argument list [modernize-redundant-void-arg]
+  111 | static void test_publish_partially_filled_skips_empty_slots(void)
+      |                                                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:115:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  115 |     Recorder a, b;
+      |     ^~~~~~~~~~~~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:116:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  116 |     TEST_ASSERT_TRUE(s.subscribe(bind(a)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:117:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  117 |     TEST_ASSERT_TRUE(s.subscribe(bind(b)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:123:47: warning: redundant void argument list [modernize-redundant-void-arg]
+  123 | static void test_publish_delivers_event_value(void)
+      |                                               ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:127:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  127 |     TEST_ASSERT_TRUE(s.subscribe(bind(r)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:133:52: warning: redundant void argument list [modernize-redundant-void-arg]
+  133 | static void test_publish_passes_event_by_reference(void)
+      |                                                    ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:137:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  137 |     TEST_ASSERT_TRUE(s.subscribe(bind(r)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:140:5: warning: do not use C-style cast to convert between unrelated types [cppcoreguidelines-pro-type-cstyle-cast]
+  140 |     TEST_ASSERT_EQUAL_PTR(&e, r.last_address);  // no copy on the way
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:313:100: note: expanded from macro 'TEST_ASSERT_EQUAL_PTR'
+  313 | #define TEST_ASSERT_EQUAL_PTR(expected, actual)                                                    UNITY_TEST_ASSERT_EQUAL_PTR((expected), (actual), __LINE__, NULL)
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1160:124: note: expanded from macro 'UNITY_TEST_ASSERT_EQUAL_PTR'
+ 1160 | #define UNITY_TEST_ASSERT_EQUAL_PTR(expected, actual, line, message)                             UnityAssertEqualIntNumber((UNITY_PTR_TO_INT)(expected), (UNITY_PTR_TO_INT)(actual), (message), (UNITY_LINE_TYPE)(line), UNITY_DISPLAY_STYLE_POINTER)
+      |                                                                                                                            ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:143:54: warning: redundant void argument list [modernize-redundant-void-arg]
+  143 | static void test_publish_calls_in_subscription_order(void)
+      |                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:146:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  146 |     Tagged t1{1}, t2{2}, t3{3};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:147:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  147 |     TEST_ASSERT_TRUE(s.subscribe(bind(t2)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:148:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  148 |     TEST_ASSERT_TRUE(s.subscribe(bind(t3)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:149:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  149 |     TEST_ASSERT_TRUE(s.subscribe(bind(t1)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:157:57: warning: redundant void argument list [modernize-redundant-void-arg]
+  157 | static void test_every_publish_reaches_every_subscriber(void)
+      |                                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:160:5: warning: multiple declarations in a single statement reduces readability [readability-isolate-declaration]
+  160 |     Recorder a, b;
+      |     ^~~~~~~~~~~~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:161:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  161 |     TEST_ASSERT_TRUE(s.subscribe(bind(a)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:162:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  162 |     TEST_ASSERT_TRUE(s.subscribe(bind(b)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:171:41: warning: redundant void argument list [modernize-redundant-void-arg]
+  171 | static void test_free_function_observer(void)
+      |                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:174:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  174 |     TEST_ASSERT_TRUE(s.subscribe(Cb::create<&free_observer>()));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:180:54: warning: redundant void argument list [modernize-redundant-void-arg]
+  180 | static void test_same_observer_twice_is_called_twice(void)
+      |                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:185:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  185 |     TEST_ASSERT_TRUE(s.subscribe(bind(r)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:186:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  186 |     TEST_ASSERT_TRUE(s.subscribe(bind(r)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_subject.cpp:191:10: warning: redundant void argument list [modernize-redundant-void-arg]
+  191 | int main(void)
+      |          ^~~~
+
+[7/7][1.5s] /opt/homebrew/opt/llvm/bin/clang-tidy -extra-arg=-isysroot/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -p=build/host -quiet /Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/sensor_fsm.hpp:83:18: warning: do not use 'else' after 'return' [readability-else-after-return]
+   83 |                 }else{
+      |                  ^~~~~
+   84 |                     return State::Logging;
+   85 |                 } 
+      |                 ~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:66:26: warning: use designated initializer list to initialize 'ImuSample' [modernize-use-designated-initializers]
+   66 |             s = ImuSample{10, 20, 1000, -1, -2, -3};
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                           .accel_x_mg= .accel_y_mg= .accel_z_mg= .gyro_x_mdps= .gyro_y_mdps= .gyro_z_mdps=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/mpu6050.hpp:9:1: note: aggregate type is defined here
+    9 | struct ImuSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:75:26: warning: use designated initializer list to initialize 'EnvSample' [modernize-use-designated-initializers]
+   75 |             e = EnvSample{1971, 101140};
+      |                          ^~~~~~~~~~~~~~
+      |                           .temp_centi_c= .press_pa=
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/Inc/log_record.hpp:6:1: note: aggregate type is defined here
+    6 | struct EnvSample {
+      | ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:106:5: warning: function 'last' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  106 |     const LogRecord& last() const { return records[count - 1]; }
+      |     ^
+      |     [[nodiscard]] 
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:114:8: warning: variable 'hw' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  114 | FakeHw hw;
+      |        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:115:8: warning: variable 'sink' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  115 | Sink   sink;
+      |        ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:119:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  119 |     TEST_ASSERT_TRUE(o.subscribe(Out::Callback::create<Sink, &Sink::on_record>(s)));
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:122:9: warning: function-like macro 'TEST_ASSERT_STATE' used; consider a 'constexpr' template function [cppcoreguidelines-macro-usage]
+  122 | #define TEST_ASSERT_STATE(expected, fsm) \
+      |         ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:136:59: warning: redundant void argument list [modernize-redundant-void-arg]
+  136 | static void test_initial_state_is_init_and_ignores_events(void)
+      |                                                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:148:49: warning: redundant void argument list [modernize-redundant-void-arg]
+  148 | static void test_row1_start_imu_ok_goes_logging(void)
+      |                                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:158:55: warning: redundant void argument list [modernize-redundant-void-arg]
+  158 | static void test_row2_start_imu_fails_goes_recovering(void)
+      |                                                       ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:167:59: warning: redundant void argument list [modernize-redundant-void-arg]
+  167 | static void test_start_twice_does_nothing_the_second_time(void)
+      |                                                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:180:57: warning: redundant void argument list [modernize-redundant-void-arg]
+  180 | static void test_row3_tick_all_ok_publishes_full_record(void)
+      |                                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:191:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  191 |     TEST_ASSERT_TRUE(r.env_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:192:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  192 |     TEST_ASSERT_TRUE(r.imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:199:64: warning: redundant void argument list [modernize-redundant-void-arg]
+  199 | static void test_row3_nack_marks_imu_invalid_and_stays_logging(void)
+      |                                                                ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:209:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  209 |     TEST_ASSERT_FALSE(sink.last().imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:210:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  210 |     TEST_ASSERT_TRUE(sink.last().env_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:214:58: warning: redundant void argument list [modernize-redundant-void-arg]
+  214 | static void test_row3_env_failure_marks_env_invalid_only(void)
+      |                                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:223:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  223 |     TEST_ASSERT_FALSE(sink.last().env_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:224:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  224 |     TEST_ASSERT_TRUE(sink.last().imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:227:62: warning: redundant void argument list [modernize-redundant-void-arg]
+  227 | static void test_row4_timeout_publishes_then_goes_recovering(void)
+      |                                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:237:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  237 |     TEST_ASSERT_FALSE(sink.last().imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:238:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  238 |     TEST_ASSERT_TRUE(sink.last().env_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:242:59: warning: redundant void argument list [modernize-redundant-void-arg]
+  242 | static void test_row5_logoff_goes_idle_without_publishing(void)
+      |                                                           ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:252:52: warning: redundant void argument list [modernize-redundant-void-arg]
+  252 | static void test_logon_while_logging_keeps_logging(void)
+      |                                                    ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:264:65: warning: redundant void argument list [modernize-redundant-void-arg]
+  264 | static void test_row9_idle_tick_reads_nothing_publishes_nothing(void)
+      |                                                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:278:50: warning: redundant void argument list [modernize-redundant-void-arg]
+  278 | static void test_row8_idle_logon_resumes_logging(void)
+      |                                                  ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:290:41: warning: redundant void argument list [modernize-redundant-void-arg]
+  290 | static void test_idle_logoff_stays_idle(void)
+      |                                         ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:302:53: warning: redundant void argument list [modernize-redundant-void-arg]
+  302 | static void test_row6_recovery_success_goes_logging(void)
+      |                                                     ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:316:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  316 |     TEST_ASSERT_TRUE(sink.last().env_valid);                // BMP280 (SPI) still logged
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:317:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  317 |     TEST_ASSERT_FALSE(sink.last().imu_valid);               // no IMU data on a recovery tick
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:320:49: warning: redundant void argument list [modernize-redundant-void-arg]
+  320 | static void test_recovering_never_reads_the_imu(void)
+      |                                                 ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:331:61: warning: redundant void argument list [modernize-redundant-void-arg]
+  331 | static void test_row6b_reset_fails_skips_imu_init_and_stays(void)
+      |                                                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:345:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  345 |     TEST_ASSERT_FALSE(sink.last().imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:348:54: warning: redundant void argument list [modernize-redundant-void-arg]
+  348 | static void test_row6b_reset_ok_but_init_fails_stays(void)
+      |                                                      ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:360:62: warning: redundant void argument list [modernize-redundant-void-arg]
+  360 | static void test_recovery_one_attempt_per_tick_until_success(void)
+      |                                                              ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:380:51: warning: redundant void argument list [modernize-redundant-void-arg]
+  380 | static void test_row7_recovering_logoff_goes_idle(void)
+      |                                                   ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:391:58: warning: redundant void argument list [modernize-redundant-void-arg]
+  391 | static void test_logon_while_recovering_stays_recovering(void)
+      |                                                          ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:406:61: warning: redundant void argument list [modernize-redundant-void-arg]
+  406 | static void test_scenario_timestamps_increase_across_states(void)
+      |                                                             ^~~~
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:420:34: warning: integer literal has suffix 'u', which is not uppercase [readability-uppercase-literal-suffix]
+  420 |         TEST_ASSERT_EQUAL_UINT32(1000u * (i + 1), sink.records[i].timestamp_ms);
+      |                                  ^   ~
+      |                                      U
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:422:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  422 |     TEST_ASSERT_TRUE(sink.records[0].imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:423:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  423 |     TEST_ASSERT_FALSE(sink.records[1].imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:424:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  424 |     TEST_ASSERT_FALSE(sink.records[2].imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:152:100: note: expanded from macro 'TEST_ASSERT_FALSE'
+  152 | #define TEST_ASSERT_FALSE(condition)                                                               UNITY_TEST_ASSERT(      !(condition), __LINE__, " Expected FALSE Was TRUE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:425:5: warning: avoid do-while loops [cppcoreguidelines-avoid-do-while]
+  425 |     TEST_ASSERT_TRUE(sink.records[3].imu_valid);
+      |     ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity.h:150:100: note: expanded from macro 'TEST_ASSERT_TRUE'
+  150 | #define TEST_ASSERT_TRUE(condition)                                                                UNITY_TEST_ASSERT(       (condition), __LINE__, " Expected TRUE Was FALSE")
+      |                                                                                                    ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/third_party/unity/src/unity_internals.h:1048:98: note: expanded from macro 'UNITY_TEST_ASSERT'
+ 1048 | #define UNITY_TEST_ASSERT(condition, line, message)                                              do { if (condition) { /* nothing*/ } else { UNITY_TEST_FAIL((line), (message)); } } while (0)
+      |                                                                                                  ^
+/Users/alexandervindelinckx/Documents/Coding/GitHub/Embedded/Phase_3/week37/CppSensorLogger/test/test_sensor_fsm.cpp:428:10: warning: redundant void argument list [modernize-redundant-void-arg]
+  428 | int main(void)
+      |          ^~~~
+

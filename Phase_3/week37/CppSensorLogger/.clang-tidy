@@ -1,0 +1,39 @@
+# clang-tidy configuration for CppSensorLogger
+# Every disabled or tuned check has its reason next to it (same idea as cppcheck-suppressions.txt).
+Checks: >
+  -*,
+  bugprone-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -readability-identifier-length,
+  -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-pro-type-reinterpret-cast,
+  -cppcoreguidelines-avoid-c-arrays,
+  -modernize-avoid-c-arrays,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
+  -cppcoreguidelines-pro-bounds-constant-array-index,
+  -cppcoreguidelines-avoid-const-or-ref-data-members
+
+# Why the checks above are off:
+#   trailing-return-type ......... style preference (auto f() -> int)
+#   magic-numbers ................ register addresses and datasheet constants ARE the documentation
+#   identifier-length ............ i, e, r are fine in short scopes
+#   easily-swappable-parameters .. (dev, reg, val) bus signatures are fixed by the hardware protocol
+#   pro-type-reinterpret-cast .... unavoidable for memory-mapped registers
+#   avoid-c-arrays ............... fixed-size char buffers for C APIs (format_fixed, UART)
+#   unchecked-container-access ... .at() throws -> std::terminate with -fno-exceptions; indices are
+#   constant-array-index ......... guaranteed by invariants (% kN, i < count_) and covered by tests
+#   const-or-ref-data-members .... reference members = non-null, non-rebindable dependencies, by design
+
+CheckOptions:
+  # Deleting copy already suppresses the implicit moves; no need to spell out the move functions.
+  - key:   cppcoreguidelines-special-member-functions.AllowMissingMoveFunctionsWhenCopyIsDeleted
+    value: true
+
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*/(Inc|Src)/.*'

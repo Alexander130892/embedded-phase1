@@ -36,9 +36,9 @@ public:
         char tmp[10];                 // 4294967295 has 10 digits
         std::size_t n = 0;
         do {
-            tmp[n++] = static_cast<char>('0' + value % 10u);
-            value /= 10u;
-        } while (value != 0u);
+            tmp[n++] = static_cast<char>('0' + (value % 10U));
+            value /= 10U;
+        } while (value != 0U);
         while (ok_ && n > 0) {
             put(tmp[--n]);
         }

@@ -89,7 +89,7 @@ private:
     // Big-endian byte pair --> signed 16-bit value.
     static constexpr std::int16_t be16(std::uint8_t hi, std::uint8_t lo)
     {
-        const auto u = static_cast<std::uint16_t>((hi << 8) | lo);   // int → the 16 raw bits
+        const auto u = static_cast<std::uint16_t>((static_cast<unsigned>(hi) << 8U) | lo);   // int → the 16 raw bits
         return static_cast<std::int16_t>(u);                         // reinterpret as signed (defined in C++20)
     }
 

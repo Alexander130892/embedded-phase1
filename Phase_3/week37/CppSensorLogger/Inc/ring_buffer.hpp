@@ -48,7 +48,7 @@ struct ring_buffer {
         return true;
     }
 
-    bool is_empty() const { return head == tail; }
-    std::uint32_t get_count() const { return (head + kN - tail) % kN; }
+    [[nodiscard]] bool is_empty() const { return head == tail; }
+    [[nodiscard]] std::uint32_t get_count() const { return (head + kN - tail) % kN; }
     static constexpr std::uint32_t capacity() { return kN - 1; }
 };
