@@ -332,7 +332,7 @@ static void i2c_recovery_delay(void){
 status_t i2c_bus_reset(void){
 	volatile uint32_t * const moder = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_MODER_OFFSET);
 	volatile uint32_t * const odr   = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_ODR_OFFSET);
-	volatile uint32_t * const idr   = (volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_IDR_OFFSET);
+	const volatile uint32_t * const idr = (const volatile uint32_t *)(GPIOB_BASE_ADDR + GPIOx_IDR_OFFSET);
 	const uint32_t scl = 1u << I2C_SCL_PIN;
 	const uint32_t sda = 1u << I2C_SDA_PIN;
 

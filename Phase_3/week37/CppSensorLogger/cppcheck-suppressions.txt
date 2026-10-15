@@ -1,0 +1,13 @@
+# newlib fixes the _write() prototype
+constParameterPointer:Src/syscalls.c
+# "addr << 1 | 0" documents the R/W bit on purpose
+badBitmaskCheck:Src/i2c.c
+# defensive status checks on functions that currently always return OK
+knownConditionTrueFalse:Src/i2c.c
+# interface methods (I2cBusLike, SensorHw, FSM handlers) stay non-static by design
+functionStatic
+# Unity's TEST_ASSERT_* macros expand to C-style casts (Unity is a C library)
+cstyleCast:test/*
+# toolchain headers / vendored code
+missingIncludeSystem
+*:*third_party/*
