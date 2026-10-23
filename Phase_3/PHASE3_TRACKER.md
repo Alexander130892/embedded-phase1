@@ -185,59 +185,33 @@
 #### Week 37 — C++ Deliverable + Integration
 > ~10 hrs | Polish, integration, documentation
 
-- [ ] Integrate the C++ work into one coherent project: `CppSensorLogger` — a C++ rewrite of your Phase 2 Week 17 data logger
-  - [ ] `Bmp280` and `Mpu6050` C++ driver classes
-  - [ ] `UartLogger` class with `etl::delegate` callback
-  - [ ] `SensorFsm` state machine controlling log start/stop
-  - [ ] Observer pattern connecting sensors → logger
-  - [ ] CMake build system (replace Makefile)
-  - [ ] Runs on STM32F446RE — no FreeRTOS (pure super-loop + sequencer)
-- [ ] Run `cppcheck` and `clang-tidy` on the codebase — fix all warnings
-- [ ] Write `README.md` covering:
-  - [ ] Architecture diagram (class relationships, observer connections, FSM states)
-  - [ ] C vs C++ comparison table: what each feature replaced and why
-  - [ ] Build instructions (`cmake`, `make`, `openocd` flash)
-  - [ ] Lessons learned
-- [ ] Tag the repo: `git tag v1.0-phase3-cpp`
-- [ ] Write a short C++ retrospective in `NOTES.md`
+- [x] Integrate the C++ work into one coherent project: `CppSensorLogger` — a C++ rewrite of your Phase 2 Week 17 data logger
+  - [x] `Bmp280` and `Mpu6050` C++ driver classes
+  - [x] `UartLogger` class with `etl::delegate` callback
+  - [x] `SensorFsm` state machine controlling log start/stop
+  - [x] Observer pattern connecting sensors → logger
+  - [x] CMake build system (replace Makefile)
+  - [x] Runs on STM32F446RE — no FreeRTOS (pure super-loop + sequencer)
+- [x] Run `cppcheck` and `clang-tidy` on the codebase — fix all warnings
+- [x] Write `README.md` covering:
+  - [x] Architecture diagram (class relationships, observer connections, FSM states)
+  - [x] C vs C++ comparison table: what each feature replaced and why
+  - [x] Build instructions (`cmake`, `make`, `openocd` flash)
+  - [x] Lessons learned
+- [x] Tag the repo: `git tag v1.0-phase3-cpp`
+- [x] Write a short C++ retrospective in `NOTES.md`
 
 > 🏁 **M19 checkpoint:** C++ sensor logger running on STM32. CMake build. Static analysis clean. ✅
 
 ---
 
-### 🟠 BLOCK 3 — Rust Exploration (Week 38)
-> One sprint. Goal: informed opinion, not mastery. Build something real, understand the tradeoffs, be able to discuss it in an interview.
-
----
-
-#### Week 38 — Rust for Embedded: One Sprint
-> ~10 hrs | The Embedded Rust Book (free) + Embassy framework docs
-
-**Study tasks**
-- [ ] Read *The Embedded Rust Book* (free at [docs.rust-embedded.org/book](https://docs.rust-embedded.org/book/)): Ch. 1–5 — toolchain setup, memory layout, registers as types, the `#![no_std]` environment
-- [ ] Understand Rust's ownership model in one sentence that you can explain to a C developer: *the borrow checker enforces at compile time what C enforces (or fails to enforce) at runtime*
-- [ ] Understand `embassy-rs`: async/await for embedded, no RTOS needed — read the Embassy overview at [embassy.dev](https://embassy.dev/)
-- [ ] Understand where Rust is gaining traction in embedded: Linux kernel drivers, safety-critical automotive (ISO 26262 discussions), WASM targets
-- [ ] Understand where C/C++ still dominates and why (toolchain maturity, vendor support, existing codebases, certification trails)
-- [ ] Set up the Rust toolchain: `rustup target add thumbv7em-none-eabihf` for your STM32F4
-
-**Exercises**
-- [ ] Exercise: port your Phase 1 LED blink to Rust using `embassy-stm32` — GPIO toggle in an async task
-- [ ] Exercise: add UART TX — send "tick" over serial every second
-- [ ] Reflection: write a `RUST_NOTES.md` comparing the experience to C — what the compiler caught that C wouldn't, what was harder, what was surprising
-- [ ] Commit to `week38/rust_blink/`
-
-> 🏁 **M20 checkpoint:** Rust blink + UART running on STM32. Reflection written.
-
----
-
-### 🟢 BLOCK 4 — Engineering Hygiene: Git + CI/CD + Testing (Weeks 39–44)
+### 🟢 BLOCK 3 — Engineering Hygiene: Git + CI/CD + Testing (Weeks 39–44)
 
 > This block applies to real codebases — your Phase 2 and Phase 3 repos. No toy examples.
 
 ---
 
-#### Week 39 — Git for Teams
+#### Week 38 — Git for Teams
 > ~10 hrs | Pro Git Ch. 1–3, 5 (free at git-scm.com) + practice
 
 **Study tasks**
@@ -259,7 +233,7 @@
 
 ---
 
-#### Week 40 — CI/CD for Embedded: GitHub Actions
+#### Week 39 — CI/CD for Embedded: GitHub Actions
 > ~10 hrs | GitHub Actions docs + practice
 
 - [ ] Understand GitHub Actions concepts: workflow (`.yml`), trigger (`on:`), job, step, runner, artifact
@@ -283,7 +257,7 @@
 
 ---
 
-#### Week 41 — Static Analysis + Code Quality
+#### Week 40 — Static Analysis + Code Quality
 > ~10 hrs | cppcheck docs + clang-tidy docs + MISRA-C awareness
 
 - [ ] Understand the difference between compiler warnings, static analysis, and runtime sanitizers — three different layers of defect detection
@@ -302,7 +276,7 @@
 
 ---
 
-#### Week 42 — Testing Foundations: fff + Unity
+#### Week 41 — Testing Foundations: fff + Unity
 > ~10 hrs | fff GitHub docs + ThrowTheSwitch Unity docs
 
 **Study tasks**
@@ -326,7 +300,7 @@
 
 ---
 
-#### Week 43 — Testing with Python: pytest + pyserial
+#### Week 42 — Testing with Python: pytest + pyserial
 > ~10 hrs | pytest docs + pyserial docs
 
 **Study tasks**
@@ -349,7 +323,7 @@
 
 ---
 
-#### Week 44 — Tooling Deliverable + Phase 3 Wrap-Up
+#### Week 43 — Tooling Deliverable + Phase 3 Wrap-Up
 > ~10 hrs | Polish, documentation, retrospective
 
 - [ ] Write a unified `CONTRIBUTING.md` for your Phase 3 repo — the document a new team member would read:
@@ -390,13 +364,12 @@
 | 35 | Advanced C++: Templates + Compile-Time | ✅ Done  |
 | 36 | Applied C++: HAL, Patterns + FSM | ✅ Done |
 | 37 | C++ Deliverable + Integration | 🟡 In progress |
-| 38 | Rust Exploration Sprint | ⬜ Not started |
-| 39 | Git for Teams | ⬜ Not started |
-| 40 | CI/CD: GitHub Actions | ⬜ Not started |
-| 41 | Static Analysis + Code Quality | ⬜ Not started |
-| 42 | Testing Foundations: fff + Unity | ⬜ Not started |
-| 43 | Testing with Python: pytest + pyserial | ⬜ Not started |
-| 44 | Tooling Deliverable + Phase 3 Wrap-Up | ⬜ Not started |
+| 38 | Git for Teams | ⬜ Not started |
+| 39 | CI/CD: GitHub Actions | ⬜ Not started |
+| 40 | Static Analysis + Code Quality | ⬜ Not started |
+| 41 | Testing Foundations: fff + Unity | ⬜ Not started |
+| 42 | Testing with Python: pytest + pyserial | ⬜ Not started |
+| 43 | Tooling Deliverable + Phase 3 Wrap-Up | ⬜ Not started |
 
 > Update statuses to: `🟡 In progress` → `✅ Done`
 
@@ -453,22 +426,13 @@ embedded-phase3/
 ├── week35/cpp_advanced/            ← templates, constexpr lookup table
 ├── week36/cpp_applied/             ← GpioPin class, FSM, Observer pattern
 ├── week37/CppSensorLogger/         ← integrated C++ deliverable
-├── week38/rust_blink/              ← Embassy blink + UART, RUST_NOTES.md
-├── week39/git_teamwork/            ← workflow notes, .gitignore
-├── week40/github_actions/          ← .github/workflows/ci.yml
-├── week41/static_analysis/         ← cppcheck config, clang-tidy config
-├── week42/unit_testing/            ← fff + Unity tests, make test target
-├── week43/python_testing/          ← pytest suite, conftest.py
-├── week44/                         ← CONTRIBUTING.md, README, NOTES, tag v1.0-phase3-tooling
+├── week38/git_teamwork/            ← workflow notes, .gitignore
+├── week39/github_actions/          ← .github/workflows/ci.yml
+├── week40/static_analysis/         ← cppcheck config, clang-tidy config
+├── week41/unit_testing/            ← fff + Unity tests, make test target
+├── week42/python_testing/          ← pytest suite, conftest.py
+├── week43/                         ← CONTRIBUTING.md, README, NOTES, tag v1.0-phase3-tooling
 └── README.md
 ```
 
 ---
-
-## 📝 Notes & Decisions Log
-
-> Use this section to log design decisions, bugs worth remembering, and things to revisit in Phase 4.
-
-| Date | Note |
-|------|------|
-| | |
