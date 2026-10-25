@@ -215,7 +215,7 @@
 > ~10 hrs | Pro Git Ch. 1–3, 5 (free at git-scm.com) + practice
 
 **Study tasks**
-- [ ] Pro Git Ch.1–2 — Refresher: object model (blob, tree, commit, tag), the index, `reflog` — understand what actually happens under the hood during a commit
+- [x] Pro Git Ch.1–2 — Refresher: object model (blob, tree, commit, tag), the index, `reflog` — understand what actually happens under the hood during a commit
 - [ ] Pro Git Ch.3 — Branching: `git branch`, `git merge`, `git rebase` — understand when rebase is appropriate and when it's dangerous (never rebase shared branches)
 - [ ] Pro Git Ch.5 — Distributed workflows: forking model, PR-based workflow, code review etiquette
 - [ ] Study two branching strategies and know the tradeoffs:
@@ -344,7 +344,6 @@
 - [ ] Write a Phase 3 retrospective in `NOTES.md`:
   - [ ] Yocto: what clicked, what was frustrating, what you'd do differently
   - [ ] C++: which patterns felt natural coming from C, which felt forced
-  - [ ] Rust: honest assessment — does it change how you think about C/C++?
   - [ ] Tooling: which tools will you actually use going forward
 
 > 🏁 **M22 checkpoint:** Full tooling pipeline in place. Phase 3 complete. ✅
